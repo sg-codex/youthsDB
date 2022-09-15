@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="" id="btn_certificate" class="">인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" class="">
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="./1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" class="">
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 메뉴 관리</a></li>
+                            <li><a href="">- 게시판 관리</a></li>
+                            <li><a href="">- 팝업/배너 관리</a></li>
+                            <li><a href="">- 게시물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="m-nav" class="">
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="content" class="content">
+                <div id="cont-wrap">
+                    <div class="location-box clearfix">
+                        <h2 class="page-title-txt">관심인재관리</h2>
+                        <div class="location-txt">
+                            <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                            <span>인재검색</span>
+                            <span class="angle-bracket">관심인재관리</span>
+                        </div>
+                    </div>
+                    <hr class="page-title-line">
+                    <div>
+                        <div class="con-box-wh">
+                            <div class="sch-select-box clearfix">
+                                <div class="w35">
+                                    <p>요청일</p>
+                                    <div class="datePickerBox">
+                                        <input type="text" id="fromDate" name="from" autocomplete="off" placeholder="날짜 선택">
+                                        <label for="fromDate"></label>
+                                        <span>~</span>
+                                        <input type="text" id="toDate" name="to" autocomplete="off" placeholder="날짜 선택">
+                                        <label for="toDate"></label>
+                                    </div>
+                                </div>
+                                <div class="w20">
+                                    <p>분류</p>
+                                    <div class="selectBox">
+                                        <button type="button" class="label">전체</button>
+                                        <ul class="option-list">
+                                            <li class="option">전체</li>
+                                            <li class="option">직접검색</li>
+                                            <li class="option">인재추천</li>
+                                        </ul>
+                                        <!-- <select name="" id="" class="more-b">
+                                            <option value="전체">전체</option>
+                                            <option value="직접검색">직접검색</option>
+                                            <option value="인재추천">인재추천</option>
+                                        </select> -->
+                                    </div>
+                                </div>
+                                <div class="w20">
+                                    <p>상태</p>
+                                    <div class="selectBox">
+                                        <button type="button" class="label">선택</button>
+                                        <ul class="option-list">
+                                            <li class="option">승인</li>
+                                            <li class="option">대기</li>
+                                            <li class="option">거절</li>
+                                        </ul>
+                                    </div>
+                                    <!-- <div>
+                                        <select name="" id="" class="more-b">
+                                            <option value="선택">선택</option>
+                                            <option value="승인">승인</option>
+                                            <option value="대기">대기</option>
+                                            <option value="거절">거절</option>
+                                        </select>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="sch-select-box clearfix">
+                                <div class="w35">
+                                    <p><label for="belongOrgani">소속기관</label></p>
+                                    <div class="input-wrap">
+                                        <input type="text" id="belongOrgani" class="w100" name="" autocomplete="off" placeholder="소속기관" disabled>                                        
+                                    </div>
+                                </div>
+                                <div class="w20">
+                                    <p><label for="departName">부서명</label></p>
+                                    <div class="input-wrap">
+                                        <input type="text" id="departName" class="w100" name="" autocomplete="off" placeholder="부서명" disabled>
+                                    </div>
+                                </div>
+                                <div class="w20">
+                                    <p><label for="requestOrg">담당자명</label></p>
+                                    <div class="input-wrap">
+                                        <input type="text" id="requestOrg" class="w100" name="" autocomplete="off" placeholder="담당자명" disabled>
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <button type="submit" class="btn">조회</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="con-box-wh">
+                            <div class="box-top-tit clearfix">
+                                <div class="l-box">
+                                    <h3>요청이력</h3>
+                                    <span class="count-txt">전체 <strong class="items">3</strong></span>
+                                </div>
+                                <div class="r-box">
+                                    <div class="selectBox">
+                                        <button type="button" class="label">직접검색</button>
+                                        <ul class="option-list">
+                                            <li class="option">직접검색</li>
+                                            <li class="option">인재추천</li>
+                                        </ul>
+                                    </div>
+                                    <div class="selectBox">
+                                        <button type="button" class="label">최신순</button>
+                                        <ul class="option-list">
+                                            <li class="option">최신순</li>
+                                        </ul>
+                                    </div>
+                                    <div class="selectBox">
+                                        <button type="button" class="label">10개씩</button>
+                                        <ul class="option-list">
+                                            <li class="option">10개씩</li>
+                                            <li class="option">20개씩</li>
+                                        </ul>
+                                    </div>
+                                    <!-- <select name="" id="">
+                                        <option value="">직접검색</option>
+                                        <option value="">인재추천</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">최신순</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">10개씩</option>
+                                    </select> -->
+                                </div>
+                            </div>
+                            <div class="table-wrap result-table-wrap">
+                                <table>
+                                    <caption>요청이력</caption>
+                                    <colgroup>
+                                        <col width="3%">
+                                        <col width="7%">
+                                        <col width="9%">
+                                        <col width="10%">
+                                        <col width="25%">
+                                        <col width="4%">
+                                        <col width="4%">
+                                        <col width="7%">
+                                        <col width="5%">
+                                        <col width="5%">
+                                        <col width="17%">
+                                        <col width="4%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2">번호</th>
+                                            <th rowspan="2">분류</th>
+                                            <th rowspan="2">요청일</th>
+                                            <th rowspan="2">신청기관</th>
+                                            <th rowspan="2">활용목적</th>
+                                            <th colspan="3">인원수</th>
+                                            <th rowspan="2">상태</th>
+                                            <th rowspan="2">승인</th>
+                                            <th rowspan="2">검색기간</th>
+                                            <th rowspan="2">검색<br>
+                                                취소<br>
+                                                회수
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>위촉</th>
+                                            <th>요청</th>
+                                            <th>선임 인원수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="openDrtList">1</span></td>
+                                            <td><span class="openDrtList">직접검색</span></td>
+                                            <td><span class="openDrtList">2022-07-04</span></td>
+                                            <td><span class="openDrtList">인사혁신처</span></td>
+                                            <td class="txt-left"><span class="openDrtList">인사혁신처 직위후보자</span></td>
+                                            <td>4</td>
+                                            <td>12</td>
+                                            <td class="red">2</td>
+                                            <td>
+                                                <span id="">검색중</span>
+                                                <!-- <span id="">검색완료</span> -->
+                                                <!-- <span id="">평가중</span> -->
+                                                <!-- <span id="">평가완료</span> -->
+                                            </td>
+                                            <td>
+                                                <span class="blue">승인</span>
+                                                <!-- <span class="gray">대기</span> -->
+                                                <!-- <span class="red">거절</span> -->
+                                            </td>
+                                            <td>2022-08-04 ~ 2022-08-24</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="openRcmdList">2</span></td>
+                                            <td><span class="openRcmdList">인재추천</span></td>
+                                            <td><span class="openRcmdList">2022-07-04</span></td>
+                                            <td><span class="openRcmdList">인사혁신처</span></td>
+                                            <td class="txt-left"><span class="openRcmdList">인사혁신처 직위후보자</span></td>
+                                            <td>4</td>
+                                            <td>12</td>
+                                            <td class="red">1</td>
+                                            <td>
+                                                <!-- <span id="">검색중</span> -->
+                                                <span id="">검색완료</span>
+                                                <!-- <span id="">평가중</span> -->
+                                                <!-- <span id="">평가완료</span> -->
+                                            </td>
+                                            <td>
+                                                <span class="blue">승인</span>
+                                                <!-- <span class="gray">대기</span> -->
+                                                <!-- <span class="red">거절</span> -->
+                                            </td>
+                                            <td>2022-08-04 ~ 2022-08-24</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="openDrtList">3</span></td>
+                                            <td><span class="openDrtList">직접검색</span></td>
+                                            <td><span class="openDrtList">2022-07-04</span></td>
+                                            <td><span class="openDrtList">인사혁신처</span></td>
+                                            <td class="txt-left"><span class="openDrtList">인사혁신처 직위후보자</span></td>
+                                            <td>4</td>
+                                            <td>12</td>
+                                            <td class="red">4</td>
+                                            <td>
+                                                <!-- <span id="">검색중</span> -->
+                                                <!-- <span id="">검색완료</span> -->
+                                                <span id="">평가중</span>
+                                                <!-- <span id="">평가완료</span> -->
+                                            </td>
+                                            <td>
+                                                <!-- <span class="blue">승인</span> -->
+                                                <span class="gray">대기</span>
+                                                <!-- <span class="red">거절</span> -->
+                                            </td>
+                                            <td>2022-08-04 ~ 2022-08-24</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="openRcmdList">4</span></td>
+                                            <td><span class="openRcmdList">인재추천</span></td>
+                                            <td><span class="openRcmdList">2022-07-04</span></td>
+                                            <td><span class="openRcmdList">인사혁신처</span></td>
+                                            <td class="txt-left"><span class="openRcmdList">인사혁신처 직위후보자</span></td>
+                                            <td>4</td>
+                                            <td>12</td>
+                                            <td class="red">2</td>
+                                            <td>
+                                                <!-- <span id="">검색중</span> -->
+                                                <!-- <span id="">검색완료</span> -->
+                                                <!-- <span id="">평가중</span> -->
+                                                <span id="">평가완료</span>
+                                            </td>
+                                            <td>
+                                                <!-- <span class="blue">승인</span> -->
+                                                <!-- <span class="gray">대기</span> -->
+                                                <span class="red">거절</span>
+                                            </td>
+                                            <td>2022-08-04 ~ 2022-08-24</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="pagination-container">
+                                <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
+                            </div>
+                        </div>
+
+                        <div id="directList" class="con-box-wh">
+                            <div class="box-top-tit mg-btm0">
+                                <h3>관심인재 목록</h3>
+                                <span class="count-txt">전체 <strong class="items">3</strong></span>
+                            </div>
+                            <div class="box-top-tit clearfix">
+                                <div class="l-box">
+                                    <span class="explain-txt">※노란색 배경은 이미 인쇄를 한 인물입니다.</span>
+                                </div>
+                                <div class="r-box">
+                                    <div class="selectBox">
+                                        <button type="button" class="label">최신순</button>
+                                        <ul class="option-list">
+                                            <li class="option">최신순</li>
+                                            <li class="option">인재추천</li>
+                                        </ul>
+                                    </div>
+                                    <div class="selectBox">
+                                        <button type="button" class="label">10개씩</button>
+                                        <ul class="option-list">
+                                            <li class="option">10개씩</li>
+                                            <li class="option">20개씩</li>
+                                        </ul>
+                                    </div>
+                                    <input type="button" value="엑셀" class="btn btn-style-wh btn_file" onclick="">
+                                    <input type="button" value="인쇄" class="btn btn-style-wh btn_print" onclick="window.print()">
+                                    <!-- <select name="" id="">
+                                        <option value="">직접검색</option>
+                                        <option value="">인재추천</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">최신순</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">10개씩</option>
+                                    </select> -->
+                                </div>
+                            </div>
+                            <div class="table-wrap result-table-wrap bd-style01">
+                                <table>
+                                    <caption>요청이력</caption>
+                                    <colgroup>
+                                        <col width="3%">
+                                        <col width="5%">
+                                        <col width="5%">
+                                        <col width="5%">
+                                        <col width="5%">
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="25%">
+                                        <col width="12%">
+                                        <col width="5%">
+                                        <col width="5%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="txt-center">
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="allChk">
+                                                    <label for="allChk"></label>
+                                                </div>
+                                            </th>
+                                            <th>성명</th>
+                                            <th>출생년도</th>
+                                            <th>성별</th>
+                                            <th>활동지역</th>
+                                            <th>직종</th>
+                                            <th>관심분야</th>
+                                            <th>참여희망분야</th>
+                                            <th>현행일자</th>
+                                            <th>선임</th>
+                                            <th>평가</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="printed">
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="chk01">
+                                                    <label for="chk01"></label>
+                                                </div>
+                                            </td>
+                                            <td class="printed"><span id="" class="marked">***</span></td>
+                                            <td class="printed">1997</td>
+                                            <td class="printed">남</td>
+                                            <td class="printed">서울</td>
+                                            <td class="printed">학생</td>
+                                            <td class="printed">고용ㆍ노동 / 기후ㆍ환경 / 기타</td>
+                                            <td class="printed">중앙부처 (정책평가ㆍ모니터링 / 자문)</td>
+                                            <td class="printed">2021-07-02</td>
+                                            <td class="printed"></td>
+                                            <td class="printed"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="chk02">
+                                                    <label for="chk02"></label>
+                                                </div>
+                                            </td>
+                                            <td><span id="" class="marked">***</span></td>
+                                            <td>1997</td>
+                                            <td>남</td>
+                                            <td>서울</td>
+                                            <td>학생</td>
+                                            <td>고용ㆍ노동 / 기후ㆍ환경 / 기타</td>
+                                            <td>중앙부처 (정책평가ㆍ모니터링 / 자문)</td>
+                                            <td>2021-07-02</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="chk03">
+                                                    <label for="chk03"></label>
+                                                </div>
+                                            </td>
+                                            <td><span id="" class="marked">***</span></td>
+                                            <td>1997</td>
+                                            <td>남</td>
+                                            <td>서울</td>
+                                            <td>학생</td>
+                                            <td>고용ㆍ노동 / 기후ㆍ환경 / 기타</td>
+                                            <td>중앙부처 (정책평가ㆍ모니터링 / 자문)</td>
+                                            <td>2021-07-02</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="pagination-container">
+                                <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
+                            </div>
+                            <div class="r-btn-box">
+                                <button type="button" id="" class="btn r-btn">관심인재삭제</button>
+                                <button type="button" id="" class="btn r-btn">검색완료</button>
+                                <button type="button" id="" class="btn r-btn" disabled>추가검색요청</button>
+                                <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
+                                <button type="button" id="" class="btn r-btn" disabled>평가등록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

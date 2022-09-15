@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+    <script type="text/javascript">
+        
+        // 아이디 한글 막기
+        $(function() {
+            $('#schUserId').on("blur keyup", function() {
+                $(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
+            });
+        });
+
+        // 이메일 도메인 선택
+        var changeEmail = function() {
+
+            var email_in01 = $('#email_in01');
+            var email_in02 = $('#email_in02');
+            var email_sel = $('#email_sel');
+
+            if(email_sel.val() === "기타(직접입력)") {
+                email_in02.attr('readonly', false);
+                email_in02.val('');
+                email_in02.focus();
+            } else {
+                email_in02.attr('readonly', true);
+                email_in02.val(email_sel.val());
+            }
+        };
+
+
+        // 아이디 중복확인
+        // function IDconfirm() {
+            
+        //     function idCheck() {
+                
+        //     };
+
+        // };
+
+        
+        // 유효성 검사
+        function joinFormCheck() {
+            // 변수 선언
+            var getCheck = RegExp(/^[a-zA-Z0-9]{6,12}$/);
+            var userId = $('#schUserId');
+            var getName= RegExp(/^[가-힣]+$/);
+            var userName = $('#userName');
+            var getpwdCheck = RegExp(/^.*(?=^.{9,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[~!@#$%^*]).*$/);
+            var pwd = $('#pwd');
+            var pwdConfirm = $('#pwdConfirm');
+            var belongDepart = $('#belongDepart');
+            var belongOrgani = $('#belongOrgani');
+            var departName = $('#departName');
+            var tel1_2Chk = RegExp(/^[0-9]/);
+            var tel1_3Chk = RegExp(/^[0-9]/);
+            var tel1_1 = $('#tel1_1');
+            var tel1_2 = $('#tel1_2');
+            var tel1_3 = $('#tel1_3');
+            var tel2_1 = $('#tel2_1');
+            var tel2_2 = $('#tel2_2');
+            var tel2_3 = $('#tel2_3');
+            var ipAdr = $('#ipAdr');
+
+            // 아이디
+            if (userId.val() === "") {
+                alert("아이디를 입력하세요.");
+                userId.focus();
+                return false;
+            };  
+
+            if (!getCheck.test(userId.val())) {
+                alert("영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.");
+                userId.val("");
+                userId.focus();
+                return false;
+            };
+
+            // 사용자명
+            if (userName.val() === "") {
+                alert("사용자명을 입력하세요.");
+                userName.focus();
+                return false;
+            };
+
+            if(!getName.test(userName.val())){
+                alert("사용자명을 올바르게 입력하세요.");
+                userName.val("");
+                userName.focus();
+                return false;
+            }
+
+            // 비밀번호
+            if (pwd.val() === "") {
+                alert("비밀번호를 입력하세요.");
+                pwd.focus();
+                return false;
+            }
+
+            if (!getpwdCheck.test(pwd.val())) {
+                alert("영문, 숫자, 특수문자로 조합하여 9~15자로 사용할 수 있습니다.(사용 가능한 특수문자: ~ ! @ # $ % ^ *)");
+                pwd.val("");
+                pwd.focus();
+                return false;
+            }
+
+            if (pwdConfirm.val() === "") {
+                alert("비밀번호를 다시 한 번 입력하세요.");
+                pwdConfirm.focus();
+                return false;
+            }
+
+            if(pwd.val() != pwdConfirm.val()){
+                alert("비밀번호가 일치하지 않습니다");
+                pwdConfirm.focus();
+                return false;
+            }
+
+            // 소속부처
+            if (belongDepart.val() === "") {
+                alert("소속부처를 선택하세요.");
+                belongDepart.focus();
+                return false;
+            }
+            
+            // 소속기관
+            if (belongOrgani.val() === "") {
+                alert("소속기관을 입력하세요.");
+                belongOrgani.focus();
+                return false;
+            }
+
+            // 부서명
+            if (departName.val() === "") {
+                alert("부서명을 입력하세요.");
+                departName.focus();
+                return false;
+            }
+
+            
+
+            // 직장전화 번호
+            if ($('#tel1_1 option:selected').val() === "선택") {
+                alert("전화번호를 정확하게 입력해주세요.");
+                tel1_1.focus();
+                return false;
+            }
+
+            if (tel1_2.val() === "") {
+                alert("잘못된 전화번호 입니다.");
+                tel1_2.focus();
+                return false;
+            }
+            if (!tel1_2Chk.test(tel1_2.val())) {
+                alert("잘못된 전화번호 입니다.");
+                tel1_2.val("");
+                tel1_2.focus();
+                return false;
+            }
+            if (tel1_3.val() === "") {
+                alert("잘못된 전화번호 입니다.");
+                tel1_3.focus();
+                return false;
+            }
+            if (!tel1_3Chk.test(tel1_3.val())) {
+                alert("잘못된 전화번호 입니다.");
+                tel1_3.val("");
+                tel1_3.focus();
+                return false;
+            }
+
+            // 휴대전화 번호
+            if (tel2_2.val() === "") {
+                alert("잘못된 전화번호 입니다.");
+                tel2_2.focus();
+                return false;
+            }
+            if (!tel1_2Chk.test(tel2_2.val())) {
+                alert("잘못된 전화번호 입니다.");
+                tel2_2.val("");
+                tel2_2.focus();
+                return false;
+            }
+            if (tel2_3.val() === "") {
+                alert("잘못된 전화번호 입니다.");
+                tel2_3.focus();
+                return false;
+            }
+            if (!tel1_3Chk.test(tel2_3.val())) {
+                alert("잘못된 전화번호 입니다.");
+                tel2_3.val("");
+                tel2_3.focus();
+                return false;
+            }
+            
+            // ip 주소
+            if(ipAdr.val() === "") {
+                alert("IP주소를 입력하세요.");
+                ipAdr.focus();
+                return false;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div class="logo">
+                    <a href="/index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../0. 로그인/로그인.html" title="로그인 바로가기" class="head-login">
+                                <span>로그인</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./1)회원가입.html" title="회원가입 바로가기" class="head-join">
+                                 <span>회원가입</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div id="content">
+                <form id="joinForm" name="" action="" method="" onsubmit="">
+                    <legend>회원가입</legend>
+                    <div>
+                        <h2 class="page-title-txt">회원가입</h2>
+                    </div>
+                    <hr class="page-title-line">
+                    <div>
+                        <div class="con-box-wh">
+                            <p class="box-top-txt">
+                                <strong>청년정책조정실</strong>은 개인정보처리방침에 의해 입력하신 정보를 안전하게 보호하고 있습니다.<br>
+                                인사상 목적 또는 공직에서의 직무수행과 관련된 전문분야의 지식,기술, 경험 등의 활용을 위하여 필요한 경우에만 사용하시기 바랍니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="con-box-wh">
+                            <div class="box-top-tit">
+                                <h3>회원정보 입력</h3>
+                                <span><span class="red">*</span> 표시는 필수 입력 항목입니다.</span>
+                            </div>
+                            <div class="table-wrap table-th-left">
+                                <ul>
+                                    <li>
+                                        <div class="list-tit">
+                                            <label for="schUserId">아이디 <span class="red">*</span></label>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="text" name="schUserId" id="schUserId" class="input01" placeholder="아이디 입력 후 중복확인" maxlength="12">
+                                            </div>
+                                            <button type="button" id="IDconfirm" class="btn">중복확인</button>
+                                            <span class="sub-txt">영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <label for="userName">사용자명 <span class="red">*</span></label>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="text" name="" id="userName" class="input01" placeholder="사용자명">
+                                            </div>
+                                            <span class="sub-txt red">※ 반드시 실명 입력바랍니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <label for="pwd">비밀번호 <span class="red">*</span></label>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="password" name="" id="pwd" class="input01" placeholder="비밀번호" maxlength="15">
+                                            </div>
+                                            <span class="sub-txt">영문, 숫자, 특수문자로 조합하여 9~15자로 사용할 수 있습니다.(사용 가능한 특수문자: ~ ! @ # $ % ^ *)</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <label for="pwdConfirm">비밀번호 확인 <span class="red">*</span></label>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="password" name="" id="pwdConfirm" class="input01" placeholder="비밀번호" maxlength="15">
+                                            </div>
+                                            <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <label for="belongDepart">소속부처 <span class="red">*</span></label>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="text" name="" id="belongDepart" class="input01" placeholder="소속부처">
+                                            </div>
+                                            <button type="button" id="schDepart" class="btn">조회</button>
+                                            <span class="sub-txt">소속부처를 조회 후 선택할 수 있습니다.</span>
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">
+                                            <label for="belongOrgani">소속기관 <span class="red">*</span></label>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="text" name="" id="belongOrgan" class="input01" placeholder="소속기관">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">
+                                            <label for="departName">부서명 <span class="red">*</span></label>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="text" name="" id="departName" class="input01" placeholder="부서명">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <span>직장전화 번호 <span class="red">*</span></span>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="form-style tel clearfix">
+                                                <select name="tel1_1" id="tel1_1" title="유선전화 앞 번호">
+                                                    <option value="">선택</option>
+                                                    <option value="02">02</option>
+                                                    <option value="031">031</option>
+                                                    <option value="032">032</option>
+                                                    <option value="033">033</option>
+                                                    <option value="041">041</option>
+                                                    <option value="042">042</option>
+                                                    <option value="043">043</option>
+                                                    <option value="044">044</option>
+                                                    <option value="050">050</option>
+                                                    <option value="051">051</option>
+                                                    <option value="052">052</option>
+                                                    <option value="053">053</option>
+                                                    <option value="054">054</option>
+                                                    <option value="055">055</option>
+                                                    <option value="061">061</option>
+                                                    <option value="062">062</option>
+                                                    <option value="063">063</option>
+                                                    <option value="064">064</option>
+                                                    <option value="070">070</option>
+                                                </select>
+                                                <input maxlength="4" type="text" name="tel1_2" id="tel1_2" title="유선전화 중간 번호">
+                                                <input maxlength="4" type="text" name="tel1_3" id="tel1_3" title="유선전화 끝 번호">
+                                            </div>
+                                            <span class="sub-txt">입력 예) 010-1234-5678</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <span>휴대전화 번호 <span class="red">*</span></span>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="form-style tel clearfix">
+                                                <select name="tel2_1" id="tel2_1" title="휴대전화 앞 번호">
+                                                    <option value="" selected="selected">선택</option>
+                                                    <option value="010">010</option>
+                                                    <option value="011">011</option>
+                                                    <option value="016">016</option>
+                                                    <option value="017">017</option>
+                                                    <option value="018">018</option>
+                                                    <option value="019">019</option>
+                                                </select>
+                                                <input maxlength="4" type="text" name="tel2_2" id="tel2_2" title="휴대전화 중간 번호" value="">
+                                                <input maxlength="4" type="text" name="tel2_3" id="tel2_3" title="휴대전화 끝 번호" value="">
+                                            </div>
+                                            <span class="sub-txt">입력 예) 010-1234-5678</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <span>E-MAIL</span>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="form-style email">
+                                                <input type="text" name="" id="email_in01" class="input01" title="이메일 주소입력" value="" maxlength="40">
+                                                <span class="email-at">@</span>
+                                                <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
+                                                <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
+                                                    <option value="chol.com">chol.com</option>                
+                                                    <option value="dreamwiz.com">dreamwiz.com</option>                
+                                                    <option value="daum.net">daum.net</option>                
+                                                    <option value="empal.com">empal.com</option>                
+                                                    <option value="freechal.com">freechal.com</option>                
+                                                    <option value="gmail.com">gmail.com</option>                
+                                                    <option value="hanmail.net">hanmail.net</option>                
+                                                    <option value="hanmir.com">hanmir.com</option>                
+                                                    <option value="hitel.net">hitel.net</option>                
+                                                    <option value="hotmail.com">hotmail.com</option>                
+                                                    <option value="korea.com">korea.com</option>                
+                                                    <option value="nate.com">nate.com</option>                
+                                                    <option value="naver.com">naver.com</option>                
+                                                    <option value="orgio.com">orgio.com</option>                
+                                                    <option value="paran.com">paran.com</option>                
+                                                    <option value="sayclub.com">sayclub.com</option>                
+                                                    <option value="shinbiro.com">shinbiro.com</option>                
+                                                    <option value="yahoo.co.kr">yahoo.co.kr</option>                
+                                                    <option value="yahoo.com">yahoo.com</option>                
+                                                    <option value="moel.go.kr">moel.go.kr</option>                
+                                                    <option value="korea.kr">korea.kr</option>                
+                                                    <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
+                                                </select>
+                                            </div>
+                                            <span class="sub-txt">입력 예) korea@korea.kr</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <label for="ipAdr">IP주소 <span class="red">*</span></label>
+                                            <span class="blind"></span>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="text" name="" id="ipAdr" class="input01" placeholder="12.123.123.12" maxlength="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr class="page-bottom-line">
+                            <div class="txt-center">
+                                <p class="sub-txt red">
+                                    ※ 청년인재DB 회원은 관리자의 가입 승인 후 로그인이 가능합니다.
+                                </p>
+                                <p class="sub-txt red">
+                                    ※ 로그인의 경우 GPKI 인증서를 통한 2차 인증이 필요합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btm-btnBox">
+                        <a href="javascript:history.go(-1)" id="btn_prev" class="btn btn-style-wh">이전</a>
+                        <button type="submit" id="join" class="btn" onclick="joinFormCheck();">가입완료</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="popupWrapper">
+        <div id="popup-confirm-id" class="popup">
+            <div class="popup-head-txt">
+                <h3>아이디 중복 확인</h3>
+            </div>
+            <div>
+                <span class="btn_close"></span>
+                <span class="btn_close"></span>
+            </div>
+            <div class="popup-con">
+                <div class="con-box">
+                    <ul>
+                        <li>사용하실 아이디를 입력하고 버튼을 클릭하세요.</li>
+                        <li>영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="sch-form">
+                    <h5>아이디 검색</h5>
+                    <div>
+                        <input type="text" name="" id="schID" class="">
+                        <button type="button">중복 검색</button>
+                    </div>
+                    <div class="result">
+                        <p>
+                            <span class="blue">admin2022</span>은(는) 사용하실 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="/images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="/index.html" title="메인 바로가기"><img src="/images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="" id="btn_certificate" class="">인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" class="btn_user">
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" class="">
+                <ul class="menu">
+                    <li>
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 메뉴관리</a></li>
+                            <li><a href="">- 게시판관리</a></li>
+                            <li><a href="">- 팝업/배너관리</a></li>
+                            <li><a href="">- 게시물관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="content" class="content">
+                <div id="cont-wrap">
+                    <div>
+                        <h2 class="page-title-txt">회원탈퇴</h2>
+                    </div>
+                    <hr class="page-title-line">
+                    <div>
+                        <div class="con-box-wh">
+                            <p class="box-top-txt">
+                                ※ 비밀번호 입력 시 회원탈퇴가 진행됩니다.
+                            </p>
+                            <p class="box-top-txt">
+                                ※ 탈퇴 후에는 아이디와 데이터 복구가 불가능합니다. 신중하게 선택하시기 바랍니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="con-box-wh">
+                            <div class="box-top-tit">
+                                <span><span class="red">*</span> 표시는 필수 입력 항목입니다.</span>
+                            </div>
+                            <div class="table-wrap table-th-left">
+                                <table>
+                                    <caption>내 정보 관리</caption>
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="80%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>비밀번호 <span class="red">*</span></th>
+                                            <td>
+                                                <input type="password" name="" id="" class="input01" placeholder="비밀번호" maxlength="15">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="all-agree-txt">
+                                <div class="chkbox">
+                                    <input type="checkbox" name="agreement" id="all_agree">
+                                    <label for="all_agree">안내 사항을 모두 확인했으며, 이에 동의합니다.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btm-btnBox">
+                        <a href="" id="btn_cancel" class="btn btn-style-wh">취소</a>
+                        <a href="" id="btn_save" class="btn">탈퇴하기</a>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
