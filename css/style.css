@@ -356,6 +356,10 @@ input.hasDatepicker {
     content: '/';
     padding: 0 1px 0 4px;
 }
+/* 스킵 네비게이션 */
+.skip-nav a{position:absolute; top:-30px; left:0; background:#000; height:30px; line-height:30px; color:#fff; font-size:12px; padding:0 6px; z-index: 9999;}
+.skip-nav a:focus,
+.skip-nav a:active {top:0;}
 
 /* 페이지네이션 */
 #pagination-container {
@@ -852,7 +856,7 @@ hr.page-bottom-line {
     background-color: #fff;
     border-radius: 14px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-    padding: 50px 70px;
+    padding: 70px;
 }
 .loginWrap > div {
     width: 100%;
@@ -908,7 +912,7 @@ hr.page-bottom-line {
     background-color: #E7EAF1;
     margin: 30px auto;
 }
-.onepassBox > div {
+/* .onepassBox > div {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -921,7 +925,7 @@ hr.page-bottom-line {
 }
 .onepassBox > div p {
     line-height: 1.4;
-}
+} */
 .btn_onepass {
     background-color: #24246C;
     padding: 15px 20px;
