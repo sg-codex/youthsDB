@@ -1625,23 +1625,26 @@ hr.page-bottom-line {
     line-height: 1.6;
  }
  .sch-result-table td .sch-txt {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     cursor: pointer;
  }
  .sch-result-table td .sch-txt > * {
     color: #222222;
     font-size: 1rem;
+    font-weight: 400;
  }
  /* 클릭(확인)한 인물정보는 하루동안 이름, 생년월일이 파란색으로 변경됨 class명 active */
  .sch-result-table td .sch-txt.active > * {
     color: #1776E1;
  }
 
+ .sch-result-table .sch-txt .sch-sort-tit { font-size: 0.85rem; }
  .sch-result-table .sch-sort-tit.sort-gray {
     background-color: #A9B1C0;
  }
  .sch-result-table .sch-sort-tit.sort-blue {
     background-color: #1776E1;
+    color: #ffffff;
  }
 
  .sch-result-table .sch-sort-tit.sort-skyblue {
@@ -1650,10 +1653,12 @@ hr.page-bottom-line {
  }
  .sch-result-table .sch-sort-tit.sort-red {
     background-color: #FF5656;
+    color: #ffffff;
  }
  .sch-result-table .sch-sort-cont {
     color: #555555;
     font-size: 0.95rem;
+    margin-right: 3px;
  }
 
 
