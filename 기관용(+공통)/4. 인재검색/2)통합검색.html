@@ -11,7 +11,7 @@
     <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
     
-    <script src="../../js/ui.js"></script>
+    <script type="text/javascript" src="../../js/ui.js"></script>
 
 </head>
 <body>
@@ -790,7 +790,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('youthsInfoPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">29</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -1199,6 +1199,294 @@
                     </div>
                 </div>                
             </section>
+        </div>
+    </div>
+    <!-- 팝업1 인재상세열람 -->
+    <div id="popupWrapper" class="youthsInfoPopup">
+        <div id="popup" class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>인재정보</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                    <!-- <span class="btn_close"></span> -->
+                </div>
+            </div>
+            <div class="popup-con youths-info-con">
+                <div class="con-box">
+                    <div class="">
+                        <span class="name">OOO</span>
+                        <span class="ag">(33세, 여)</span>
+                    </div>
+                    <ul class="careers">
+                       <li>(現) 인사혁신처 주식회사 인재정보관리 대표이사</li>
+                       <li>(前) HR 핵심 연구소1 핵심 연구팀 팀장</li> 
+                    </ul>
+                   <div class="info">
+                        <div>
+                            <ul class="info-list">
+                                <li>
+                                    <strong>연락처</strong>
+                                    <span>010-****-****</span>
+                                </li>
+                                <li>
+                                    <strong>직종</strong>
+                                    <span>일반 사무직, 교육직, 기타</span>
+                                </li>
+                                <li>
+                                    <strong>최종수정일</strong>
+                                    <span>2021-02-08</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="info-list">
+                                <li>
+                                    <strong>이메일</strong>
+                                    <span>********@email.com</span>
+                                </li>
+                                <li>
+                                    <strong>관심분야</strong>
+                                    <span>고용ㆍ노동, 교육</span>
+                                </li>
+                                <li>
+                                    <strong>최초임용일</strong>
+                                    <span>2014-11-21</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="info-list">
+                                <li>
+                                    <strong>활동지역</strong>
+                                    <span>대전광역시 서구</span>
+                                </li>
+                                <li>
+                                    <strong>참여희망 분야</strong>
+                                    <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
+                                </li>
+                                <li>
+                                    <strong>현재 직위임용일</strong>
+                                    <span>2020-12-04</span>
+                                </li>
+                            </ul>
+                        </div>
+                   </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">관심분야</h3>
+                    <div class="tag-box">
+                        <span>고용ㆍ노동 분야</span>
+                        <span>교육 분야</span>
+                        <span>지역발전 분야</span>
+                    </div>
+                    <div class="popup-table-wrap thead-table-wrap">
+                        <table>
+                            <caption>관심분야 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>상세 관심분야</th>
+                                    <th>세부내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>지역활성화</td>
+                                    <td class="txt-left">청년들을 위한 지역 활성화</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">참여희망 분야</h3>
+                    <div class="tag-box">
+                        <span>정부위원회</span>
+                        <span>정책 홍보</span>
+                        <span>간담회ㆍ행사</span>
+                    </div>
+                    <div class="popup-table-wrap thead-table-wrap">
+                        <table>
+                            <caption>참여희망 분야 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>기관</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>중앙부처</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">학력</h3>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>학력 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>학교명</th>
+                                    <th>학위 종류</th>
+                                    <th>학과/전공명</th>
+                                    <th>소재지</th>
+                                    <th>졸업연도</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>OOOO대학교</td>
+                                    <td>학사</td>
+                                    <td>OOOO전공</td>
+                                    <td>OO시</td>
+                                    <td>2010</td>
+                                    <td>휴학</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">직종 구분(전∙현직)</h3>
+                    <div class="tag-box">
+                        <span>일반 사무직</span>
+                        <span>기타</span>
+                        <span>교육직</span>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">근무경력(전∙현직)</h3>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>근무경력 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>직장 및 부서명</th>
+                                    <th>직위</th>
+                                    <th>근무기간</th>
+                                    <th>주요업무</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>주식회사 OOOO OOO부</td>
+                                    <td>대리</td>
+                                    <td>2019.08 ~ 2021.03</td>
+                                    <td class="txt-left">‘청년이 머무르는 지역’을 뜻하는 청정지역 프로젝트 진행</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">주요 활동사항</h3>
+                    <div class="tag-box">
+                        <span>고용ㆍ노동 분야</span>
+                        <span>창업 분야</span>
+                        <span>교육 분야</span>
+                        <span>지역발전 분야</span>
+                    </div>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>주요 활동사항 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>상세분야</th>
+                                    <th>근무기간</th>
+                                    <th>주요내용</th>
+                                    <th>업무</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>마음건강</td>
+                                    <td>2021.01 ~ 2021.06</td>
+                                    <td>OO지역 중∙고등학생 100명을 대상으로 ‘OOOO만들기' 행사를 직접 기획하였습니다.</td>
+                                    <td>행사, 기획</td>
+                                </tr>
+                                <tr>
+                                    <td>월세지원</td>
+                                    <td>2020.01 ~ 2020.06</td>
+                                    <td>OO부처에서 모집하는 ‘OO기자단'으로 활동하여 직접 정책홍보영상을 제작하였습니다.</td>
+                                    <td>정책기자단, 영상제작</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">주요 성과물</h3>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>주요 성과물 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>제목</th>
+                                    <th>구분</th>
+                                    <th>일자</th>
+                                    <th>기관명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>청년들의 정책참여 촉진 요인에 관한 연구</td>
+                                    <td>논문</td>
+                                    <td>2021.01</td>
+                                    <td>OOOO학회</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">자기소개</h3>
+                    <div class="inner-box">
+                        <p>
+                            혼인과 가족생활은 개인의 존엄과 양성의 평등을 기초로 성립되고 유지되어야 하며, 국가는 이를 보장한다. 국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 총리령 또는 부령을 발할 수 있다. 국회는 선전포고, 국군의 외국에의 파견 또는 외국군대의 대한민국 영역안에서의 주류에 대한 동의권을 가진다.
+    대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다. 탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다.
+                        </p>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">첨부파일</h3>
+                    <div class="inner-box">
+                        <a href="">청년인재데이터베이스_김서아_자기소개서.pdf</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 퀵메뉴 -->
+            <!-- <div id="quickMenu">
+                <ul>
+                    <li>
+                        <a href="">기본정보</a>
+                    </li>
+                    <li>
+                        <a href="">관심분야</a>
+                    </li>
+                    <li>
+                        <a href="">참여희망 분야</a>
+                    </li>
+                    <li>
+                        <a href="">학력</a>
+                    </li>
+                    <li>
+                        <a href="">경력</a>
+                    </li>
+                    <li>
+                        <a href="">주요 활동사항</a>
+                    </li>
+                    <li>
+                        <a href="">주요 성과물</a>
+                    </li>
+                    <li>
+                        <a href="">자기소개</a>
+                    </li>
+                </ul>
+            </div> -->
         </div>
     </div>
 </body>

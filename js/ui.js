@@ -1,16 +1,43 @@
+/* ============================================================ 
+* 팝업
+* ============================================================ */
+function openPopup(popupname) {
+  document.get
+  $("." + popupname).fadeIn(300);
+  $('body').addClass('o-y-hidden');
+}
 $(function() {
+  $('table a.openPopup').on('click', function(e){
+    e.preventDefault();
+  });
+});
 
-    /* ============================================================ 
-    * 클래스 전역 변수
-    * ============================================================ */
-    var active = 'active'; // 클래스 active
-    var openGnb = 'openGnb'; // 클래스 openGnb
-    var toggleAct = 'toggle_active'; // 토글 active
-    var asideToggleAct = 'asideToggleAct'; // 우측 메뉴 active
 
-    /* ============================================================ 
-    * 왼쪽 메뉴 토글
-    * ============================================================ */
+
+$(function() {
+  /* ============================================================ 
+  * 팝업 닫기
+  * ============================================================ */
+  $('#popupWrapper .close').on('click', function() {
+    $(this)
+      .parent()
+      .parent()
+      .parent()
+      .fadeOut(300);
+      $('body').removeClass('o-y-hidden');
+  });
+
+  /* ============================================================ 
+  * 클래스 전역 변수
+  * ============================================================ */
+  var active = 'active'; // 클래스 active
+  var openGnb = 'openGnb'; // 클래스 openGnb
+  var toggleAct = 'toggle_active'; // 토글 active
+  var asideToggleAct = 'asideToggleAct'; // 우측 메뉴 active
+
+  /* ============================================================ 
+  * 왼쪽 메뉴 토글
+  * ============================================================ */
    $(window).resize(function() {
     if(window.innerWidth < 1024){
       if($('.wrap').hasClass(active)) {
@@ -266,6 +293,17 @@ $(function() {
         .parent()
         .not('div.fixWrap')
         .remove();
+    });
+
+
+    // 퀵메뉴
+    $(window).scroll(function(){
+      var scrollTop = $('#popupWrapper').scrollTop();
+      if(scrollTop < 180) {
+        scrollTop = 180;
+      }
+      $('#quickMenu').stop();
+      $('#quickMenu').animate({ "top" : scrollTop });
     });
 
 });
