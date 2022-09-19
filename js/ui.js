@@ -6,6 +6,7 @@ function openPopup(popupname) {
   $("." + popupname).fadeIn(300);
   $('body').addClass('o-y-hidden');
 }
+// a 태그 이벤트 막기
 $(function() {
   $('table a.openPopup').on('click', function(e){
     e.preventDefault();
