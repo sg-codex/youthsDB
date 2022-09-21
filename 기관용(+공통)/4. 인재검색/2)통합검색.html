@@ -278,7 +278,7 @@
                                             </td>
                                             <td>2022-08-04 ~ 2022-08-14</td>
                                             <td>
-                                                <a href="" class="blue">보기</a>
+                                                <a href="#" class="blue openPopup" onclick="openPopup('requestDetailPopup');">보기</a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -397,7 +397,7 @@
                                         </li>
                                         <li>
                                             <div class="list-tit">
-                                                <h3>직장 이력</h3>
+                                                <h3>근무경력</h3>
                                             </div>
                                             <ul class="list-cont clearfix">
                                                 <li>
@@ -416,11 +416,11 @@
                                                 </li>
                                                 <li>
                                                     <div class="sub-tit">
-                                                        <h5>직위/직급/계급</h5>
+                                                        <h5>직위</h5>
                                                     </div>
                                                     <div class="sub-cont">
                                                         <div class="input-wrap">
-                                                            <input type="text" name="" id="" maxlength="40" placeholder="선직위/직급/계급택">
+                                                            <input type="text" name="" id="" maxlength="40" placeholder="직위">
                                                             <input type="checkbox" name="" id="present02">
                                                             <label for="present02">현직</label>
                                                             <input type="checkbox" name="" id="accord02">
@@ -530,51 +530,55 @@
                                                     <ul class="clearfix">
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest01">
-                                                            <label for="interest01">고용 · 노동 분야</label>
+                                                            <label for="interest01">고용 · 노동</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest02">
-                                                            <label for="interest02">창업 분야</label>
+                                                            <label for="interest02">창업</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest03">
-                                                            <label for="interest03">주거 · 교통 분야</label>
+                                                            <label for="interest03">주거 · 교통</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest04">
-                                                            <label for="interest04">교육 분야</label>
+                                                            <label for="interest04">교육</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest05">
-                                                            <label for="interest05">보건 · 복지· 가족 분야</label>
-                                                        </li>
+                                                            <label for="interest05">과학기술ㆍIT</label>
+                                                        </li>                                                        
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest06">
-                                                            <label for="interest06">금융 분야</label>
+                                                            <label for="interest06">보건 · 복지· 가족</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest07">
-                                                            <label for="interest07">인권 분야</label>
+                                                            <label for="interest07">금융</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest08">
-                                                            <label for="interest08">문화 · 체육· 관광 분야</label>
+                                                            <label for="interest08">문화 · 체육· 관광</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest09">
-                                                            <label for="interest09">지역발전 분야</label>
+                                                            <label for="interest09">인권</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest10">
-                                                            <label for="interest10">기후 · 환경 분야</label>
+                                                            <label for="interest10">지역발전</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest11">
-                                                            <label for="interest11">통일 · 안보· 치안 분야</label>
+                                                            <label for="interest11">기후 · 환경</label>
                                                         </li>
                                                         <li>
                                                             <input type="checkbox" name="interest" id="interest12">
-                                                            <label for="interest12">기타 분야</label>
+                                                            <label for="interest12">통일 · 안보· 치안</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="interest" id="interest13">
+                                                            <label for="interest13">기타</label>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -617,15 +621,11 @@
                                                                 </li>
                                                                 <li>
                                                                     <input type="checkbox" name="participation_kind" id="participation_kind02">
-                                                                    <label for="participation_kind02">정책자문</label>
+                                                                    <label for="participation_kind02">정책 서포터즈ㆍ기자단</label>
                                                                 </li>
                                                                 <li>
                                                                     <input type="checkbox" name="participation_kind" id="participation_kind03">
-                                                                    <label for="participation_kind03">정책홍보</label>
-                                                                </li>
-                                                                <li>
-                                                                    <input type="checkbox" name="participation_kind" id="participation_kind04">
-                                                                    <label for="participation_kind04">간담회 · 행사</label>
+                                                                    <label for="participation_kind03">간담회 · 행사</label>
                                                                 </li>
                                                                 <li>
                                                                     <input type="checkbox" name="participation_kind" id="participation_kind05">
@@ -770,7 +770,7 @@
                                             <li class="option">20개씩</li>
                                         </ul>
                                     </div>
-                                    <button type="button" id="" class="btn r-btn big-btn">관심인재등록</button>
+                                    <button type="button" id="" class="btn r-btn big-btn" onclick="openPopup('addYouthsPopup');">관심인재등록</button>
                                 </div>
                             </div>
                             <div class="table-wrap sch-result-table">
@@ -790,7 +790,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('youthsInfoPopup');">
+                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">29</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -835,7 +835,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     <span>(<span id="sch-age" class="sch-age">26</span>,<span id="sch-gender" class="sch-gender">남</span>)</span>
                                                 </div>
@@ -878,7 +878,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">33</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -922,7 +922,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">29</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -967,7 +967,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     <span>(<span id="sch-age" class="sch-age">26</span>,<span id="sch-gender" class="sch-gender">남</span>)</span>
                                                 </div>
@@ -1010,7 +1010,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">33</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -1054,7 +1054,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">29</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -1099,7 +1099,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     <span>(<span id="sch-age" class="sch-age">26</span>,<span id="sch-gender" class="sch-gender">남</span>)</span>
                                                 </div>
@@ -1142,7 +1142,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt">
+                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">33</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -1183,7 +1183,7 @@
                                     </tbody>
                                 </table>
                                 <div class="r-btn-box">
-                                    <button type="button" id="" class="btn big-btn">관심인재등록</button>
+                                    <button type="button" id="" class="btn big-btn" onclick="openPopup('addYouthsPopup');">관심인재등록</button>
                                 </div>
                             </div>
                             <div id="pagination-container">
@@ -1201,9 +1201,107 @@
             </section>
         </div>
     </div>
-    <!-- 팝업1 인재상세열람 -->
-    <div id="popupWrapper" class="youthsInfoPopup">
-        <div id="popup" class="popup">
+    <!-- 팝업 요청상세내역 -->
+    <div class="popupWrapper requestDetailPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>요청상세내역</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="popup-table-wrap">
+                    <table>
+                        <caption>요청상세내역</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="35%">
+                            <col width="15%">
+                            <col width="35%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>요청기관</th>
+                                <td>
+                                    <span class="result-txt">지방자치단체명</span>
+                                </td>
+                                <th>부서명</th>
+                                <td>
+                                    <span class="result-txt">부서명</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자명</th>
+                                <td>
+                                    <span class="result-txt">홍길동</span>
+                                </td>
+                                <th>연락처</th>
+                                <td>
+                                    <span class="result-txt">010-1234-1234</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>활용목적</th>
+                                <td colspan="3">
+                                    <span class="result-txt">◯◯위원회 위촉직 위원</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>근거규정</th>
+                                <td colspan="3">
+                                    <span class="result-txt">위촉직위가 행정기관위원회(지방자치 단체 포함) 위원인 경우 위원회 근거규정 등</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>선정/위촉인원</th>
+                                <td>
+                                    <span class="result-txt headcount">3</span>
+                                </td>
+                                <th>위촉/선정 예정일</th>
+                                <td>
+                                    <span class="result-txt">2022-09-01</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>관심 분야</th>
+                                <td colspan="3">
+                                    <span class="result-txt">고용 · 노동 / 창업</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>선정요건</th>
+                                <td colspan="3">
+                                    <span class="result-txt">근무경력, 활동사항, 지역 등 선정요건</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>참고사항</th>
+                                <td colspan="3">
+                                    <span class="result-txt">참고사항</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>요청일</th>
+                                <td>
+                                    <span class="result-txt">2022-08-16</span>
+                                </td>
+                                <th>요청내역 분류</th>
+                                <td>
+                                    <span class="result-txt">인재추천</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 인재상세열람 (marked) -->
+    <div class="popupWrapper markedYouthsPopup">
+        <div class="popup">
             <div class="popup-head">
                 <div class="popup-head-txt">
                     <h2>인재정보</h2>
@@ -1215,15 +1313,14 @@
             </div>
             <div class="popup-con youths-info-con">
                 <div class="con-box">
-                    <div class="">
+                    <div class="data-name">
                         <span class="name">OOO</span>
                         <span class="ag">(33세, 여)</span>
                     </div>
-                    <ul class="careers">
-                       <li>(現) 인사혁신처 주식회사 인재정보관리 대표이사</li>
-                       <li>(前) HR 핵심 연구소1 핵심 연구팀 팀장</li> 
+                    <ul class="data-careers">
+                       <li>주식회사 OOOO OOO부 대리</li>
                     </ul>
-                   <div class="info">
+                   <div class="data-info">
                         <div>
                             <ul class="info-list">
                                 <li>
@@ -1231,96 +1328,40 @@
                                     <span>010-****-****</span>
                                 </li>
                                 <li>
-                                    <strong>직종</strong>
-                                    <span>일반 사무직, 교육직, 기타</span>
+                                    <strong>이메일</strong>
+                                    <span>********@email.com</span>
                                 </li>
                                 <li>
-                                    <strong>최종수정일</strong>
-                                    <span>2021-02-08</span>
+                                    <strong>활동지역</strong>
+                                    <span class="slash">주거지</span><span>대전광역시 서구</span>
                                 </li>
                             </ul>
                         </div>
                         <div>
                             <ul class="info-list">
                                 <li>
-                                    <strong>이메일</strong>
-                                    <span>********@email.com</span>
+                                    <strong>직종</strong>
+                                    <span>일반 사무직, 교육직, 기타</span>
                                 </li>
                                 <li>
                                     <strong>관심분야</strong>
                                     <span>고용ㆍ노동, 교육</span>
                                 </li>
                                 <li>
-                                    <strong>최초임용일</strong>
-                                    <span>2014-11-21</span>
+                                    <strong>참여희망 분야</strong>
+                                    <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
                                 </li>
                             </ul>
                         </div>
                         <div>
                             <ul class="info-list">
                                 <li>
-                                    <strong>활동지역</strong>
-                                    <span>대전광역시 서구</span>
-                                </li>
-                                <li>
-                                    <strong>참여희망 분야</strong>
-                                    <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
-                                </li>
-                                <li>
-                                    <strong>현재 직위임용일</strong>
-                                    <span>2020-12-04</span>
+                                    <strong>최종수정일</strong>
+                                    <span>2021-02-08</span>
                                 </li>
                             </ul>
                         </div>
                    </div>
-                </div>
-                <div class="con-box">
-                    <h3 class="info-tit bg">관심분야</h3>
-                    <div class="tag-box">
-                        <span>고용ㆍ노동 분야</span>
-                        <span>교육 분야</span>
-                        <span>지역발전 분야</span>
-                    </div>
-                    <div class="popup-table-wrap thead-table-wrap">
-                        <table>
-                            <caption>관심분야 상세 표</caption>
-                            <thead>
-                                <tr>
-                                    <th>상세 관심분야</th>
-                                    <th>세부내용</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>지역활성화</td>
-                                    <td class="txt-left">청년들을 위한 지역 활성화</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="con-box">
-                    <h3 class="info-tit bg">참여희망 분야</h3>
-                    <div class="tag-box">
-                        <span>정부위원회</span>
-                        <span>정책 홍보</span>
-                        <span>간담회ㆍ행사</span>
-                    </div>
-                    <div class="popup-table-wrap thead-table-wrap">
-                        <table>
-                            <caption>참여희망 분야 상세 표</caption>
-                            <thead>
-                                <tr>
-                                    <th>기관</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>중앙부처</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
                 <div class="con-box">
                     <h3 class="info-tit bg">학력</h3>
@@ -1330,35 +1371,29 @@
                             <thead>
                                 <tr>
                                     <th>학교명</th>
-                                    <th>학위 종류</th>
                                     <th>학과/전공명</th>
-                                    <th>소재지</th>
-                                    <th>졸업연도</th>
-                                    <th>비고</th>
+                                    <th>학위 종류</th>
+                                    <th>상태</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>OOOO대학교</td>
-                                    <td>학사</td>
                                     <td>OOOO전공</td>
-                                    <td>OO시</td>
-                                    <td>2010</td>
+                                    <td>학사</td>
                                     <td>휴학</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div class="con-box">
+                    <hr class="con-box-line">
                     <h3 class="info-tit bg">직종 구분(전∙현직)</h3>
                     <div class="tag-box">
                         <span>일반 사무직</span>
                         <span>기타</span>
                         <span>교육직</span>
                     </div>
-                </div>
-                <div class="con-box">
+                    <hr class="con-box-line">
                     <h3 class="info-tit bg">근무경력(전∙현직)</h3>
                     <div class="popup-table-wrap">
                         <table>
@@ -1383,6 +1418,30 @@
                     </div>
                 </div>
                 <div class="con-box">
+                    <h3 class="info-tit bg">관심 분야</h3>
+                    <div class="tag-box">
+                        <span>고용ㆍ노동</span>
+                        <span>교육</span>
+                    </div>
+                    <div class="popup-table-wrap thead-table-wrap">
+                        <table>
+                            <caption>관심 분야 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>관심 분야</th>
+                                    <th>상세 분야</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>고용ㆍ노동</td>
+                                    <td class="txt-left">청년들을 위한 지역 활성화</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
                     <h3 class="info-tit bg">주요 활동사항</h3>
                     <div class="tag-box">
                         <span>고용ㆍ노동 분야</span>
@@ -1396,9 +1455,9 @@
                             <thead>
                                 <tr>
                                     <th>상세분야</th>
-                                    <th>근무기간</th>
+                                    <th>활동기간</th>
                                     <th>주요내용</th>
-                                    <th>업무</th>
+                                    <th>비고</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1419,22 +1478,22 @@
                     </div>
                 </div>
                 <div class="con-box">
-                    <h3 class="info-tit bg">주요 성과물</h3>
+                    <h3 class="info-tit bg">주요 결과물</h3>
                     <div class="popup-table-wrap">
                         <table>
-                            <caption>주요 성과물 상세 표</caption>
+                            <caption>주요 결과물 상세 표</caption>
                             <thead>
                                 <tr>
-                                    <th>제목</th>
                                     <th>구분</th>
+                                    <th>제목</th>
                                     <th>일자</th>
-                                    <th>기관명</th>
+                                    <th>발급ㆍ수여기관</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>청년들의 정책참여 촉진 요인에 관한 연구</td>
                                     <td>논문</td>
+                                    <td>청년들의 정책참여 촉진 요인에 관한 연구</td>
                                     <td>2021.01</td>
                                     <td>OOOO학회</td>
                                 </tr>
@@ -1443,50 +1502,509 @@
                     </div>
                 </div>
                 <div class="con-box">
-                    <h3 class="info-tit bg">자기소개</h3>
+                    <h3 class="info-tit bg">참여희망 기관</h3>
+                    <div class="tag-box2">
+                        <span>중앙부처</span>
+                    </div>
+                    <hr class="con-box-line">
+                    <h3 class="info-tit bg">참여희망 종류</h3>
+                    <div class="tag-box">
+                        <span>정부위원회</span>
+                        <span>정책 홍보</span>
+                        <span>간담회ㆍ행사</span>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">지원동기</h3>
                     <div class="inner-box">
                         <p>
                             혼인과 가족생활은 개인의 존엄과 양성의 평등을 기초로 성립되고 유지되어야 하며, 국가는 이를 보장한다. 국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 총리령 또는 부령을 발할 수 있다. 국회는 선전포고, 국군의 외국에의 파견 또는 외국군대의 대한민국 영역안에서의 주류에 대한 동의권을 가진다.
     대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다. 탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다.
                         </p>
                     </div>
-                </div>
-                <div class="con-box">
+                    <hr class="con-box-line">
                     <h3 class="info-tit bg">첨부파일</h3>
                     <div class="inner-box">
-                        <a href="">청년인재데이터베이스_김서아_자기소개서.pdf</a>
+                        <a href="" class="" download="">청년인재데이터베이스_김서아_지원동기서.pdf</a>
                     </div>
                 </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh" onclick="openPopup('synchronizingPopup');">현행화요청</button>
+                    <button type="button" class="btn" onclick="openPopup('addYouthsPopup');">관심인재등록</button>
+                </div>
             </div>
-            <!-- 퀵메뉴 -->
-            <!-- <div id="quickMenu">
-                <ul>
+        </div>
+        <!-- 퀵메뉴 -->
+        <div id="quickMenuWrapper">
+            <div id="quickMenu">
+                <div class="name">
+                    OOO
+                </div>
+                <ul class="quickList">
                     <li>
-                        <a href="">기본정보</a>
-                    </li>
-                    <li>
-                        <a href="">관심분야</a>
-                    </li>
-                    <li>
-                        <a href="">참여희망 분야</a>
+                        <a href="">인적사항</a>
                     </li>
                     <li>
                         <a href="">학력</a>
                     </li>
                     <li>
-                        <a href="">경력</a>
+                        <a href="">직종 / 경력</a>
+                    </li>
+                    <li>
+                        <a href="">관심 분야</a>
                     </li>
                     <li>
                         <a href="">주요 활동사항</a>
                     </li>
                     <li>
-                        <a href="">주요 성과물</a>
+                        <a href="">주요 결과물</a>
                     </li>
                     <li>
-                        <a href="">자기소개</a>
+                        <a href="">참여희망 분야</a>
+                    </li>
+                    <li>
+                        <a href="">지원동기</a>
                     </li>
                 </ul>
-            </div> -->
+                <div class="btn-box">
+                    <button type="button" class="btn btn-style-gr" onclick="openPopup('synchronizingPopup');">현행화요청</button>
+                    <button type="button" class="btn disabled" onclick="openPopup('historyPopup');" >열람이력조회</button>
+                    <button type="button" class="btn btn-style-wh" onclick="openPopup('addYouthsPopup');">관심인재등록</button>
+                </div>
+                <div class="btn-top">
+                    <a href="#">TOP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 인재상세열람 -->
+    <div class="popupWrapper youthsPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>인재정보</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                    <!-- <span class="btn_close"></span> -->
+                </div>
+            </div>
+            <div class="popup-con youths-info-con">
+                <div class="con-box d-table">
+                    <div class="id-pic-box">
+                        <div class="id-pic"></div>
+                    </div>
+                    <div class="">
+                        <div class="data-name">
+                            <span class="name">김서아</span>
+                            <span class="ag">(33세, 여)</span>
+                        </div>
+                        <ul class="data-careers">
+                           <li>주식회사 OOOO OOO부 대리</li>
+                        </ul>
+                       <div class="data-info">
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>연락처</strong>
+                                        <span>010-1234-1234</span>
+                                    </li>
+                                    <li>
+                                        <strong>이메일</strong>
+                                        <span>youthsDB@email.com</span>
+                                    </li>
+                                    <li>
+                                        <strong>활동지역</strong>
+                                        <span class="slash">주거지</span><span>대전광역시 서구</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>직종</strong>
+                                        <span>일반 사무직, 교육직, 기타</span>
+                                    </li>
+                                    <li>
+                                        <strong>관심분야</strong>
+                                        <span>고용ㆍ노동, 교육</span>
+                                    </li>
+                                    <li>
+                                        <strong>참여희망 분야</strong>
+                                        <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>최종수정일</strong>
+                                        <span>2021-02-08</span>
+                                    </li>
+                                </ul>
+                            </div>
+                       </div>
+
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">학력</h3>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>학력 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>학교명</th>
+                                    <th>학과/전공명</th>
+                                    <th>학위 종류</th>
+                                    <th>상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>OOOO대학교</td>
+                                    <td>OOOO전공</td>
+                                    <td>학사</td>
+                                    <td>휴학</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr class="con-box-line">
+                    <h3 class="info-tit bg">직종 구분(전∙현직)</h3>
+                    <div class="tag-box">
+                        <span>일반 사무직</span>
+                        <span>기타</span>
+                        <span>교육직</span>
+                    </div>
+                    <hr class="con-box-line">
+                    <h3 class="info-tit bg">근무경력(전∙현직)</h3>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>근무경력 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>직장 및 부서명</th>
+                                    <th>직위</th>
+                                    <th>근무기간</th>
+                                    <th>주요업무</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>주식회사 OOOO OOO부</td>
+                                    <td>대리</td>
+                                    <td>2019.08 ~ 2021.03</td>
+                                    <td class="txt-left">‘청년이 머무르는 지역’을 뜻하는 청정지역 프로젝트 진행</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">관심 분야</h3>
+                    <div class="tag-box">
+                        <span>고용ㆍ노동</span>
+                        <span>교육</span>
+                    </div>
+                    <div class="popup-table-wrap thead-table-wrap">
+                        <table>
+                            <caption>관심 분야 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>관심 분야</th>
+                                    <th>상세 분야</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>고용ㆍ노동</td>
+                                    <td class="txt-left">청년들을 위한 지역 활성화</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">주요 활동사항</h3>
+                    <div class="tag-box">
+                        <span>고용ㆍ노동 분야</span>
+                        <span>창업 분야</span>
+                        <span>교육 분야</span>
+                        <span>지역발전 분야</span>
+                    </div>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>주요 활동사항 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>상세분야</th>
+                                    <th>활동기간</th>
+                                    <th>주요내용</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>마음건강</td>
+                                    <td>2021.01 ~ 2021.06</td>
+                                    <td>OO지역 중∙고등학생 100명을 대상으로 ‘OOOO만들기' 행사를 직접 기획하였습니다.</td>
+                                    <td>행사, 기획</td>
+                                </tr>
+                                <tr>
+                                    <td>월세지원</td>
+                                    <td>2020.01 ~ 2020.06</td>
+                                    <td>OO부처에서 모집하는 ‘OO기자단'으로 활동하여 직접 정책홍보영상을 제작하였습니다.</td>
+                                    <td>정책기자단, 영상제작</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">주요 결과물</h3>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>주요 결과물 상세 표</caption>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>제목</th>
+                                    <th>일자</th>
+                                    <th>발급ㆍ수여기관</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>논문</td>
+                                    <td>청년들의 정책참여 촉진 요인에 관한 연구</td>
+                                    <td>2021.01</td>
+                                    <td>OOOO학회</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">참여희망 기관</h3>
+                    <div class="tag-box2">
+                        <span>중앙부처</span>
+                    </div>
+                    <hr class="con-box-line">
+                    <h3 class="info-tit bg">참여희망 종류</h3>
+                    <div class="tag-box">
+                        <span>정부위원회</span>
+                        <span>정책 홍보</span>
+                        <span>간담회ㆍ행사</span>
+                    </div>
+                </div>
+                <div class="con-box">
+                    <h3 class="info-tit bg">지원동기</h3>
+                    <div class="inner-box">
+                        <p>
+                            혼인과 가족생활은 개인의 존엄과 양성의 평등을 기초로 성립되고 유지되어야 하며, 국가는 이를 보장한다. 국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 총리령 또는 부령을 발할 수 있다. 국회는 선전포고, 국군의 외국에의 파견 또는 외국군대의 대한민국 영역안에서의 주류에 대한 동의권을 가진다.
+    대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다. 탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다.
+                        </p>
+                    </div>
+                    <hr class="con-box-line">
+                    <h3 class="info-tit bg">첨부파일</h3>
+                    <div class="inner-box">
+                        <a href="" class="" download="">청년인재데이터베이스_김서아_지원동기서.pdf</a>
+                    </div>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh" onclick="openPopup('synchronizingPopup');">현행화요청</button>
+                    <button type="button" class="btn" onclick="openPopup('addYouthsPopup');">관심인재등록</button>
+                </div>
+            </div>
+        </div>
+        <!-- 퀵메뉴 -->
+        <div id="quickMenuWrapper">
+            <div id="quickMenu">
+                <div class="name">
+                    OOO
+                </div>
+                <ul class="quickList">
+                    <li>
+                        <a href="">인적사항</a>
+                    </li>
+                    <li>
+                        <a href="">학력</a>
+                    </li>
+                    <li>
+                        <a href="">직종 / 경력</a>
+                    </li>
+                    <li>
+                        <a href="">관심 분야</a>
+                    </li>
+                    <li>
+                        <a href="">주요 활동사항</a>
+                    </li>
+                    <li>
+                        <a href="">주요 결과물</a>
+                    </li>
+                    <li>
+                        <a href="">참여희망 분야</a>
+                    </li>
+                    <li>
+                        <a href="">지원동기</a>
+                    </li>
+                </ul>
+                <div class="btn-box">
+                    <button type="button" class="btn btn-style-gr" onclick="openPopup('synchronizingPopup');">현행화요청</button>
+                    <button type="button" class="btn disabled" onclick="openPopup('historyPopup');" >열람이력조회</button>
+                    <button type="button" class="btn btn-style-wh" onclick="openPopup('addYouthsPopup');">관심인재등록</button>
+                </div>
+                <div class="btn-top">
+                    <a href="#">TOP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 팝업 현행화요청 -->
+    <div class="popupWrapper synchronizingPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>인재정보 현행화요청</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="popup-table-wrap">
+                    <table>
+                        <caption>인재정보 현행화요청 표</caption>
+                        <tbody>
+                            <tr>
+                                <th>요청일자</th>
+                                <td>2022-08-05</td>
+                                <th>요청자</th>
+                                <td>시스템1</td>
+                            </tr>
+                            <tr>
+                                <th>요청내용<span class="red">*</span></th>
+                                <td colspan="3">
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="요청내용을 작성해 주세요"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sub-txt-wrap">
+                        <p class="sub-txt"><span class="red">*</span>&nbsp;인재정보에 대하여 수정, 현행화가 필요할 시 현행화요청을 할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn close-befor-popup">요청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 열람이력조회 -->
+    <div class="popupWrapper historyPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>열람이력조회</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="count-box">
+                    <span class="count-txt">전체 <strong class="items">1</strong></span>
+                </div>
+                <div class="popup-table-wrap thead-table-wrap">
+                    <table>
+                        <caption>열람이력조회 표</caption>
+                        <thead>
+                            <tr>
+                                <th>열람기관</th>
+                                <th>열람자</th>
+                                <th>열람일시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>인사혁신처</td>
+                                <td>홍길동</td>
+                                <td>2022-08-17 13:31:06</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 관심인재등록 -->
+    <div class="popupWrapper addYouthsPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>관심인재등록</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="popup-table-wrap thead-table-wrap">
+                    <table>
+                        <caption>관심인재등록 표</caption>
+                        <thead>
+                            <tr>
+                                <th>요청일</th>
+                                <th>요청기관</th>
+                                <th>활용목적</th>
+                                <th>신청인원</th>
+                                <th>등록인원</th>
+                                <th>등록현황</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2022-07-04</td>
+                                <td>인사혁신처</td>
+                                <td class="txt-left">인사혁신처 직위후보자</td>
+                                <td>4</td>
+                                <td>12</td>
+                                <td>
+                                    <span class="blue">3</span>/<span>12</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info-box">
+                    <p>
+                        OOO (1990-12-31, 33세 ,여)
+                    </p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn close-befor-popup" onclick="openPopup('alert-addYouthsPopup');">관심인재등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert 팝업 관심인재등록 확인 -->
+    <div class="popupWrapper alert-addYouthsPopup">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>관심인재로 등록하시겠습니까?</p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh alert-close">취소</button>
+                    <button type="button" class="btn">확인</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>

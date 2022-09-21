@@ -60,7 +60,6 @@
             var getpwdCheck = RegExp(/^.*(?=^.{9,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[~!@#$%^*]).*$/);
             var pwd = $('#pwd');
             var pwdConfirm = $('#pwdConfirm');
-            var belongDepart = $('#belongDepart');
             var belongOrgani = $('#belongOrgani');
             var departName = $('#departName');
             var tel1_2Chk = RegExp(/^[0-9]/);
@@ -127,13 +126,6 @@
                 return false;
             }
 
-            // 소속부처
-            if (belongDepart.val() === "") {
-                alert("소속부처를 선택하세요.");
-                belongDepart.focus();
-                return false;
-            }
-            
             // 소속기관
             if (belongOrgani.val() === "") {
                 alert("소속기관을 입력하세요.");
@@ -213,6 +205,8 @@
 
         }
 
+
+
     </script>
 </head>
 <body>
@@ -247,7 +241,7 @@
                     <div>
                         <div class="con-box-wh">
                             <p class="box-top-txt">
-                                <strong>청년정책조정실</strong>은 개인정보처리방침에 의해 입력하신 정보를 안전하게 보호하고 있습니다.<br>
+                                <strong>국무조정실</strong>은 개인정보처리방침에 의해 입력하신 정보를 안전하게 보호하고 있습니다.<br>
                                 인사상 목적 또는 공직에서의 직무수행과 관련된 전문분야의 지식,기술, 경험 등의 활용을 위하여 필요한 경우에만 사용하시기 바랍니다.
                             </p>
                         </div>
@@ -267,10 +261,10 @@
                                         </div>
                                         <div class="list-cont">
                                             <div class="input-wrap">
-                                                <input type="text" name="schUserId" id="schUserId" class="input01" placeholder="아이디 입력 후 중복확인" maxlength="12">
+                                                <input type="text" name="schUserId" id="schUserId" class="input02" placeholder="아이디 입력 후 중복확인" maxlength="12">
+                                                <button type="button" id="IDconfirm" class="btn" onclick="openPopup('IDconfirmPopup');">중복확인</button>
+                                                <span class="sub-txt">영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</span>
                                             </div>
-                                            <button type="button" id="IDconfirm" class="btn">중복확인</button>
-                                            <span class="sub-txt">영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</span>
                                         </div>
                                     </li>
                                     <li>
@@ -280,9 +274,9 @@
                                         </div>
                                         <div class="list-cont">
                                             <div class="input-wrap">
-                                                <input type="text" name="" id="userName" class="input01" placeholder="사용자명">
+                                                <input type="text" name="" id="userName" class="input02" placeholder="사용자명">
+                                                <span class="sub-txt red">※ 반드시 실명 입력바랍니다.</span>
                                             </div>
-                                            <span class="sub-txt red">※ 반드시 실명 입력바랍니다.</span>
                                         </div>
                                     </li>
                                     <li>
@@ -292,9 +286,9 @@
                                         </div>
                                         <div class="list-cont">
                                             <div class="input-wrap">
-                                                <input type="password" name="" id="pwd" class="input01" placeholder="비밀번호" maxlength="15">
+                                                <input type="password" name="" id="pwd" class="input02" placeholder="비밀번호" maxlength="15">
+                                                <span class="sub-txt">영문, 숫자, 특수문자로 조합하여 9~15자로 사용할 수 있습니다.(사용 가능한 특수문자: ~ ! @ # $ % ^ *)</span>
                                             </div>
-                                            <span class="sub-txt">영문, 숫자, 특수문자로 조합하여 9~15자로 사용할 수 있습니다.(사용 가능한 특수문자: ~ ! @ # $ % ^ *)</span>
                                         </div>
                                     </li>
                                     <li>
@@ -304,43 +298,32 @@
                                         </div>
                                         <div class="list-cont">
                                             <div class="input-wrap">
-                                                <input type="password" name="" id="pwdConfirm" class="input01" placeholder="비밀번호" maxlength="15">
+                                                <input type="password" name="" id="pwdConfirm" class="input02" placeholder="비밀번호" maxlength="15">
+                                                <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
                                             </div>
-                                            <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="list-tit">
-                                            <label for="belongDepart">소속부처 <span class="red">*</span></label>
-                                            <span class="blind"></span>
-                                        </div>
-                                        <div class="list-cont">
-                                            <div class="input-wrap">
-                                                <input type="text" name="" id="belongDepart" class="input01" placeholder="소속부처">
-                                            </div>
-                                            <button type="button" id="schDepart" class="btn">조회</button>
-                                            <span class="sub-txt">소속부처를 조회 후 선택할 수 있습니다.</span>
-                                        </div>
-                                    </li>
-                                    <li class="f-left">
                                         <div class="list-tit">
                                             <label for="belongOrgani">소속기관 <span class="red">*</span></label>
                                             <span class="blind"></span>
                                         </div>
                                         <div class="list-cont">
                                             <div class="input-wrap">
-                                                <input type="text" name="" id="belongOrgan" class="input01" placeholder="소속기관">
+                                                <input type="text" name="" id="belongOrgan" class="input02" placeholder="소속기관">
+                                                <button type="button" id="schDepart" class="btn" onclick="openPopup('belongOrgPopup');">조회</button>
+                                                <span class="sub-txt">소속기관 조회 후 선택할 수 있습니다.</span>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="f-left">
+                                    <li>
                                         <div class="list-tit">
                                             <label for="departName">부서명 <span class="red">*</span></label>
                                             <span class="blind"></span>
                                         </div>
                                         <div class="list-cont">
                                             <div class="input-wrap">
-                                                <input type="text" name="" id="departName" class="input01" placeholder="부서명">
+                                                <input type="text" name="" id="departName" class="input02" placeholder="부서명">
                                             </div>
                                         </div>
                                     </li>
@@ -408,7 +391,7 @@
                                         </div>
                                         <div class="list-cont">
                                             <div class="form-style email">
-                                                <input type="text" name="" id="email_in01" class="input01" title="이메일 주소입력" value="" maxlength="40">
+                                                <input type="text" name="" id="email_in01" class="input02" title="이메일 주소입력" value="" maxlength="40">
                                                 <span class="email-at">@</span>
                                                 <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
                                                 <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
@@ -446,7 +429,7 @@
                                         </div>
                                         <div class="list-cont">
                                             <div class="input-wrap">
-                                                <input type="text" name="" id="ipAdr" class="input01" placeholder="12.123.123.12" maxlength="">
+                                                <input type="text" name="" id="ipAdr" class="input02" placeholder="12.123.123.12" maxlength="">
                                             </div>
                                         </div>
                                     </li>
@@ -465,23 +448,25 @@
                     </div>
                     <div class="btm-btnBox">
                         <a href="javascript:history.go(-1)" id="btn_prev" class="btn btn-style-wh">이전</a>
-                        <button type="submit" id="join" class="btn" onclick="joinFormCheck();">가입완료</button>
+                        <button type="submit" id="join" class="btn" onclick="joinFormCheck(); openPopup('joinPopup');">가입완료</button>
                     </div>
                 </form>
             </section>
         </div>
     </div>
-    <div id="popupWrapper">
-        <div id="popup-confirm-id" class="popup">
-            <div class="popup-head-txt">
-                <h3>아이디 중복 확인</h3>
-            </div>
-            <div>
-                <span class="btn_close"></span>
-                <span class="btn_close"></span>
+    <!-- 팝업 아이디 중복확인 -->
+    <div class="popupWrapper IDconfirmPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>아이디 중복 확인</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
             </div>
             <div class="popup-con">
-                <div class="con-box">
+                <div class="con-box-b">
                     <ul>
                         <li>사용하실 아이디를 입력하고 버튼을 클릭하세요.</li>
                         <li>영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</li>
@@ -489,15 +474,95 @@
                 </div>
                 <div class="sch-form">
                     <h5>아이디 검색</h5>
-                    <div>
+                    <div class="input-wrap">
                         <input type="text" name="" id="schID" class="">
-                        <button type="button">중복 검색</button>
+                        <button type="button" class="btn btn-style-wh">중복 검색</button>
                     </div>
                     <div class="result">
                         <p>
                             <span class="blue">admin2022</span>은(는) 사용하실 수 있습니다.
                         </p>
                     </div>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn">아이디 사용하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 소속기관 조회 -->
+    <div class="popupWrapper belongOrgPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>기관 조회</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <form action="" class="sch-form">
+                    <legend>기관 조회</legend>
+                    <div class="input-wrap">
+                        <input type="text" name="" id="schOrg" class="">
+                        <button type="button" class="btn btn-style-wh">검색</button>
+                    </div>
+                </form>
+                <div class="count-box">
+                    <span class="count-txt">전체 <strong class="items">1</strong></span>
+                </div>
+                <div class="popup-table-wrap thead-table-wrap">
+                    <table>
+                        <caption>기관 조회 내역 표</caption>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="checkBox">
+                                        <input type="checkbox" name="check" id="allChk" class="allChk">
+                                        <label for="allChk"></label>
+                                    </div>
+                                </th>
+                                <th>기관명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="checkBox">
+                                        <input type="checkbox" name="check" id="chk01">
+                                        <label for="chk01"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    국무조정실「국무조정실」
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn">완료</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert 팝업 회원가입완료 -->
+    <div class="popupWrapper joinPopup">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>회원가입이 완료되었습니다.</p>
+                </div>
+                <ul class="popup-add-txt">
+                    <li>관리자의 가입 승인 후 로그인이 가능합니다.</li>
+                    <li>로그인의 경우 GPKI 인증서를 통한 2차 인증이 필요합니다.</li>
+                </ul>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn alert-close">확인</button>
                 </div>
             </div>
         </div>

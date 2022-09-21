@@ -32,7 +32,7 @@
                             <a href="" id="btn_certificate" class="">인증서 관리</a>
                         </li>
                         <li>
-                            <button type="button" class="btn_user">
+                            <button type="button" id="btn_user" class="">
                                 <span>홍길동</span>
                                 <ul class="user-menu">
                                     <li><a href="./1)마이페이지.html">마이페이지</a></li>
@@ -161,10 +161,46 @@
                     </div>
                     <div class="btm-btnBox">
                         <a href="" id="btn_cancel" class="btn btn-style-wh">취소</a>
-                        <a href="" id="btn_save" class="btn">탈퇴하기</a>
+                        <a href="" id="btn_save" class="btn openPopup" onclick="openPopup('withdrawalPopup');">탈퇴하기</a>
                     </div>
                 </div>                
             </section>
+        </div>
+    </div>
+    <!-- alert 팝업 회원탈퇴 확인 -->
+    <div class="popupWrapper withdrawalPopup">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_delete.png" alt="삭제 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>정말로 탈퇴하시겠습니까?</p>
+                </div>
+                <ul class="popup-add-txt">
+                    <li>탈퇴 후에는 아이디와 데이터 복구가 불가능합니다. </li>
+                </ul>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh alert-close">취소</button>
+                    <button type="button" class="btn" onclick="openPopup('withdrawalPopup2');">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert 팝업 회원탈퇴 완료 -->
+    <div class="popupWrapper withdrawalPopup2">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="완료 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>회원탈퇴가 완료되었습니다.</p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn alert-close">확인</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>

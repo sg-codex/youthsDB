@@ -35,7 +35,7 @@
                             <button type="button" id="btn_user" class="">
                                 <span>홍길동</span>
                                 <ul class="user-menu">
-                                    <li><a href="./1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="../1. 대시보드/1)마이페이지.html">마이페이지</a></li>
                                     <li><a href="">로그아웃</a></li>
                                 </ul>
                             </button>
@@ -340,7 +340,7 @@
                                             <td>
                                                 <span class="blue">승인</span>
                                                 <!-- <span class="gray">대기</span> -->
-                                                <!-- <a href="#" class="red refused openPopup" onclick="openPopup('refusedPopup');">거절</a> -->
+                                                <!-- <a href="#" class="red refused" onclick="openPopup('refusedPopup');">거절</a> -->
                                             </td>
                                             <td>2022-08-04 ~ 2022-08-24</td>
                                             <td>2</td>
@@ -363,7 +363,7 @@
                                             <td>
                                                 <span class="blue">승인</span>
                                                 <!-- <span class="gray">대기</span> -->
-                                                <!-- <a href="#" class="red refused openPopup" onclick="openPopup('refusedPopup');">거절</a> -->
+                                                <!-- <a href="#" class="red refused" onclick="openPopup('refusedPopup');">거절</a> -->
                                             </td>
                                             <td>2022-08-04 ~ 2022-08-24</td>
                                             <td>2</td>
@@ -386,7 +386,7 @@
                                             <td>
                                                 <!-- <span class="blue">승인</span> -->
                                                 <span class="gray">대기</span>
-                                                <!-- <a href="#" class="red refused openPopup" onclick="openPopup('refusedPopup');">거절</a> -->
+                                                <!-- <a href="#" class="red refused" onclick="openPopup('refusedPopup');">거절</a> -->
                                             </td>
                                             <td>2022-08-04 ~ 2022-08-24</td>
                                             <td></td>
@@ -409,7 +409,7 @@
                                             <td>
                                                 <!-- <span class="blue">승인</span> -->
                                                 <!-- <span class="gray">대기</span> -->
-                                                <a href="#" class="red refused openPopup" onclick="openPopup('refusedPopup');">거절</a>
+                                                <a href="#" class="red refused" onclick="openPopup('refusedPopup');">거절</a>
                                             </td>
                                             <td>2022-08-04 ~ 2022-08-24</td>
                                             <td></td>
@@ -433,8 +433,8 @@
         </div>
     </div>
     <!-- 팝업 요청상세내역 -->
-    <div id="popupWrapper" class="requestDetailPopup">
-        <div id="popup" class="popup">
+    <div class="popupWrapper requestDetailPopup">
+        <div class="popup">
             <div class="popup-head">
                 <div class="popup-head-txt">
                     <h2>요청상세내역</h2>
@@ -499,6 +499,12 @@
                             <tr>
                                 <th>관심 분야</th>
                                 <td colspan="3">
+                                    <span class="result-txt">고용 · 노동 / 창업</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>선정요건</th>
+                                <td colspan="3">
                                     <span class="result-txt">근무경력, 활동사항, 지역 등 선정요건</span>
                                 </td>
                             </tr>
@@ -525,6 +531,34 @@
         </div>
     </div>
     <!-- 팝업 요청거절사유 조회 -->
-    
+    <div class="popupWrapper refusedPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>요청 거절사유</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="popup-table-wrap">
+                    <table>
+                        <caption>요청 거절사유 상세 표</caption>
+                        <tbody>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <p class="refused-txt">
+                                        관리자가 작성한 요청 거절사유가 노출됩니다.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

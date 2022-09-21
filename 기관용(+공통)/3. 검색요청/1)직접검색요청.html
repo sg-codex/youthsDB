@@ -35,7 +35,7 @@
                             <button type="button" id="btn_user" class="">
                                 <span>홍길동</span>
                                 <ul class="user-menu">
-                                    <li><a href="./1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="../1. 대시보드/1)마이페이지.html">마이페이지</a></li>
                                     <li><a href="">로그아웃</a></li>
                                 </ul>
                             </button>
@@ -53,7 +53,7 @@
                         <ul class="menu-depth2">
                             <li><a href="">- 소개</a></li>
                             <li><a href="">- 공지사항</a></li>
-                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 자료실</a></li> 
                             <li><a href="">- 인증서 안내</a></li>
                             <li><a href="">- 사이트맵</a></li>
                         </ul>
@@ -263,7 +263,7 @@
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="text" name="" id="departName" class="input01" placeholder="부서명">
+                                                    <input type="text" name="" id="departName" class="input02" placeholder="부서명">
                                                 </div>
                                             </div>
                                         </li>
@@ -306,7 +306,7 @@
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="text" name="" id="" class="w100" placeholder="예) ◯◯위원회 위촉직 위원, ◯◯◯ 사업 모니터링, ◯◯◯ 추진계획 자문">
+                                                    <input type="text" name="" id="" class="input01" placeholder="예) ◯◯위원회 위촉직 위원, ◯◯◯ 사업 모니터링, ◯◯◯ 추진계획 자문">
                                                 </div>
                                             </div>
                                         </li>
@@ -317,7 +317,7 @@
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="text" name="" id="" class="w100" placeholder="예) 위촉직위가 행정기관위원회(지방자치 단체 포함) 위원인 경우 위원회 근거규정 등">
+                                                    <input type="text" name="" id="" class="input01" placeholder="예) 위촉직위가 행정기관위원회(지방자치 단체 포함) 위원인 경우 위원회 근거규정 등">
                                                 </div>
                                             </div>
                                         </li>
@@ -328,7 +328,7 @@
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="number" min="1" name="" id="" class="input01" placeholder="선정 또는 위촉할 인원 수 기재">
+                                                    <input type="number" min="1" name="" id="" class="input02" placeholder="선정 또는 위촉할 인원 수 기재">
                                                     <span class="side-txt">명</span>
                                                 </div>
                                             </div>
@@ -340,72 +340,83 @@
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="text" id="datepicker" class="input01" placeholder="위촉/선정 예정일" autocomplete="off">
+                                                    <input type="text" id="datepicker" class="input02" placeholder="위촉/선정 예정일" autocomplete="off">
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="full-cont">
                                             <div class="list-cont">
-                                                <span class="red">*</span>선정(위촉) 인원은 기관에서 선정(위촉)할 인원수를 기재해야 하며, 선정(위촉) 인원의 약 3배수의 후보자를 제공받을 수 있습니다.
+                                                <p class="add-txt">
+                                                    <span class="red">*</span>&nbsp;선정(위촉) 인원은 기관에서 선정(위촉)할 인원수를 기재해야 하며, 선정(위촉) 인원의 약 3배수의 후보자를 제공받을 수 있습니다.
+                                                </p>
                                             </div>
                                         </li>
-                                        <li class="h-auto">
+                                        <li class="h-auto ">
                                             <div class="list-tit">
                                                 <label for="departName">관심분야 <span class="red">*</span></label>
                                                 <span class="blind"></span>
                                             </div>
-                                            <div class="list-cont">
-                                                <div class="checkBoxList">
-                                                    <ul class="clearfix">
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest01">
-                                                            <label for="interest01">고용 · 노동 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest02">
-                                                            <label for="interest02">창업 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest03">
-                                                            <label for="interest03">주거 · 교통 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest04">
-                                                            <label for="interest04">교육 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest05">
-                                                            <label for="interest05">보건 · 복지· 가족 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest06">
-                                                            <label for="interest06">금융 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest07">
-                                                            <label for="interest07">인권 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest08">
-                                                            <label for="interest08">문화 · 체육· 관광 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest09">
-                                                            <label for="interest09">지역발전 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest10">
-                                                            <label for="interest10">기후 · 환경 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest11">
-                                                            <label for="interest11">통일 · 안보· 치안 분야</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" name="interest" id="interest12">
-                                                            <label for="interest12">기타 분야</label>
-                                                        </li>
-                                                    </ul>
+                                            <div class="list2-cont">
+                                                <div class="list-cont add-txt-wrap">
+                                                    <p class="add-txt">※ 중복하여 선택하실 수 있습니다.</p>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="checkBoxList">
+                                                        <ul class="clearfix">
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest01">
+                                                                <label for="interest01">고용 · 노동</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest02">
+                                                                <label for="interest02">창업</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest03">
+                                                                <label for="interest03">주거 · 교통</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest04">
+                                                                <label for="interest04">교육</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest05">
+                                                                <label for="interest05">과학기술ㆍIT</label>
+                                                            </li>                                                        
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest06">
+                                                                <label for="interest06">보건 · 복지· 가족</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest07">
+                                                                <label for="interest07">금융</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest08">
+                                                                <label for="interest08">문화 · 체육· 관광</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest09">
+                                                                <label for="interest09">인권</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest10">
+                                                                <label for="interest10">지역발전</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest11">
+                                                                <label for="interest11">기후 · 환경</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest12">
+                                                                <label for="interest12">통일 · 안보· 치안</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest13">
+                                                                <label for="interest13">기타</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </li>
@@ -425,7 +436,7 @@
                                             </div>
                                             <div class="list-cont">
                                                 <textarea name="" id="" cols="30" rows="5" placeholder="참고사항을 작성해 주세요"></textarea>
-                                                <p>※ 그 밖의 요청사항이 있으면 적어주시기 바랍니다.</p>
+                                                <p class="add-txt">※ 그 밖의 요청사항이 있으면 적어주시기 바랍니다.</p>
                                             </div>
                                         </li>
                                     </ul>

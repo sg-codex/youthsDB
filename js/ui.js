@@ -4,11 +4,11 @@
 function openPopup(popupname) {
   document.get
   $("." + popupname).fadeIn(300);
-  $('body').addClass('o-y-hidden');
+  // $('body').addClass('o-y-hidden');
 }
 // a 태그 이벤트 막기
 $(function() {
-  $('table a.openPopup').on('click', function(e){
+  $('a.openPopup').on('click', function(e){
     e.preventDefault();
   });
 });
@@ -19,13 +19,25 @@ $(function() {
   /* ============================================================ 
   * 팝업 닫기
   * ============================================================ */
-  $('#popupWrapper .close').on('click', function() {
+  // 닫기 버튼
+  $('.popupWrapper .close').on('click', function() {
     $(this)
       .parent()
       .parent()
       .parent()
       .fadeOut(300);
+
       $('body').removeClass('o-y-hidden');
+  });
+  
+  // 취소 버튼
+  $('.alert-popup .alert-close').on('click', function() {
+    $(this)
+      .parent()
+      .parent()
+      .parent()
+      .parent()
+      .fadeOut(300);
   });
 
   /* ============================================================ 
@@ -206,14 +218,6 @@ $(function() {
 
     });
 
-    // 목록 보이기
-    $('.openDrtList').on('click', function() {
-      $('#directList').toggleClass(active);
-    });
-
-    $('.openRcmdList').on('click', function() {
-      $('#recommendList').toggleClass(active);
-    });
 
 
 
@@ -299,12 +303,12 @@ $(function() {
 
     // 퀵메뉴
     $(window).scroll(function(){
-      var scrollTop = $('#popupWrapper').scrollTop();
-      if(scrollTop < 180) {
-        scrollTop = 180;
+      var scrollTop = $(document).scrollTop();
+      if(scrollTop < 100) {
+        scrollTop = 100;
       }
       $('#quickMenu').stop();
-      $('#quickMenu').animate({ "top" : scrollTop });
+      $('#quickMenu').animate({ "bottom" : scrollTop });
     });
 
 });
