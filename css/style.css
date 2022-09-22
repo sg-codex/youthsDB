@@ -1821,7 +1821,7 @@ table .result-txt.headcount::after {
 }
 
 .popup-head {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -2053,7 +2053,11 @@ hr.con-box-line {
     margin: 40px 0 !important;
     background-color: #D4D9E4;
 }
-
+.youths-info-con #carInfo.con-box {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
 .youths-info-con .con-box .data-name { margin-bottom: 20px; }
 .youths-info-con .name {
     font-size: 1.4rem;
@@ -2340,11 +2344,26 @@ form .form-list h3 {
 /* 퀵메뉴 */
 #quickMenuWrapper {
     position: absolute;
-    bottom: 10%;
-    right: 3%;
-    width: 140px;
+    width: 77%;
+    max-width: 1280px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
-#quickMenu {
+#quickMenuWrapper.fixed { 
+    position: fixed;
+    top: auto;
+    bottom: 10%;
+ }
+
+ #quickMenu {
+    position: absolute;
+    left: 101%;
+    bottom: 10%;
+    width: 140px;
+    height: 413px;
+    z-index: 9999;
+
     background-color: #fff;
     padding: 10px;
     border-radius: 6px;
@@ -2372,10 +2391,18 @@ form .form-list h3 {
     height: 5px;
     border-radius: 100%;
 }
+.quickList li.on::before {
+    color: #1776E1;
+    background-color: #1776E1;
+}
 .quickList li a {
     font-size: 0.95rem;
     line-height: 1.6;
     color: #333333;
+}
+.quickList li.on a {
+    color: #1776E1;
+    text-decoration: underline;
 }
 
 #quickMenu .btn-box button {
@@ -2493,8 +2520,6 @@ form .form-list h3 {
     }
     /* 퀵메뉴 */
     #quickMenuWrapper { display: none; }
-
-
 
 }
 @media (max-width:1024px){

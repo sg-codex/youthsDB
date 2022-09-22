@@ -4,13 +4,16 @@
 function openPopup(popupname) {
   document.get
   $("." + popupname).fadeIn(300);
-  // $('body').addClass('o-y-hidden');
+  $('body').addClass('o-y-hidden');
 }
 // a 태그 이벤트 막기
 $(function() {
   $('a.openPopup').on('click', function(e){
     e.preventDefault();
   });
+  // $('#quickMenuWrapper a').on('click', function(e){
+  //   e.preventDefault();
+  // });
 });
 
 
@@ -302,13 +305,95 @@ $(function() {
 
 
     // 퀵메뉴
-    $(window).scroll(function(){
-      var scrollTop = $(document).scrollTop();
-      if(scrollTop < 100) {
-        scrollTop = 100;
-      }
-      $('#quickMenu').stop();
-      $('#quickMenu').animate({ "bottom" : scrollTop });
+    // $('.markedYouthsPopup .youths-info-con').scroll(function(){
+    //   var scrollTop = $(document).scrollTop();
+    //   if(scrollTop < 100) {
+    //     scrollTop = 100;
+    //   }
+    //   $('#quickMenu').stop();
+    //   $('#quickMenu').animate({ "bottom" : scrollTop });
+    // });
+
+    // $('#quickMenu a.wish').on('click', function(e){
+    //   e.preventDefault();
+    //   var offset = $('.youths-info-con #wish').offset();
+
+    //   $('.markedYouthsPopup').animate({ scrollTop : offset.top }, 400);
+    // });
+
+    var conBox = $('.markedYouthsPopup .con-box');
+    var quickMenu = $('#quickMenu');
+    var quickMenu_height = quickMenu.outerHeight();
+
+    // $('.markedYouthsPopup .youths-info-con').on('scroll', function() {
+    //   var cur_pos = $(this).scrollTop();      
+
+    //   conBox.each(function(){
+    //     var top = $(this).offset().top - quickMenu_height;
+    //     var bottom = top + $(this).outerHeight();
+
+    //     if(cur_pos >= top && cur_pos <= bottom) {
+    //       quickMenu.find('a').parent().removeClass('on');
+    //       conBox.removeClass(active);
+
+    //       $(this).parent().addClass('on');
+    //       quickMenu.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('on');
+    //     }
+    //   });
+
+    // });
+
+
+
+    quickMenu.find('a').on('click', function(e) {
+      var $el = $(this);
+      var id = $el.attr('href');
+      e.preventDefault();
+
+      $('.markedYouthsPopup .youths-info-con').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+
+      return false;
     });
+
+
+
+    // var currentPosition = parseInt(quickMenu.css("top"));
+    
+    // $('.markedYouthsPopup .youths-info-con').on('scroll', function(){
+    //   var position = $('.markedYouthsPopup .youths-info-con').scrollTop();
+    //   console.log(position, 'position');
+    //   console.log(currentPosition, 'currentPosition');
+
+    //   if(position >= $('.markedYouthsPopup .youths-info-con').offset().top){ 
+        
+    //     quickMenu.addClass("fixed");
+    //     // quickMenu.stop().animate({ "top": 100 + "%" ,"bottom" : 10 + "%" }, 500);
+    //     // quickMenu.stop().animate({ "top": position + currentPosition + "%" },500);
+    //     //위의 if문에 대한 조건 만족시 fixed라는 class를 부여함
+    //     } else {
+    //       quickMenu.removeClass("fixed");
+    //         //위의 if문에 대한 조건 아닌경우 fixed라는 class를 삭제함
+    //     }
+
+    // });
+
+
+    // $('.markedYouthsPopup .youths-info-con').on('scroll', function() {
+    //    //스크롤의 위치가 상단에서 760보다 크면
+    //   //  if ($(window).scrollTop() > 520) {
+    //     if($('.markedYouthsPopup .youths-info-con').scrollTop() >= $('.markedYouthsPopup .youths-info-con').offset().top){ 
+    //     quickMenu.addClass("fixed");
+    //     //위의 if문에 대한 조건 만족시 fixed라는 class를 부여함
+    //     } else {
+    //       quickMenu.removeClass("fixed");
+    //         //위의 if문에 대한 조건 아닌경우 fixed라는 class를 삭제함
+    //     }
+    // });
+
+
+
+
 
 });
