@@ -773,7 +773,7 @@
                                     <button type="button" id="" class="btn r-btn big-btn" onclick="openPopup('alert-addYouthsPopup');">관심인재등록</button>
                                 </div>
                             </div>
-                            <div class="table-wrap sch-result-table rp-table">
+                            <div class="table-wrap sch-result-table">
                                 <table>
                                     <caption>검색결과</caption>
                                     <colgroup>
@@ -790,7 +790,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">29</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -835,7 +835,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     <span>(<span id="sch-age" class="sch-age">26</span>,<span id="sch-gender" class="sch-gender">남</span>)</span>
                                                 </div>
@@ -878,7 +878,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">33</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -922,7 +922,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">29</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -967,7 +967,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     <span>(<span id="sch-age" class="sch-age">26</span>,<span id="sch-gender" class="sch-gender">남</span>)</span>
                                                 </div>
@@ -1010,7 +1010,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">33</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -1054,7 +1054,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">29</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -1099,7 +1099,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     <span>(<span id="sch-age" class="sch-age">26</span>,<span id="sch-gender" class="sch-gender">남</span>)</span>
                                                 </div>
@@ -1142,7 +1142,7 @@
                                                 <label for="sch_result_list01"></label>
                                             </td>
                                             <td>
-                                                <div class="sch-txt" onclick="openPopup('markedYouthsPopup');">
+                                                <div class="sch-txt" onclick="openPopup('youthsPopup');">
                                                     <strong id="sch-name" class="sch-name">OOO</strong>
                                                     (<span id="sch-age" class="sch-age">33</span>,<span id="sch-gender" class="sch-gender">여</span>)
                                                 </div>
@@ -1299,23 +1299,13 @@
             </div>
         </div>
     </div>
-    <!-- 팝업 인재상세열람 (marked) -->
-    <div class="popupWrapper markedYouthsPopup">
+    <!-- 팝업 인재상세열람 -->
+    <div class="popupWrapper youthsPopup">
         <!-- 퀵메뉴 -->
-        <div id="main-content" class="main">
-            <div id="sidebar" class="sidebar">
-                <div class="sidebar__inner">
-                    <!-- Content goes here -->
-                </div>
-            </div>
-            <div id="content" class="content">
-                <!-- Content goes here -->
-            </div>
-        </div>
         <div id="quickMenuWrapper">
             <div id="quickMenu">
                 <div class="name">
-                    OOO
+                    김서아
                 </div>
                 <ul class="quickList">
                     <li>
@@ -1343,7 +1333,7 @@
                 <div class="btn-box">
                     <button type="button" class="btn btn-style-gr" onclick="openPopup('synchronizingPopup');">현행화요청</button>
                     <button type="button" class="btn disabled" onclick="openPopup('historyPopup');" >열람이력조회</button>
-                    <button type="button" class="btn btn-style-wh" onclick="openPopup('alert-addYouthsPopup');">관심인재등록</button>
+                    <button type="button" class="btn btn-style-wh" onclick="openPopup('alert-addYouthsPopup');">청년인재추천</button>
                 </div>
                 <div class="btn-top-box">
                     <a href="#" id="btn-top">TOP</a>
@@ -1361,56 +1351,62 @@
                 </div>
             </div>
             <div class="popup-con youths-info-con">
-                <div id="userInfo" class="con-box">
-                    <div class="data-name">
-                        <span class="name">OOO</span>
-                        <span class="ag">(33세, 여)</span>
+                <div id="userInfo" class="con-box d-table">
+                    <div class="id-pic-box">
+                        <div class="id-pic"></div>
                     </div>
-                    <ul class="data-careers">
-                       <li>주식회사 OOOO OOO부 대리</li>
-                    </ul>
-                   <div class="data-info">
-                        <div>
-                            <ul class="info-list">
-                                <li>
-                                    <strong>연락처</strong>
-                                    <span>010-****-****</span>
-                                </li>
-                                <li>
-                                    <strong>이메일</strong>
-                                    <span>********@email.com</span>
-                                </li>
-                                <li>
-                                    <strong>활동지역</strong>
-                                    <span class="slash">주거지</span><span>대전광역시 서구</span>
-                                </li>
-                            </ul>
+                    <div class="">
+                        <div class="data-name">
+                            <span class="name">김서아</span>
+                            <span class="ag">(33세, 여)</span>
                         </div>
-                        <div>
-                            <ul class="info-list">
-                                <li>
-                                    <strong>직종</strong>
-                                    <span>일반 사무직, 교육직, 기타</span>
-                                </li>
-                                <li>
-                                    <strong>관심분야</strong>
-                                    <span>고용ㆍ노동, 교육</span>
-                                </li>
-                                <li>
-                                    <strong>참여희망 분야</strong>
-                                    <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="info-list">
-                                <li>
-                                    <strong>최종수정일</strong>
-                                    <span>2021-02-08</span>
-                                </li>
-                            </ul>
-                        </div>
-                   </div>
+                        <ul class="data-careers">
+                           <li>주식회사 OOOO OOO부 대리</li>
+                        </ul>
+                       <div class="data-info">
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>연락처</strong>
+                                        <span>010-1234-1234</span>
+                                    </li>
+                                    <li>
+                                        <strong>이메일</strong>
+                                        <span>youthsDB@email.com</span>
+                                    </li>
+                                    <li>
+                                        <strong>활동지역</strong>
+                                        <span class="slash">주거지</span><span>대전광역시 서구</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>직종</strong>
+                                        <span>일반 사무직, 교육직, 기타</span>
+                                    </li>
+                                    <li>
+                                        <strong>관심분야</strong>
+                                        <span>고용ㆍ노동, 교육</span>
+                                    </li>
+                                    <li>
+                                        <strong>참여희망 분야</strong>
+                                        <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>최종수정일</strong>
+                                        <span>2021-02-08</span>
+                                    </li>
+                                </ul>
+                            </div>
+                       </div>
+
+                    </div>
                 </div>
                 <div id="eduInfo" class="con-box">
                     <h3 class="info-tit bg">학력</h3>

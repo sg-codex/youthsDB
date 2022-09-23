@@ -2,7 +2,6 @@
 * 팝업
 * ============================================================ */
 function openPopup(popupname) {
-  document.get
   $("." + popupname).fadeIn(300);
   $('body').addClass('o-y-hidden');
 }
@@ -11,9 +10,6 @@ $(function() {
   $('a.openPopup').on('click', function(e){
     e.preventDefault();
   });
-  // $('#quickMenuWrapper a').on('click', function(e){
-  //   e.preventDefault();
-  // });
 });
 
 
@@ -41,6 +37,8 @@ $(function() {
       .parent()
       .parent()
       .fadeOut(300);
+
+      $('body').removeClass('o-y-hidden');
   });
 
   /* ============================================================ 
@@ -284,16 +282,6 @@ $(function() {
 
       index+=1;
 
-      // function appendTxt() {
-
-      //   var newSelect = '<select name="" id=""><option value="출신학교">출신학교</option><option value="출신학과">출신학과</option><option value="직장명">직장명</option><option value="기타">기타</option></select>';
-      //   var newInput = '<input type="text" name="" id="" class="w70" placeholder="제외어">';
-      //   var newRmBtn = '<button type="button" class="btn btn-style-gr">삭제</button>';
-      //   var newAddBtn = '<button type="button" class="btn btn-add-exclude">추가</button>';
-        
-      //   newD.append(newSelect, newInput, newRmBtn, newAddBtn);
-      // };
-
     });
 
     $(document).on('click', '.btn-rm-exclude', function(){
@@ -304,8 +292,36 @@ $(function() {
     });
 
 
+
+
+
+
+
+    
+
     // 퀵메뉴
-    // $('.markedYouthsPopup .youths-info-con').scroll(function(){
+    var youthsPopupWrap = $('.markedYouthsPopup .popup-con');
+    var youthsConBox = $('.markedYouthsPopup .con-box');
+    var quickMenu = $('#quickMenu .quickList');
+    var quickMenu_height = quickMenu.outerHeight();
+    
+    // 상단으로 이동
+    $('#btn-top').on('click', function(e) {
+      e.preventDefault();
+      youthsPopupWrap.animate({ scrollTop : 0 }, 500);
+    });
+  
+    // 퀵메뉴 클릭 시 클래스 추가
+    $('.quickList li').on('click', function(){
+      $(this)
+        .siblings()
+        .removeClass('on');
+      $(this).addClass('on');
+
+    });
+
+
+    // youthsPopupWrap.scroll(function(){
     //   var scrollTop = $(document).scrollTop();
     //   if(scrollTop < 100) {
     //     scrollTop = 100;
@@ -316,25 +332,25 @@ $(function() {
 
     // $('#quickMenu a.wish').on('click', function(e){
     //   e.preventDefault();
-    //   var offset = $('.youths-info-con #wish').offset();
+    //   var offset = $('.popup-con #wish').offset();
 
     //   $('.markedYouthsPopup').animate({ scrollTop : offset.top }, 400);
     // });
 
-    var conBox = $('.markedYouthsPopup .con-box');
-    var quickMenu = $('#quickMenu');
-    var quickMenu_height = quickMenu.outerHeight();
-
-    // $('.markedYouthsPopup .youths-info-con').on('scroll', function() {
+    // 스크롤 시 퀵메뉴 on 클래스 추가
+    // youthsPopupWrap.on('scroll', function() {
     //   var cur_pos = $(this).scrollTop();      
 
-    //   conBox.each(function(){
-    //     var top = $(this).offset().top - quickMenu_height;
-    //     var bottom = top + $(this).outerHeight();
+    //   console.log($('#eduInfo').position().top, 'eduInfo position');
+    //   console.log($('#eduInfo').scrollTop(), 'eduInfo scrollTop');
 
-    //     if(cur_pos >= top && cur_pos <= bottom) {
+    //   youthsConBox.each(function(){
+    //     var conTop = $(this).offset().top - quickMenu_height;
+    //     var conBottom = conTop + $(this).outerHeight();
+
+    //     if(cur_pos >= conTop && cur_pos <= conBottom) {
     //       quickMenu.find('a').parent().removeClass('on');
-    //       conBox.removeClass(active);
+    //       youthsConBox.removeClass(active);
 
     //       $(this).parent().addClass('on');
     //       quickMenu.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('on');
@@ -343,30 +359,52 @@ $(function() {
 
     // });
 
+  // $('.quickList > li > a').on('click', function(e) {
+  //   e.preventDefault();
+  //   const DOM = $(this).attr('href');
 
+  //   const scTop = $(DOM).offset().top;
 
-    quickMenu.find('a').on('click', function(e) {
-      var $el = $(this);
-      var id = $el.attr('href');
-      e.preventDefault();
+  //   // youthsPopupWrap.scrollTop(scTop)
+  //   youthsPopupWrap.stop().animate({ scrollTop : scTop } , 500);
+  // });
 
-      $('.markedYouthsPopup .youths-info-con').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-      }, 500);
+    // 퀵메뉴 클릭 시 이동
+    // quickMenu.find('a').on('click', function(e) {
+    //   e.preventDefault();
+                                                                                                                                                                                    
+    //   var id = $(this).attr('href');
 
-      return false;
-    });
-
+    //   // scrollQuickMenu(id);
+    //   const scTop = $(id).offset().top;
+    //   scrollQuickMenu(scTop);
+    //   console.log($(id).position().top, '$(id).position().top');
+    //   console.log($(id).offset().top, '$(id).offset().top');
+    //   console.log($(id), '$(id)');
+      
+    //   return false;
+      
+    // });
+    // function scrollQuickMenu(scTop) {
+    //   youthsPopupWrap.animate({
+    //     scrollTop: scTop + 300
+    //   }, 500);
+    // }
+    // function scrollQuickMenu(id) {
+    //   youthsPopupWrap.animate({
+    //     scrollTop: $(id).position().top - 30
+    //   }, 500);
+    // }
 
 
     // var currentPosition = parseInt(quickMenu.css("top"));
     
-    // $('.markedYouthsPopup .youths-info-con').on('scroll', function(){
-    //   var position = $('.markedYouthsPopup .youths-info-con').scrollTop();
+    // youthsPopupWrap.on('scroll', function(){
+    //   var position = youthsPopupWrap.scrollTop();
     //   console.log(position, 'position');
     //   console.log(currentPosition, 'currentPosition');
 
-    //   if(position >= $('.markedYouthsPopup .youths-info-con').offset().top){ 
+    //   if(position >= youthsPopupWrap.offset().top){ 
         
     //     quickMenu.addClass("fixed");
     //     // quickMenu.stop().animate({ "top": 100 + "%" ,"bottom" : 10 + "%" }, 500);
@@ -380,10 +418,10 @@ $(function() {
     // });
 
 
-    // $('.markedYouthsPopup .youths-info-con').on('scroll', function() {
+    // youthsPopupWrap.on('scroll', function() {
     //    //스크롤의 위치가 상단에서 760보다 크면
     //   //  if ($(window).scrollTop() > 520) {
-    //     if($('.markedYouthsPopup .youths-info-con').scrollTop() >= $('.markedYouthsPopup .youths-info-con').offset().top){ 
+    //     if(youthsPopupWrap.scrollTop() >= youthsPopupWrap.offset().top){ 
     //     quickMenu.addClass("fixed");
     //     //위의 if문에 대한 조건 만족시 fixed라는 class를 부여함
     //     } else {
