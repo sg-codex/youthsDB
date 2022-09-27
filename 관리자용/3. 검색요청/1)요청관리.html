@@ -29,13 +29,13 @@
                 <div class="top-header-right">
                     <ul>
                         <li>
-                            <a href="" id="btn_certificate" class="">인증서 관리</a>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" class="">인증서 관리</a>
                         </li>
                         <li>
                             <button type="button" id="btn_user" class="">
                                 <span>홍길동</span>
                                 <ul class="user-menu">
-                                    <li><a href="../1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
                                     <li><a href="">로그아웃</a></li>
                                 </ul>
                             </button>
@@ -221,201 +221,237 @@
             <section id="content" class="content">
                 <div id="cont-wrap">
                     <div class="location-box clearfix">
-                        <h2 class="page-title-txt">요청현황</h2>
+                        <h2 class="page-title-txt">요청관리</h2>
                         <div class="location-txt">
                             <img src="../../images/common/ico_location.png" alt="홈 아이콘">
                             <span>검색요청</span>
-                            <span class="angle-bracket">요청현황</span>
+                            <span class="angle-bracket">요청관리</span>
                         </div>
                     </div>
                     <hr class="page-title-line">
                     <div>
-                        <div class="con-box-wh sch-select-box clearfix">
-                            <div class="w40">
-                                <p>요청일</p>
-                                <div class="datePickerBox">
-                                    <input type="text" id="fromDate" name="from" autocomplete="off" placeholder="날짜 선택">
-                                    <span>~</span>
-                                    <input type="text" id="toDate" name="to" autocomplete="off" placeholder="날짜 선택">
+                        <div class="con-box-wh">
+                            <form action="">
+                                <legend>요청관리 조회</legend>
+                                <div class="sch-select-box clearfix">
+                                    <div class="w35">
+                                        <p>요청일</p>
+                                        <div class="datePickerBox">
+                                            <input type="text" id="fromDate" name="from" autocomplete="off" placeholder="날짜 선택" class="hasDatepicker">
+                                            <label for="fromDate"></label>
+                                            <span>~</span>
+                                            <input type="text" id="toDate" name="to" autocomplete="off" placeholder="날짜 선택" class="hasDatepicker">
+                                            <label for="toDate"></label>
+                                        </div>
+                                    </div>
+                                    <div class="w20">
+                                        <p>분류</p>
+                                        <div class="selectBox">
+                                            <button type="button" class="label">전체</button>
+                                            <ul class="option-list">
+                                                <li class="option">전체</li>
+                                                <li class="option">직접검색</li>
+                                                <li class="option">인재추천</li>
+                                            </ul>
+                                            <!-- <select name="" id="" class="more-b">
+                                                <option value="전체">전체</option>
+                                                <option value="직접검색">직접검색</option>
+                                                <option value="인재추천">인재추천</option>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                    <!-- <div class="w20">
+                                        <p>상태</p>
+                                        <div class="selectBox">
+                                            <button type="button" class="label">선택</button>
+                                            <ul class="option-list">
+                                                <li class="option">승인</li>
+                                                <li class="option">대기</li>
+                                                <li class="option">거절</li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
                                 </div>
-                            </div>
-                            <div class="w20">
-                                <p>분류</p>
-                                <div>
-                                    <select name="" id="" class="more-b">
-                                        <option value="전체">전체</option>
-                                        <option value="직접검색">직접검색</option>
-                                        <option value="인재추천">인재추천</option>
-                                    </select>
+                                <div class="sch-select-box clearfix">
+                                    <div class="w35">
+                                        <p><label for="belongOrgani">요청기관</label></p>
+                                        <div class="input-wrap">
+                                            <input type="text" id="belongOrgani" class="w100" name="" autocomplete="off" placeholder="요청기관">                                        
+                                        </div>
+                                    </div>
+                                    <div class="w20">
+                                        <p><label for="departName">부서명</label></p>
+                                        <div class="input-wrap">
+                                            <input type="text" id="departName" class="w100" name="" autocomplete="off" placeholder="부서명" >
+                                        </div>
+                                    </div>
+                                    <div class="w20">
+                                        <p><label for="requestOrg">담당자명</label></p>
+                                        <div class="input-wrap">
+                                            <input type="text" id="requestOrg" class="w100" name="" autocomplete="off" placeholder="담당자명" >
+                                        </div>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button type="submit" class="btn">조회</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w20">
-                                <p>상태</p>
-                                <div>
-                                    <select name="" id="" class="more-b">
-                                        <option value="선택">선택</option>
-                                        <option value="승인">승인</option>
-                                        <option value="대기">대기</option>
-                                        <option value="거절">거절</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="btn-box">
-                                <button type="submit" class="btn">조회</button>
-                            </div>
+                            </form>
                         </div>
                         <div class="con-box-wh">
                             <div class="box-top-tit clearfix">
                                 <div class="l-box">
                                     <h3>요청이력</h3>
-                                    <span class="count-txt">전체 <strong class="items">4</strong></span>
+                                    <span class="count-txt">전체 <strong class="items">3</strong></span>
                                 </div>
                                 <div class="r-box">
-                                    <select name="" id="">
-                                        <option value="">직접검색</option>
-                                    </select>
-                                    <select name="" id="">
-                                        <option value="">최신순</option>
-                                    </select>
-                                    <select name="" id="">
-                                        <option value="">10개씩</option>
-                                    </select>
+                                    <div class="selectBox">
+                                        <button type="button" class="label">직접검색</button>
+                                        <ul class="option-list">
+                                            <li class="option">직접검색</li>
+                                            <li class="option">인재추천</li>
+                                        </ul>
+                                    </div>
+                                    <div class="selectBox">
+                                        <button type="button" class="label">최신순</button>
+                                        <ul class="option-list">
+                                            <li class="option">최신순</li>
+                                            <li class="option">최신순</li>
+                                        </ul>
+                                    </div>
+                                    <div class="selectBox">
+                                        <button type="button" class="label">10개씩</button>
+                                        <ul class="option-list">
+                                            <li class="option">10개씩</li>
+                                            <li class="option">20개씩</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap">
                                 <table>
                                     <caption>요청이력</caption>
                                     <colgroup>
-                                        <col width="3%">
-                                        <col width="7%">
-                                        <col width="9%">
+                                        <col width="4%">
                                         <col width="8%">
-                                        <col width="25%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="20%">
                                         <col width="4%">
                                         <col width="4%">
-                                        <col width="7%">
-                                        <col width="5%">
-                                        <col width="7%">
-                                        <col width="17%">
-                                        <col width="4%">
+                                        <col width="8%">
+                                        <col width="8%">
+                                        <col width="12%">
+                                        <col width="12%">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="row" rowspan="2">번호</th>
+                                            <th scope="row" rowspan="2">
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="allChk" class="allChk">
+                                                    <label for="allChk"></label>
+                                                </div>
+                                            </th>
                                             <th scope="row" rowspan="2">분류</th>
                                             <th scope="row" rowspan="2">요청일</th>
                                             <th scope="row" rowspan="2">요청기관</th>
                                             <th scope="row" rowspan="2">활용목적</th>
-                                            <th scope="rowgroup" colspan="3">인원수</th>
+                                            <th scope="rowgroup" colspan="2">인원수</th>
                                             <th scope="row" rowspan="2">상태</th>
-                                            <th scope="row" rowspan="2">승인</th>
-                                            <th scope="row" rowspan="2">검색기간</th>
-                                            <th scope="row" rowspan="2">검색<br>
-                                                취소<br>
-                                                회수
-                                            </th>
+                                            <th scope="row" rowspan="2">담당관리자</th>
+                                            <th scope="rowgroup" colspan="2">관리</th>
                                         </tr>
                                         <tr>
                                             <th scope="row">위촉</th>
                                             <th scope="row">요청</th>
-                                            <th scope="row">선임 인원수</th>
+                                            <th scope="row">승인</th>
+                                            <th scope="row" class="bd-none">비고</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">1</a></td>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="chk01">
+                                                    <label for="chk01"></label>
+                                                </div>
+                                            </td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">직접검색</a></td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">2022-07-04</a></td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처</a></td>
                                             <td class="txt-left"><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처 직위후보자</a></td>
                                             <td>4</td>
                                             <td>12</td>
-                                            <td class="red">2</td>
+                                            <td>검색중</td>
+                                            <td>홍길동</td>
                                             <td>
-                                                <span id="">검색중</span>
-                                                <!-- <span id="">검색완료</span> -->
-                                                <!-- <span id="">평가중</span> -->
-                                                <!-- <span id="">평가완료</span> -->
+                                                <select name="" id="">
+                                                    <option value="승인">승인</option>
+                                                    <option value="승인">승인</option>
+                                                    <option value="승인">승인</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <span class="blue">승인</span>
-                                                <!-- <span class="gray">대기</span> -->
-                                                <!-- <a href="#" class="red refused" onclick="openPopup('refusedPopup');">거절</a> -->
+                                                <a href="#" class="btn btn-style-wh" title="평가조회 팝업 열기" onclick="openPopup('checkPopup');">평가조회</a>
                                             </td>
-                                            <td>2022-08-04 ~ 2022-08-24</td>
-                                            <td>2</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">2</a></td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인재추천</a></td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">2022-07-04</a></td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처</a></td>
-                                            <td class="txt-left"><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처 직위후보자</a></td>
-                                            <td>4</td>
-                                            <td>12</td>
-                                            <td class="red">1</td>
                                             <td>
-                                                <!-- <span id="">검색중</span> -->
-                                                <span id="">검색완료</span>
-                                                <!-- <span id="">평가중</span> -->
-                                                <!-- <span id="">평가완료</span> -->
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="chk02">
+                                                    <label for="chk02"></label>
+                                                </div>
                                             </td>
-                                            <td>
-                                                <span class="blue">승인</span>
-                                                <!-- <span class="gray">대기</span> -->
-                                                <!-- <a href="#" class="red refused" onclick="openPopup('refusedPopup');">거절</a> -->
-                                            </td>
-                                            <td>2022-08-04 ~ 2022-08-24</td>
-                                            <td>2</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">3</a></td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">직접검색</a></td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">2022-07-04</a></td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처</a></td>
                                             <td class="txt-left"><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처 직위후보자</a></td>
                                             <td>4</td>
                                             <td>12</td>
-                                            <td class="red">4</td>
+                                            <td>검색완료</td>
+                                            <td>홍길동</td>
                                             <td>
-                                                <!-- <span id="">검색중</span> -->
-                                                <!-- <span id="">검색완료</span> -->
-                                                <span id="">평가중</span>
-                                                <!-- <span id="">평가완료</span> -->
+                                                <select name="" id="">
+                                                    <option value="승인">승인</option>
+                                                    <option value="승인">승인</option>
+                                                    <option value="승인">승인</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <!-- <span class="blue">승인</span> -->
-                                                <span class="gray">대기</span>
-                                                <!-- <a href="#" class="red refused" onclick="openPopup('refusedPopup');">거절</a> -->
+                                                <a href="#" class="btn btn-style-wh" title="평가조회 팝업 열기">평가조회</a>
                                             </td>
-                                            <td>2022-08-04 ~ 2022-08-24</td>
-                                            <td></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">4</a></td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인재추천</a></td>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="chk03">
+                                                    <label for="chk03"></label>
+                                                </div>
+                                            </td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">직접검색</a></td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">2022-07-04</a></td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처</a></td>
                                             <td class="txt-left"><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처 직위후보자</a></td>
                                             <td>4</td>
                                             <td>12</td>
-                                            <td class="red">2</td>
+                                            <td>평가중</td>
+                                            <td>홍길동</td>
                                             <td>
-                                                <!-- <span id="">검색중</span> -->
-                                                <!-- <span id="">검색완료</span> -->
-                                                <!-- <span id="">평가중</span> -->
-                                                <span id="">평가완료</span>
+                                                <select name="" id="">
+                                                    <option value="승인">승인</option>
+                                                    <option value="승인">승인</option>
+                                                    <option value="승인">승인</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <!-- <span class="blue">승인</span> -->
-                                                <!-- <span class="gray">대기</span> -->
-                                                <a href="#" class="red refused" onclick="openPopup('refusedPopup');">거절</a>
+                                                <a href="#" class="btn btn-style-wh" title="평가조회 팝업 열기">평가조회</a>
                                             </td>
-                                            <td>2022-08-04 ~ 2022-08-24</td>
-                                            <td></td>
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div class="r-btn-box">
+                                    <button type="button" id="" class="btn r-btn r-btn-cancel" onclick="openPopup('alert-cancel');">일괄취소</button>
+                                    <button type="button" class="btn r-btn" onclick="openPopup('alert-confirm');">일괄승인</button>
+                                </div>
                             </div>
                             <div id="pagination-container">
                                 <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
@@ -527,39 +563,60 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh" onclick="">요청내역 인쇄</button>
+                    <button type="button" class="btn">확인</button>
+                </div>
             </div>
         </div>
     </div>
-    <!-- 팝업 요청거절사유 조회 -->
-    <div class="popupWrapper refusedPopup">
+    <!-- 팝업 청년인재 평가조회 -->
+    <div class="popupWrapper checkPopup">
         <div class="popup">
             <div class="popup-head">
                 <div class="popup-head-txt">
-                    <h2>요청 거절사유</h2>
+                    <h2>청년인재 평가조회</h2>
                 </div>
                 <div class="close">
                     <span class="btn_close"></span>
                 </div>
             </div>
             <div class="popup-con">
-                <div class="popup-table-wrap">
-                    <table>
-                        <caption>요청 거절사유 상세 표</caption>
-                        <colgroup>
-                            <col width="20%">
-                            <col width="80%">                        
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>내용</th>
-                                <td>
-                                    <p class="refused-txt">
-                                        관리자가 작성한 요청 거절사유가 노출됩니다.
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- alert 팝업 일괄취소 -->
+    <div class="popupWrapper alert-cancel">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_info.png" alt="확인 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p><span>1</span>건의 요청을 취소하시겠습니까?</p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh alert-close">취소</button>
+                    <button type="button" class="btn">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert 팝업 일괄승인 -->
+    <div class="popupWrapper alert-confirm">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p><span>1</span>건의 요청을 승인하시겠습니까?</p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh alert-close">취소</button>
+                    <button type="button" class="btn">확인</button>
                 </div>
             </div>
         </div>

@@ -1085,6 +1085,10 @@ hr.page-bottom-line {
     border: 1px solid #EBF0F8;
     color: #CDD5E1;
 }
+.r-btn-box .btn.r-btn-cancel {
+    border: 1px solid #D4D9E4;
+    color: #8E97A9;
+}
 
 .con-box .txt-underline {
     text-decoration: underline;
@@ -1524,7 +1528,9 @@ table .result-txt.headcount::after {
     text-decoration: underline;
     cursor: pointer;
 }
-.result-table-wrap tr:first-child th:last-child, .result-table-wrap td:last-child {
+.result-table-wrap tr:first-child th:last-child,
+.result-table-wrap tr:last-child th.bd-none, 
+.result-table-wrap td:last-child {
     border-right-style: none;
 }
 
@@ -1711,6 +1717,60 @@ table .result-txt.headcount::after {
     height: 36px;
     line-height: 34px;
 }
+
+
+
+/* ===========================================================================================
+ 인증서 관리
+=========================================================================================== */
+.cer-tit { color: #DD0527; }
+.cer-box .l-box { float: left; max-width: 94px; }
+.cer-box .r-box { float: left; width: calc(91% - 94px - 60px); margin: 10px 0 0 60px; }
+
+.cer-box ul li.list-style-circle {
+    position: relative;
+    padding-left: 18px;
+}
+.cer-box ul li.list-style-circle:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #222222;
+    background-color: #222222;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}
+.cer-box .r-box li {
+    word-break: keep-all;
+    color: #222222;
+    margin-bottom: 20px;
+    line-height: 23px;
+}
+.cer-box .GPKI-box li {
+    line-height: 46px;
+    margin-bottom: 12px;
+}
+.cer-box .GPKI-box li:last-child {
+    margin-bottom: 0;
+}
+.cer-box .GPKI-box ul li::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.cer-box .GPKI-box ul li.list-style-circle:before {
+    top:22px
+}
+.cer-box .GPKI-box p {
+    float: left;
+}
+.cer-box .GPKI-box button {
+    float: right;
+}
+
+
 
 
 
