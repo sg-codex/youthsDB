@@ -334,14 +334,14 @@
                                         <col width="4%">
                                         <col width="8%">
                                         <col width="10%">
+                                        <col width="8%">
+                                        <col width="22%">
+                                        <col width="4%">
+                                        <col width="4%">
+                                        <col width="7%">
+                                        <col width="7%">
                                         <col width="10%">
-                                        <col width="20%">
-                                        <col width="4%">
-                                        <col width="4%">
-                                        <col width="8%">
-                                        <col width="8%">
-                                        <col width="12%">
-                                        <col width="12%">
+                                        <col width="16%">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -384,14 +384,15 @@
                                             <td>검색중</td>
                                             <td>홍길동</td>
                                             <td>
-                                                <select name="" id="">
+                                                <select name="" id="" class="selectPopup" onchange="openSelectPopup('refusedPopup');">
+                                                    <option value="선택">선택</option>
                                                     <option value="승인">승인</option>
-                                                    <option value="승인">승인</option>
-                                                    <option value="승인">승인</option>
+                                                    <option value="취소">취소</option>
+                                                    <option value="거절">거절</option>
                                                 </select>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-style-wh" title="평가조회 팝업 열기" onclick="openPopup('checkPopup');">평가조회</a>
+                                                <button type="button" class="btn btn-style-wh" onclick="openPopup('estCheckPopup');">평가조회</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -410,14 +411,16 @@
                                             <td>검색완료</td>
                                             <td>홍길동</td>
                                             <td>
-                                                <select name="" id="">
+                                                <select name="" id="" class="selectPopup" onchange="openSelectPopup('refusedPopup');">
+                                                    <option value="선택">선택</option>
                                                     <option value="승인">승인</option>
-                                                    <option value="승인">승인</option>
-                                                    <option value="승인">승인</option>
+                                                    <option value="취소">취소</option>
+                                                    <option value="거절">거절</option>
                                                 </select>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-style-wh" title="평가조회 팝업 열기">평가조회</a>
+                                                <a href="./2)요청관리-통합검색(인재상세열람-표시).html" class="btn" title="인재검색 바로가기">인재검색</a>
+                                                <button type="button" class="btn btn-style-wh" onclick="openPopup('estCheckPopup');">평가조회</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -436,14 +439,70 @@
                                             <td>평가중</td>
                                             <td>홍길동</td>
                                             <td>
-                                                <select name="" id="">
+                                                <select name="" id="" class="selectPopup" onchange="openSelectPopup('refusedPopup');">
+                                                    <option value="선택">선택</option>
                                                     <option value="승인">승인</option>
-                                                    <option value="승인">승인</option>
-                                                    <option value="승인">승인</option>
+                                                    <option value="취소">취소</option>
+                                                    <option value="거절">거절</option>
                                                 </select>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-style-wh" title="평가조회 팝업 열기">평가조회</a>
+                                                <button type="button" class="btn btn-style-wh" onclick="openPopup('estCheckPopup');">평가조회</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="chk04">
+                                                    <label for="chk04"></label>
+                                                </div>
+                                            </td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인재추천</a></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">2022-07-04</a></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처</a></td>
+                                            <td class="txt-left"><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처 직위후보자</a></td>
+                                            <td>4</td>
+                                            <td>12</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <select name="" id="" class="selectPopup" onchange="openSelectPopup('refusedPopup');">
+                                                    <option value="선택">선택</option>
+                                                    <option value="승인">승인</option>
+                                                    <option value="취소">취소</option>
+                                                    <option value="거절">거절</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-style-wh" onclick="openPopup('estCheckPopup');" disabled>평가조회</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check" id="chk05">
+                                                    <label for="chk05"></label>
+                                                </div>
+                                            </td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인재추천</a></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">2022-07-04</a></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처</a></td>
+                                            <td class="txt-left"><a href="#" class="openPopup" onclick="openPopup('requestDetailPopup');">인사혁신처 직위후보자</a></td>
+                                            <td>4</td>
+                                            <td>12</td>
+                                            <td></td>
+                                            <td>홍길동</td>
+                                            <td>
+                                                <select name="" id="" class="selectPopup" onchange="openSelectPopup('refusedPopup');">
+                                                    <option value="선택">선택</option>
+                                                    <option value="승인">승인</option>
+                                                    <option value="취소">취소</option>
+                                                    <option value="거절">거절</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn disabled" title="인재검색 바로가기">인재검색</a>
+                                                <button type="button" class="btn btn-style-wh" onclick="openPopup('estCheckPopup');" disabled>평가조회</button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -571,7 +630,7 @@
         </div>
     </div>
     <!-- 팝업 청년인재 평가조회 -->
-    <div class="popupWrapper checkPopup">
+    <div class="popupWrapper estCheckPopup">
         <div class="popup">
             <div class="popup-head">
                 <div class="popup-head-txt">
@@ -582,7 +641,123 @@
                 </div>
             </div>
             <div class="popup-con">
-
+                <div class="count-box">
+                    <span class="count-txt">전체 <strong class="items">2</strong></span>
+                </div>
+                <div class="con-box-wh">
+                    <div class="con-box-b">
+                        <p>홍길동 (33세 ,여)</p>
+                    </div>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>청년인재 평가조회</caption>
+                            <colgroup>
+                                <col width="15%">
+                                <col width="auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">청년인재 활용 분야</th>
+                                    <td>
+                                        <span class="result-txt">고용 · 노동 / 지역발전</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">선정/위촉 결과</th>
+                                    <td>
+                                        <span class="result-txt">기관이 작성한 청년인재의 활용결과 내역이 노출됩니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">활동 내용</th>
+                                    <td>
+                                        <span class="result-txt">기관이 작성한 청년인재의 구체적인 활동 내용 및 정보 변경 내역이 노출됩니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">적절성 평가</th>
+                                    <td>
+                                        <span class="result-txt">매우적절</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="con-box-wh">
+                    <div class="con-box-b">
+                        <p>홍길동 (33세 ,여)</p>
+                    </div>
+                    <div class="popup-table-wrap">
+                        <table>
+                            <caption>청년인재 평가조회</caption>
+                            <colgroup>
+                                <col width="15%">
+                                <col width="auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">청년인재 활용 분야</th>
+                                    <td>
+                                        <span class="result-txt">고용 · 노동 / 지역발전</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">선정/위촉 결과</th>
+                                    <td>
+                                        <span class="result-txt">기관이 작성한 청년인재의 활용결과 내역이 노출됩니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">활동 내용</th>
+                                    <td>
+                                        <span class="result-txt">기관이 작성한 청년인재의 구체적인 활동 내용 및 정보 변경 내역이 노출됩니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">적절성 평가</th>
+                                    <td>
+                                        <span class="result-txt">매우적절</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 요청거절사유 조회 -->
+    <div class="popupWrapper refusedPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>요청 거절사유</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="popup-table-wrap">
+                    <table>
+                        <caption>요청 거절사유 상세 표</caption>
+                        <colgroup>
+                            <col width="20%">
+                            <col width="80%">                        
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <p class="refused-txt">
+                                        관리자가 작성한 요청 거절사유가 노출됩니다.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

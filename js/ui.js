@@ -12,6 +12,11 @@ $(function() {
   });
 });
 
+function openSelectPopup(popupname) {
+  if($('select.selectPopup').val() == '거절') {
+    $("." + popupname).fadeIn(300);
+  }
+}
 
 
 $(function() {
@@ -300,7 +305,7 @@ $(function() {
     
 
     // 퀵메뉴
-    var youthsPopupWrap = $('.markedYouthsPopup .popup-con');
+    var youthsPopupWrap = $('.popup-con.youths-info-con');
     var youthsConBox = $('.markedYouthsPopup .con-box');
     var quickMenu = $('#quickMenu .quickList');
     var quickMenu_height = quickMenu.outerHeight();

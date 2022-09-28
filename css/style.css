@@ -12,6 +12,7 @@
 .clearfix {position:relative;}
 .clearfix::after {content:""; display:block; clear:both;}
 .ellipsis {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.p-relative {position: relative !important;}
 .d-none {display: none !important;}
 .d-block {display: block !important;}
 .d-iblock {display: inline-block !important;}
@@ -1070,6 +1071,10 @@ hr.page-bottom-line {
     right: 30px;
     bottom: 38px;
 }
+.p-relative .r-btn-box {
+    bottom: 0px;
+    right: 0;
+}
 .r-btn-box .btn.r-btn {
     background-color: #ffffff;
     color: #1776E1;
@@ -1534,14 +1539,12 @@ table .result-txt.headcount::after {
     border-right-style: none;
 }
 
-.result-table-wrap table .btn-style-wh {
+.table-wrap.result-table-wrap table .btn { 
     min-width: 90px;
-    font-size: 0.9rem;
 }
 
 .result-table-wrap table a.blue {
     text-decoration: underline;
-    font-size: 0.9rem;
 }
 .result-table-wrap table .refused { 
     padding-right: 14px;
@@ -1836,6 +1839,25 @@ table .result-txt.headcount::after {
 
 
 
+/* ===========================================================================================
+ 관리자
+=========================================================================================== */
+
+
+
+
+
+
+
+/* =========================================================================================== 
+ 요청관리
+=========================================================================================== */
+.table-wrap.result-table-wrap table button:disabled.btn,
+.table-wrap.result-table-wrap table a.disabled.btn {
+    border: 1px solid #EBF0F8;
+    color: #CDD5E1;
+    background-color: #ffffff;
+}
 
 
 
@@ -2043,8 +2065,6 @@ table .result-txt.headcount::after {
     vertical-align: middle;
     border-radius: 6px;
 }
-
-
 
 
 
@@ -2409,6 +2429,8 @@ form .form-list h3 {
     margin-left: 0;
 }
 
+/* 팝업 청년인재 평가조회 */
+.estCheckPopup .popup { height: 85%; }
 
 
 

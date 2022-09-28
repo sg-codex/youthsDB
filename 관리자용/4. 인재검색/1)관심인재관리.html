@@ -46,13 +46,13 @@
                 <div class="top-header-right">
                     <ul>
                         <li>
-                            <a href="" id="btn_certificate" class="">인증서 관리</a>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" class="">인증서 관리</a>
                         </li>
                         <li>
                             <button type="button" id="btn_user" class="">
                                 <span>홍길동</span>
                                 <ul class="user-menu">
-                                    <li><a href="../1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
                                     <li><a href="">로그아웃</a></li>
                                 </ul>
                             </button>
@@ -61,7 +61,7 @@
                 </div>
             </header>
             <nav id="side-nav" class="">
-                <ul class="menu">            
+                <ul class="menu">
                     <li class="one-depth">
                         <a href="" class="menu-depth-01">대시보드</a>
                     </li>
@@ -248,68 +248,71 @@
                     <hr class="page-title-line">
                     <div>
                         <div class="con-box-wh">
-                            <div class="sch-select-box clearfix">
-                                <div class="w35">
-                                    <p>요청일</p>
-                                    <div class="datePickerBox">
-                                        <input type="text" id="fromDate" name="from" autocomplete="off" placeholder="날짜 선택">
-                                        <label for="fromDate"></label>
-                                        <span>~</span>
-                                        <input type="text" id="toDate" name="to" autocomplete="off" placeholder="날짜 선택">
-                                        <label for="toDate"></label>
+                            <form action="">
+                                <legend>요청관리 조회</legend>
+                                <div class="sch-select-box clearfix">
+                                    <div class="w35">
+                                        <p>요청일</p>
+                                        <div class="datePickerBox">
+                                            <input type="text" id="fromDate" name="from" autocomplete="off" placeholder="날짜 선택" class="hasDatepicker">
+                                            <label for="fromDate"></label>
+                                            <span>~</span>
+                                            <input type="text" id="toDate" name="to" autocomplete="off" placeholder="날짜 선택" class="hasDatepicker">
+                                            <label for="toDate"></label>
+                                        </div>
+                                    </div>
+                                    <div class="w20">
+                                        <p>분류</p>
+                                        <div class="selectBox">
+                                            <button type="button" class="label">전체</button>
+                                            <ul class="option-list">
+                                                <li class="option">전체</li>
+                                                <li class="option">직접검색</li>
+                                                <li class="option">인재추천</li>
+                                            </ul>
+                                            <!-- <select name="" id="" class="more-b">
+                                                <option value="전체">전체</option>
+                                                <option value="직접검색">직접검색</option>
+                                                <option value="인재추천">인재추천</option>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                    <!-- <div class="w20">
+                                        <p>상태</p>
+                                        <div class="selectBox">
+                                            <button type="button" class="label">선택</button>
+                                            <ul class="option-list">
+                                                <li class="option">승인</li>
+                                                <li class="option">대기</li>
+                                                <li class="option">거절</li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="sch-select-box clearfix">
+                                    <div class="w35">
+                                        <p><label for="belongOrgani">요청기관</label></p>
+                                        <div class="input-wrap">
+                                            <input type="text" id="belongOrgani" class="w100" name="" autocomplete="off" placeholder="요청기관">                                        
+                                        </div>
+                                    </div>
+                                    <div class="w20">
+                                        <p><label for="departName">부서명</label></p>
+                                        <div class="input-wrap">
+                                            <input type="text" id="departName" class="w100" name="" autocomplete="off" placeholder="부서명" >
+                                        </div>
+                                    </div>
+                                    <div class="w20">
+                                        <p><label for="requestOrg">담당자명</label></p>
+                                        <div class="input-wrap">
+                                            <input type="text" id="requestOrg" class="w100" name="" autocomplete="off" placeholder="담당자명" >
+                                        </div>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button type="submit" class="btn">조회</button>
                                     </div>
                                 </div>
-                                <div class="w20">
-                                    <p>분류</p>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">전체</button>
-                                        <ul class="option-list">
-                                            <li class="option">전체</li>
-                                            <li class="option">직접검색</li>
-                                            <li class="option">인재추천</li>
-                                        </ul>
-                                        <!-- <select name="" id="" class="more-b">
-                                            <option value="전체">전체</option>
-                                            <option value="직접검색">직접검색</option>
-                                            <option value="인재추천">인재추천</option>
-                                        </select> -->
-                                    </div>
-                                </div>
-                                <!-- <div class="w20">
-                                    <p>상태</p>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">선택</button>
-                                        <ul class="option-list">
-                                            <li class="option">승인</li>
-                                            <li class="option">대기</li>
-                                            <li class="option">거절</li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                            </div>
-                            <div class="sch-select-box clearfix">
-                                <div class="w35">
-                                    <p><label for="belongOrgani">요청기관</label></p>
-                                    <div class="input-wrap">
-                                        <input type="text" id="belongOrgani" class="w100" name="" autocomplete="off" placeholder="요청기관" disabled>                                        
-                                    </div>
-                                </div>
-                                <div class="w20">
-                                    <p><label for="departName">부서명</label></p>
-                                    <div class="input-wrap">
-                                        <input type="text" id="departName" class="w100" name="" autocomplete="off" placeholder="부서명" disabled>
-                                    </div>
-                                </div>
-                                <div class="w20">
-                                    <p><label for="requestOrg">담당자명</label></p>
-                                    <div class="input-wrap">
-                                        <input type="text" id="requestOrg" class="w100" name="" autocomplete="off" placeholder="담당자명" disabled>
-                                    </div>
-                                </div>
-                                <div class="btn-box">
-                                    <button type="submit" class="btn">조회</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                         <div class="con-box-wh">
                             <div class="box-top-tit clearfix">
@@ -329,6 +332,7 @@
                                         <button type="button" class="label">최신순</button>
                                         <ul class="option-list">
                                             <li class="option">최신순</li>
+                                            <li class="option">최신순</li>
                                         </ul>
                                     </div>
                                     <div class="selectBox">
@@ -338,16 +342,6 @@
                                             <li class="option">20개씩</li>
                                         </ul>
                                     </div>
-                                    <!-- <select name="" id="">
-                                        <option value="">직접검색</option>
-                                        <option value="">인재추천</option>
-                                    </select>
-                                    <select name="" id="">
-                                        <option value="">최신순</option>
-                                    </select>
-                                    <select name="" id="">
-                                        <option value="">10개씩</option>
-                                    </select> -->
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap">
@@ -384,9 +378,9 @@
                                             </th>
                                         </tr>
                                         <tr>
-                                            <th scope="row" >위촉</th>
-                                            <th scope="row" >요청</th>
-                                            <th scope="row" >선임 인원수</th>
+                                            <th scope="row">위촉</th>
+                                            <th scope="row">요청</th>
+                                            <th scope="row">선임 인원수</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -571,7 +565,7 @@
                                                     <label for="chk01"></label>
                                                 </div>
                                             </td>
-                                            <td class="printed"><a href="#" class="openPopup" onclick="openPopup('markedYouthsPopup');">***</a></td>
+                                            <td class="printed"><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
                                             <td class="printed">1997</td>
                                             <td class="printed">남</td>
                                             <td class="printed">서울</td>
@@ -589,7 +583,7 @@
                                                     <label for="chk02"></label>
                                                 </div>
                                             </td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('markedYouthsPopup');">***</a></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
                                             <td>1997</td>
                                             <td>남</td>
                                             <td>서울</td>
@@ -607,7 +601,7 @@
                                                     <label for="chk03"></label>
                                                 </div>
                                             </td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('markedYouthsPopup');">***</a></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
                                             <td>1997</td>
                                             <td>남</td>
                                             <td>서울</td>
@@ -721,7 +715,7 @@
                                                     <label for="chk01"></label>
                                                 </div>
                                             </td>
-                                            <td class="printed"><a href="#" class="openPopup" onclick="openPopup('markedYouthsPopup');">***</a></td>
+                                            <td class="printed"><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
                                             <td class="printed">1997</td>
                                             <td class="printed">남</td>
                                             <td class="printed">서울</td>
@@ -739,7 +733,7 @@
                                                     <label for="chk02"></label>
                                                 </div>
                                             </td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('markedYouthsPopup');">***</a></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
                                             <td>1997</td>
                                             <td>남</td>
                                             <td>서울</td>
@@ -757,7 +751,7 @@
                                                     <label for="chk03"></label>
                                                 </div>
                                             </td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('markedYouthsPopup');">***</a></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
                                             <td>1997</td>
                                             <td>남</td>
                                             <td>서울</td>
@@ -771,19 +765,24 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div id="pagination-container">
-                                <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
-                                <a href="#" class="active">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <a href="#">5</a>
-                                <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
+                            <div class="p-relative">
+                                <div id="pagination-container">
+                                    <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
+                                </div>
+                                <div class="r-btn-box">
+                                    <button type="button" id="" class="btn r-btn">추천인재삭제</button>
+                                    <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
+                                    <button type="button" id="" class="btn r-btn" disabled>평가등록</button>
+                                </div>
                             </div>
-                            <div class="r-btn-box">
-                                <button type="button" id="" class="btn r-btn" disabled>추천인재삭제</button>
-                                <button type="button" id="" class="btn r-btn">선임등록</button>
-                                <button type="button" id="" class="btn r-btn">평가등록</button>
+                            <div class="btm-btnBox">
+                                <button type="button" class="btn">인재추천완료</button>
                             </div>
                         </div>
                     </div>
@@ -791,23 +790,13 @@
             </section>
         </div>
     </div>
-    <!-- 팝업 인재상세열람 (marked) -->
-    <div class="popupWrapper markedYouthsPopup">
+    <!-- 팝업 인재상세열람 -->
+    <div class="popupWrapper youthsPopup">
         <!-- 퀵메뉴 -->
-        <div id="main-content" class="main">
-            <div id="sidebar" class="sidebar">
-                <div class="sidebar__inner">
-                    <!-- Content goes here -->
-                </div>
-            </div>
-            <div id="content" class="content">
-                <!-- Content goes here -->
-            </div>
-        </div>
         <div id="quickMenuWrapper">
             <div id="quickMenu">
                 <div class="name">
-                    OOO
+                    김서아
                 </div>
                 <ul class="quickList">
                     <li>
@@ -834,7 +823,7 @@
                 </ul>
                 <div class="btn-box">
                     <button type="button" class="btn btn-style-gr" onclick="openPopup('synchronizingPopup');">현행화요청</button>
-                    <button type="button" class="btn disabled" onclick="openPopup('historyPopup');" >열람이력조회</button>
+                    <button type="button" class="btn btn-style-gr" onclick="openPopup('historyPopup');" >열람이력조회</button>
                 </div>
                 <div class="btn-top-box">
                     <a href="#" id="btn-top">TOP</a>
@@ -852,56 +841,62 @@
                 </div>
             </div>
             <div class="popup-con youths-info-con">
-                <div id="userInfo" class="con-box">
-                    <div class="data-name">
-                        <span class="name">OOO</span>
-                        <span class="ag">(33세, 여)</span>
+                <div id="userInfo" class="con-box d-table">
+                    <div class="id-pic-box">
+                        <div class="id-pic"></div>
                     </div>
-                    <ul class="data-careers">
-                       <li>주식회사 OOOO OOO부 대리</li>
-                    </ul>
-                   <div class="data-info">
-                        <div>
-                            <ul class="info-list">
-                                <li>
-                                    <strong>연락처</strong>
-                                    <span>010-****-****</span>
-                                </li>
-                                <li>
-                                    <strong>이메일</strong>
-                                    <span>********@email.com</span>
-                                </li>
-                                <li>
-                                    <strong>활동지역</strong>
-                                    <span class="slash">주거지</span><span>대전광역시 서구</span>
-                                </li>
-                            </ul>
+                    <div class="">
+                        <div class="data-name">
+                            <span class="name">김서아</span>
+                            <span class="ag">(33세, 여)</span>
                         </div>
-                        <div>
-                            <ul class="info-list">
-                                <li>
-                                    <strong>직종</strong>
-                                    <span>일반 사무직, 교육직, 기타</span>
-                                </li>
-                                <li>
-                                    <strong>관심분야</strong>
-                                    <span>고용ㆍ노동, 교육</span>
-                                </li>
-                                <li>
-                                    <strong>참여희망 분야</strong>
-                                    <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="info-list">
-                                <li>
-                                    <strong>최종수정일</strong>
-                                    <span>2021-02-08</span>
-                                </li>
-                            </ul>
-                        </div>
-                   </div>
+                        <ul class="data-careers">
+                           <li>주식회사 OOOO OOO부 대리</li>
+                        </ul>
+                       <div class="data-info">
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>연락처</strong>
+                                        <span>010-1234-1234</span>
+                                    </li>
+                                    <li>
+                                        <strong>이메일</strong>
+                                        <span>youthsDB@email.com</span>
+                                    </li>
+                                    <li>
+                                        <strong>활동지역</strong>
+                                        <span class="slash">주거지</span><span>대전광역시 서구</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>직종</strong>
+                                        <span>일반 사무직, 교육직, 기타</span>
+                                    </li>
+                                    <li>
+                                        <strong>관심분야</strong>
+                                        <span>고용ㆍ노동, 교육</span>
+                                    </li>
+                                    <li>
+                                        <strong>참여희망 분야</strong>
+                                        <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="info-list">
+                                    <li>
+                                        <strong>최종수정일</strong>
+                                        <span>2021-02-08</span>
+                                    </li>
+                                </ul>
+                            </div>
+                       </div>
+
+                    </div>
                 </div>
                 <div id="eduInfo" class="con-box">
                     <h3 class="info-tit bg">학력</h3>
