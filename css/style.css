@@ -97,7 +97,7 @@ col widths
     padding-left: 48px;
     background-image: url('../images/common/ico_file.png');
     background-repeat: no-repeat;
-    background-position: left 50px center;
+    background-position: left 14% center;
     background-size: 24px;
 }
 .btn_print {
@@ -106,7 +106,7 @@ col widths
     padding-left: 48px;
     background-image: url('../images/common/ico_print.png');
     background-repeat: no-repeat;
-    background-position: left 16px center;
+    background-position: left 14% center;
     background-size: 24px;
 }
 
@@ -242,6 +242,7 @@ select.more-b {
     background-repeat: no-repeat;
     background-size: 24px;
     background-position: right 5px center;
+    background-color: #ffffff;
     cursor: pointer;
     vertical-align: middle;
 }
@@ -713,7 +714,7 @@ input.hasDatepicker {
 }
 .m-menu > ul { position: relative; }
 .m-menu > ul > li {
-    width: 120px;
+    width: 180px;
     background-color: #F5F5F5;
     color: #999999;
     height: 60px;
@@ -733,8 +734,8 @@ input.hasDatepicker {
     display: none;
     position: absolute;
     top: 0;
-    left: 120px;
-    width: calc(100% - 120px);
+    left: 180px;
+    width: calc(100% - 180px);
     height: 100%;
     padding: 0 20px;
 }
@@ -1032,7 +1033,8 @@ hr.page-bottom-line {
     font-size: 0.9rem;
     vertical-align: -150%;
 }
-.count-txt .items {
+.count-txt .items, 
+.count-txt .people {
     color: #1776E1;
     font-weight: normal;
 }
@@ -1041,11 +1043,16 @@ hr.page-bottom-line {
     color: #555555;
     font-weight: normal;
 }
+.count-txt .people::after {
+    content: '명';
+    color: #555555;
+    font-weight: normal;
+}
 .r-box .selectBox {
     height: 34px;
     padding: 0px 14px;
     color: #333333;
-    line-height: 34px;
+    line-height: 32px;
     vertical-align: bottom;
 }
 .r-box .selectBox .label {
@@ -1147,9 +1154,8 @@ hr.page-bottom-line {
     color: #555555;
     font-size: 0.9rem;
 }
-.agree-txt .agr-radio-box {
-    margin-top: -3px;
-}
+.agree-txt > span { line-height: 1.4; }
+.agree-txt .agr-radio-box { margin-top: -3px; }
 .all-agree-txt {
     text-align: center;
     color: #222222;
@@ -1441,6 +1447,10 @@ hr.page-bottom-line {
     float: none;
     display: block;
 }
+.table-wrap ul .list2-cont > .input-wrap {
+    
+    padding: 14px 0 0px 14px;
+}
 .table-wrap ul .list2-cont .list-cont.add-txt-wrap {
     display: block;
     padding: 14px;
@@ -1470,7 +1480,7 @@ hr.page-bottom-line {
 }
 .table-wrap .form-style.tel > * {
     float: left;
-    width: 30%;
+    width: 30% !important;
     max-width: 110px;
     margin-right: 10px;
 }
@@ -1710,6 +1720,18 @@ table .result-txt.headcount::after {
 /* ===========================================================================================
  마이페이지
 =========================================================================================== */
+.r-table-wrap .flex-wrap > li.f-item {
+    display: flex;
+    width: 100%;
+}
+.r-table-wrap .flex-wrap > li.f-item > * {
+    display: flex;
+    align-items: center;
+}
+.list2-cont { 
+    padding-bottom: 14px;
+    border-bottom: 1px solid #D4D9E4;
+}
 #btn_withdrawal {
     display: inline-block;
     color: #8E97A9;
@@ -2554,8 +2576,10 @@ form .form-list h3 {
         min-width: 45%;
     }
 
-    /* table wrap */    
+    /* table wrap */
+    .box-top-tit h3 { display: block; margin: 0 0 5px 0; }
     /* 표 스타일 */
+    .table-th-left table { min-width: 100%; }
     .table-wrap table colgroup col {
         width: 100%;
     }
@@ -2622,6 +2646,14 @@ form .form-list h3 {
         width: 45%;
     }
     .exclude-wrap input { width: 40% !important; }
+    .tooltip-wrap .tooltip { 
+        left: calc(100% - 112px);
+    }
+    .tooltip-wrap .tooltip::before,
+    .tooltip-wrap .tooltip::after {
+        left: 26%;
+
+    }
 
     .box-top-tit .l-box, 
     .box-top-tit .r-box {
@@ -2629,7 +2661,25 @@ form .form-list h3 {
         width: 100%;
     }
     .box-top-tit .r-box {margin-top: 10px;}
-    .btn.r-btn { max-height: 34px; line-height: 0.8; min-width: auto; }
+    .box-top-tit .r-box select, 
+    .box-top-tit .r-box .selectBox {
+        min-width: 32%;
+    }
+    .box-top-tit .r-box .btn { 
+        min-width: 48%; 
+        display: inline-block; 
+        margin: 5px 0 0 0; 
+    }
+    .btn.r-btn { 
+        max-height: 34px; 
+        line-height: 0.8; 
+        min-width: auto; 
+    }
+    .btn.r-btn.big-btn { 
+        max-height: inherit; 
+        line-height: inherit; 
+        min-width: auto; 
+    }
 
     .sch-result-table.rp-table table { min-width: 100%; }
     .sch-result-table.rp-table table tbody th, 
@@ -2642,15 +2692,14 @@ form .form-list h3 {
     /* 팝업 */
     .popup { width: 95% !important; height: 73vh; }
     .alert-popup { width: 85% !important; height: auto; }
-    .alert-txt-box p {font-size: 0.9rem;}
-    
-    /* .popup-table-wrap table { min-width: 100% !important; }
+    .alert-popup .btn { min-width: 48%; display: inline-block; }
+    .popup-table-wrap table { min-width: 100% !important; }
     .popup-table-wrap table colgroup col {
         width: 100%;
     }
     .popup-table-wrap table tbody th, .popup-table-wrap table tbody td {
         display: block;
-    } */
+    }
 
 
     /* 요청 거절사유 */
@@ -2703,6 +2752,11 @@ form .form-list h3 {
 
 @media all and (max-width: 767px) {
 
+    label, input { font-size: 0.9rem; }
+    
+    /* 전체 너비 */
+    #cont-wrap { width: 90%; }
+
     /* 버튼 스타일 */
     .btn {
         min-width: 100%;
@@ -2711,15 +2765,108 @@ form .form-list h3 {
         display: block;
     }
     .btm-btnBox .btn:last-child { margin-bottom: 0; }
+    .r-btn-box { position: static; margin-top: 10px; }
+
+    /* 데이트피커 커스텀 */
+    input.hasDatepicker { width: 100%; }
+
+    /* 모바일 메뉴 */
+    .m-menu > ul > li { width: 120px; }
+    .m-menu > ul > li:first-child { padding: 13px; }
+    .m-menu .m-depth-02 {left: 120px; width: calc(100% - 120px);}
+    .m-menu > ul > li > span { word-break: initial; }
+
+    /* 전화번호 input 스타일 */
+    .table-wrap .form-style.tel > select, 
+    .table-wrap .form-style.tel > .selectBox {
+        min-width: 80px;
+    }
+
+    .con-box-wh { padding: 20px; }
+    .con-box { padding: 20px; }
+    .con-box-wh  > p, 
+    .con-box-wh  > p strong,
+    .con-box  > p, 
+    .con-box  > p strong { 
+        line-height: 1.4; 
+    }
+    .page-cont-box { padding: 20px; }
+
+    .table-wrap input.input02 { max-width: 200px; }
 
     /* 마이페이지 */
     .table-wrap .form-style.email input[type=text], .table-wrap .form-style.email select { width: 28%; }
 
+    /* 검색요청 */
+    .con-box ol li { line-height: 1.6; }
+    .agree-txt { display: block !important; }
+
     /* 통합검색 */
+    .sch-table-wrap ul.list-cont > li .sub-tit, 
+    .sch-table-wrap ul.list-cont > li .sub-cont {
+        float: none;
+        width: 100%;
+    }
+    .sch-table-wrap ul.list-cont > li .sub-cont > * {
+        width: 100%;
+    }
+    .sch-table-wrap .sub-cont .input-wrap input[type='text'] {
+        width: 100% !important;
+    }
     .sch-table-wrap .checkBoxList li {
         width: 100%;
     }
-    .sch-table-wrap .sub-cont .exclude-wrap > * { float: none; width: 100%; }
-    .exclude-wrap input { width: 100% !important; }
+    .sch-table-wrap .sub-cont .exclude-wrap > select { 
+        float: none;
+        width: 100%; 
+        margin: 0 0 5px 0;
+    }
+    .sch-table-wrap .sub-cont .exclude-wrap > .btn {
+        float: left;
+        width: 49%;
+        margin: 5px 0;
+        margin-right: 1%;
+    }
+
+    /* 관심인재관리 */
+    .r-btn-box .btn.r-btn { display: inline-block; }
+
+
+
+    /* 팝업 */
+    .popup-con { padding: 5px 20px 28px; }
+    .requestDetailPopup .popup-table-wrap { margin-top: 0; }
+
+    /* 팝업 인재정보 */
+    .popup-con .con-box { padding: 20px; }
+    .data-info > div { min-width: 100%; }
+    .youths-info-con .popup-table-wrap table { min-width: 820px !important; }
+    .youths-info-con .popup-table-wrap table tbody th, 
+    .youths-info-con .popup-table-wrap table tbody td {
+        display: table-cell;
+    }
+    .tag-box span {margin-right: 5px;}
+
+    /* 팝업 현행화요청 */
+    .synchronizingPopup .popup-table-wrap table td,
+    .synchronizingPopup .popup-table-wrap table textarea {
+        height: 100%;
+    }
+
+    /* 팝업 청년인재 평가등록 */
+    .estimationPopup .popup-form-table .list-tit,
+    .estimationPopup .popup-form-table .list-cont {
+        float: none;
+        width: 100%;
+    }
+    .popup-form-table .list-tit.d-table {
+        height: auto;
+    }
+    .estimationPopup .thead-form-table .list-tit ul li,
+    .estimationPopup .thead-form-table .list-cont ul li
+    {
+        padding: 10px 0;
+    }
+    .estimationPopup .thead-form-table .list-tit ul li label { letter-spacing: -0.14em; }
 
 }

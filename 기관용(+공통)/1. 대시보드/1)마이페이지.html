@@ -118,7 +118,7 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div class="close-box">
+                    <div id="m-menu-close" class="close-box">
                         <span class="btn_close"></span>
                         <span class="btn_close"></span>
                     </div>
@@ -165,7 +165,7 @@
                         </li>
                         <li>
                             <span>검색요청</span>
-                            <ul>
+                            <ul class="m-depth-02">
                                 <li>직접검색 요청</li>
                                 <li>인재추천 요청</li>
                                 <li>요청현황</li>
@@ -174,14 +174,14 @@
                         </li>
                         <li>
                             <span>인재검색</span>
-                            <ul>
+                            <ul class="m-depth-02">
                                 <li>통합검색</li>
                                 <li>관심인재 관리</li>
                             </ul>
                         </li>
                         <li>
                             <span>인재관리</span>
-                            <ul>
+                            <ul class="m-depth-02">
                                 <li>인재목록</li>
                                 <li>인재등록 현황</li>
                                 <li>인재정보 현행화요청</li>
@@ -189,14 +189,14 @@
                         </li>
                         <li>
                             <span>회원관리</span>
-                            <ul>
+                            <ul class="m-depth-02">
                                 <li>회원목록</li>
                                 <li>회원안내발송</li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
-                            <ul>
+                            <ul class="m-depth-02">
                                 <li>메뉴 관리</li>
                                 <li>게시판 관리</li>
                                 <li>팝업/배너 관리</li>
@@ -204,7 +204,7 @@
                         </li>
                         <li>
                             <span>기타관리</span>
-                            <ul>
+                            <ul class="m-depth-02">
                                 <li>코드관리</li>
                                 <li>의심징후관리</li>
                             </ul>
@@ -234,155 +234,10 @@
                                 <div class="box-top-tit">
                                     <h3>내 정보 관리</h3>
                                 </div>
+                                <!-- 바뀌는 테이블 -->
                                 <div class="table-wrap table-th-left r-table-wrap">
-                                    <table>
-                                        <caption>내 정보 관리</caption>
-                                        <tbody>
-                                            <tr>
-                                                <th>아이디</th>
-                                                <td>
-                                                    <input type="text" name="" id="" class="input01" value="admin2022" disabled>
-                                                </td>
-                                                <th>사용자명</th>
-                                                <td>
-                                                    <input type="text" name="" id="" class="input01" value="홍길동" disabled>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" rowspan="3">비밀번호</th>
-                                                <td colspan="3">
-                                                    <input type="password" name="" id="" class="input02" placeholder="현재 비밀번호" maxlength="15">
-                                                    <span class="sub-txt">비밀번호 변경을 원하실 경우 현재 비밀번호를 입력해 주세요.</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="3">
-                                                    <input type="password" name="" id="" class="input02" placeholder="새 비밀번호" maxlength="15">
-                                                    <span class="sub-txt">영문, 숫자, 특수문자로 조합하여 9~15자로 사용할 수 있습니다.(사용 가능한 특수문자: ~ ! @ # $ % ^ *)</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="3">
-                                                    <input type="password" name="" id="" class="input02" placeholder="새 비밀번호 확인" maxlength="15">
-                                                    <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>소속부처</th>
-                                                <td colspan="3">
-                                                    <input type="text" name="" id="" class="input01" placeholder="소속부처">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>소속기관</th>
-                                                <td>
-                                                    <input type="text" name="" id="" class="input01" placeholder="소속기관">
-                                                </td>
-                                                <th>부서명</th>
-                                                <td>
-                                                    <input type="text" name="" id="" class="input01" placeholder="부서명">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>직장전화 번호</th>
-                                                <td>
-                                                    <div class="form-style tel clearfix">
-                                                        <select name="tel1_1" id="tel1_1" title="유선전화 앞 번호">
-                                                            <option value="">선택</option>
-                                                            <option value="02">02</option>
-                                                            <option value="031">031</option>
-                                                            <option value="032">032</option>
-                                                            <option value="033">033</option>
-                                                            <option value="041">041</option>
-                                                            <option value="042">042</option>
-                                                            <option value="043">043</option>
-                                                            <option value="044">044</option>
-                                                            <option value="050">050</option>
-                                                            <option value="051">051</option>
-                                                            <option value="052">052</option>
-                                                            <option value="053">053</option>
-                                                            <option value="054">054</option>
-                                                            <option value="055">055</option>
-                                                            <option value="061">061</option>
-                                                            <option value="062">062</option>
-                                                            <option value="063">063</option>
-                                                            <option value="064">064</option>
-                                                            <option value="070">070</option>
-                                                        </select>
-                                                        <input maxlength="4" type="text" name="tel1_2" id="tel1_2" title="유선전화 중간 번호">
-                                                        <input maxlength="4" type="text" name="tel1_3" id="tel1_3" title="유선전화 끝 번호">
-                                                    </div>
-                                                </td>
-                                                <th>휴대전화 번호</th>
-                                                <td>
-                                                    <div class="form-style tel clearfix">
-                                                        <select name="tel2_1" id="tel2_1" title="휴대전화 앞 번호">
-                                                            <option value="" selected="selected">선택</option>
-                                                            <option value="010">010</option>
-                                                            <option value="011">011</option>
-                                                            <option value="016">016</option>
-                                                            <option value="017">017</option>
-                                                            <option value="018">018</option>
-                                                            <option value="019">019</option>
-                                                        </select>
-                                                        <input maxlength="4" type="text" name="tel2_2" id="tel2_2" title="휴대전화 중간 번호" value="">
-                                                        <input maxlength="4" type="text" name="tel2_3" id="tel2_3" title="휴대전화 끝 번호" value="">
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>E-MAIL</th>
-                                                <td colspan="3">
-                                                    <div class="form-style email">
-                                                        <input type="text" name="" id="email_in01" class="input01" title="이메일 주소입력" value="">
-                                                        <span class="email-at">@</span>
-                                                        <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
-                                                        <select class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="setEmailDomain();">	
-                                                            <option value="chol.com">chol.com</option>                
-                                                            <option value="dreamwiz.com">dreamwiz.com</option>                
-                                                            <option value="daum.net">daum.net</option>                
-                                                            <option value="empal.com">empal.com</option>                
-                                                            <option value="freechal.com">freechal.com</option>                
-                                                            <option value="gmail.com">gmail.com</option>                
-                                                            <option value="hanmail.net">hanmail.net</option>                
-                                                            <option value="hanmir.com">hanmir.com</option>                
-                                                            <option value="hitel.net">hitel.net</option>                
-                                                            <option value="hotmail.com">hotmail.com</option>                
-                                                            <option value="korea.com">korea.com</option>                
-                                                            <option value="nate.com">nate.com</option>                
-                                                            <option value="naver.com">naver.com</option>                
-                                                            <option value="orgio.com">orgio.com</option>                
-                                                            <option value="paran.com">paran.com</option>                
-                                                            <option value="sayclub.com">sayclub.com</option>                
-                                                            <option value="shinbiro.com">shinbiro.com</option>                
-                                                            <option value="yahoo.co.kr">yahoo.co.kr</option>                
-                                                            <option value="yahoo.com">yahoo.com</option>                
-                                                            <option value="moel.go.kr">moel.go.kr</option>                
-                                                            <option value="korea.kr">korea.kr</option>                
-                                                            <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
-                                                        </select>
-                                                    </div>
-                                                    <span class="sub-txt">입력 예) korea@korea.kr</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>IP주소</th>
-                                                <td colspan="3">
-                                                    <input type="text" name="" id="" class="input01" placeholder="12.123.123.12">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>회원탈퇴</th>
-                                                <td colspan="3">
-                                                    <a href="./2)회원탈퇴.html" id="btn_withdrawal" class="">회원탈퇴</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- <div class="table-wrap table-th-left r-table-wrap">
-                                    <ul>
-                                        <li class="f-left">
+                                    <ul class="flex-wrap">
+                                        <li class="f-item">
                                             <div class="list-tit">                                                
                                                 <label for="userId">아이디</label>
                                                 <span class="blind"></span>
@@ -393,7 +248,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="f-left">
+                                        <li class="f-item">
                                             <div class="list-tit">                                                
                                                 <label for="userName">사용자명</label>
                                                 <span class="blind"></span>
@@ -404,7 +259,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="">
+                                        <li class="h-auto">
                                             <div class="list-tit">
                                                 <label for="departName">비밀번호</label>
                                                 <span class="blind"></span>
@@ -424,18 +279,137 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="h-auto">
+                                        <li>
                                             <div class="list-tit">
-                                                <label for="departName">참고사항</label>
+                                                <label for="belongOrgani">소속기관</label>
                                                 <span class="blind"></span>
                                             </div>
                                             <div class="list-cont">
-                                                <textarea name="" id="" cols="30" rows="5" placeholder="참고사항을 작성해 주세요"></textarea>
-                                                <p class="add-txt">※ 그 밖의 요청사항이 있으면 적어주시기 바랍니다.</p>
+                                                <div class="input-wrap">
+                                                    <input type="text" name="" id="belongOrgani" class="input01" placeholder="소속기관">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <label for="departName">부서명</label>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="input-wrap">
+                                                    <input type="text" name="" id="departName" class="input02" placeholder="부서명">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">
+                                                <span>직장전화 번호</span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="form-style tel clearfix">
+                                                    <select name="tel1_1" id="tel1_1" title="유선전화 앞 번호">
+                                                        <option value="">선택</option>
+                                                        <option value="02">02</option>
+                                                        <option value="031">031</option>
+                                                        <option value="032">032</option>
+                                                        <option value="033">033</option>
+                                                        <option value="041">041</option>
+                                                        <option value="042">042</option>
+                                                        <option value="043">043</option>
+                                                        <option value="044">044</option>
+                                                        <option value="050">050</option>
+                                                        <option value="051">051</option>
+                                                        <option value="052">052</option>
+                                                        <option value="053">053</option>
+                                                        <option value="054">054</option>
+                                                        <option value="055">055</option>
+                                                        <option value="061">061</option>
+                                                        <option value="062">062</option>
+                                                        <option value="063">063</option>
+                                                        <option value="064">064</option>
+                                                        <option value="070">070</option>
+                                                    </select>
+                                                    <input maxlength="4" type="text" name="tel1_2" id="tel1_2" title="유선전화 중간 번호">
+                                                    <input maxlength="4" type="text" name="tel1_3" id="tel1_3" title="유선전화 끝 번호">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">
+                                                <span>휴대전화 번호</span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="form-style tel clearfix">
+                                                    <select name="tel2_1" id="tel2_1" title="휴대전화 앞 번호">
+                                                        <option value="" selected="selected">선택</option>
+                                                        <option value="010">010</option>
+                                                        <option value="011">011</option>
+                                                        <option value="016">016</option>
+                                                        <option value="017">017</option>
+                                                        <option value="018">018</option>
+                                                        <option value="019">019</option>
+                                                    </select>
+                                                    <input maxlength="4" type="text" name="tel2_2" id="tel2_2" title="휴대전화 중간 번호" value="">
+                                                    <input maxlength="4" type="text" name="tel2_3" id="tel2_3" title="휴대전화 끝 번호" value="">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <span>E-MAIL</span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="form-style email">
+                                                    <input type="text" name="" id="email_in01" class="input02" title="이메일 주소입력" value="" maxlength="40">
+                                                    <span class="email-at">@</span>
+                                                    <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
+                                                    <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
+                                                        <option value="chol.com">chol.com</option>                
+                                                        <option value="dreamwiz.com">dreamwiz.com</option>                
+                                                        <option value="daum.net">daum.net</option>                
+                                                        <option value="empal.com">empal.com</option>                
+                                                        <option value="freechal.com">freechal.com</option>                
+                                                        <option value="gmail.com">gmail.com</option>                
+                                                        <option value="hanmail.net">hanmail.net</option>                
+                                                        <option value="hanmir.com">hanmir.com</option>                
+                                                        <option value="hitel.net">hitel.net</option>                
+                                                        <option value="hotmail.com">hotmail.com</option>                
+                                                        <option value="korea.com">korea.com</option>                
+                                                        <option value="nate.com">nate.com</option>                
+                                                        <option value="naver.com">naver.com</option>                
+                                                        <option value="orgio.com">orgio.com</option>                
+                                                        <option value="paran.com">paran.com</option>                
+                                                        <option value="sayclub.com">sayclub.com</option>                
+                                                        <option value="shinbiro.com">shinbiro.com</option>                
+                                                        <option value="yahoo.co.kr">yahoo.co.kr</option>                
+                                                        <option value="yahoo.com">yahoo.com</option>                
+                                                        <option value="moel.go.kr">moel.go.kr</option>                
+                                                        <option value="korea.kr">korea.kr</option>                
+                                                        <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
+                                                    </select>
+                                                </div>
+                                                <span class="sub-txt">입력 예) korea@korea.kr</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <label for="ipAdr">IP주소</label>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="input-wrap">
+                                                    <input type="text" name="" id="ipAdr" class="input02" placeholder="12.123.123.12" maxlength="">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <span>회원탈퇴</span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <a href="./2)회원탈퇴.html" id="btn_withdrawal" class="">회원탈퇴</a>
                                             </div>
                                         </li>
                                     </ul>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                         <div class="btm-btnBox">

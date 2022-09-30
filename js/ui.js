@@ -124,6 +124,24 @@ $(function() {
         });
     });
 
+    
+  $.datepicker.setDefaults({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    showMonthAfterYear: true,
+    yearSuffix: '년'
+  });
+
+
+
+
+
     // 데이트 피커 - 기간 설정
     $(function() {
         var dateFormat = "yy-mm-dd",
@@ -225,6 +243,19 @@ $(function() {
     });
 
 
+    //체크박스 전체 선택 해제
+    // $("#ch-all").click(function() {
+    //   if($("#ch-all").is(":checked")) $("input[name=table-check]").prop("checked", true);
+    //   else $("input[name=table-check]").prop("checked", false);
+    // });
+  
+    // $("input[name=table-check]").click(function() {
+    //   var total = $("input[name=table-check]").length;
+    //   var checked = $("input[name=table-check]:checked").length;
+  
+    //   if(total != checked) $("#ch-all").prop("checked", false);
+    //   else $("#ch-all").prop("checked", true); 
+    // });
 
 
 
