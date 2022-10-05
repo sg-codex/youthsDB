@@ -2331,7 +2331,7 @@ hr.con-box-line {
 }
 .refusedPopup .popup .popup-table-wrap { margin-top: 0; }
 .refusedPopup .popup .popup-table-wrap table { min-width: 500px; }
-.refused-txt {
+.table-minHeight {
     min-height: 120px;
 }
 
@@ -2660,6 +2660,7 @@ form .form-list h3 {
         float: none;
         width: 100%;
     }
+    .box-top-tit .l-box .explain-txt { vertical-align: -30%; }
     .box-top-tit .r-box {margin-top: 10px;}
     .box-top-tit .r-box select, 
     .box-top-tit .r-box .selectBox {
@@ -2702,7 +2703,7 @@ form .form-list h3 {
     }
 
 
-    /* 요청 거절사유 */
+    /* 팝업 요청 거절사유 */
     .refusedPopup .popup { height: auto !important;}
 
 
@@ -2724,6 +2725,18 @@ form .form-list h3 {
     }
     /* 퀵메뉴 */
     #quickMenuWrapper { display: none; }
+
+
+    /* 팝업 인쇄옵션 */
+    .printPopup .popup { height: auto !important;}
+    .printPopup .popup-form-table .list-tit,
+    .printPopup .popup-form-table .list-cont {
+        float: none;
+        width: 100%;
+    }
+    .printPopup p.sub-txt {
+        line-height: 1.6;
+    }
 
 }
 
