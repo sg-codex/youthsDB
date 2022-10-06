@@ -374,6 +374,20 @@ input.hasDatepicker {
 .txt-underline {
     text-decoration: underline !important;
 }
+.txt-small { 
+    font-size: 0.9rem !important; 
+}
+.percentage { 
+    position: relative; 
+    padding: 0 1em;
+    margin-left: auto;
+}
+.percentage::after {
+    content: '%';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 
 /* 특수기호 */
 .tilde { margin: 0 16px !important; }
@@ -1124,6 +1138,10 @@ hr.page-bottom-line {
     border: 1px solid #D4D9E4;
     color: #8E97A9;
 }
+.r-btn-box .btn.r-btn-refused {
+    border: 1px solid #E41A1A;
+    color: #E41A1A;
+}
 
 .con-box .txt-underline {
     text-decoration: underline;
@@ -1554,7 +1572,7 @@ table .result-txt.headcount::after {
     border: 1px solid #D4D9E4;
     border-width: 0 1px 1px 0;
     color: #333333;
-    padding: 10.5px 14px;
+    padding: 10.5px 5px;
     height: 60px;
 }
 .result-table-wrap td.printed {
@@ -1965,10 +1983,12 @@ table .result-txt.headcount::after {
 /* =========================================================================================== 
  인재관리
 =========================================================================================== */
-.sch-con-box { margin-bottom: 45px; }
-.sch-con-box .selectBox, .sch-con-box input {
+.sch-con-box { margin-bottom: 30px; }
+.sch-con-box .selectBox, 
+.sch-con-box input {
     height: 46px;
 }
+.sch-con-box .selectBox .label { vertical-align: middle; }
 .sch-wrap { position: relative; }
 .schBtn {
     position: absolute;
@@ -2016,6 +2036,46 @@ table .result-txt.headcount::after {
 .tab-wrap { 
     margin-bottom: 30px;
 }
+.result-table-wrap .txt-small { 
+    vertical-align: initial;
+}
+.result-table-wrap .red.txt-small::before {
+    content: '+';
+}
+.result-table-wrap .blue.txt-small::before {
+    content: '-';
+}
+.calendar-table-wrap .d-flex {
+    flex-direction: column;
+    min-height: 150px;
+    text-align: right;
+}
+.calendar-table-wrap .d-flex > * { 
+    color: #222222;
+    display: flex;
+    flex-grow: 1;
+ }
+.calendar-table-wrap .d-flex .date {
+    color: #ADADAD;
+    text-align: left;
+    flex-direction: row;
+}
+.calendar-table-wrap .d-flex .num {
+    flex-direction: column-reverse;
+}
+.calendar-table-wrap .d-flex .red::before {
+    content: '+';
+    position: absolute;
+    left: 4px;
+    bottom: 0;
+}
+.calendar-table-wrap .d-flex .blue::before {
+    content: '-';
+    position: absolute;
+    left: 4px;
+    bottom: 0;
+}
+
 /* 탭 커스텀 */
 .tab-list li {
     display: inline-block;
@@ -2038,13 +2098,49 @@ table .result-txt.headcount::after {
 }
 
 
+/* =========================================================================================== 
+ 회원관리
+=========================================================================================== */
+.cont-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+}
 
+.cont-flex .flex-left {
+    width: 20%;
+}
+.cont-flex .flex-right {
+    width: 80%;
+}
+.cont-flex .table-wrap table { min-width: 800px; }
 
-
-
-
-
-
+.member-list {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #E2E9EE;
+    border-radius: 0px 0px 6px 6px;
+    overflow: hidden;
+}
+.member-list.all {
+    border-radius: 6px 6px 0 0;
+    margin-bottom: -1px;
+}
+.member-list li {
+    padding: 13px 23px;
+    height: 48px;
+    line-height: 1.4;
+    background-color: #fff;
+    color: #555555;
+    cursor: pointer;
+}
+.member-list li.active {
+    background-color: #1776E1;
+    color: #ffffff;
+}
+.member-list li .count {
+    margin-left: 8px;
+}
 
 
 
@@ -2165,7 +2261,7 @@ table .result-txt.headcount::after {
     border: 1px solid #D4D9E4;
     border-width: 0 1px 1px 0;
     color: #333333;
-    padding: 10.5px 14px;
+    padding: 10.5px 5px;
     height: 60px;
     text-align: left;
 }

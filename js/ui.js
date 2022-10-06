@@ -12,10 +12,16 @@ $(function() {
   });
 });
 
-function openSelectPopup(popupname) {
-  if($('select.selectPopup').val() == '거절') {
-    $("." + popupname).fadeIn(300);
+// 셀렉트 박스 거절&승인 팝업
+function openSelectPopup() {
+  var val = $('select.selectPopup').val();
+  if(val == '거절') {
+    $(".alert-cancel").fadeIn(300);
+  } 
+  if(val == '승인') {
+    $(".alert-confirm").fadeIn(300);
   }
+  return;
 }
 
 // 파일추가
