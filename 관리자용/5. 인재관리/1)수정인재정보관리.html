@@ -221,58 +221,48 @@
             <section id="content" class="content">
                 <div id="cont-wrap">
                     <div class="location-box clearfix">
-                        <h2 class="page-title-txt">인재목록</h2>
+                        <h2 class="page-title-txt">수정 인재정보 관리</h2>
                         <div class="location-txt">
                             <img src="../../images/common/ico_location.png" alt="홈 아이콘">
                             <span>인재관리</span>
-                            <span class="angle-bracket">인재목록</span>
+                            <span class="angle-bracket">수정 인재정보 관리</span>
                         </div>
                     </div>
                     <hr class="page-title-line">
                     <div>
-                        <form action="">
-                            <legend>인재 조회</legend>
-                            <div class="sch-select-box sch-con-box clearfix">
-                                <div class="w20">
-                                    <div class="selectBox">
-                                        <button type="button" class="label">이름</button>
-                                        <ul class="option-list">
-                                            <li class="option">이름</li>
-                                            <li class="option">생년월일</li>
-                                            <li class="option">최종 수정일</li>
-                                        </ul>
-                                        <!-- <select name="" id="" class="more-b">
-                                            <option value="전체">전체</option>
-                                            <option value="직접검색">직접검색</option>
-                                            <option value="인재추천">인재추천</option>
-                                        </select> -->
+                        <div class="con-box-wh">
+                            <form action="">
+                                <legend>요청관리 조회</legend>
+                                <div class="sch-select-box clearfix">
+                                    <div class="w35">
+                                        <p>요청일</p>
+                                        <div class="datePickerBox">
+                                            <input type="text" id="fromDate" name="from" autocomplete="off" placeholder="날짜 선택" class="hasDatepicker">
+                                            <label for="fromDate"></label>
+                                            <span>~</span>
+                                            <input type="text" id="toDate" name="to" autocomplete="off" placeholder="날짜 선택" class="hasDatepicker">
+                                            <label for="toDate"></label>
+                                        </div>
+                                    </div>
+                                    <div class="w20">
+                                        <p><label for="schIpt">요청자</label></p>
+                                        <div class="sch-wrap">
+                                            <input type="search" id="schIpt" class="input01" placeholder="검색어를 입력해주세요">
+                                            <button type="submit" class="schBtn"></button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button type="submit" class="btn">조회</button>
                                     </div>
                                 </div>
-                                <div class="w40">
-                                    <label for="schIpt"></label>
-                                    <div class="sch-wrap">
-                                        <input type="search" id="schIpt" class="input01" placeholder="검색어를 입력해주세요">
-                                        <button type="submit" class="schBtn h46"></button>
-                                    </div>
-                                </div>
-                                <div class="btn-box">
-                                    <a href="./1)인재목록-청년인재등록.html" class="btn">청년인재등록</a>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                         <div class="con-box-wh">
                             <div class="box-top-tit clearfix">
                                 <div class="l-box">
                                     <span class="count-txt">전체 회원 수 <strong class="people">5,637</strong></span>
                                 </div>
                                 <div class="r-box">
-                                    <div class="selectBox">
-                                        <button type="button" class="label">직접검색</button>
-                                        <ul class="option-list">
-                                            <li class="option">직접검색</li>
-                                            <li class="option">인재추천</li>
-                                        </ul>
-                                    </div>
                                     <div class="selectBox">
                                         <button type="button" class="label">최신순</button>
                                         <ul class="option-list">
@@ -287,7 +277,6 @@
                                             <li class="option">20개씩</li>
                                         </ul>
                                     </div>
-                                    <a href="./1)인재목록-중복인재관리.html" class="btn btn-style-wh">중복인재 관리</a>
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap">
@@ -297,13 +286,13 @@
                                         <col width="4%">
                                         <col width="8%">
                                         <col width="4%">
+                                        <col width="4%">
                                         <col width="8%">
                                         <col width="10%">
-                                        <col width="14%">
                                         <col width="18%">
-                                        <col width="14%">
+                                        <col width="16%">
+                                        <col width="18%">
                                         <col width="8%">
-                                        <col width="10%">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -313,15 +302,15 @@
                                                     <label for="allChk"></label>
                                                 </div>
                                             </th>
+                                            <th scope="row">요청일</th>
                                             <th scope="row">이름</th>
                                             <th scope="row">성별</th>
                                             <th scope="row">생년월일</th>
                                             <th scope="row">휴대전화</th>
-                                            <th scope="row">이메일</th>
                                             <th scope="row">최종이력</th>
                                             <th scope="row">관심분야</th>
-                                            <th scope="row">최종 수정일</th>
                                             <th scope="row">관리</th>
+                                            <th scope="row">조회</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -332,16 +321,19 @@
                                                     <label for="chk01"></label>
                                                 </div>
                                             </td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
+                                            <td>2022.08.31</td>
+                                            <td>홍길동</td>
                                             <td>여</td>
                                             <td>1999.11.04</td>
                                             <td>010-1234-1234</td>
-                                            <td>2030@sample.com</td>
                                             <td>주식회사 OOOO OOO부 대리</td>
                                             <td>고용ㆍ노동</td>
-                                            <td>2022.08.31</td>
                                             <td>
-                                                <a href="./1)인재목록-청년인재등록.html" class="btn btn-style-wh">정보수정</a>
+                                                <button type="button" class="btn btn-style-gr" onclick="openPopup('refusedPopup');">요청거절</button>
+                                                <button type="button" class="btn btn-style-wh">요청승인</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn" onclick="openPopup('youthsPopup');">조회</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -351,16 +343,19 @@
                                                     <label for="chk02"></label>
                                                 </div>
                                             </td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">김청년</a></td>
+                                            <td>2022.08.31</td>
+                                            <td>김청년</td>
                                             <td>남</td>
                                             <td>1999.11.04</td>
                                             <td>010-1234-1234</td>
-                                            <td>2030@sample.com</td>
                                             <td>OOOO대학교 OOOO전공</td>
                                             <td>고용ㆍ노동 / 기후ㆍ환경 / 기타</td>
-                                            <td>2022.08.31</td>
                                             <td>
-                                                <a href="./1)인재목록-청년인재등록.html" class="btn btn-style-wh">정보수정</a>
+                                                <button type="button" class="btn btn-style-gr">요청거절</button>
+                                                <button type="button" class="btn btn-style-wh">요청승인</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn" onclick="openPopup('youthsPopup');">조회</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -370,23 +365,25 @@
                                                     <label for="chk03"></label>
                                                 </div>
                                             </td>
-                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
+                                            <td>2022.08.31</td>
+                                            <td>홍길동</td>
                                             <td>여</td>
                                             <td>1999.11.04</td>
                                             <td>010-1234-1234</td>
-                                            <td>2030@sample.com</td>
                                             <td>주식회사 OOOO OOO부 대리</td>
                                             <td>고용ㆍ노동</td>
-                                            <td>2022.08.31</td>
                                             <td>
-                                                <a href="./1)인재목록-청년인재등록.html" class="btn btn-style-wh">정보수정</a>
+                                                <button type="button" class="btn btn-style-gr">요청거절</button>
+                                                <button type="button" class="btn btn-style-wh">요청승인</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn" onclick="openPopup('youthsPopup');">조회</button>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div class="r-btn-box">
-                                    <button type="button" id="" class="btn r-btn r-btn-cancel" onclick="openPopup('alert-cancel');">비활성화</button>
-                                    <button type="button" class="btn r-btn" onclick="openPopup('alert-confirm');">활성화</button>
+                                    <button type="button" class="btn r-btn" onclick="openPopup('alert-confirm');">일괄승인</button>
                                 </div>
                             </div>
                             <div id="pagination-container">
@@ -505,7 +502,7 @@
                                 <ul class="info-list">
                                     <li>
                                         <strong>최종수정일</strong>
-                                        <span>2021-02-08</span>
+                                        <span>2022-08-22</span>
                                     </li>
                                 </ul>
                             </div>
@@ -762,24 +759,42 @@
             </div>
         </div>
     </div>
-
-    <!-- alert 팝업 일괄취소 -->
-    <div class="popupWrapper alert-cancel">
-        <div class="popup alert-popup">
-            <div class="popup-con">
-                <div class="icon-box">
-                    <img src="../../images/ico_info.png" alt="확인 아이콘">
+    <!-- 팝업 요청거절사유 조회 -->
+    <div class="popupWrapper refusedPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>요청 거절사유</h2>
                 </div>
-                <div class="alert-txt-box">
-                    <p><span>1</span>건의 요청을 취소하시겠습니까?</p>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="popup-table-wrap">
+                    <table>
+                        <caption>요청 거절사유 상세 표</caption>
+                        <colgroup>
+                            <col width="20%">
+                            <col width="80%">                        
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <textarea class="table-minHeight" placeholder="거절사유를 입력해 주세요"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="popup-btn-box">
-                    <button type="button" class="btn btn-style-wh alert-close">취소</button>
-                    <button type="button" class="btn">확인</button>
+                    <button type="button" class="btn">저장</button>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- alert 팝업 일괄승인 -->
     <div class="popupWrapper alert-confirm">
         <div class="popup alert-popup">
@@ -788,7 +803,7 @@
                     <img src="../../images/ico_write.png" alt="등록 아이콘">
                 </div>
                 <div class="alert-txt-box">
-                    <p><span>1</span>건의 요청을 승인하시겠습니까?</p>
+                    <p>중복인재의 대표정보로 설정하시겠습니까?</p>
                 </div>
                 <div class="popup-btn-box">
                     <button type="button" class="btn btn-style-wh alert-close">취소</button>

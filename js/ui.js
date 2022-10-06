@@ -18,6 +18,17 @@ function openSelectPopup(popupname) {
   }
 }
 
+// 파일추가
+var maxAppend = 1;
+function addDel(a){ 
+    $(a).closest('.file-sel').remove(); 
+    maxAppend --;
+
+    if(maxAppend == 1){
+        $('.file-not-sel').css('display','block')
+    }
+}
+
 
 $(function() {
   /* ============================================================ 
@@ -54,9 +65,7 @@ $(function() {
   var toggleAct = 'toggle_active'; // 토글 active
   var asideToggleAct = 'asideToggleAct'; // 우측 메뉴 active
 
-  /* ============================================================ 
-  * 왼쪽 메뉴 토글
-  * ============================================================ */
+  //왼쪽 메뉴 토글
    $(window).resize(function() {
     if(window.innerWidth < 1024){
       if($('.wrap').hasClass(active)) {
@@ -87,7 +96,7 @@ $(function() {
       $(this).toggleClass(active);
    });
 
-
+   // 상단 메뉴
    $('#btn_user').on('click', function() {
        $('.user-menu').toggleClass(active);
    });
@@ -120,27 +129,18 @@ $(function() {
     $(function() {
         $( "#datepicker" ).datepicker({
           dateFormat: "yy-mm-dd",
-          minDate: 0
+          minDate: 0,
+          prevText: '이전 달',
+          nextText: '다음 달',
+          monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+          monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+          dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+          dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+          dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+          showMonthAfterYear: true,
+          yearSuffix: '년'
         });
     });
-
-    
-  $.datepicker.setDefaults({
-    dateFormat: 'yy-mm-dd',
-    prevText: '이전 달',
-    nextText: '다음 달',
-    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-    showMonthAfterYear: true,
-    yearSuffix: '년'
-  });
-
-
-
-
 
     // 데이트 피커 - 기간 설정
     $(function() {
@@ -177,46 +177,12 @@ $(function() {
       }
     });
 
-    // 체크박스 갯수 제한
-    // var chkbox = $('input[name=interest]');
-    // $(chkbox).change(function(){
-    //     if($('input[name=interest]:checkbox:checked').length === 5){
-    //         $(':checkbox:not(:checked)').attr('disabled', 'disabled');
-    //     } else {
-    //         $('input[name=interest]:checkbox').removeAttr('disabled');
-    //     }
-    // });
-
-
-
-    // 셀렉트 박스 커스텀
-    // 임시 
+    // 셀렉트 박스 커스텀 (임시) 
     $('.selectBox').on('click', function(){
       $('.selectBox').not($(this)).removeClass(active);
       $(this).toggleClass(active);
     });
 
-    // var selLabel = $('.label');
-    // var selOptions = $('.option');
-
-    // // 클릭한 옵션의 텍스트를 라벨 안에 넣음
-    // const handleSelect = function(item) {
-    //   selLabel.html = item.textContent;
-    //   selLabel.parent('selectBox').removeClass('active');
-    // }
-    // // 옵션 클릭시 클릭한 옵션을 넘김
-    // selOptions.forEach(function(option, index){
-    //   option.addEventListener('click', function(){handleSelect(option)});
-    //   console.log(option, 'option');
-    // });
-    // // 라벨을 클릭시 옵션 목록이 열림/닫힘
-    // selLabel.on('click', function() {
-    //   if(selLabel.parent('selectBox').hasClass(active)) {
-    //     selLabel.parent('selectBox').removeClass(active);
-    //   } else {
-    //     selLabel.parent('selectBox').addClass(active);
-    //   }
-    // });
 
     // 체크박스 전체 선택 
     var allChk = $('.allChk');
@@ -242,48 +208,16 @@ $(function() {
 
     });
 
-
-    //체크박스 전체 선택 해제
-    // $("#ch-all").click(function() {
-    //   if($("#ch-all").is(":checked")) $("input[name=table-check]").prop("checked", true);
-    //   else $("input[name=table-check]").prop("checked", false);
-    // });
-  
-    // $("input[name=table-check]").click(function() {
-    //   var total = $("input[name=table-check]").length;
-    //   var checked = $("input[name=table-check]:checked").length;
-  
-    //   if(total != checked) $("#ch-all").prop("checked", false);
-    //   else $("#ch-all").prop("checked", true); 
+    // 체크박스 갯수 제한 - 기존 기능 사라짐. 주석 처리
+    // var chkbox = $('input[name=interest]');
+    // $(chkbox).change(function(){
+    //     if($('input[name=interest]:checkbox:checked').length === 5){
+    //         $(':checkbox:not(:checked)').attr('disabled', 'disabled');
+    //     } else {
+    //         $('input[name=interest]:checkbox').removeAttr('disabled');
+    //     }
     // });
 
-
-
-
-    // keydown 이벤트(Enter 키)
-    // const handlerKeydown = (evt) => {
-    //   if (evt.key === "Enter") handlerClick(evt);
-    // };
-
-    var tooltipKeydown = function(event) {
-      if(event.key === "Enter") handlerClick(event);
-    };
-
-    // event 등록
-    (function() {
-
-      var tooltip = $('.ico-tooltip');      
-      tooltip.on('keydown', tooltipKeydown);
-
-
-      // const abbr = document.querySelectorAll("abbr[title]");
-      // if (!abbr.length) return;
-
-      // for (let i = 0; i < abbr.length; i++) {
-      //     abbr[i].addEventListener("click", handlerClick);
-      //     abbr[i].addEventListener("keydown", handlerKeydown);
-      // }
-    })();
 
 
     // 툴팁 on/off 
@@ -328,12 +262,11 @@ $(function() {
     });
 
 
-
-
-
-
-
+    // 학력 추가&삭제
     
+
+
+
 
     // 퀵메뉴
     var youthsPopupWrap = $('.popup-con.youths-info-con');
@@ -356,118 +289,50 @@ $(function() {
 
     });
 
-
-    // youthsPopupWrap.scroll(function(){
-    //   var scrollTop = $(document).scrollTop();
-    //   if(scrollTop < 100) {
-    //     scrollTop = 100;
-    //   }
-    //   $('#quickMenu').stop();
-    //   $('#quickMenu').animate({ "bottom" : scrollTop });
-    // });
-
-    // $('#quickMenu a.wish').on('click', function(e){
-    //   e.preventDefault();
-    //   var offset = $('.popup-con #wish').offset();
-
-    //   $('.markedYouthsPopup').animate({ scrollTop : offset.top }, 400);
-    // });
-
-    // 스크롤 시 퀵메뉴 on 클래스 추가
-    // youthsPopupWrap.on('scroll', function() {
-    //   var cur_pos = $(this).scrollTop();      
-
-    //   console.log($('#eduInfo').position().top, 'eduInfo position');
-    //   console.log($('#eduInfo').scrollTop(), 'eduInfo scrollTop');
-
-    //   youthsConBox.each(function(){
-    //     var conTop = $(this).offset().top - quickMenu_height;
-    //     var conBottom = conTop + $(this).outerHeight();
-
-    //     if(cur_pos >= conTop && cur_pos <= conBottom) {
-    //       quickMenu.find('a').parent().removeClass('on');
-    //       youthsConBox.removeClass(active);
-
-    //       $(this).parent().addClass('on');
-    //       quickMenu.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('on');
-    //     }
-    //   });
-
-    // });
-
-  // $('.quickList > li > a').on('click', function(e) {
-  //   e.preventDefault();
-  //   const DOM = $(this).attr('href');
-
-  //   const scTop = $(DOM).offset().top;
-
-  //   // youthsPopupWrap.scrollTop(scTop)
-  //   youthsPopupWrap.stop().animate({ scrollTop : scTop } , 500);
-  // });
-
-    // 퀵메뉴 클릭 시 이동
-    // quickMenu.find('a').on('click', function(e) {
-    //   e.preventDefault();
-                                                                                                                                                                                    
-    //   var id = $(this).attr('href');
-
-    //   // scrollQuickMenu(id);
-    //   const scTop = $(id).offset().top;
-    //   scrollQuickMenu(scTop);
-    //   console.log($(id).position().top, '$(id).position().top');
-    //   console.log($(id).offset().top, '$(id).offset().top');
-    //   console.log($(id), '$(id)');
-      
-    //   return false;
-      
-    // });
-    // function scrollQuickMenu(scTop) {
-    //   youthsPopupWrap.animate({
-    //     scrollTop: scTop + 300
-    //   }, 500);
-    // }
-    // function scrollQuickMenu(id) {
-    //   youthsPopupWrap.animate({
-    //     scrollTop: $(id).position().top - 30
-    //   }, 500);
-    // }
-
-
-    // var currentPosition = parseInt(quickMenu.css("top"));
     
-    // youthsPopupWrap.on('scroll', function(){
-    //   var position = youthsPopupWrap.scrollTop();
-    //   console.log(position, 'position');
-    //   console.log(currentPosition, 'currentPosition');
+  // 파일추가
+  $('#fileUp').on('input',function(){ 
+    var fileValue = $("#fileUp").val().split("\\");
+    var fileName = fileValue[fileValue.length-1];
+    $('.file-not-sel').css('display','none');
 
-    //   if(position >= youthsPopupWrap.offset().top){ 
-        
-    //     quickMenu.addClass("fixed");
-    //     // quickMenu.stop().animate({ "top": 100 + "%" ,"bottom" : 10 + "%" }, 500);
-    //     // quickMenu.stop().animate({ "top": position + currentPosition + "%" },500);
-    //     //위의 if문에 대한 조건 만족시 fixed라는 class를 부여함
-    //     } else {
-    //       quickMenu.removeClass("fixed");
-    //         //위의 if문에 대한 조건 아닌경우 fixed라는 class를 삭제함
-    //     }
+    if(maxAppend > 10){
+      alert("파일 업로드 최대 개수는 10개 입니다.");
+      return;
+    } else {
+      $('.file-upload > div').append(        
+          "<div class='file-sel input-nomal w100p'>"+
+              "<div>"+
+                  "<div></div>"+
+                  "<p>" + fileName + " </p>"+
+                  "<button type='button' onclick='addDel(this)';></button>"+
+              "</div>"+
+          "</div>"        
+        ); 
 
-    // });
+      maxAppend ++;
+    }
 
+  });
 
-    // youthsPopupWrap.on('scroll', function() {
-    //    //스크롤의 위치가 상단에서 760보다 크면
-    //   //  if ($(window).scrollTop() > 520) {
-    //     if(youthsPopupWrap.scrollTop() >= youthsPopupWrap.offset().top){ 
-    //     quickMenu.addClass("fixed");
-    //     //위의 if문에 대한 조건 만족시 fixed라는 class를 부여함
-    //     } else {
-    //       quickMenu.removeClass("fixed");
-    //         //위의 if문에 대한 조건 아닌경우 fixed라는 class를 삭제함
-    //     }
-    // });
+  // 탭 
+  var $TabList = $('.tab-list li');
+  var $tabBox = $('.tabBox');
+  var tabOn = 'tab-on'
 
+  $TabList.first().addClass(tabOn);
+  $tabBox.hide();
+  $tabBox.first().show();
 
-
+  $TabList.click(function(e){
+      e.preventDefault();
+      $TabList.removeClass(tabOn);
+      $(this).addClass(tabOn);
+      $tabBox.hide();
+      
+      var activeTab = $(this).find('a').attr('href');
+      $(activeTab).show();
+  });
 
 
 });

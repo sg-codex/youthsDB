@@ -55,6 +55,12 @@ col widths
 .w95{width:95%!important}
 .w100{width:100%!important}
 
+
+/* ===========================================================================================
+margin
+=========================================================================================== */
+.mb0 { margin-bottom: 0 !important; }
+
 #wrapper {
     width: 100%;
     height: 100%;
@@ -67,6 +73,7 @@ col widths
     min-width: 160px;
     height: 46px;
     line-height: 1.4;
+    text-align: center;
     background-color: #1776E1;
     border: 1px solid #1776E1;
     color: #fff;
@@ -77,6 +84,7 @@ col widths
 .btn-style-wh {
     height: 46px;
     line-height: 1.4;
+    text-align: center;
     background: #FFFFFF;
     border: 1px solid #1776E1;
     color: #1776E1;
@@ -90,6 +98,16 @@ col widths
     color: #8E97A9;
     border-radius: 4px;
     font-size: 1rem;
+    text-align: center;
+}
+.btn-disabled {
+    background: #FFFFFF;
+    border: 1px solid #EBF0F8;
+    color: #CDD5E1;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+    cursor: initial;
 }
 .btn_file {
     height: 46px;
@@ -115,7 +133,7 @@ input:disabled+label { cursor: default; }
 button:disabled { cursor: default; }
 
 /* input text & password 스타일 */
-input[type=text], input[type=password], input[type=number] {
+input[type=text], input[type=password], input[type=number], input[type=search] {
     background-color: #ffffff;
     border: 1px solid #D4D9E4;
     border-radius: 4px;
@@ -991,7 +1009,11 @@ hr.page-bottom-line {
 /* 임시코드 */
 .sch-select-box .w20 select {
     width: 100%;
-}/* 임시코드 */
+    margin-top: 30px;
+}
+.sch-select-box .w20 p+select,
+.sch-select-box .w20 p+.selectBox { margin-top: 0px; }
+/* 임시코드 */
 
 .sch-select-box .btn-box {
     float: right;
@@ -1004,7 +1026,8 @@ hr.page-bottom-line {
     line-height: 1.6;
 }
 .box-top-tit {
-    margin-bottom: 18px;
+    line-height: 1.6;
+    padding: 10px 0;
 }
 .box-top-tit.mg-btm0 { margin-bottom: 0 !important; }
 .box-top-tit h3 {
@@ -1205,10 +1228,10 @@ hr.page-bottom-line {
 
 .table-wrap table .btn {
     height: 38px;
-    padding: 7px 0;
+    padding: 7px 4px;
     min-width: 120px;
     vertical-align: middle;
-    line-height: 22px;
+    line-height: 22px;    
 }
 .table-wrap table .checkBox li {
     float: left;
@@ -1447,8 +1470,7 @@ hr.page-bottom-line {
     float: none;
     display: block;
 }
-.table-wrap ul .list2-cont > .input-wrap {
-    
+.table-wrap ul .list2-cont > div {    
     padding: 14px 0 0px 14px;
 }
 .table-wrap ul .list2-cont .list-cont.add-txt-wrap {
@@ -1563,6 +1585,7 @@ table .result-txt.headcount::after {
     background-size: 12px;
     background-position: right center;
 }
+.result-table-wrap table .ellipsis { max-width: 380px; }
 
 /* 결과 표 비어있을 때 */
 .empty-table table { min-height: 200px; }  /* 표 감싸고 있는 table-wrap에 empty-table 클래스 추가 */
@@ -1714,6 +1737,62 @@ table .result-txt.headcount::after {
  }
 
 
+
+
+/* ===========================================================================================
+ 대시보드
+=========================================================================================== */
+.box-top-tit.dashboard-tit a {
+    font-size: 1.25rem;
+    color: #02346B;
+    font-weight: 700;
+    display: block;
+    background-image: url('../images/ico_arrow-right-main.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 24px;
+}
+
+/* 대시보드 표 스타일 */
+.dashboard-table-wrap { overflow-x: auto; } 
+.dashboard-table-wrap table { 
+    min-width: 1200px; 
+    text-align: center; 
+    min-height: 300px; 
+}
+.dashboard-table-wrap table th {
+    color: #707F9C;
+    font-weight: 500;
+    border-bottom: 2px solid #C3CCDE;
+    padding: 18px 0;
+}
+.dashboard-table-wrap table td {
+    color: #333333;
+    padding: 18px 0;
+    border-bottom: 1px solid #D4D9E4;
+}
+
+.dashboard-flex { 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dashboard-flex > div {
+    width: calc(100% / 24 * 6 - 15px);
+}
+.tag-gray {
+    margin-top: 7px;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #AEBBD5;
+    color: #707F9C;
+    font-size: 0.95rem;
+    border-radius: 4px;
+}
+.db-chart-box {
+    min-height: 260px;
+}
 
 
 
@@ -1880,6 +1959,85 @@ table .result-txt.headcount::after {
     color: #CDD5E1;
     background-color: #ffffff;
 }
+
+
+
+/* =========================================================================================== 
+ 인재관리
+=========================================================================================== */
+.sch-con-box { margin-bottom: 45px; }
+.sch-con-box .selectBox, .sch-con-box input {
+    height: 46px;
+}
+.sch-wrap { position: relative; }
+.schBtn {
+    position: absolute;
+    left: calc(100% - 44px);
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/ico_search.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 24px;
+}
+.schBtn.h46 {
+    width: 46px;
+    height: 46px;
+    background-position: right 14px center;
+}
+.sch-con-box .btn {
+    margin-top: 0;
+}
+
+/* 청년인재 등록 */
+.container:not(:last-child) { margin-bottom: 40px; }
+
+.thead-table-wrap ul .list-tit:first-child,
+.thead-table-wrap ul .list-cont:first-child { 
+    width: 15%;    
+    text-align: center;
+ }
+ .thead-table-wrap ul .list-cont:first-child { 
+    min-height: 57px; 
+    line-height: 2;
+}
+.thead-table-wrap ul .list-tit:last-child,
+.thead-table-wrap ul .list-cont:last-child { 
+    width: 85%;
+    text-align: center;
+    border-left: 1px solid #D4D9E4;
+ }
+.btm-btnBox.d-flex {
+    justify-content: space-between;
+}
+
+/* 인재등록 현황 */
+.tab-wrap { 
+    margin-bottom: 30px;
+}
+/* 탭 커스텀 */
+.tab-list li {
+    display: inline-block;
+    color: #333333;
+    background-color: #FAFAFA;
+    border: 1px solid #E2E9EE; 
+    border-radius: 6px 6px 0 0;
+    padding: 14px 20px;
+}
+.tab-list li.tab-on {
+    color: #1776E1;
+    background-color: #ffffff;
+}
+.tab-content { 
+    margin-top: -1px;
+    padding: 30px; 
+    border: 1px solid #E2E9EE;
+    background-color: #ffffff;
+    border-radius: 0 0 6px 6px;
+}
+
+
 
 
 
@@ -2331,7 +2489,7 @@ hr.con-box-line {
 }
 .refusedPopup .popup .popup-table-wrap { margin-top: 0; }
 .refusedPopup .popup .popup-table-wrap table { min-width: 500px; }
-.refused-txt {
+.table-minHeight {
     min-height: 120px;
 }
 
@@ -2522,7 +2680,8 @@ form .form-list h3 {
     text-decoration: underline;
 }
 
-#quickMenu .btn-box button {
+#quickMenu .btn-box button,
+#quickMenu .btn-box a {
     min-width: 120px;
     padding: 6px 10px;
     height: 36px;
@@ -2613,6 +2772,14 @@ form .form-list h3 {
     #joinForm .table-wrap ul .list-cont > * { display: block; }
     #joinForm .sub-txt { display: block; }
 
+    /* 대시보드 */
+    .dashboard-flex > div {
+        width: calc(100% / 12 * 6 - 15px);
+    }
+
+
+
+
     /* 마이페이지 */
     .sub-txt { display: block; }
 
@@ -2660,6 +2827,7 @@ form .form-list h3 {
         float: none;
         width: 100%;
     }
+    .box-top-tit .l-box .explain-txt { vertical-align: -30%; }
     .box-top-tit .r-box {margin-top: 10px;}
     .box-top-tit .r-box select, 
     .box-top-tit .r-box .selectBox {
@@ -2702,7 +2870,7 @@ form .form-list h3 {
     }
 
 
-    /* 요청 거절사유 */
+    /* 팝업 요청 거절사유 */
     .refusedPopup .popup { height: auto !important;}
 
 
@@ -2724,6 +2892,18 @@ form .form-list h3 {
     }
     /* 퀵메뉴 */
     #quickMenuWrapper { display: none; }
+
+
+    /* 팝업 인쇄옵션 */
+    .printPopup .popup { height: auto !important;}
+    .printPopup .popup-form-table .list-tit,
+    .printPopup .popup-form-table .list-cont {
+        float: none;
+        width: 100%;
+    }
+    .printPopup p.sub-txt {
+        line-height: 1.6;
+    }
 
 }
 
@@ -2793,6 +2973,13 @@ form .form-list h3 {
     .page-cont-box { padding: 20px; }
 
     .table-wrap input.input02 { max-width: 200px; }
+
+
+
+    /* 대시보드 */
+    .dashboard-flex > div {
+        width: 100%;
+    }
 
     /* 마이페이지 */
     .table-wrap .form-style.email input[type=text], .table-wrap .form-style.email select { width: 28%; }

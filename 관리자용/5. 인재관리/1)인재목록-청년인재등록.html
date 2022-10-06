@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" class="">인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" class="">
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" class="">
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 메뉴 관리</a></li>
+                            <li><a href="">- 게시판 관리</a></li>
+                            <li><a href="">- 팝업/배너 관리</a></li>
+                            <li><a href="">- 게시물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="m-nav" class="">
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section id="content" class="content">
+                <div id="cont-wrap">
+                    <div class="location-box clearfix">
+                        <h2 class="page-title-txt">청년인재 등록</h2>
+                        <div class="location-txt">
+                            <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                            <span>인재관리</span>
+                            <span class="angle-bracket">인재목록</span>
+                        </div>
+                    </div>
+                    <hr class="page-title-line">
+                    <div>
+                        <form action="">
+                            <legend>청년인재 등록</legend>
+                            <div class="con-box-wh">
+                                <div class="container">
+                                    <div class="box-top-tit">
+                                        <h3>인적사항</h3>
+                                        <span>
+                                            정부위원회, 자문단 등 각종 정책결정과정에 청년위원으로 최종 추천되기 전까지 기본정보는 공개되지 않습니다.
+                                        </span>
+                                    </div>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="userName">성명</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="userName" class="input02" value="" placeholder="성명">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">생년월일</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="userName" class="input02" placeholder="생년월일">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">성별</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <input type="checkbox" name="" id="male">
+                                                    <label for="male">남자</label>
+                                                    <input type="checkbox" name="" id="female">
+                                                    <label for="female">여자</label>
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">연락처</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="form-style tel clearfix">
+                                                        <select name="tel2_1" id="tel2_1" title="휴대전화 앞 번호">
+                                                            <option value="" selected="selected">선택</option>
+                                                            <option value="010">010</option>
+                                                            <option value="011">011</option>
+                                                            <option value="016">016</option>
+                                                            <option value="017">017</option>
+                                                            <option value="018">018</option>
+                                                            <option value="019">019</option>
+                                                        </select>
+                                                        <input maxlength="4" type="text" name="tel2_2" id="tel2_2" title="휴대전화 중간 번호" value="">
+                                                        <input maxlength="4" type="text" name="tel2_3" id="tel2_3" title="휴대전화 끝 번호" value="">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="">이메일</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" class="input-nomal w300" placeholder="아이디">
+                                                        <span>@</span>
+                                                        <input type="text" class="input-nomal w300" id="inputId" disabled="">
+                                                        <select name="sel" id="emailId" class="select-nomal w300">
+                                                            <option value="선택">선택</option>
+                                                            <option value=">naver.com">naver.com</option>
+                                                            <option value="hanmail.net">hanmail.net</option>
+                                                            <option value="gmail.com">gmail.com</option>
+                                                            <option value="nate.com">nate.com</option>
+                                                            <option value="hotmail.com">hotmail.com</option>
+                                                            <option value="dreamwiz.com">dreamwiz.com</option>
+                                                            <option value="empal.com">empal.com</option>
+                                                            <option value="1">직접입력</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="">활동지역</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <select name="sel" id="address01" class="select-nomal w300">
+                                                            <option value="선택">시/도</option>
+                                                            <option value="선택1">선택1</option>
+                                                            <option value="선택2">선택2</option>
+                                                            <option value="선택3">선택3</option>
+                                                        </select>
+                                                        <select name="sel" id="address02" class="select-nomal w300">
+                                                            <option value="선택">시/군/구</option>
+                                                            <option value="선택1">선택1</option>
+                                                            <option value="선택2">선택2</option>
+                                                            <option value="선택3">선택3</option>
+                                                        </select>
+                                                        <input type="checkbox" name="aria" id="ariaHome">
+                                                        <label for="ariaHome" class="radio-nomal">주거지</label>
+                                                        <input type="checkbox" name="aria" id="ariaOffice">
+                                                        <label for="ariaOffice" class="radio-nomal">직장</label>
+                                                        <input type="checkbox" name="aria" id="ariainterest">
+                                                        <label for="ariainterest" class="radio-nomal">관심지역</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="h-auto">
+                                                <div class="list-tit">
+                                                    증명사진
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list2-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="file" id="picFile">
+                                                        <label for="picFile">파일찾기</label>
+                                                        <span class="">※ 가급적 사진을 첨부해 주시기 바랍니다.(크기 제한 없음)</span>
+                                                    </div>
+                                                    <div>
+                                                        <p>첨부된 파일이 없습니다.</p>
+                                                        <div class="file-not-sel input-nomal w100p">
+                                                            <p>첨부된 파일이 없습니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="box-top-tit">
+                                        <h3>학력</h3>
+                                        <span>
+                                            재학 중을 포함하여 고등학교 이상의 학력을 기재해 주세요. 해당 사항이 없는 경우 빈 칸으로 두시고 다음 단계를 진행해 주세요.
+                                        </span>
+                                    </div>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">학교명</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" class="input02" value="" placeholder="학교명">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">학과ㆍ전공명</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" class="input02" placeholder="학과ㆍ전공명">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    학위 종류
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <select name="" id="">
+                                                        <option value="선택">선택</option>
+                                                        <option value="1">1</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    상태
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <select name="" id="">
+                                                        <option value="선택">선택</option>
+                                                        <option value="1">1</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-box">
+                                            <button type="button" class="btn btn-style-wh add-btn add-btn1">학력 추가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="box-top-tit">
+                                        <h3>직장경력</h3>
+                                        <span>
+                                            해당 사항이 없는 경우 빈 칸으로 두시고 다음 단계를 진행해 주세요.
+                                        </span>
+                                    </div>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="h-auto">
+                                                <div class="list-tit">
+                                                    <label for="">직종 구분(전∙현직)</label>                                                    
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list2-cont">
+                                                    <div>
+                                                        <p>※ 최대 3개 직종을 선택할 수 있습니다.</p>
+                                                    </div>
+                                                    <div class="checkBoxList">
+                                                        <ul class="clearfix">
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession01">
+                                                                <label for="profession01">일반 사무직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession02">
+                                                                <label for="profession02">금융 · 보험직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession03">
+                                                                <label for="profession03">연구직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession04">
+                                                                <label for="profession04">교육직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession05">
+                                                                <label for="profession05">법률직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession06">
+                                                                <label for="profession06">사회복지 · 종교직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession07">
+                                                                <label for="profession07">예술 · 디자인 · 방송 · 스포츠직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession08">
+                                                                <label for="profession08">경찰 · 소방직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession09">
+                                                                <label for="profession09">보건 · 의료직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession10">
+                                                                <label for="profession10">여행 · 판매 · 운전직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession11">
+                                                                <label for="profession11">건설직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession12">
+                                                                <label for="profession12">설치 · 정비 · 생산직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession13">
+                                                                <label for="profession13">농립 · 어업직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession14">
+                                                                <label for="profession14">미용 · 여행 · 음식 · 숙박직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession15">
+                                                                <label for="profession15">전자 · 정보통신직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession16">
+                                                                <label for="profession16">단순 노무직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession17">
+                                                                <label for="profession17">자영업 · 프리랜서</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession18">
+                                                                <label for="profession18">학생</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession19">
+                                                                <label for="profession19">무직</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="profession" id="profession20">
+                                                                <label for="profession20">기타</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>※ 최근 순으로 기재하시기 바랍니다.</p>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">직장명</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" class="input02" value="" placeholder="직장명">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">부서명</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" class="input02" placeholder="부서명">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">근무기간</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <input type="text" id="sdate1-1" class="date-nomal w300  hasDatepicker" placeholder="시작연월">
+                                                    <span>~</span>
+                                                    <input type="text" id="edate1-1" class="date-nomal w300  hasDatepicker" placeholder="종료연월">
+                                                </div>
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">직위</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" class="input02" placeholder="직위">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-box">
+                                            <button type="button" class="btn btn-style-wh add-btn add-btn2">경력 추가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container mb0">
+                                    <div class="box-top-tit">
+                                        <h3>관심분야</h3>
+                                    </div>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="h-auto">
+                                                <div class="list-tit">
+                                                    <label for="">직종 구분(전∙현직)</label>                                                    
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list2-cont">
+                                                    <div>
+                                                        <p>※ 최대 3개 직종을 선택할 수 있습니다.</p>
+                                                    </div>
+                                                    <div class="checkBoxList">
+                                                        <ul class="clearfix">
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest01">
+                                                                <label for="interest01">고용 · 노동</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest02">
+                                                                <label for="interest02">창업</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest03">
+                                                                <label for="interest03">주거 · 교통</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest04">
+                                                                <label for="interest04">교육</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest05">
+                                                                <label for="interest05">과학기술ㆍIT</label>
+                                                            </li>                                                        
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest06">
+                                                                <label for="interest06">보건 · 복지· 가족</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest07">
+                                                                <label for="interest07">금융</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest08">
+                                                                <label for="interest08">문화 · 체육· 관광</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest09">
+                                                                <label for="interest09">인권</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest10">
+                                                                <label for="interest10">지역발전</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest11">
+                                                                <label for="interest11">기후 · 환경</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest12">
+                                                                <label for="interest12">통일 · 안보· 치안</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="interest" id="interest13">
+                                                                <label for="interest13">기타</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="box-top-tit">
+                                        <h3>상세분야</h3>
+                                    </div>
+                                    <div class="table-wrap thead-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li>
+                                                <div class="list-tit">
+                                                    관심 분야
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-tit">
+                                                    상세 분야
+                                                    <span class="blind"></span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-cont">
+                                                    <label for="">-</label>
+                                                </div>
+                                                <div class="list-cont txt-left">
+                                                    <input type="text" name="" id="" class="input01" placeholder="상세 분야를 작성해 주세요">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="box-top-tit">
+                                        <h3>주요 활동사항</h3>
+                                    </div>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="h-auto">
+                                                <div class="list-tit">
+                                                    <label for="">분야</label>                                                    
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list2-cont">
+                                                    <div>
+                                                        <p>※ 최대 3개 직종을 선택할 수 있습니다.</p>
+                                                    </div>
+                                                    <div class="checkBoxList">
+                                                        <ul class="clearfix">
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active1">
+                                                                <label for="active1">고용 · 노동</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active2">
+                                                                <label for="active2">창업</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active3">
+                                                                <label for="active3">주거 · 교통</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active4">
+                                                                <label for="active4">교육</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active5">
+                                                                <label for="active5">과학기술ㆍIT</label>
+                                                            </li>                                                        
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active6">
+                                                                <label for="active6">보건 · 복지· 가족</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active7">
+                                                                <label for="active7">금융</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active8">
+                                                                <label for="interest08">문화 · 체육· 관광</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active9">
+                                                                <label for="active9">인권</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active10">
+                                                                <label for="active10">지역발전</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active11">
+                                                                <label for="active11">기후 · 환경</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active12">
+                                                                <label for="active12">통일 · 안보· 치안</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="active" id="active13">
+                                                                <label for="active13">기타</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>※ 봉사활동, 정책기자단, SNS활동, 동아리, 프로젝트 등 다양한 활동을 기재하시기 바랍니다.</p>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">상세분야</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" placeholder="상세 분야">
+                                                    </div>
+                                                </div>                                                
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">비고</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" placeholder="비고">
+                                                    </div>
+                                                </div>                                                
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">                                                
+                                                    <label for="">활동기간</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <input type="text" id="sdate1-1" class="date-nomal w300  hasDatepicker" placeholder="시작연월">
+                                                    <span>~</span>
+                                                    <input type="text" id="edate1-1" class="date-nomal w300  hasDatepicker" placeholder="종료연월">
+                                                </div>                                       
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">                                                
+                                                    <label for="">주요내용</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" placeholder="주요내용을 작성해 주세요">
+                                                    </div>
+                                                </div>      
+                                            </li>
+                                        </ul>
+                                        <div class="btn-box">
+                                            <button type="button" class="btn btn-style-wh add-btn add-btn3">활동 추가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="box-top-tit">
+                                        <h3>주요 결과물</h3>
+                                        <span>
+                                            특허 ∙ 면허 ∙ 자격증 ∙ 수상 ∙ 논문 ∙ 저서 ∙ 기고 등을 작성해 주세요
+                                        </span>
+                                    </div>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">구분</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" placeholder="논문/저서 등">
+                                                    </div>
+                                                </div>                                                
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">연월<br><span>(발간,취득,등록,수상일)</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <input type="text" id="date3-1" class="date-nomal w300 hasDatepicker" placeholder="선택">
+                                                </div>                                                
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">제목</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" placeholder="명칭">
+                                                    </div>
+                                                </div>                                                
+                                            </li>
+                                            <li class="f-item">
+                                                <div class="list-tit">                                                
+                                                    <label for="">발급ㆍ수여기관</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="" placeholder="기관명">
+                                                    </div>
+                                                </div>                                                
+                                            </li>
+                                        </ul>
+                                        <div class="btn-box">
+                                            <button type="button" class="btn btn-style-wh add-btn add-btn4">결과물 추가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="box-top-tit">
+                                        <h3>참여희망 분야</h3>
+                                    </div>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="full-cont">※ 중복선택할 수 있습니다.</li>
+                                            <li>
+                                                <div class="list-tit">                                                
+                                                    <label for="">기관</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                  
+                                                </div>    
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">                                                
+                                                    <label for="">종류</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                  
+                                                </div>    
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="box-top-tit">
+                                        <h3>지원동기</h3>
+                                        <span>
+                                            ※ 기타 자기소개, 정책결정과정에 참여하고 싶은 이유 등을 자유롭게 기술해주시기 바랍니다.(1,000자 이내)
+                                        </span>
+                                    </div>
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li class="h-auto">
+                                                <div class="list-tit">                                                
+                                                    <label for="">내용</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                  <div class="text-conut"><span class="blue">0</span>/<span>1000</span></div>
+                                                </div>  
+                                            </li>
+                                            <li class="h-auto">
+                                                <div class="list-tit">                                                
+                                                    <label for="">첨부파일</label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list2-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="file" id="fileUp">
+                                                        <label for="fileUp" class="mr20">파일첨부</label>
+                                                        <!-- <input type="file" id="picFile">
+                                                        <label for="picFile">파일찾기</label> -->
+                                                        <span class="">※ 가급적 사진을 첨부해 주시기 바랍니다.(크기 제한 없음)</span>
+                                                    </div>
+                                                    <div>
+                                                        <p>첨부된 파일이 없습니다.</p>
+                                                        <div class="file-not-sel input-nomal w100p">
+                                                            <p>첨부된 파일이 없습니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btm-btnBox d-flex">
+                                <div>
+                                    <button type="button" id="" class="btn btn-style-wh" onclick="openPopup('alert-storage');">임시저장</button>
+                                </div>
+                                <div>
+                                    <button type="button" id="" class="btn btn-style-wh" onclick="openPopup('alert-cancel');">취소</button>
+                                    <button type="button" id="" class="btn" onclick="openPopup('alert-confirm');">등록</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>                
+            </section>
+        </div>
+    </div>
+    <!-- alert 팝업 임시저장 -->
+    <div class="popupWrapper alert-storage">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>임시저장이 완료되었습니다.</p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn alert-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert 팝업 등록취소 -->
+    <div class="popupWrapper alert-cancel">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_info.png" alt="확인 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>청년인재등록을 취소하시겠습니까?</p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh alert-close">취소</button>
+                    <button type="button" class="btn">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert 팝업 등록완료 -->
+    <div class="popupWrapper alert-confirm">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>청년인재등록을 완료하시겠습니까?</p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn btn-style-wh alert-close">취소</button>
+                    <button type="button" class="btn">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -286,7 +286,9 @@
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="text" name="" id="belongOrgani" class="input01" placeholder="소속기관">
+                                                    <input type="text" name="" id="belongOrgan" class="input02" placeholder="소속기관">
+                                                    <button type="button" id="schDepart" class="btn" onclick="openPopup('belongOrgPopup');">조회</button>
+                                                    <span class="sub-txt">소속기관 조회 후 선택할 수 있습니다.</span>
                                                 </div>
                                             </div>
                                         </li>
@@ -414,11 +416,84 @@
                         </div>
                         <div class="btm-btnBox">
                             <button type="reset" id="btn_reset" class="btn btn-style-wh">초기화</button>
-                            <a href="" id="btn_save" class="btn">저장</a>
+                            <button type="button" id="btn_save" class="btn" onclick="openPopup('confirmPopup');">저장</button>
                         </div>
                     </form>
                 </div>                
             </section>
+        </div>
+    </div>
+    <!-- 팝업 소속기관 조회 -->
+    <div class="popupWrapper belongOrgPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>기관 조회</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <form action="" class="sch-form">
+                    <legend>기관 조회</legend>
+                    <div class="input-wrap">
+                        <input type="text" name="" id="schOrg" class="">
+                        <button type="button" class="btn btn-style-wh">검색</button>
+                    </div>
+                </form>
+                <div class="count-box">
+                    <span class="count-txt">전체 <strong class="items">1</strong></span>
+                </div>
+                <div class="popup-table-wrap thead-table-wrap">
+                    <table>
+                        <caption>기관 조회 내역 표</caption>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="checkBox">
+                                        <input type="checkbox" name="check" id="allChk" class="allChk">
+                                        <label for="allChk"></label>
+                                    </div>
+                                </th>
+                                <th>기관명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="checkBox">
+                                        <input type="checkbox" name="check" id="chk01">
+                                        <label for="chk01"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    국무조정실「국무조정실」
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn">완료</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert 팝업 회원가입완료 -->
+    <div class="popupWrapper confirmPopup">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>회원정보 수정이 완료되었습니다.</p>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn alert-close">확인</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
