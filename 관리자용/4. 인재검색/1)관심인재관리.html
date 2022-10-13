@@ -263,31 +263,12 @@
                                     </div>
                                     <div class="w20">
                                         <p>분류</p>
-                                        <div class="selectBox">
-                                            <button type="button" class="label">전체</button>
-                                            <ul class="option-list">
-                                                <li class="option">전체</li>
-                                                <li class="option">직접검색</li>
-                                                <li class="option">인재추천</li>
-                                            </ul>
-                                            <!-- <select name="" id="" class="more-b">
-                                                <option value="전체">전체</option>
-                                                <option value="직접검색">직접검색</option>
-                                                <option value="인재추천">인재추천</option>
-                                            </select> -->
-                                        </div>
+                                        <select name="" id="" class="more-b">
+                                            <option value="전체">전체</option>
+                                            <option value="직접검색">직접검색</option>
+                                            <option value="인재추천">인재추천</option>
+                                        </select>
                                     </div>
-                                    <!-- <div class="w20">
-                                        <p>상태</p>
-                                        <div class="selectBox">
-                                            <button type="button" class="label">선택</button>
-                                            <ul class="option-list">
-                                                <li class="option">승인</li>
-                                                <li class="option">대기</li>
-                                                <li class="option">거절</li>
-                                            </ul>
-                                        </div>
-                                    </div> -->
                                 </div>
                                 <div class="sch-select-box clearfix">
                                     <div class="w35">
@@ -321,27 +302,19 @@
                                     <span class="count-txt">전체 <strong class="items">3</strong></span>
                                 </div>
                                 <div class="r-box">
-                                    <div class="selectBox">
-                                        <button type="button" class="label">직접검색</button>
-                                        <ul class="option-list">
-                                            <li class="option">직접검색</li>
-                                            <li class="option">인재추천</li>
-                                        </ul>
-                                    </div>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">최신순</button>
-                                        <ul class="option-list">
-                                            <li class="option">최신순</li>
-                                            <li class="option">최신순</li>
-                                        </ul>
-                                    </div>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">10개씩</button>
-                                        <ul class="option-list">
-                                            <li class="option">10개씩</li>
-                                            <li class="option">20개씩</li>
-                                        </ul>
-                                    </div>
+                                    <select name="" id="" class="">
+                                        <option value="전체">전체</option>
+                                        <option value="직접검색">직접검색</option>
+                                        <option value="인재추천">인재추천</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="최신순">최신순</option>
+                                        <option value="오래된순">오래된순</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="10개씩">10개씩</option>
+                                        <option value="20개씩">20개씩</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap">
@@ -484,7 +457,7 @@
 
                         <!-- 관심인재 목록 -->
                         <div id="directList" class="con-box-wh">
-                            <div class="box-top-tit mg-btm0">
+                            <div class="box-top-tit mb0">
                                 <h3>관심인재 목록</h3>
                                 <span class="count-txt">전체 <strong class="items">3</strong></span>
                             </div>
@@ -493,32 +466,16 @@
                                     <span class="explain-txt">※노란색 배경은 이미 인쇄를 한 인물입니다.</span>
                                 </div>
                                 <div class="r-box">
-                                    <div class="selectBox">
-                                        <button type="button" class="label">최신순</button>
-                                        <ul class="option-list">
-                                            <li class="option">최신순</li>
-                                            <li class="option">인재추천</li>
-                                        </ul>
-                                    </div>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">10개씩</button>
-                                        <ul class="option-list">
-                                            <li class="option">10개씩</li>
-                                            <li class="option">20개씩</li>
-                                        </ul>
-                                    </div>
+                                    <select name="" id="" class="">
+                                        <option value="최신순">최신순</option>
+                                        <option value="오래된순">오래된순</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="10개씩">10개씩</option>
+                                        <option value="50개씩">50개씩</option>
+                                    </select>
                                     <input type="button" value="엑셀" class="btn btn-style-wh btn_file" onclick="">
                                     <input type="button" value="인쇄" class="btn btn-style-wh btn_print" onclick="openPopup('printPopup');">
-                                    <!-- <select name="" id="">
-                                        <option value="">직접검색</option>
-                                        <option value="">인재추천</option>
-                                    </select>
-                                    <select name="" id="">
-                                        <option value="">최신순</option>
-                                    </select>
-                                    <select name="" id="">
-                                        <option value="">10개씩</option>
-                                    </select> -->
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap bd-style01">
@@ -531,18 +488,18 @@
                                         <col width="5%">
                                         <col width="5%">
                                         <col width="10%">
-                                        <col width="20%">
+                                        <col width="17%">
                                         <col width="25%">
                                         <col width="12%">
                                         <col width="5%">
-                                        <col width="5%">
+                                        <col width="8%">
                                     </colgroup>
                                     <thead>
                                         <tr>
                                             <th scope="row" class="txt-center">
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="allChk" class="allChk">
-                                                    <label for="allChk"></label>
+                                                    <label for="allChk" class="adm-chkBox"></label>
                                                 </div>
                                             </th>
                                             <th scope="row">성명</th>
@@ -554,7 +511,7 @@
                                             <th scope="row">참여희망분야</th>
                                             <th scope="row">현행일자</th>
                                             <th scope="row">선임</th>
-                                            <th scope="row">평가</th>
+                                            <th scope="row">활용결과</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -562,7 +519,7 @@
                                             <td class="printed">
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk01">
-                                                    <label for="chk01"></label>
+                                                    <label for="chk01" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td class="printed"><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
@@ -580,7 +537,7 @@
                                             <td>
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk02">
-                                                    <label for="chk02"></label>
+                                                    <label for="chk02" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
@@ -598,7 +555,7 @@
                                             <td>
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk03">
-                                                    <label for="chk03"></label>
+                                                    <label for="chk03" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
@@ -629,12 +586,12 @@
                                 <button type="button" id="" class="btn r-btn">검색완료</button>
                                 <button type="button" id="" class="btn r-btn" onclick="openPopup('alert-addSearchPopup');" >추가검색요청</button>
                                 <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
-                                <button type="button" id="" class="btn r-btn" onclick="openPopup('estimationPopup');" >평가등록</button>
+                                <button type="button" id="" class="btn r-btn" onclick="openPopup('estimationPopup');" >활용평가등록</button>
                             </div>
                         </div>
                         <!-- 추천인재 목록 -->
                         <div id="recommendList" class="con-box-wh">
-                            <div class="box-top-tit mg-btm0">
+                            <div class="box-top-tit mb0">
                                 <h3>추천인재 목록</h3>
                                 <span class="count-txt">전체 <strong class="items">3</strong></span>
                             </div>
@@ -643,32 +600,16 @@
                                     <span class="explain-txt">※노란색 배경은 이미 인쇄를 한 인물입니다.</span>
                                 </div>
                                 <div class="r-box">
-                                    <div class="selectBox">
-                                        <button type="button" class="label">최신순</button>
-                                        <ul class="option-list">
-                                            <li class="option">최신순</li>
-                                            <li class="option">인재추천</li>
-                                        </ul>
-                                    </div>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">10개씩</button>
-                                        <ul class="option-list">
-                                            <li class="option">10개씩</li>
-                                            <li class="option">20개씩</li>
-                                        </ul>
-                                    </div>
+                                    <select name="" id="" class="">
+                                        <option value="최신순">최신순</option>
+                                        <option value="오래된순">오래된순</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="10개씩">10개씩</option>
+                                        <option value="50개씩">50개씩</option>
+                                    </select>
                                     <input type="button" value="엑셀" class="btn btn-style-wh btn_file" onclick="">
                                     <input type="button" value="인쇄" class="btn btn-style-wh btn_print" onclick="openPopup('printPopup');">
-                                    <!-- <select name="" id="">
-                                        <option value="">직접검색</option>
-                                        <option value="">인재추천</option>
-                                    </select>
-                                    <select name="" id="">
-                                        <option value="">최신순</option>
-                                    </select>
-                                    <select name="" id="">
-                                        <option value="">10개씩</option>
-                                    </select> -->
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap bd-style01">
@@ -681,18 +622,18 @@
                                         <col width="5%">
                                         <col width="5%">
                                         <col width="10%">
-                                        <col width="20%">
+                                        <col width="17%">
                                         <col width="25%">
                                         <col width="12%">
                                         <col width="5%">
-                                        <col width="5%">
+                                        <col width="8%">
                                     </colgroup>
                                     <thead>
                                         <tr>
                                             <th scope="row" class="txt-center">
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="allChk" class="allChk">
-                                                    <label for="allChk"></label>
+                                                    <label for="allChk" class="adm-chkBox"></label>
                                                 </div>
                                             </th>
                                             <th scope="row">성명</th>
@@ -704,7 +645,7 @@
                                             <th scope="row">참여희망분야</th>
                                             <th scope="row">현행일자</th>
                                             <th scope="row">선임</th>
-                                            <th scope="row">평가</th>
+                                            <th scope="row">활용결과</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -712,7 +653,7 @@
                                             <td class="printed">
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk01">
-                                                    <label for="chk01"></label>
+                                                    <label for="chk01" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td class="printed"><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
@@ -730,7 +671,7 @@
                                             <td>
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk02">
-                                                    <label for="chk02"></label>
+                                                    <label for="chk02" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
@@ -748,7 +689,7 @@
                                             <td>
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk03">
-                                                    <label for="chk03"></label>
+                                                    <label for="chk03" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
@@ -778,7 +719,7 @@
                                 <div class="r-btn-box">
                                     <button type="button" id="" class="btn r-btn">추천인재삭제</button>
                                     <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
-                                    <button type="button" id="" class="btn r-btn" disabled>평가등록</button>
+                                    <button type="button" id="" class="btn r-btn" disabled>활용평가등록</button>
                                 </div>
                             </div>
                             <div class="btm-btnBox">
@@ -1147,12 +1088,12 @@
         </div>
     </div>
 
-    <!-- 팝업 청년인재 평가등록 -->
+    <!-- 팝업 청년인재 활용결과 -->
     <div class="popupWrapper estimationPopup">
         <div class="popup">
             <div class="popup-head">
                 <div class="popup-head-txt">
-                    <h2>청년인재 평가등록</h2>
+                    <h2>청년인재 활용결과</h2>
                 </div>
                 <div class="close">
                     <span class="btn_close"></span>
@@ -1163,140 +1104,142 @@
                     <span class="count-txt">전체 <strong class="items">1</strong></span>
                 </div>
                 <form action="" id="estimationForm">
-                    <legend>청년인재 평가등록 폼</legend>
+                    <legend>청년인재 활용결과 폼</legend>
                     <div class="con-box">
                         <div class="con-box-b">
                             <p>홍길동 (33세 ,여)</p>
                         </div>
                         <div class="form-list">
-                            <h3>청년인재 활용 분야</h3>
-                            <p class="sub-txt"><span class="red">*</span> 해당 데이터는 청년인재DB의 통계를 위하여 수집됩니다.</p>
+                            <h3>활용결과</h3>
+                            <div class="popup-form-table">
+                                <div class="list-tit">
+                                    <label for="estiTxt01">선정 여부</label>                                    
+                                </div>
+                                <div class="list-cont">
+                                    <div class="input-wrap">
+                                        <input type="checkbox" name="onechk" id="onechk01">
+                                        <label for="onechk01" class="adm-chkBox">선정</label>
+                                        <input type="checkbox" name="onechk" id="onechk02">
+                                        <label for="onechk02" class="adm-chkBox">미선정</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-list">
+                            <h3>활용분야</h3>
                             <div class="popup-form-table">
                                 <div class="checkBoxList">
                                     <ul class="clearfix">
                                         <li>
                                             <input type="checkbox" name="interest" id="interest01">
-                                            <label for="interest01">고용 · 노동</label>
+                                            <label for="interest01" class="adm-chkBox">고용 · 노동</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest02">
-                                            <label for="interest02">창업</label>
+                                            <label for="interest02" class="adm-chkBox">창업</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest03">
-                                            <label for="interest03">주거 · 교통</label>
+                                            <label for="interest03" class="adm-chkBox">주거 · 교통</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest04">
-                                            <label for="interest04">교육</label>
+                                            <label for="interest04" class="adm-chkBox">교육</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest05">
-                                            <label for="interest05">과학기술ㆍIT</label>
+                                            <label for="interest05" class="adm-chkBox">과학기술ㆍIT</label>
                                         </li>                                                        
                                         <li>
                                             <input type="checkbox" name="interest" id="interest06">
-                                            <label for="interest06">보건 · 복지· 가족</label>
+                                            <label for="interest06" class="adm-chkBox">보건 · 복지· 가족</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest07">
-                                            <label for="interest07">금융</label>
+                                            <label for="interest07" class="adm-chkBox">금융</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest08">
-                                            <label for="interest08">문화 · 체육· 관광</label>
+                                            <label for="interest08" class="adm-chkBox">문화 · 체육· 관광</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest09">
-                                            <label for="interest09">인권</label>
+                                            <label for="interest09" class="adm-chkBox">인권</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest10">
-                                            <label for="interest10">지역발전</label>
+                                            <label for="interest10" class="adm-chkBox">지역발전</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest11">
-                                            <label for="interest11">기후 · 환경</label>
+                                            <label for="interest11" class="adm-chkBox">기후 · 환경</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest12">
-                                            <label for="interest12">통일 · 안보· 치안</label>
+                                            <label for="interest12" class="adm-chkBox">통일 · 안보· 치안</label>
                                         </li>
                                         <li>
                                             <input type="checkbox" name="interest" id="interest13">
-                                            <label for="interest13">기타</label>
+                                            <label for="interest13" class="adm-chkBox">기타</label>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="form-list">
-                            <h3>선정/위촉결과</h3>
+                            <h3>참여내용</h3>
                             <div class="popup-form-table">
-                                <div class="list-tit">
-                                    <label for="estiTxt01">활용결과</label>                                    
+                                <div class="clearfix">
+                                    <div class="list-tit">
+                                        <label for="estiTxt01">기관</label>                                    
+                                    </div>
+                                    <div class="list-cont">
+                                        <div class="input-wrap">
+                                            <input type="checkbox" name="onechk2" id="onechk21">
+                                            <label for="onechk21" class="adm-chkBox">중앙부처</label>
+                                            <input type="checkbox" name="onechk2" id="onechk22">
+                                            <label for="onechk22" class="adm-chkBox">지방자치단체</label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="list-cont">
-                                    <div class="input-wrap">
-                                        <input type="text" id="estiTxt01" class="input01" placeholder="활용결과를 작성해 주세요.">
+                                <div class="clearfix">
+                                    <div class="list-tit">
+                                        <label for="estiTxt01">종류</label>                                    
+                                    </div>
+                                    <div class="list-cont">
+                                        <div class="input-wrap">
+                                            <input type="checkbox" name="kind" id="check01">
+                                            <label for="check01" class="adm-chkBox">정부위원회</label>
+                                            <input type="checkbox" name="kind" id="check02">
+                                            <label for="check02" class="adm-chkBox">정책 서포터즈ㆍ기자단</label>
+                                            <input type="checkbox" name="kind" id="check03">
+                                            <label for="check03" class="adm-chkBox">간담회ㆍ행사</label>
+                                            <input type="checkbox" name="kind" id="check04">
+                                            <label for="check04" class="adm-chkBox">정책평가ㆍ모니터링</label>
+                                            <input type="checkbox" name="kind" id="check05">
+                                            <label for="check05" class="adm-chkBox">기타</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="list-tit h100">
+                                        <label for="details01">내용</label>
+                                    </div>
+                                    <div class="list-cont">
+                                    <textarea name="" id="details01" class="textarea01" cols="30" rows="1" placeholder="예) ◯◯위원회 위원, ◯◯◯ 사업 모니터링단 등 청년인재 활용결과를 작성해 주세요."></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-list">
-                            <h3>활동 내용</h3>
+                            <h3>개선사항</h3>
                             <div class="popup-form-table">
                                 <div class="list-tit d-table">
-                                    <label for="estiTxt02">구체적인 활동 내용 및<br> 정보 변경 내역</label>
+                                    <label for="details02">내용</label>
                                 </div>
                                 <div class="list-cont">
                                     <div class="input-wrap">
-                                        <textarea name="" id="estiTxt02" cols="30" rows="5" placeholder="구체적인 활동 내용 및 정보 변경 내역을 작성해 주세요."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-list">
-                            <h3>적절성 평가</h3>
-                            <div class="thead-form-table">
-                                <div class="list-tit">
-                                    <ul class="clearfix">
-                                        <li>
-                                            <label for="radio01">매우 부적절</label>
-                                        </li>
-                                        <li>
-                                            <label for="radio02">부적절</label>
-                                        </li>
-                                        <li>
-                                            <label for="radio03">보통</label>
-                                        </li>
-                                        <li>
-                                            <label for="radio04">적절</label>
-                                        </li>
-                                        <li>
-                                            <label for="radio05">매우 적절</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="list-cont">
-                                    <div class="radio-wrap">
-                                        <ul class="clearfix">
-                                            <li>
-                                                <input id="radio01" type="radio" name="estimation">
-                                            </li>
-                                            <li>
-                                                <input id="radio02" type="radio" name="estimation">
-                                            </li>
-                                            <li>
-                                                <input id="radio03" type="radio" name="estimation">
-                                            </li>
-                                            <li>
-                                                <input id="radio04" type="radio" name="estimation">
-                                            </li>
-                                            <li>
-                                                <input id="radio05" type="radio" name="estimation">
-                                            </li>
-                                        </ul>
+                                        <textarea name="" id="details02" cols="30" rows="5" placeholder="청년인재데이터베이스 검색 중 발생한 불편사항 또는 인재정보의 부정확 등 개선사항을 작성해 주세요."></textarea>
                                     </div>
                                 </div>
                             </div>

@@ -234,19 +234,11 @@
                             <legend>인재 조회</legend>
                             <div class="sch-select-box sch-con-box clearfix">
                                 <div class="w20">
-                                    <div class="selectBox">
-                                        <button type="button" class="label">이름</button>
-                                        <ul class="option-list">
-                                            <li class="option">이름</li>
-                                            <li class="option">생년월일</li>
-                                            <li class="option">최종 수정일</li>
-                                        </ul>
-                                        <!-- <select name="" id="" class="more-b">
-                                            <option value="전체">전체</option>
-                                            <option value="직접검색">직접검색</option>
-                                            <option value="인재추천">인재추천</option>
-                                        </select> -->
-                                    </div>
+                                    <select name="" id="" class="mt0 more-b">
+                                        <option value="이름">이름</option>
+                                        <option value="생년월일">생년월일</option>
+                                        <option value="최종 수정일">최종 수정일</option>
+                                    </select>
                                 </div>
                                 <div class="w40">
                                     <label for="schIpt"></label>
@@ -266,27 +258,19 @@
                                     <span class="count-txt">전체 회원 수 <strong class="people">5,637</strong></span>
                                 </div>
                                 <div class="r-box">
-                                    <div class="selectBox">
-                                        <button type="button" class="label">직접검색</button>
-                                        <ul class="option-list">
-                                            <li class="option">직접검색</li>
-                                            <li class="option">인재추천</li>
-                                        </ul>
-                                    </div>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">최신순</button>
-                                        <ul class="option-list">
-                                            <li class="option">최신순</li>
-                                            <li class="option">최신순</li>
-                                        </ul>
-                                    </div>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">10개씩</button>
-                                        <ul class="option-list">
-                                            <li class="option">10개씩</li>
-                                            <li class="option">20개씩</li>
-                                        </ul>
-                                    </div>
+                                    <select name="" id="" class="">
+                                        <option value="전체">전체</option>
+                                        <option value="직접검색">직접검색</option>
+                                        <option value="인재추천">인재추천</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="최신순">최신순</option>
+                                        <option value="오래된순">오래된순</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="10개씩">10개씩</option>
+                                        <option value="50개씩">50개씩</option>
+                                    </select>
                                     <a href="./1)인재목록-중복인재관리.html" class="btn btn-style-wh">중복인재 관리</a>
                                 </div>
                             </div>
@@ -310,7 +294,7 @@
                                             <th scope="row">
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="allChk" class="allChk">
-                                                    <label for="allChk"></label>
+                                                    <label for="allChk" class="adm-chkBox"></label>
                                                 </div>
                                             </th>
                                             <th scope="row">이름</th>
@@ -329,7 +313,7 @@
                                             <td>
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk01">
-                                                    <label for="chk01"></label>
+                                                    <label for="chk01" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
@@ -348,7 +332,7 @@
                                             <td>
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk02">
-                                                    <label for="chk02"></label>
+                                                    <label for="chk02" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">김청년</a></td>
@@ -367,7 +351,7 @@
                                             <td>
                                                 <div class="checkBox">
                                                     <input type="checkbox" name="check" id="chk03">
-                                                    <label for="chk03"></label>
+                                                    <label for="chk03" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
                                             <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>

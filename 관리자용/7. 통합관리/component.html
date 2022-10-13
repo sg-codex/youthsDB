@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" class="">인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" class="">
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" class="">
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 메뉴 관리</a></li>
+                            <li><a href="">- 게시판 관리</a></li>
+                            <li><a href="">- 팝업/배너 관리</a></li>
+                            <li><a href="">- 게시물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="m-nav" class="">
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="content" class="content">
+                <div id="cont-wrap">                    
+                    <form action="" id="memberForm">
+                        <div class="location-box clearfix">
+                            <h2 class="page-title-txt">제목</h2>
+                            <div class="location-txt">
+                                <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                                <span>위치</span>
+                                <span class="angle-bracket">위치</span>
+                                <span class="angle-bracket">위치</span>
+                            </div>
+                        </div>
+                        <hr class="page-title-line">
+                        <div>
+                            <form action="">
+                                <legend>인재 조회</legend>
+                                <div class="sch-select-box sch-con-box clearfix">
+                                    <div class="w20">
+                                        <select name="" id="" class="mt0 more-b">
+                                            <option value="선택" selected disabled>선택</option>
+                                            <option value="옵션">옵션</option>
+                                            <option value="옵션">옵션</option>
+                                        </select>
+                                    </div>
+                                    <div class="w40">
+                                        <label for="schIpt"></label>
+                                        <div class="sch-wrap">
+                                            <input type="search" id="schIpt" class="input01" placeholder="검색어를 입력해주세요">
+                                            <button type="submit" class="schBtn h46"></button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-box">
+                                        <a href="#a" class="btn">우측 버튼</a>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="con-box-wh">
+                                <div class="box-top-tit">
+                                    <h3>표 이름</h3>
+                                    <span><span class="red">*</span> 표시는 필수 입력 항목입니다.</span>
+                                </div>
+                                <div class="table-wrap table-th-left r-table-wrap">
+                                    <ul class="flex-wrap">
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                제목 셀 <span class="red">*</span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">내용 셀</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                제목 셀 <span class="red">*</span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">내용 셀</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                제목 셀
+                                            </div>
+                                            <div class="list-cont">
+                                                <select name="" id="" class="w30">
+                                                    <option value="선택" selected disabled>셀렉트 박스</option>
+                                                    <option value="옵션">옵션</option>
+                                                    <option value="옵션">옵션</option>
+                                                    <option value="옵션">옵션</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                제목 셀
+                                            </div>
+                                            <div class="list-cont">
+                                                <select name="" id="" class="w30 more-b">
+                                                    <option value="선택" selected disabled>셀렉트 박스(파란색 화살표)</option>
+                                                    <option value="옵션">옵션</option>
+                                                    <option value="옵션">옵션</option>
+                                                    <option value="옵션">옵션</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                제목 셀
+                                            </div>
+                                            <div class="list-cont">
+                                                <button type="button" id="" class="btn">표 내부 버튼</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                제목 셀
+                                            </div>
+                                            <div class="list-cont">
+                                                <button type="button" id="" class="btn">표 내부 버튼</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                제목 셀
+                                            </div>
+                                            <div class="list-cont">
+                                                <button type="button" id="" class="btn btn-style-wh" onclick="openPopup('IDconfirmPopup');">팝업</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                제목 셀
+                                            </div>
+                                            <div class="list-cont">
+                                                <button type="button" id="" class="btn btn-style-gr" onclick="openPopup('joinPopup');">alert팝업</button>
+                                            </div>
+                                        </li>
+                                        <li class="h-auto">
+                                            <div class="list-tit">                                                
+                                                제목 셀
+                                            </div>
+                                            <div class="list-cont">
+                                                <textarea name="" id="" cols="30" rows="10" placeholder="내용"></textarea>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                            <div class="con-box-wh">
+                                <div class="box-top-tit mb0">
+                                    <h3>표 이름</h3>
+                                    <span class="count-txt">전체 <strong class="items">3</strong></span>
+                                </div>
+                                <div class="box-top-tit clearfix">
+                                    <div class="l-box">
+                                        <span class="explain-txt">※예시문구</span>
+                                    </div>
+                                    <div class="r-box">
+                                        <select name="" id="" class="">
+                                            <option value="최신순">최신순</option>
+                                            <option value="오래된순">오래된순</option>
+                                        </select>
+                                        <select name="" id="" class="">
+                                            <option value="10개씩">10개씩</option>
+                                            <option value="50개씩">50개씩</option>
+                                        </select>
+                                        <input type="button" value="엑셀" class="btn btn-style-wh btn_file" onclick="">
+                                        <input type="button" value="인쇄" class="btn btn-style-wh btn_print" onclick="openPopup('printPopup');">
+                                    </div>
+                                </div> 
+                                <div class="table-wrap result-table-wrap bd-style01">
+                                    <table>
+                                        <caption>예시 표</caption>
+                                        <colgroup>
+                                            <col width="3%">
+                                            <col width="5%">
+                                            <col width="5%">
+                                            <col width="5%">
+                                            <col width="5%">
+                                            <col width="10%">
+                                            <col width="17%">
+                                            <col width="25%">
+                                            <col width="12%">
+                                            <col width="5%">
+                                            <col width="8%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row" class="txt-center">
+                                                    <div class="checkBox">
+                                                        <input type="checkbox" name="check" id="allChk" class="allChk">
+                                                        <label for="allChk"></label>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                                <th scope="row">제목셀</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="printed">
+                                                    <div class="checkBox">
+                                                        <input type="checkbox" name="check" id="chk01">
+                                                        <label for="chk01"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="printed"><a href="#" class="openPopup" onclick="">내용셀</a></td>
+                                                <td class="printed">내용셀</td>
+                                                <td class="printed">내용셀</td>
+                                                <td class="printed">내용셀</td>
+                                                <td class="printed">내용셀</td>
+                                                <td class="printed">내용셀</td>
+                                                <td class="printed">내용셀</td>
+                                                <td class="printed">내용셀</td>
+                                                <td class="printed"></td>
+                                                <td class="printed"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkBox">
+                                                        <input type="checkbox" name="check" id="chk02">
+                                                        <label for="chk02"></label>
+                                                    </div>
+                                                </td>
+                                                <td><a href="#" class="openPopup" onclick="">내용셀</a></td>
+                                                <td>내용셀</td>
+                                                <td>내용셀</td>
+                                                <td>내용셀</td>
+                                                <td>내용셀</td>
+                                                <td>내용셀</td>
+                                                <td>내용셀</td>
+                                                <td>내용셀</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="r-btn-box">
+                                        <button type="button" id="" class="btn r-btn r-btn-refused">빨간색 하단 버튼</button>
+                                        <button type="button" id="" class="btn r-btn r-btn-b">하단 버튼</button>
+                                        <button type="button" id="" class="btn r-btn r-btn-cancel">하단 버튼</button>
+                                        <button type="button" class="btn r-btn">하단 버튼</button>
+                                    </div>
+                                </div>    
+                                <div id="pagination-container">
+                                    <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
+                                </div>                        
+                            </div>
+                            <div class="tab-wrap">
+                                <div>
+                                    <ul class="tab-list">
+                                        <li class="tab-on"><a href="#tab01">탭1</a></li>
+                                        <li><a href="#tab02">탭2</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="tab01" class="tabBox">
+                                        <div class="chart-box"></div>
+                                    </div>
+                                    <div id="tab02" class="tabBox">
+                                        <div class="chart-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btm-btnBox">
+                            <button type="button" id="btn_reset" class="btn btn-style-wh">버튼</button>
+                            <button type="button" id="btn_save" class="btn">버튼</button>
+                        </div>
+                    </form>
+                </div>                
+            </section>
+        </div>
+    </div>
+    <!-- 팝업 아이디 중복확인 -->
+    <div class="popupWrapper IDconfirmPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>아이디 중복 확인</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="con-box-b">
+                    <ul>
+                        <li>사용하실 아이디를 입력하고 버튼을 클릭하세요.</li>
+                        <li>영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="sch-form">
+                    <h5>아이디 검색</h5>
+                    <div class="input-wrap">
+                        <input type="text" name="" id="schID" class="">
+                        <button type="button" class="btn btn-style-wh">중복 검색</button>
+                    </div>
+                    <div class="result">
+                        <p>
+                            <span class="blue">admin2022</span>은(는) 사용하실 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn">아이디 사용하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert 팝업 회원가입완료 -->
+    <div class="popupWrapper joinPopup">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>회원가입이 완료되었습니다.</p>
+                </div>
+                <ul class="popup-add-txt">
+                    <li>관리자의 가입 승인 후 로그인이 가능합니다.</li>
+                    <li>로그인의 경우 GPKI 인증서를 통한 2차 인증이 필요합니다.</li>
+                </ul>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn alert-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

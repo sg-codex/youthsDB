@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" class="">인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" class="">
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" class="">
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 메뉴 관리</a></li>
+                            <li><a href="">- 게시판 관리</a></li>
+                            <li><a href="">- 팝업/배너 관리</a></li>
+                            <li><a href="">- 게시물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="m-nav" class="">
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="content" class="content">
+                <div id="cont-wrap">                    
+                    <form action="" id="memberForm">
+                        <div class="location-box clearfix">
+                            <h2 class="page-title-txt">회원등록</h2>
+                            <div class="location-txt">
+                                <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                                <span>회원관리</span>
+                                <span class="angle-bracket">회원목록</span>
+                                <span class="angle-bracket">회원등록</span>
+                            </div>
+                        </div>
+                        <hr class="page-title-line">
+                        <div>
+                            <div class="con-box-wh">
+                                <div class="box-top-tit">
+                                    <h3>회원정보 입력</h3>
+                                    <span><span class="red">*</span> 표시는 필수 입력 항목입니다.</span>
+                                </div>
+                                <div class="table-wrap table-th-left r-table-wrap">
+                                    <ul class="flex-wrap">
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                가입유형 <span class="red">*</span>
+                                                <span class="blind"></span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="input-wrap">
+                                                    <input type="checkbox" name="chkType01" id="chkInside" class="chkInside">
+                                                    <label for="chkInside">내부업무시스템</label>
+                                                    <input type="checkbox" name="chkType01" id="chkPublic" class="chkPublic">
+                                                    <label for="chkPublic">대민서비스</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                <label for="userName">회원유형 <span class="red">*</span></label>
+                                                <span class="blind"></span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="input-wrap">
+                                                    <input type="checkbox" name="chkType02" id="chkYouths" class="chkYouths">
+                                                    <label for="chkYouths">일반</label>
+                                                    <input type="checkbox" name="chkType02" id="chkOrgani" class="chkOrgani">
+                                                    <label for="chkOrgani">기관</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="f-item">
+                                            <div class="list-tit">                                                
+                                                권한그룹
+                                                <span class="blind"></span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <select name="" id="" class="w30">
+                                                    <option value="선택" selected disabled>선택</option>
+                                                    <option value="일반 회원">일반 회원</option>
+                                                    <option value="기관">기관</option>
+                                                    <option value="관리자">관리자</option>
+                                                    <option value="최고 관리자">최고 관리자</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="type-box type-inner active">
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="schUserId">아이디 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="schUserId" id="schUserId" class="input02" placeholder="아이디 입력 후 중복확인" maxlength="12">
+                                                        <button type="button" id="IDconfirm" class="btn" onclick="openPopup('IDconfirmPopup');">중복확인</button>
+                                                        <span class="sub-txt">영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="userName">사용자명 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="userName" class="input02" placeholder="사용자명">
+                                                        <span class="sub-txt red">※ 반드시 실명 입력바랍니다.</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="pwd">비밀번호 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="password" name="" id="pwd" class="input02" placeholder="비밀번호" maxlength="15">
+                                                        <span class="sub-txt">영문, 숫자, 특수문자로 조합하여 9~15자로 사용할 수 있습니다.(사용 가능한 특수문자: ~ ! @ # $ % ^ *)</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="pwdConfirm">비밀번호 확인 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="password" name="" id="pwdConfirm" class="input02" placeholder="비밀번호" maxlength="15">
+                                                        <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="belongOrgani">소속기관 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="belongOrgan" class="input02" placeholder="소속기관">
+                                                        <button type="button" id="schDepart" class="btn" onclick="openPopup('belongOrgPopup');">조회</button>
+                                                        <span class="sub-txt">소속기관 조회 후 선택할 수 있습니다.</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="departName">부서명</label>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="departName" class="input02" placeholder="부서명">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <span>직장전화 번호 <span class="red">*</span></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="form-style tel clearfix">
+                                                        <select name="tel1_1" id="tel1_1" title="유선전화 앞 번호">
+                                                            <option value="">선택</option>
+                                                            <option value="02">02</option>
+                                                            <option value="031">031</option>
+                                                            <option value="032">032</option>
+                                                            <option value="033">033</option>
+                                                            <option value="041">041</option>
+                                                            <option value="042">042</option>
+                                                            <option value="043">043</option>
+                                                            <option value="044">044</option>
+                                                            <option value="050">050</option>
+                                                            <option value="051">051</option>
+                                                            <option value="052">052</option>
+                                                            <option value="053">053</option>
+                                                            <option value="054">054</option>
+                                                            <option value="055">055</option>
+                                                            <option value="061">061</option>
+                                                            <option value="062">062</option>
+                                                            <option value="063">063</option>
+                                                            <option value="064">064</option>
+                                                            <option value="070">070</option>
+                                                        </select>
+                                                        <input maxlength="4" type="text" name="tel1_2" id="tel1_2" title="유선전화 중간 번호">
+                                                        <input maxlength="4" type="text" name="tel1_3" id="tel1_3" title="유선전화 끝 번호">
+                                                    </div>
+                                                    <span class="sub-txt">입력 예) 010-1234-5678</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <span>휴대전화 번호 <span class="red">*</span></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="form-style tel clearfix">
+                                                        <select name="tel2_1" id="tel2_1" title="휴대전화 앞 번호">
+                                                            <option value="" selected="selected">선택</option>
+                                                            <option value="010">010</option>
+                                                            <option value="011">011</option>
+                                                            <option value="016">016</option>
+                                                            <option value="017">017</option>
+                                                            <option value="018">018</option>
+                                                            <option value="019">019</option>
+                                                        </select>
+                                                        <input maxlength="4" type="text" name="tel2_2" id="tel2_2" title="휴대전화 중간 번호" value="">
+                                                        <input maxlength="4" type="text" name="tel2_3" id="tel2_3" title="휴대전화 끝 번호" value="">
+                                                    </div>
+                                                    <span class="sub-txt">입력 예) 010-1234-5678</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <span>E-MAIL <span class="red">*</span></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="form-style email">
+                                                        <input type="text" name="" id="email_in01" class="input02" title="이메일 주소입력" value="" maxlength="40">
+                                                        <span class="email-at">@</span>
+                                                        <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
+                                                        <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
+                                                            <option value="chol.com">chol.com</option>                
+                                                            <option value="dreamwiz.com">dreamwiz.com</option>                
+                                                            <option value="daum.net">daum.net</option>                
+                                                            <option value="empal.com">empal.com</option>                
+                                                            <option value="freechal.com">freechal.com</option>                
+                                                            <option value="gmail.com">gmail.com</option>                
+                                                            <option value="hanmail.net">hanmail.net</option>                
+                                                            <option value="hanmir.com">hanmir.com</option>                
+                                                            <option value="hitel.net">hitel.net</option>                
+                                                            <option value="hotmail.com">hotmail.com</option>                
+                                                            <option value="korea.com">korea.com</option>                
+                                                            <option value="nate.com">nate.com</option>                
+                                                            <option value="naver.com">naver.com</option>                
+                                                            <option value="orgio.com">orgio.com</option>                
+                                                            <option value="paran.com">paran.com</option>                
+                                                            <option value="sayclub.com">sayclub.com</option>                
+                                                            <option value="shinbiro.com">shinbiro.com</option>                
+                                                            <option value="yahoo.co.kr">yahoo.co.kr</option>                
+                                                            <option value="yahoo.com">yahoo.com</option>                
+                                                            <option value="moel.go.kr">moel.go.kr</option>                
+                                                            <option value="korea.kr">korea.kr</option>                
+                                                            <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
+                                                        </select>
+                                                    </div>
+                                                    <span class="sub-txt">입력 예) korea@korea.kr</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="ipAdr">IP주소 <span class="red">*</span></label>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="ipAdr" class="input02" placeholder="12.123.123.12" maxlength="">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="type-box type-youths">
+                                    <div class="table-wrap table-th-left r-table-wrap">
+                                        <ul class="flex-wrap">
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="schUserId">아이디 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="schUserId" id="schUserId" class="input02" placeholder="아이디 입력 후 중복확인" maxlength="12">
+                                                        <button type="button" id="IDconfirm" class="btn" onclick="openPopup('IDconfirmPopup');">중복확인</button>
+                                                        <span class="sub-txt">영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="userName">사용자명 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="userName" class="input02" placeholder="사용자명">
+                                                        <span class="sub-txt red">※ 반드시 실명 입력바랍니다.</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="pwd">비밀번호 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="password" name="" id="pwd" class="input02" placeholder="비밀번호" maxlength="15">
+                                                        <span class="sub-txt">영문, 숫자, 특수문자로 조합하여 9~15자로 사용할 수 있습니다.(사용 가능한 특수문자: ~ ! @ # $ % ^ *)</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="pwdConfirm">비밀번호 확인 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="password" name="" id="pwdConfirm" class="input02" placeholder="비밀번호" maxlength="15">
+                                                        <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <label for="birth">생년월일 <span class="red">*</span></label>
+                                                    <span class="blind"></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="text" name="" id="birth" class="input02" placeholder="생년월일">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    성별
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="input-wrap">
+                                                        <input type="checkbox" name="onechk2" id="m">
+                                                        <label for="m">남자</label>
+                                                        <input type="checkbox" name="onechk2" id="f">
+                                                        <label for="f">여자</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <span>전화번호 <span class="red">*</span></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="form-style tel clearfix">
+                                                        <select name="tel1_1" id="tel1_1" title="유선전화 앞 번호">
+                                                            <option value="">선택</option>
+                                                            <option value="02">02</option>
+                                                            <option value="031">031</option>
+                                                            <option value="032">032</option>
+                                                            <option value="033">033</option>
+                                                            <option value="041">041</option>
+                                                            <option value="042">042</option>
+                                                            <option value="043">043</option>
+                                                            <option value="044">044</option>
+                                                            <option value="050">050</option>
+                                                            <option value="051">051</option>
+                                                            <option value="052">052</option>
+                                                            <option value="053">053</option>
+                                                            <option value="054">054</option>
+                                                            <option value="055">055</option>
+                                                            <option value="061">061</option>
+                                                            <option value="062">062</option>
+                                                            <option value="063">063</option>
+                                                            <option value="064">064</option>
+                                                            <option value="070">070</option>
+                                                        </select>
+                                                        <input maxlength="4" type="text" name="tel1_2" id="tel1_2" title="유선전화 중간 번호">
+                                                        <input maxlength="4" type="text" name="tel1_3" id="tel1_3" title="유선전화 끝 번호">
+                                                    </div>
+                                                    <span class="sub-txt">입력 예) 010-1234-5678</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <span>휴대전화 번호 <span class="red">*</span></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="form-style tel clearfix">
+                                                        <select name="tel2_1" id="tel2_1" title="휴대전화 앞 번호">
+                                                            <option value="" selected="selected">선택</option>
+                                                            <option value="010">010</option>
+                                                            <option value="011">011</option>
+                                                            <option value="016">016</option>
+                                                            <option value="017">017</option>
+                                                            <option value="018">018</option>
+                                                            <option value="019">019</option>
+                                                        </select>
+                                                        <input maxlength="4" type="text" name="tel2_2" id="tel2_2" title="휴대전화 중간 번호" value="">
+                                                        <input maxlength="4" type="text" name="tel2_3" id="tel2_3" title="휴대전화 끝 번호" value="">
+                                                    </div>
+                                                    <span class="sub-txt">입력 예) 010-1234-5678</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list-tit">
+                                                    <span>E-MAIL <span class="red">*</span></span>
+                                                </div>
+                                                <div class="list-cont">
+                                                    <div class="form-style email">
+                                                        <input type="text" name="" id="email_in01" class="input02" title="이메일 주소입력" value="" maxlength="40">
+                                                        <span class="email-at">@</span>
+                                                        <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
+                                                        <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
+                                                            <option value="chol.com">chol.com</option>                
+                                                            <option value="dreamwiz.com">dreamwiz.com</option>                
+                                                            <option value="daum.net">daum.net</option>                
+                                                            <option value="empal.com">empal.com</option>                
+                                                            <option value="freechal.com">freechal.com</option>                
+                                                            <option value="gmail.com">gmail.com</option>                
+                                                            <option value="hanmail.net">hanmail.net</option>                
+                                                            <option value="hanmir.com">hanmir.com</option>                
+                                                            <option value="hitel.net">hitel.net</option>                
+                                                            <option value="hotmail.com">hotmail.com</option>                
+                                                            <option value="korea.com">korea.com</option>                
+                                                            <option value="nate.com">nate.com</option>                
+                                                            <option value="naver.com">naver.com</option>                
+                                                            <option value="orgio.com">orgio.com</option>                
+                                                            <option value="paran.com">paran.com</option>                
+                                                            <option value="sayclub.com">sayclub.com</option>                
+                                                            <option value="shinbiro.com">shinbiro.com</option>                
+                                                            <option value="yahoo.co.kr">yahoo.co.kr</option>                
+                                                            <option value="yahoo.com">yahoo.com</option>                
+                                                            <option value="moel.go.kr">moel.go.kr</option>                
+                                                            <option value="korea.kr">korea.kr</option>                
+                                                            <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
+                                                        </select>
+                                                    </div>
+                                                    <span class="sub-txt">입력 예) korea@korea.kr</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btm-btnBox">
+                            <button type="button" id="btn_reset" class="btn btn-style-wh">취소</button>
+                            <button type="button" id="btn_save" class="btn">저장</button>
+                        </div>
+                    </form>
+                </div>                
+            </section>
+        </div>
+    </div>
+    <!-- 팝업 아이디 중복확인 -->
+    <div class="popupWrapper IDconfirmPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>아이디 중복 확인</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="con-box-b">
+                    <ul>
+                        <li>사용하실 아이디를 입력하고 버튼을 클릭하세요.</li>
+                        <li>영문, 숫자로 조합하여 6~12자로 사용할 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="sch-form">
+                    <h5>아이디 검색</h5>
+                    <div class="input-wrap">
+                        <input type="text" name="" id="schID" class="">
+                        <button type="button" class="btn btn-style-wh">중복 검색</button>
+                    </div>
+                    <div class="result">
+                        <p>
+                            <span class="blue">admin2022</span>은(는) 사용하실 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn">아이디 사용하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 소속기관 조회 -->
+    <div class="popupWrapper belongOrgPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>기관 조회</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <form action="" class="sch-form">
+                    <legend>기관 조회</legend>
+                    <div class="input-wrap">
+                        <input type="text" name="" id="schOrg" class="">
+                        <button type="button" class="btn btn-style-wh">검색</button>
+                    </div>
+                </form>
+                <div class="count-box">
+                    <span class="count-txt">전체 <strong class="items">1</strong></span>
+                </div>
+                <div class="popup-table-wrap thead-table-wrap">
+                    <table>
+                        <caption>기관 조회 내역 표</caption>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="checkBox">
+                                        <input type="checkbox" name="check" id="allChk" class="allChk">
+                                        <label for="allChk"></label>
+                                    </div>
+                                </th>
+                                <th>기관명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="checkBox">
+                                        <input type="checkbox" name="check" id="chk01">
+                                        <label for="chk01"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    국무조정실「국무조정실」
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn">완료</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert 팝업 회원가입완료 -->
+    <div class="popupWrapper joinPopup">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>회원가입이 완료되었습니다.</p>
+                </div>
+                <ul class="popup-add-txt">
+                    <li>관리자의 가입 승인 후 로그인이 가능합니다.</li>
+                    <li>로그인의 경우 GPKI 인증서를 통한 2차 인증이 필요합니다.</li>
+                </ul>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn alert-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

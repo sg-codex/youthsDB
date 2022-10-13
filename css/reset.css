@@ -20,7 +20,9 @@ button{color:inherit;border:0;padding:0;background:0 0;cursor:pointer;font-famil
 hr{margin:0;border:none;padding:0;display:block}
 figcaption,figure,form{padding:0;margin:0}
 fieldset{border:none;padding:0;margin:0}
-input[type=submit]{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+input[type=number], input[type=submit]{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
 input[type=text]::-ms-clear{display: none;}
 article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
 button,input,optgroup,pre,select,textarea{color:inherit;margin:0;}

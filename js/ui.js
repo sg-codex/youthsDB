@@ -13,8 +13,8 @@ $(function() {
 });
 
 // 셀렉트 박스 거절&승인 팝업
-function openSelectPopup() {
-  var val = $('select.selectPopup').val();
+function openSelectPopup(select) {
+  var val = $(select).val();
   if(val == '거절') {
     $(".alert-cancel").fadeIn(300);
   } 
@@ -34,6 +34,12 @@ function addDel(a){
         $('.file-not-sel').css('display','block')
     }
 }
+
+// input 값 초기화
+function valueReset(btn) {
+  $(btn).siblings('input').val("");
+}
+
 
 
 $(function() {
@@ -85,6 +91,7 @@ $(function() {
             .parent()
             .parent()
             .toggleClass(active);
+        $('body').addClass('o-y-hidden');
     });
    }).resize();
 
@@ -125,6 +132,7 @@ $(function() {
         .parent()
         .parent()
         .removeClass(active);
+        $('body').removeClass('o-y-hidden');
     });
     $('.m-menu > ul > li').on('click', function(){
       $(this).addClass(active);
@@ -183,12 +191,6 @@ $(function() {
       }
     });
 
-    // 셀렉트 박스 커스텀 (임시) 
-    $('.selectBox').on('click', function(){
-      $('.selectBox').not($(this)).removeClass(active);
-      $(this).toggleClass(active);
-    });
-
 
     // 체크박스 전체 선택 
     var allChk = $('.allChk');
@@ -204,15 +206,53 @@ $(function() {
 
     check.on('click', function(){
       var total = check.length;
-      var checked = $('input[name=check]:checked').length;
+      var checkedBox = $('input[name=check]:checked').length;
 
-      if( total != checked ) {
+      if( total != checkedBox ) {
         allChk.prop('checked', false); 
       } else {
         allChk.prop('checked', true);
       }
-
     });
+
+
+    // 체크박스 하나만 선택
+    $('input[name=onechk]').on('click',function() {
+      $('input[name=onechk]').not(this).prop("checked", false);
+    });
+    $('input[name=onechk2]').on('click',function() {
+      $('input[name=onechk2]').not(this).prop("checked", false);
+    });
+
+
+    // 관리자 - 회원등록 - 회원정보 입력: 체크박스 선택 시 내용 보이기
+    $('input[name=chkType01]').on('click', function(){
+      $('input[name=chkType01]').not(this).prop("checked", false);
+      if($('.chkPublic').prop('checked') && $('.chkYouths').prop('checked')) {
+        $('.type-youths').addClass(active);
+        $('.type-inner').removeClass(active);
+      } else {
+        $('.type-inner').addClass(active);
+        $('.type-youths').removeClass(active);
+      }
+    });
+    
+    $('input[name=chkType02]').on('click', function(){
+      $('input[name=chkType02]').not(this).prop("checked", false);
+      if($('.chkPublic').prop('checked') && $('.chkYouths').prop('checked')) {
+        $('.type-youths').addClass(active);
+        $('.type-inner').removeClass(active);
+      } else {
+        $('.type-inner').addClass(active);
+        $('.type-youths').removeClass(active);
+      }
+    });
+
+
+
+
+
+
 
     // 체크박스 갯수 제한 - 기존 기능 사라짐. 주석 처리
     // var chkbox = $('input[name=interest]');
@@ -244,20 +284,16 @@ $(function() {
     var index = 0;
 
     $(document).on('click', '.btn-add-exclude', function(){
-
       if(index === 9) {
         alert("10개까지 추가 가능합니다.");
         return false;
       }
 
       var newExcludeWrap = '<div class="input-wrap exclude-wrap clearfix"><select name="" id=""><option value="출신학교">출신학교</option><option value="출신학과">출신학과</option><option value="직장명">직장명</option><option value="기타">기타</option></select><input type="text" name="" id="" class="w70" placeholder="제외어"><button type="button" class="btn btn-style-gr btn-rm-exclude">삭제</button><button type="button" class="btn btn-add-exclude">추가</button></div>';
-
       $(this)
         .parent('.exclude-wrap')
         .after(newExcludeWrap);
-
       index+=1;
-
     });
 
     $(document).on('click', '.btn-rm-exclude', function(){
@@ -339,6 +375,7 @@ $(function() {
       var activeTab = $(this).find('a').attr('href');
       $(activeTab).show();
   });
+
 
 
 });

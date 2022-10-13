@@ -24,18 +24,18 @@
                     </button>
                 </div>
                 <div class="logo">
-                    <a href="/index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
                 </div>
                 <div class="top-header-right">
                     <ul>
                         <li>
-                            <a href="" id="btn_certificate" class="">인증서 관리</a>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" class="">인증서 관리</a>
                         </li>
                         <li>
                             <button type="button" id="btn_user" class="">
                                 <span>홍길동</span>
                                 <ul class="user-menu">
-                                    <li><a href="./1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
                                     <li><a href="">로그아웃</a></li>
                                 </ul>
                             </button>
@@ -118,9 +118,9 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div id="m-menu-close" class="close-box">
-                        <span class="btn_close"></span>
-                        <span class="btn_close"></span>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
                 <div class="m-ico-box">
@@ -153,60 +153,60 @@
                 </div>
                 <div class="m-menu">
                     <ul>
-                        <li>
-                            <span>청년인재데이터베이스</span>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
                             <ul class="m-depth-02">
-                                <li>소개</li>
-                                <li>공지사항</li>
-                                <li>자료실</li>
-                                <li>공인인증서 안내</li>
-                                <li>사이트맵</li>
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>검색요청</span>
                             <ul class="m-depth-02">
-                                <li>직접검색 요청</li>
-                                <li>인재추천 요청</li>
-                                <li>요청현황</li>
-                                <li>요청관리</li>
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>인재검색</span>
                             <ul class="m-depth-02">
-                                <li>통합검색</li>
-                                <li>관심인재 관리</li>
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>인재관리</span>
                             <ul class="m-depth-02">
-                                <li>인재목록</li>
-                                <li>인재등록 현황</li>
-                                <li>인재정보 현행화요청</li>
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>회원관리</span>
                             <ul class="m-depth-02">
-                                <li>회원목록</li>
-                                <li>회원안내발송</li>
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
                             <ul class="m-depth-02">
-                                <li>메뉴 관리</li>
-                                <li>게시판 관리</li>
-                                <li>팝업/배너 관리</li>
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>기타관리</span>
                             <ul class="m-depth-02">
-                                <li>코드관리</li>
-                                <li>의심징후관리</li>
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
                             </ul>
                         </li>
                         <li>
@@ -219,62 +219,97 @@
                 </div>
             </nav>
             <section id="content" class="content">
-                <div id="cont-wrap">
-                    <form action="" id="mypageForm">
+                <div id="cont-wrap">                    
+                    <form action="" id="memberForm">
                         <div class="location-box clearfix">
-                            <h2 class="page-title-txt">마이페이지</h2>
+                            <h2 class="page-title-txt">회원정보관리</h2>
                             <div class="location-txt">
                                 <img src="../../images/common/ico_location.png" alt="홈 아이콘">
-                                <span>마이페이지</span>
+                                <span>회원관리</span>
+                                <span class="angle-bracket">회원목록</span>
+                                <span class="angle-bracket">회원정보관리</span>
                             </div>
                         </div>
                         <hr class="page-title-line">
                         <div>
                             <div class="con-box-wh">
                                 <div class="box-top-tit">
-                                    <h3>내 정보 관리</h3>
+                                    <h3>회원정보</h3>
                                 </div>
-                                <!-- 바뀌는 테이블 -->
                                 <div class="table-wrap table-th-left r-table-wrap">
                                     <ul class="flex-wrap">
-                                        <li class="f-item">
+                                        <li class="f-left">
                                             <div class="list-tit">                                                
-                                                <label for="userId">아이디</label>
-                                                <span class="blind"></span>
+                                                가입유형 
                                             </div>
                                             <div class="list-cont">
-                                                <div class="input-wrap">
-                                                    <input type="text" name="" id="userId" class="input02" value="admin2022" disabled>
-                                                </div>
+                                                <span class="result-txt">내부업무시스템</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                회원유형
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">기관</span>
                                             </div>
                                         </li>
                                         <li class="f-item">
                                             <div class="list-tit">                                                
-                                                <label for="userName">사용자명</label>
+                                                권한그룹
                                                 <span class="blind"></span>
                                             </div>
                                             <div class="list-cont">
-                                                <div class="input-wrap">
-                                                    <input type="text" name="" id="userName" class="input02" value="홍길동" disabled>
-                                                </div>
+                                                <select name="" id="" class="w30">
+                                                    <option value="일반 회원" selected>일반 회원</option>
+                                                    <option value="기관">기관</option>
+                                                    <option value="관리자">관리자</option>
+                                                    <option value="최고 관리자">최고 관리자</option>
+                                                </select>
                                             </div>
                                         </li>
-                                        <li class="h-auto">
+                                    </ul>
+                                </div>
+                                
+                                <!-- 결과 표 -->
+                                <div class="table-wrap table-th-left r-table-wrap">
+                                    <ul class="flex-wrap">
+                                        <li class="f-left">
                                             <div class="list-tit">
-                                                <label for="departName">비밀번호</label>
+                                                아이디
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">admin</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">
+                                                사용자명
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">홍길동</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <label for="pwd">비밀번호 </label>
                                                 <span class="blind"></span>
                                             </div>
-                                            <div class="list2-cont">
+                                            <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="password" name="" id="" class="input02" placeholder="현재 비밀번호" maxlength="15">
-                                                    <span class="sub-txt">비밀번호 변경을 원하실 경우 현재 비밀번호를 입력해 주세요.</span>
+                                                    <input type="password" name="" id="pwd" class="input02" placeholder="비밀번호" maxlength="15">
+                                                    <span class="sub-txt">비밀번호 변경 시에만 입력해주세요.</span>
                                                 </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <label for="pwdConfirm">비밀번호 확인 </label>
+                                                <span class="blind"></span>
+                                            </div>
+                                            <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="password" name="" id="" class="input02" placeholder="새 비밀번호" maxlength="15">
-                                                    <span class="sub-txt">영문, 숫자, 특수문자로 조합하여 9~15자로 사용할 수 있습니다.(사용 가능한 특수문자: ~ ! @ # $ % ^ *)</span>
-                                                </div>
-                                                <div class="input-wrap">
-                                                    <input type="password" name="" id="" class="input02" placeholder="새 비밀번호 확인" maxlength="15">
+                                                    <input type="password" name="" id="pwdConfirm" class="input02" placeholder="비밀번호" maxlength="15">
                                                     <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
                                                 </div>
                                             </div>
@@ -304,92 +339,32 @@
                                         </li>
                                         <li class="f-left">
                                             <div class="list-tit">
-                                                <span>직장전화 번호</span>
+                                                <label for="officeNum">직장전화 번호</label>
                                             </div>
                                             <div class="list-cont">
-                                                <div class="form-style tel clearfix">
-                                                    <select name="tel1_1" id="tel1_1" title="유선전화 앞 번호">
-                                                        <option value="선택" selected disabled>선택</option>
-                                                        <option value="02">02</option>
-                                                        <option value="031">031</option>
-                                                        <option value="032">032</option>
-                                                        <option value="033">033</option>
-                                                        <option value="041">041</option>
-                                                        <option value="042">042</option>
-                                                        <option value="043">043</option>
-                                                        <option value="044">044</option>
-                                                        <option value="050">050</option>
-                                                        <option value="051">051</option>
-                                                        <option value="052">052</option>
-                                                        <option value="053">053</option>
-                                                        <option value="054">054</option>
-                                                        <option value="055">055</option>
-                                                        <option value="061">061</option>
-                                                        <option value="062">062</option>
-                                                        <option value="063">063</option>
-                                                        <option value="064">064</option>
-                                                        <option value="070">070</option>
-                                                    </select>
-                                                    <input maxlength="4" type="text" name="tel1_2" id="tel1_2" title="유선전화 중간 번호">
-                                                    <input maxlength="4" type="text" name="tel1_3" id="tel1_3" title="유선전화 끝 번호">
+                                                <div class="input-wrap">
+                                                    <input type="number" id="officeNum" maxlength="12" class="input02">
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="f-left">
                                             <div class="list-tit">
-                                                <span>휴대전화 번호</span>
+                                                <label for="phoneNum">휴대전화 번호</label>
                                             </div>
                                             <div class="list-cont">
-                                                <div class="form-style tel clearfix">
-                                                    <select name="tel2_1" id="tel2_1" title="휴대전화 앞 번호">
-                                                        <option value="" selected disabled>선택</option>
-                                                        <option value="010">010</option>
-                                                        <option value="011">011</option>
-                                                        <option value="016">016</option>
-                                                        <option value="017">017</option>
-                                                        <option value="018">018</option>
-                                                        <option value="019">019</option>
-                                                    </select>
-                                                    <input maxlength="4" type="text" name="tel2_2" id="tel2_2" title="휴대전화 중간 번호" value="">
-                                                    <input maxlength="4" type="text" name="tel2_3" id="tel2_3" title="휴대전화 끝 번호" value="">
+                                                <div class="input-wrap">
+                                                    <input type="number" id="phoneNum" maxlength="12" class="input02">
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="list-tit">
-                                                <span>E-MAIL</span>
+                                                <label for="email">E-MAIL</label>
                                             </div>
                                             <div class="list-cont">
-                                                <div class="form-style email">
-                                                    <input type="text" name="" id="email_in01" class="input02" title="이메일 주소입력" value="" maxlength="40">
-                                                    <span class="email-at">@</span>
-                                                    <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
-                                                    <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
-                                                        <option value="chol.com">chol.com</option>                
-                                                        <option value="dreamwiz.com">dreamwiz.com</option>                
-                                                        <option value="daum.net">daum.net</option>                
-                                                        <option value="empal.com">empal.com</option>                
-                                                        <option value="freechal.com">freechal.com</option>                
-                                                        <option value="gmail.com">gmail.com</option>                
-                                                        <option value="hanmail.net">hanmail.net</option>                
-                                                        <option value="hanmir.com">hanmir.com</option>                
-                                                        <option value="hitel.net">hitel.net</option>                
-                                                        <option value="hotmail.com">hotmail.com</option>                
-                                                        <option value="korea.com">korea.com</option>                
-                                                        <option value="nate.com">nate.com</option>                
-                                                        <option value="naver.com">naver.com</option>                
-                                                        <option value="orgio.com">orgio.com</option>                
-                                                        <option value="paran.com">paran.com</option>                
-                                                        <option value="sayclub.com">sayclub.com</option>                
-                                                        <option value="shinbiro.com">shinbiro.com</option>                
-                                                        <option value="yahoo.co.kr">yahoo.co.kr</option>                
-                                                        <option value="yahoo.com">yahoo.com</option>                
-                                                        <option value="moel.go.kr">moel.go.kr</option>                
-                                                        <option value="korea.kr">korea.kr</option>                
-                                                        <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
-                                                    </select>
+                                                <div class="input-wrap">
+                                                    <input type="text" id="email" maxlength="30" class="input02">
                                                 </div>
-                                                <span class="sub-txt">입력 예) korea@korea.kr</span>
                                             </div>
                                         </li>
                                         <li>
@@ -398,16 +373,112 @@
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="text" name="" id="ipAdr" class="input02" placeholder="12.123.123.12" maxlength="">
+                                                    <input type="text" id="email" maxlength="" class="input02" value="12.123.123.12" disabled>
+                                                    <button type="button" class="btn btn-style-dgr" onclick="valueReset(this);">초기화</button>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="list-tit">
-                                                <span>회원탈퇴</span>
+                                                가입일
                                             </div>
                                             <div class="list-cont">
-                                                <a href="./2)회원탈퇴.html" id="btn_withdrawal" class="btn-style-dgr">회원탈퇴</a>
+                                                <span class="result-txt">2022-08-04 17:34</span>
+                                                <a href="./../../기관용(+공통)/1. 대시보드/2)회원탈퇴.html" id="btn_withdrawal" class="btn-style-dgr">회원탈퇴</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 대민서비스 - 일반일 경우 -->
+                                <div class="table-wrap table-th-left r-table-wrap" style="display: none;">
+                                    <ul class="flex-wrap">
+                                        <li class="f-left">
+                                            <div class="list-tit">
+                                                아이디
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">admin</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">
+                                                사용자명
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">홍길동</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <label for="pwd">비밀번호 </label>
+                                                <span class="blind"></span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="input-wrap">
+                                                    <input type="password" name="" id="pwd" class="input02" placeholder="비밀번호" maxlength="15" disabled>
+                                                    <span class="sub-txt">비밀번호 변경 시에만 입력해주세요.</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <label for="pwdConfirm">비밀번호 확인 </label>
+                                                <span class="blind"></span>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="input-wrap">
+                                                    <input type="password" name="" id="pwdConfirm" class="input02" placeholder="비밀번호" maxlength="15" disabled>
+                                                    <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                생년월일
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">1990-12-31</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                성별
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">남자</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">
+                                                전화번호
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">010-1234-1234</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">
+                                                휴대전화 번호
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">010-1234-1234</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                E-MAIL
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">admin2022@korea.com</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                가입일
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">2022-08-04 17:34</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -415,7 +486,7 @@
                             </div>
                         </div>
                         <div class="btm-btnBox">
-                            <button type="reset" id="btn_reset" class="btn btn-style-wh">초기화</button>
+                            <button type="button" id="btn_reset" class="btn btn-style-wh">취소</button>
                             <button type="button" id="btn_save" class="btn" onclick="openPopup('confirmPopup');">저장</button>
                         </div>
                     </form>

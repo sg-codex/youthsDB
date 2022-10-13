@@ -246,20 +246,13 @@
                                     </div>
                                     <div class="w20">
                                         <p>상태</p>
-                                        <div class="selectBox">
-                                            <button type="button" class="label">선택</button>
-                                            <ul class="option-list">
-                                                <li class="option">전체</li>
-                                                <li class="option">접수</li>
-                                                <li class="option">대기</li>
-                                                <li class="option">완료</li>
-                                            </ul>
-                                            <!-- <select name="" id="" class="more-b">
-                                                <option value="전체">전체</option>
-                                                <option value="직접검색">직접검색</option>
-                                                <option value="인재추천">인재추천</option>
-                                            </select> -->
-                                        </div>
+                                        <select name="" id="" class="more-b">
+                                            <option value="선택" selected disabled>선택</option>
+                                            <option value="전체">전체</option>
+                                            <option value="접수">접수</option>
+                                            <option value="대기">대기</option>
+                                            <option value="완료">완료</option>
+                                        </select>
                                     </div>
                                     <div class="w20">
                                         <p><label for="schIpt">검색어</label></p>
@@ -280,28 +273,20 @@
                                     <span class="count-txt">전체 <strong class="items">5</strong></span>
                                 </div>
                                 <div class="r-box">
-                                    <div class="selectBox">
-                                        <button type="button" class="label">상태 전체</button>
-                                        <ul class="option-list">
-                                            <li class="option">접수</li>
-                                            <li class="option">대기</li>
-                                            <li class="option">완료</li>
-                                        </ul>
-                                    </div>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">최신순</button>
-                                        <ul class="option-list">
-                                            <li class="option">최신순</li>
-                                            <li class="option">최신순</li>
-                                        </ul>
-                                    </div>
-                                    <div class="selectBox">
-                                        <button type="button" class="label">10개씩</button>
-                                        <ul class="option-list">
-                                            <li class="option">10개씩</li>
-                                            <li class="option">20개씩</li>
-                                        </ul>
-                                    </div>
+                                    <select name="" id="" class="">
+                                        <option value="상태 전체">상태 전체</option>
+                                        <option value="접수">접수</option>
+                                        <option value="대기">대기</option>
+                                        <option value="완료">완료</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="최신순">최신순</option>
+                                        <option value="오래된순">오래된순</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="10개씩">10개씩</option>
+                                        <option value="50개씩">50개씩</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap">
@@ -550,7 +535,7 @@
             </div>
             <div class="popup-con">
                 <div class="con-box">
-                    <h3>인재정보</h3>
+                    <h3 class="popup-sub-tit">인재정보</h3>
                     <div class="popup-table-wrap thead-table-wrap">
                         <table>
                             <caption>요청 거절사유 상세 표</caption>
