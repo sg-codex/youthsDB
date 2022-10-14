@@ -193,27 +193,30 @@ $(function() {
 
 
     // 체크박스 전체 선택 
-    var allChk = $('.allChk');
-    var check = $('input[name=check]');
+    var $allCheckInput = $('.allChk'); // 전체선택 Input selector
+    var targetInputs = 'input[name^="check_"]'; // name값으로 감지할 input 선택
 
-    allChk.on('click', function(){
-      if(allChk.is(':checked')) {
-        check.prop('checked', true);
+
+    $allCheckInput.on('change', function(){
+      if($(this).is(':checked')) {
+        $(targetInputs).prop('checked', true);
       } else {
-        check.prop('checked', false);
+        $(targetInputs).prop('checked', false);
       }
     });
 
-    check.on('click', function(){
-      var total = check.length;
-      var checkedBox = $('input[name=check]:checked').length;
+    $(targetInputs).on('change', function() {
+        var checkInputLength = $(targetInputs + ':checked').length;
 
-      if( total != checkedBox ) {
-        allChk.prop('checked', false); 
-      } else {
-        allChk.prop('checked', true);
-      }
+        if(checkInputLength != $(targetInputs).length ) {
+          $allCheckInput.prop('checked', false);
+        } else {
+          $allCheckInput.prop('checked', true);
+        }
     });
+
+
+
 
 
     // 체크박스 하나만 선택
