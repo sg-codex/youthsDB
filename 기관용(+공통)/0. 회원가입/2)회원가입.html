@@ -21,34 +21,6 @@
                 $(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
             });
         });
-
-        // 이메일 도메인 선택
-        var changeEmail = function() {
-
-            var email_in01 = $('#email_in01');
-            var email_in02 = $('#email_in02');
-            var email_sel = $('#email_sel');
-
-            if(email_sel.val() === "기타(직접입력)") {
-                email_in02.attr('readonly', false);
-                email_in02.val('');
-                email_in02.focus();
-            } else {
-                email_in02.attr('readonly', true);
-                email_in02.val(email_sel.val());
-            }
-        };
-
-
-        // 아이디 중복확인
-        // function IDconfirm() {
-            
-        //     function idCheck() {
-                
-        //     };
-
-        // };
-
         
         // 유효성 검사
         function joinFormCheck() {
@@ -386,37 +358,24 @@
                                     </li>
                                     <li>
                                         <div class="list-tit">
-                                            <span>E-MAIL <span class="red">*</span></span>
-                                            <span class="blind"></span>
+                                            <label for="email-id-ipt">E-MAIL <span class="red">*</span></label>
                                         </div>
                                         <div class="list-cont">
                                             <div class="form-style email">
-                                                <input type="text" name="" id="email_in01" class="input02" title="이메일 주소입력" value="" maxlength="40">
+                                                <input type="text" name="" id="email-id-ipt" class="input02" title="이메일 주소입력" value="" maxlength="40">
                                                 <span class="email-at">@</span>
-                                                <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
-                                                <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
-                                                    <option value="chol.com">chol.com</option>                
-                                                    <option value="dreamwiz.com">dreamwiz.com</option>                
-                                                    <option value="daum.net">daum.net</option>                
-                                                    <option value="empal.com">empal.com</option>                
-                                                    <option value="freechal.com">freechal.com</option>                
-                                                    <option value="gmail.com">gmail.com</option>                
-                                                    <option value="hanmail.net">hanmail.net</option>                
-                                                    <option value="hanmir.com">hanmir.com</option>                
-                                                    <option value="hitel.net">hitel.net</option>                
-                                                    <option value="hotmail.com">hotmail.com</option>                
-                                                    <option value="korea.com">korea.com</option>                
-                                                    <option value="nate.com">nate.com</option>                
-                                                    <option value="naver.com">naver.com</option>                
-                                                    <option value="orgio.com">orgio.com</option>                
-                                                    <option value="paran.com">paran.com</option>                
-                                                    <option value="sayclub.com">sayclub.com</option>                
-                                                    <option value="shinbiro.com">shinbiro.com</option>                
-                                                    <option value="yahoo.co.kr">yahoo.co.kr</option>                
-                                                    <option value="yahoo.com">yahoo.com</option>                
-                                                    <option value="moel.go.kr">moel.go.kr</option>                
-                                                    <option value="korea.kr">korea.kr</option>                
-                                                    <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
+                                                <input type="text" name="" id="email-ipt" title="이메일 도메인" value="">
+                                                <select id="email-select" class="email-select" title="이메일 도메인" name="email-select">
+                                                    <option value="선택" disabled selected>선택</option>
+                                                    <option value="naver.com">naver.com</option>
+                                                    <option value="hanmail.net">hanmail.net</option>
+                                                    <option value="gmail.com">gmail.com</option>
+                                                    <option value="nate.com">nate.com</option>
+                                                    <option value="hotmail.com">hotmail.com</option>
+                                                    <option value="dreamwiz.com">dreamwiz.com</option>
+                                                    <option value="empal.com">empal.com</option>
+                                                    <option value="kakao.com">kakao.com</option>
+                                                    <option value="direct">기타(직접입력)</option>              
                                                 </select>
                                             </div>
                                             <span class="sub-txt">입력 예) korea@korea.kr</span>

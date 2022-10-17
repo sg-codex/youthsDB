@@ -212,17 +212,6 @@ input[type=radio]:checked+label:before {
 }
 
 /* input checkbox 스타일 */
-/* input[type=checkbox] {
-    width: 18px;
-    height: 18px;
-}
-input[type=checkbox]+label {
-    color: #333333;
-    padding-left: 5px;
-    vertical-align: middle;
-    font-size: 1rem;
-    letter-spacing: -0.03em;
-} */
 input[type='checkbox'] {
     display: none;
 }
@@ -241,6 +230,12 @@ input[type='checkbox'] {
 
 input[type="checkbox"]:checked + .adm-chkBox {
     background: url(/images/img_checkBox-c.png) no-repeat;
+    background-size: 24px;
+    background-position: left center;
+    vertical-align: middle;
+}
+input[type="checkbox"]:disabled + .adm-chkBox {
+    background: url(/images/img_checkBox-disabled.png) no-repeat;
     background-size: 24px;
     background-position: left center;
     vertical-align: middle;
@@ -1139,7 +1134,7 @@ hr.page-bottom-line {
     text-decoration: underline;
 }
 .sub-txt {
-    color: #555555;
+    color: #666666;
     margin: 0 0 0 10px;
     line-height: 2.4;
     vertical-align: top;
@@ -1451,7 +1446,7 @@ hr.page-bottom-line {
     width: 85%;
     background-color: #ffffff;
     border-bottom: 1px solid #D4D9E4;
-    padding: 8px 14px;
+    padding: 7px 14px;
 }
 .table-wrap.table-th-left .list-cont {
     min-height: 60px;
@@ -1518,12 +1513,13 @@ hr.page-bottom-line {
 .table-wrap .form-style.email {
     display: inline-block;
 }
-.table-wrap .form-style.email input[type=text], .table-wrap .form-style.email select {
-    width: 30%;
-    max-width: 200px;
-}
+.table-wrap .form-style.email input[type=text] { width: 200px; }
+.table-wrap .form-style.email select { width: 260px; }
 .table-wrap .form-style.email .email-at {
     margin: 0 10px;
+}
+.table-wrap .form-style.email #email-ipt {
+    display: none;
 }
 .table-wrap ul .list-cont > textarea { display: block; }
 .table-wrap ul .list-cont > textarea + p { margin-top: 10px; color: #555555;}
@@ -1989,13 +1985,17 @@ table .result-txt.headcount::after {
 /* 청년인재 등록 */
 .container:not(:last-child) { margin-bottom: 40px; }
 
+.box-top-tit h3 + .sub-txt {
+    margin: 0px;
+    font-size: 0.9rem;
+}
 .thead-table-wrap ul .list-tit:first-child,
 .thead-table-wrap ul .list-cont:first-child { 
     width: 15%;    
     text-align: center;
  }
  .thead-table-wrap ul .list-cont:first-child { 
-    min-height: 57px; 
+    min-height: 55px; 
     line-height: 2;
 }
 .thead-table-wrap ul .list-tit:last-child,
@@ -2004,9 +2004,72 @@ table .result-txt.headcount::after {
     text-align: center;
     border-left: 1px solid #D4D9E4;
  }
+.table-wrap ul .list2-cont > div:not(:last-child) {
+    border-bottom: 1px solid #D4D9E4;
+}
+
+.container .inner-txt {
+    color: #666666;
+    font-size: 0.9rem;
+    padding: 10px;
+}
+.table-wrap ul .list2-cont > div > .inner-txt {
+    padding: 0 0 14px 0;
+}
+.table-wrap ul .list2-cont > div.input-wrap {
+    padding: 0 14px;
+    min-height: 60px;
+    line-height: 56px;
+}
+.container .input-wrap input[type=file] { display: none; }
+.container .input-wrap label[for="fileUp"] {
+    color: #1776E1;
+    background-color: #ffffff;
+    border: 1px solid #1776E1;
+    border-radius: 6px;
+    padding: 8px 27px;
+    vertical-align: middle;
+}
+.container .input-wrap label[for="fileUp"] + .inner-txt {
+    color: #333333;
+}
+.file-list .inner-txt {
+    color: #999999;
+    font-size: 1rem;
+}
+
+
+.table-wrap .flex-wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.container .table-wrap .flex-wrap:not(:first-child) { margin-top: 10px; }
+.table-wrap .flex-wrap ~ button {    
+    margin-top: 10px;
+    float: right;
+}
+.table-wrap .btn {
+    padding: 10px 14px;
+    min-width: 110px;
+}
+.table-wrap .btn:last-child {
+    margin-left: 10px;
+}
 .btm-btnBox.d-flex {
     justify-content: space-between;
 }
+
+.table-wrap .list-cont textarea + .text-conut {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
 
 /* 인재등록 현황 */
 .tab-wrap { 
@@ -2152,7 +2215,7 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
 .table-wrap.table-th-left .list-cont select:disabled {
     color: #333333;
 }
-.table-wrap .list-cont .result-txt + a {
+.table-wrap .list-cont .result-txt + button {
     margin-left: 10px;
 }
 
@@ -3254,5 +3317,40 @@ form .form-list h3 {
         padding: 10px 0;
     }
     .estimationPopup .thead-form-table .list-tit ul li label { letter-spacing: -0.14em; }
+
+}
+
+
+
+
+
+  
+  
+@media print {
+    @page {
+        size: auto; 
+        margin: 10mm;
+    }
+    * {
+        margin: 0; 
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    body { background-color: #ffffff; }
+    header { display: none; }
+    .table-wrap table { min-width: 100%; }
+    .box-top-tit .r-box { display: none; }
+    .con-box-wh { border: none; border-radius: 0; padding: 0; margin: 0; }
+
+    .print-wrap {
+        display: block;
+    }
+    .print-wrap .prd-list-tr {
+        page-break-inside: avoid; 
+    }
 
 }

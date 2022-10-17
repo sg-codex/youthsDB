@@ -242,35 +242,32 @@
                                         <li class="f-left">
                                             <div class="list-tit">                                                
                                                 가입유형 <span class="red">*</span>
-                                                <span class="blind"></span>
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
                                                     <input type="checkbox" name="chkType01" id="chkInside" class="chkInside">
-                                                    <label for="chkInside">내부업무시스템</label>
+                                                    <label for="chkInside" class="adm-chkBox">내부업무시스템</label>
                                                     <input type="checkbox" name="chkType01" id="chkPublic" class="chkPublic">
-                                                    <label for="chkPublic">대민서비스</label>
+                                                    <label for="chkPublic" class="adm-chkBox">대민서비스</label>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="f-left">
                                             <div class="list-tit">                                                
                                                 <label for="userName">회원유형 <span class="red">*</span></label>
-                                                <span class="blind"></span>
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
                                                     <input type="checkbox" name="chkType02" id="chkYouths" class="chkYouths">
-                                                    <label for="chkYouths">일반</label>
+                                                    <label for="chkYouths" class="adm-chkBox">일반</label>
                                                     <input type="checkbox" name="chkType02" id="chkOrgani" class="chkOrgani">
-                                                    <label for="chkOrgani">기관</label>
+                                                    <label for="chkOrgani" class="adm-chkBox">기관</label>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="f-item">
                                             <div class="list-tit">                                                
                                                 권한그룹
-                                                <span class="blind"></span>
                                             </div>
                                             <div class="list-cont">
                                                 <select name="" id="" class="w30">
@@ -291,7 +288,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="schUserId">아이디 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -304,7 +300,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="userName">사용자명 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -316,7 +311,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="pwd">비밀번호 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -328,7 +322,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="pwdConfirm">비밀번호 확인 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -340,7 +333,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="belongOrgani">소속기관 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -417,36 +409,24 @@
                                             </li>
                                             <li>
                                                 <div class="list-tit">
-                                                    <span>E-MAIL <span class="red">*</span></span>
+                                                    <label for="email-id-ipt">E-MAIL <span class="red">*</span></label>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="form-style email">
-                                                        <input type="text" name="" id="email_in01" class="input02" title="이메일 주소입력" value="" maxlength="40">
+                                                        <input type="text" name="" id="email-id-ipt" class="input02" title="이메일 주소입력" value="" maxlength="40">
                                                         <span class="email-at">@</span>
-                                                        <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
-                                                        <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
-                                                            <option value="chol.com">chol.com</option>                
-                                                            <option value="dreamwiz.com">dreamwiz.com</option>                
-                                                            <option value="daum.net">daum.net</option>                
-                                                            <option value="empal.com">empal.com</option>                
-                                                            <option value="freechal.com">freechal.com</option>                
-                                                            <option value="gmail.com">gmail.com</option>                
-                                                            <option value="hanmail.net">hanmail.net</option>                
-                                                            <option value="hanmir.com">hanmir.com</option>                
-                                                            <option value="hitel.net">hitel.net</option>                
-                                                            <option value="hotmail.com">hotmail.com</option>                
-                                                            <option value="korea.com">korea.com</option>                
-                                                            <option value="nate.com">nate.com</option>                
-                                                            <option value="naver.com">naver.com</option>                
-                                                            <option value="orgio.com">orgio.com</option>                
-                                                            <option value="paran.com">paran.com</option>                
-                                                            <option value="sayclub.com">sayclub.com</option>                
-                                                            <option value="shinbiro.com">shinbiro.com</option>                
-                                                            <option value="yahoo.co.kr">yahoo.co.kr</option>                
-                                                            <option value="yahoo.com">yahoo.com</option>                
-                                                            <option value="moel.go.kr">moel.go.kr</option>                
-                                                            <option value="korea.kr">korea.kr</option>                
-                                                            <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
+                                                        <input type="text" name="" id="email-ipt" title="이메일 도메인" value="">
+                                                        <select id="email-select" class="email-select" title="이메일 도메인" name="email-select">
+                                                            <option value="선택" disabled selected>선택</option>
+                                                            <option value="naver.com">naver.com</option>
+                                                            <option value="hanmail.net">hanmail.net</option>
+                                                            <option value="gmail.com">gmail.com</option>
+                                                            <option value="nate.com">nate.com</option>
+                                                            <option value="hotmail.com">hotmail.com</option>
+                                                            <option value="dreamwiz.com">dreamwiz.com</option>
+                                                            <option value="empal.com">empal.com</option>
+                                                            <option value="kakao.com">kakao.com</option>
+                                                            <option value="direct">기타(직접입력)</option>              
                                                         </select>
                                                     </div>
                                                     <span class="sub-txt">입력 예) korea@korea.kr</span>
@@ -458,7 +438,8 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="ipAdr" class="input02" placeholder="12.123.123.12" maxlength="">
+                                                        <input type="text" name="" id="ipAdr" class="input02" value="12.123.123.12" maxlength="" disabled>
+                                                        <span class="sub-txt">현재 접속한 IP주소로 자동 입력됩니다.</span>
                                                     </div>
                                                 </div>
                                             </li>
@@ -472,7 +453,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="schUserId">아이디 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -485,7 +465,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="userName">사용자명 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -497,7 +476,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="pwd">비밀번호 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -509,7 +487,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="pwdConfirm">비밀번호 확인 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -521,7 +498,6 @@
                                             <li>
                                                 <div class="list-tit">
                                                     <label for="birth">생년월일 <span class="red">*</span></label>
-                                                    <span class="blind"></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -531,14 +507,14 @@
                                             </li>
                                             <li>
                                                 <div class="list-tit">
-                                                    성별
+                                                    <span>성별 <span class="red">*</span></span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
                                                         <input type="checkbox" name="onechk2" id="m">
-                                                        <label for="m">남자</label>
+                                                        <label for="m" class="adm-chkBox">남자</label>
                                                         <input type="checkbox" name="onechk2" id="f">
-                                                        <label for="f">여자</label>
+                                                        <label for="f" class="adm-chkBox">여자</label>
                                                     </div>
                                                 </div>
                                             </li>
@@ -599,36 +575,24 @@
                                             </li>
                                             <li>
                                                 <div class="list-tit">
-                                                    <span>E-MAIL <span class="red">*</span></span>
+                                                    <label for="email-id-ipt">E-MAIL <span class="red">*</span></label>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="form-style email">
-                                                        <input type="text" name="" id="email_in01" class="input02" title="이메일 주소입력" value="" maxlength="40">
+                                                        <input type="text" name="" id="email-id-ipt" class="input02" title="이메일 주소입력" value="" maxlength="40">
                                                         <span class="email-at">@</span>
-                                                        <input type="text" name="" id="email_in02" title="이메일 도메인" value="">
-                                                        <select id="email_sel" class="f_mail2 email3" title="이메일 도메인 선택" name="emailList" onchange="changeEmail();">	
-                                                            <option value="chol.com">chol.com</option>                
-                                                            <option value="dreamwiz.com">dreamwiz.com</option>                
-                                                            <option value="daum.net">daum.net</option>                
-                                                            <option value="empal.com">empal.com</option>                
-                                                            <option value="freechal.com">freechal.com</option>                
-                                                            <option value="gmail.com">gmail.com</option>                
-                                                            <option value="hanmail.net">hanmail.net</option>                
-                                                            <option value="hanmir.com">hanmir.com</option>                
-                                                            <option value="hitel.net">hitel.net</option>                
-                                                            <option value="hotmail.com">hotmail.com</option>                
-                                                            <option value="korea.com">korea.com</option>                
-                                                            <option value="nate.com">nate.com</option>                
-                                                            <option value="naver.com">naver.com</option>                
-                                                            <option value="orgio.com">orgio.com</option>                
-                                                            <option value="paran.com">paran.com</option>                
-                                                            <option value="sayclub.com">sayclub.com</option>                
-                                                            <option value="shinbiro.com">shinbiro.com</option>                
-                                                            <option value="yahoo.co.kr">yahoo.co.kr</option>                
-                                                            <option value="yahoo.com">yahoo.com</option>                
-                                                            <option value="moel.go.kr">moel.go.kr</option>                
-                                                            <option value="korea.kr">korea.kr</option>                
-                                                            <option value="기타(직접입력)" selected="">기타(직접입력)</option>                
+                                                        <input type="text" name="" id="email-ipt" title="이메일 도메인" value="">
+                                                        <select id="email-select" class="email-select" title="이메일 도메인" name="email-select">
+                                                            <option value="선택" disabled selected>선택</option>
+                                                            <option value="naver.com">naver.com</option>
+                                                            <option value="hanmail.net">hanmail.net</option>
+                                                            <option value="gmail.com">gmail.com</option>
+                                                            <option value="nate.com">nate.com</option>
+                                                            <option value="hotmail.com">hotmail.com</option>
+                                                            <option value="dreamwiz.com">dreamwiz.com</option>
+                                                            <option value="empal.com">empal.com</option>
+                                                            <option value="kakao.com">kakao.com</option>
+                                                            <option value="direct">기타(직접입력)</option>              
                                                         </select>
                                                     </div>
                                                     <span class="sub-txt">입력 예) korea@korea.kr</span>
