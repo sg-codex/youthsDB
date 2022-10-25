@@ -84,10 +84,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="" class="menu-depth-06">회원관리</a>
+                       <a href="" class="menu-depth-06">회원관리</a>
                         <ul class="menu-depth2">
                             <li><a href="">- 회원목록</a></li>
                             <li><a href="">- 회원안내발송</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
                         </ul>
                     </li>
                     <li>
@@ -118,9 +119,9 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div id="m-menu-close">
-                        <span></span>
-                        <span></span>
+                    <div id="m-menu-close" class="close-box">
+                        <span class="btn_close"></span>
+                        <span class="btn_close"></span>
                     </div>
                 </div>
                 <div class="m-ico-box">
@@ -154,7 +155,7 @@
                 <div class="m-menu">
                     <ul>
                         <li class="active">
-                            <span>청년인재<br>데이터베이스</span>
+                            <span>청년인재데이터베이스</span>
                             <ul class="m-depth-02">
                                 <li><a href="">소개</a></li>
                                 <li><a href="">공지사항</a></li>
@@ -183,8 +184,10 @@
                             <span>인재관리</span>
                             <ul class="m-depth-02">
                                 <li><a href="">인재목록</a></li>
-                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">신규 인재정보 관리</a></li>
+                                <li><a href="">수정 인재정보 관리</a></li>
                                 <li><a href="">인재정보 현행화요청</a></li>
+                                <li><a href="">인재등록 현황</a></li>
                             </ul>
                         </li>
                         <li>
@@ -192,14 +195,20 @@
                             <ul class="m-depth-02">
                                 <li><a href="">회원목록</a></li>
                                 <li><a href="">회원안내발송</a></li>
+                                <li><a href="">권한그룹관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
                             <ul class="m-depth-02">
+                                <li><a href="">기본환경설정</a></li>
                                 <li><a href="">메뉴 관리</a></li>
                                 <li><a href="">게시판 관리</a></li>
-                                <li><a href="">팝업/배너 관리</a></li>
+                                <li><a href="">게시판 통합 관리</a></li>
+                                <li><a href="">카테고리 관리</a></li>
+                                <li><a href="">게시물 관리</a></li>
+                                <li><a href="">팝업 관리</a></li>
+                                <li><a href="">배너 관리</a></li>
                             </ul>
                         </li>
                         <li>
@@ -214,6 +223,11 @@
                         </li>
                         <li>
                             <span>통계/리포팅</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">게시판 통계</a></li>
+                                <li><a href="">사용자 통계</a></li>
+                                <li><a href="">접속 통계</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -234,7 +248,7 @@
                         <div>
                             <div class="con-box-wh">
                                 <div class="box-top-tit">
-                                    <h3>회원정보 입력</h3>
+                                    <h3>회원정보</h3>
                                 </div>
                                 <div class="table-wrap table-th-left r-table-wrap">
                                     <ul class="flex-wrap">
@@ -287,6 +301,28 @@
                                             </div>
                                             <div class="list-cont">
                                                 <span class="result-txt">홍길동</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <label for="pwd">비밀번호 </label>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="input-wrap">
+                                                    <input type="password" name="" id="pwd" class="input02" placeholder="비밀번호" maxlength="15">
+                                                    <span class="sub-txt">비밀번호 변경 시에만 입력해주세요.</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">
+                                                <label for="pwdConfirm">비밀번호 확인 </label>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="input-wrap">
+                                                    <input type="password" name="" id="pwdConfirm" class="input02" placeholder="비밀번호" maxlength="15">
+                                                    <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
+                                                </div>
                                             </div>
                                         </li>
                                         <li>
@@ -369,22 +405,22 @@
                                         </li>
                                         <li>
                                             <div class="list-tit">
-                                                <label for="pwd">비밀번호 </label>
+                                                <label for="pwd02">비밀번호 </label>
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="password" name="" id="pwd" class="input02" placeholder="비밀번호" maxlength="15" disabled>
+                                                    <input type="password" name="" id="pwd02" class="input02" placeholder="비밀번호" maxlength="15">
                                                     <span class="sub-txt">비밀번호 변경 시에만 입력해주세요.</span>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="list-tit">
-                                                <label for="pwdConfirm">비밀번호 확인 </label>
+                                                <label for="pwdConfirm02      ">비밀번호 확인 </label>
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="password" name="" id="pwdConfirm" class="input02" placeholder="비밀번호" maxlength="15" disabled>
+                                                    <input type="password" name="" id="pwdConfirm02" class="input02" placeholder="비밀번호" maxlength="15">
                                                     <span class="sub-txt">비밀번호를 다시 한 번 입력합니다.</span>
                                                 </div>
                                             </div>
@@ -441,8 +477,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btm-btnBox d-flex">
-                            <a href="./1)회원목록.html" id="btn_prev" class="btn btn-style-wh">목록</a>
+                        <div class="btm-btnBox">
+                            <a href="./1)회원목록.html" id="btn_reset" class="btn btn-style-wh">취소</a>
+                            <button type="button" id="btn_save" class="btn" onclick="openPopup('confirmPopup');">저장</button>
                         </div>
                     </form>
                 </div>                

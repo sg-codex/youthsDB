@@ -102,10 +102,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="" class="menu-depth-06">회원관리</a>
+                       <a href="" class="menu-depth-06">회원관리</a>
                         <ul class="menu-depth2">
                             <li><a href="">- 회원목록</a></li>
                             <li><a href="">- 회원안내발송</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
                         </ul>
                     </li>
                     <li>
@@ -136,9 +137,9 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div id="m-menu-close">
-                        <span></span>
-                        <span></span>
+                    <div id="m-menu-close" class="close-box">
+                        <span class="btn_close"></span>
+                        <span class="btn_close"></span>
                     </div>
                 </div>
                 <div class="m-ico-box">
@@ -172,7 +173,7 @@
                 <div class="m-menu">
                     <ul>
                         <li class="active">
-                            <span>청년인재<br>데이터베이스</span>
+                            <span>청년인재데이터베이스</span>
                             <ul class="m-depth-02">
                                 <li><a href="">소개</a></li>
                                 <li><a href="">공지사항</a></li>
@@ -201,8 +202,10 @@
                             <span>인재관리</span>
                             <ul class="m-depth-02">
                                 <li><a href="">인재목록</a></li>
-                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">신규 인재정보 관리</a></li>
+                                <li><a href="">수정 인재정보 관리</a></li>
                                 <li><a href="">인재정보 현행화요청</a></li>
+                                <li><a href="">인재등록 현황</a></li>
                             </ul>
                         </li>
                         <li>
@@ -210,14 +213,20 @@
                             <ul class="m-depth-02">
                                 <li><a href="">회원목록</a></li>
                                 <li><a href="">회원안내발송</a></li>
+                                <li><a href="">권한그룹관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
                             <ul class="m-depth-02">
+                                <li><a href="">기본환경설정</a></li>
                                 <li><a href="">메뉴 관리</a></li>
                                 <li><a href="">게시판 관리</a></li>
-                                <li><a href="">팝업/배너 관리</a></li>
+                                <li><a href="">게시판 통합 관리</a></li>
+                                <li><a href="">카테고리 관리</a></li>
+                                <li><a href="">게시물 관리</a></li>
+                                <li><a href="">팝업 관리</a></li>
+                                <li><a href="">배너 관리</a></li>
                             </ul>
                         </li>
                         <li>
@@ -232,6 +241,11 @@
                         </li>
                         <li>
                             <span>통계/리포팅</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">게시판 통계</a></li>
+                                <li><a href="">사용자 통계</a></li>
+                                <li><a href="">접속 통계</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -255,11 +269,11 @@
                                     <div class="w35">
                                         <p>요청일</p>
                                         <div class="datePickerBox">
-                                            <input type="text" id="fromDate" name="from" autocomplete="off" placeholder="날짜 선택" class="hasDatepicker">
-                                            <label for="fromDate"></label>
+                                            <input type="text" id="fromDate1-1" name="from" autocomplete="off" placeholder="날짜 선택" class="">
+                                            <label for="fromDate1-1"><span class="blind">시작연월</span></label>
                                             <span>~</span>
-                                            <input type="text" id="toDate" name="to" autocomplete="off" placeholder="날짜 선택" class="hasDatepicker">
-                                            <label for="toDate"></label>
+                                            <input type="text" id="toDate1-1" name="to" autocomplete="off" placeholder="날짜 선택" class="">
+                                            <label for="toDate1-1"><span class="blind">종료연월</span></label>
                                         </div>
                                     </div>
                                     <div class="w20">
@@ -304,17 +318,13 @@
                                 </div>
                                 <div class="r-box">
                                     <select name="" id="" class="">
-                                        <option value="전체">전체</option>
-                                        <option value="직접검색">직접검색</option>
-                                        <option value="인재추천">인재추천</option>
-                                    </select>
-                                    <select name="" id="" class="">
                                         <option value="최신순">최신순</option>
                                         <option value="오래된순">오래된순</option>
                                     </select>
                                     <select name="" id="" class="">
                                         <option value="10개씩">10개씩</option>
                                         <option value="20개씩">20개씩</option>
+                                        <option value="50개씩">50개씩</option>
                                     </select>
                                 </div>
                             </div>
@@ -346,9 +356,9 @@
                                             <th scope="row" rowspan="2">상태</th>
                                             <th scope="row" rowspan="2">승인</th>
                                             <th scope="row" rowspan="2">검색기간</th>
-                                            <th scope="row" rowspan="2">검색<br>
-                                                취소<br>
-                                                회수
+                                            <th scope="row" rowspan="2">추가<br>
+                                                검색<br>
+                                                횟수
                                             </th>
                                         </tr>
                                         <tr>
@@ -573,6 +583,13 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div class="r-btn-box">
+                                <button type="button" id="" class="btn r-btn" onclick="openPopup('alert-removePopup');">관심인재삭제</button>
+                                <button type="button" id="" class="btn r-btn">검색완료</button>
+                                <button type="button" id="" class="btn r-btn" onclick="openPopup('alert-addSearchPopup');" >추가검색요청</button>
+                                <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
+                                <button type="button" id="" class="btn r-btn" onclick="openPopup('estimationPopup');" >활용평가등록</button>
+                            </div>
                             <div id="pagination-container">
                                 <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
                                 <a href="#" class="active">1</a>
@@ -581,13 +598,6 @@
                                 <a href="#">4</a>
                                 <a href="#">5</a>
                                 <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
-                            </div>
-                            <div class="r-btn-box">
-                                <button type="button" id="" class="btn r-btn" onclick="openPopup('alert-removePopup');">관심인재삭제</button>
-                                <button type="button" id="" class="btn r-btn">검색완료</button>
-                                <button type="button" id="" class="btn r-btn" onclick="openPopup('alert-addSearchPopup');" >추가검색요청</button>
-                                <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
-                                <button type="button" id="" class="btn r-btn" onclick="openPopup('estimationPopup');" >활용평가등록</button>
                             </div>
                         </div>
                         <!-- 추천인재 목록 -->
@@ -708,6 +718,11 @@
                                 </table>
                             </div>
                             <div class="p-relative">
+                                <div class="r-btn-box">
+                                    <button type="button" id="" class="btn r-btn">추천인재삭제</button>
+                                    <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
+                                    <button type="button" id="" class="btn r-btn" disabled>활용평가등록</button>
+                                </div>
                                 <div id="pagination-container">
                                     <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
                                     <a href="#" class="active">1</a>
@@ -716,11 +731,6 @@
                                     <a href="#">4</a>
                                     <a href="#">5</a>
                                     <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
-                                </div>
-                                <div class="r-btn-box">
-                                    <button type="button" id="" class="btn r-btn">추천인재삭제</button>
-                                    <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
-                                    <button type="button" id="" class="btn r-btn" disabled>활용평가등록</button>
                                 </div>
                             </div>
                             <div class="btm-btnBox">
@@ -1026,6 +1036,12 @@
                 <div class="popup-table-wrap">
                     <table>
                         <caption>인재정보 현행화요청 표</caption>
+                        <colgroup>
+                            <col width="20%">
+                            <col width="30%">    
+                            <col width="20%">   
+                            <col width="30%">                       
+                        </colgroup>
                         <tbody>
                             <tr>
                                 <th scope="col">요청일자</th>
@@ -1118,10 +1134,10 @@
                                 </div>
                                 <div class="list-cont">
                                     <div class="input-wrap">
-                                        <input type="checkbox" name="onechk" id="onechk01">
-                                        <label for="onechk01" class="adm-chkBox">선정</label>
-                                        <input type="checkbox" name="onechk" id="onechk02">
-                                        <label for="onechk02" class="adm-chkBox">미선정</label>
+                                        <input type="radio" name="select" class='radio_chkBox' id="select01">
+                                        <label for="select01" class="adm-chkBox">선정</label>
+                                        <input type="radio" name="select" class='radio_chkBox' id="select02">
+                                        <label for="select02" class="adm-chkBox ">미선정</label>
                                     </div>
                                 </div>
                             </div>
@@ -1196,10 +1212,10 @@
                                     </div>
                                     <div class="list-cont">
                                         <div class="input-wrap">
-                                            <input type="checkbox" name="onechk2" id="onechk21">
-                                            <label for="onechk21" class="adm-chkBox">중앙부처</label>
-                                            <input type="checkbox" name="onechk2" id="onechk22">
-                                            <label for="onechk22" class="adm-chkBox">지방자치단체</label>
+                                            <input type="radio" name="participation_org" class='radio_chkBox' id="participation_org01">
+                                            <label for="participation_org01" class="adm-chkBox">중앙부처</label>
+                                            <input type="radio" name="participation_org" class='radio_chkBox' id="participation_org02">
+                                            <label for="participation_org02" class="adm-chkBox">지방자치단체</label>
                                         </div>
                                     </div>
                                 </div>
@@ -1209,16 +1225,16 @@
                                     </div>
                                     <div class="list-cont">
                                         <div class="input-wrap">
-                                            <input type="checkbox" name="kind" id="check01">
-                                            <label for="check01" class="adm-chkBox">정부위원회</label>
-                                            <input type="checkbox" name="kind" id="check02">
-                                            <label for="check02" class="adm-chkBox">정책 서포터즈ㆍ기자단</label>
-                                            <input type="checkbox" name="kind" id="check03">
-                                            <label for="check03" class="adm-chkBox">간담회ㆍ행사</label>
-                                            <input type="checkbox" name="kind" id="check04">
-                                            <label for="check04" class="adm-chkBox">정책평가ㆍ모니터링</label>
-                                            <input type="checkbox" name="kind" id="check05">
-                                            <label for="check05" class="adm-chkBox">기타</label>
+                                            <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind01">
+                                            <label for="participation_kind01" class="adm-chkBox">정부위원회</label>
+                                            <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind02">
+                                            <label for="participation_kind02" class="adm-chkBox ">정책 서포터즈ㆍ기자단</label>
+                                            <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind03">
+                                            <label for="participation_kind03" class="adm-chkBox ">간담회ㆍ행사</label>
+                                            <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind04">
+                                            <label for="participation_kind04" class="adm-chkBox ">정책평가ㆍ모니터링</label>
+                                            <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind05">
+                                            <label for="participation_kind05" class="adm-chkBox ">기타</label>
                                         </div>
                                     </div>
                                 </div>

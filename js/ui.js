@@ -1,3 +1,23 @@
+
+
+// 데이트 피커
+$.datepicker.setDefaults({
+  dateFormat: 'yy-mm-dd',
+  prevText: '이전 달',
+  nextText: '다음 달',
+  monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+  monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+  dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+  dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+  dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+  showMonthAfterYear: true,
+  yearSuffix: '년'
+});
+
+$(function() {
+  $('.datepicker').datepicker();
+});
+
 /* ============================================================ 
 * 팝업
 * ============================================================ */
@@ -25,14 +45,16 @@ function openSelectPopup(select) {
 }
 
 // 파일추가
-var maxAppend = 1;
-function addDel(a){ 
-    $(a).closest('.file-sel').remove(); 
-    maxAppend --;
+function addDel(a, that){ 
+  var $this = $(a);
+  var $thisFileList = $this.parents('.file-list');
+  $thisFileList.remove();
+  var $thisInput = $(that);
+  var $fileList = $thisInput.siblings('.file-list')
 
-    if(maxAppend == 1){
-        $('.file-not-sel').css('display','block')
-    }
+  if($fileList.length < 1){
+     $thisInput.siblings('.file-empty-list').css('display','block');
+  }
 }
 
 // input 값 초기화
@@ -41,9 +63,19 @@ function valueReset(btn) {
   $(btn).siblings('input').attr('disabled', false);
 }
 
+// input 숫자 타입 최대길이 설정
+function maxLength(object){
+  var iptVal = object.val();
+  if(iptVal.length > object.maxLength) {
+    object.value = iptVal.substring(0, object.maxLength);
+  }
+}
+
+
 
 
 $(function() {
+
   /* ============================================================ 
   * 프린트 설정
   * ============================================================ */
@@ -135,7 +167,7 @@ $(function() {
             .parent()
             .parent()
             .toggleClass(active);
-        $('body').addClass('o-y-hidden');
+        // $('body').addClass('o-y-hidden');
     });
    }).resize();
 
@@ -166,6 +198,7 @@ $(function() {
     $('.wrap').removeClass(active);
     $('.menu-depth2').slideUp(300);
     $('.menu > li').removeClass(active);
+    $('body').removeClass('o-y-hidden');
   });
 
 
@@ -244,53 +277,47 @@ $(function() {
 
 
 
-  // 체크박스 하나만 선택
-  // var $oneChkParent = $('div[id^="oneChkWrap"]');
-
-  // $oneChkParent.on('click', function(){
-  //   var getId = $(this).attr('id');
-  //   var inputElements = $('#' + getId + " " + "input[data-group^=" + getId + "]").length;
-  //   var checkedInputs = $('#' + getId + " " + "input[data-group^=" + getId + "]:checked").length;
-
-
-
+  // 관리자 - 회원등록 - 회원정보 입력: 체크박스 선택 시 내용 보이기
+  // $('input[name=chkType01]').on('click', function(){
+  //   $('input[name=chkType01]').not(this).prop("checked", false);
+  //   if($('.chkInside').prop('checked')) {
+  //     $('.chkOrgani').prop('checked', true);
+  //     $('.chkYouths').prop('disabled', true);
+  //   } else {
+  //     if($('.chkPublic').prop('checked') && $('.chkYouths').prop('checked')) {
+  //       $('.type-youths').addClass(active);
+  //       $('.type-inner').removeClass(active);
+  //     } else {
+  //       $('.type-inner').addClass(active);
+  //       $('.type-youths').removeClass(active);
+  //     }
+  //   }
   // });
   
+  // $('input[name=chkType02]').on('click', function(){
+  //   $('input[name=chkType02]').not(this).prop("checked", false);
+  //   if($('.chkPublic').prop('checked') && $('.chkYouths').prop('checked')) {
+  //     $('.type-youths').addClass(active);
+  //     $('.type-inner').removeClass(active);
+  //   } else {
+  //     $('.type-inner').addClass(active);
+  //     $('.type-youths').removeClass(active);
+  //   }
+  // });
 
+  var $sType = $('input:checkbox[name="subscriptionType"]');
+  var $mType = $('input:checkbox[name="memberType"]');
 
-
-
-
-
-  $('input[name=onechk]').on('click',function() {
-    $('input[name=onechk]').not(this).prop("checked", false);
-  });
-  $('input[name=onechk2]').on('click',function() {
-    $('input[name=onechk2]').not(this).prop("checked", false);
-  });
-
-
-  // 관리자 - 회원등록 - 회원정보 입력: 체크박스 선택 시 내용 보이기
-  $('input[name=chkType01]').on('click', function(){
-    $('input[name=chkType01]').not(this).prop("checked", false);
-    if($('.chkPublic').prop('checked') && $('.chkYouths').prop('checked')) {
-      $('.type-youths').addClass(active);
-      $('.type-inner').removeClass(active);
-    } else {
-      $('.type-inner').addClass(active);
-      $('.type-youths').removeClass(active);
-    }
-  });
-  
-  $('input[name=chkType02]').on('click', function(){
-    $('input[name=chkType02]').not(this).prop("checked", false);
-    if($('.chkPublic').prop('checked') && $('.chkYouths').prop('checked')) {
-      $('.type-youths').addClass(active);
-      $('.type-inner').removeClass(active);
-    } else {
-      $('.type-inner').addClass(active);
-      $('.type-youths').removeClass(active);
-    }
+  $sType.on('click', function(){
+    console.log($(this).val(), 'value');
+    
+    $sType.not(this).prop("checked", false);
+    $mType.each(function() {
+      if (this.value == "chkInside") { //값 비교
+        $mType.
+        this.checked = true; //checked 처리
+       }
+    });
   });
 
 
@@ -300,14 +327,60 @@ $(function() {
 
 
   // 체크박스 갯수 제한
-  var chkbox = 'input[name="chk-limit"]';
-  $(chkbox).on('change', function(){
-      if($(chkbox + ':checked').length === 3){
-          $(chkbox + ':not(:checked)').attr('disabled', true);
-      } else {
-          $(chkbox).attr('disabled', false);
-      }
-  });
+  function appendInputs(thisInput, thatInputName, inputId, title, count) {
+
+    if(thatInputName !== 'chk-limit') {
+       return;
+    }
+
+    var appendTarget =$("[data-limit*='limit']");
+    var toggleEffect = thisInput.is(':checked');
+
+    
+    if (count >= 1) {
+       $('[data-template*=limit-template]').css('display', 'none');
+    } else {
+       $('[data-template*=limit-template]').css('display', 'block');
+    }
+    
+    if(toggleEffect) {
+       appendTarget.append(
+          "<li>" +
+             "<div class='list-cont'>" +
+                "<label for=" + inputId + "_elm" + ">" + title +"</label>" +
+             "</div>" +
+             "<div class='list-cont txt-left'>" +
+                "<input type='text' id=" + inputId + "_elm" + " name=" + inputId + "_elm" + "  class='input01' placeholder='상세 분야를 작성해주세요'/>" +
+             "</div>" +
+          "</li>"
+       );
+    } else {
+       $('#' + inputId + "_elm").parent().parent().remove();
+    }
+};
+
+
+$('input[type="checkbox"]').on('change', function() {
+    var $this = $(this);
+    var inputName = $this.attr('name');
+    var inputId = $this.attr('id');
+    var label = $this.siblings('label');
+    var getLabelText = label.text()
+    var $allInputs= $('#' + inputName + " input[type='checkbox']");
+    var $notCheckedInputs= $('#' + inputName + " input[type='checkbox']:not(:checked)");
+    var allInputsState = $('#' + inputName + " input[type='checkbox']:checked");
+
+    if(allInputsState.length === 3){
+       $notCheckedInputs.attr('disabled', true);
+    } else {
+       $allInputs.attr('disabled', false);
+    };
+
+    if(allInputsState.length <= 3) {
+       appendInputs($this, inputName, inputId, getLabelText, allInputsState.length);
+    }
+    
+ });
 
 
 
@@ -325,9 +398,98 @@ $(function() {
       .removeClass('active');
   });
 
+
+
+  // 생년월일 형식
+  // 숫자만 입력되도록
+  $("#isBirthday").keypress(function(event) {
+    if (event.which < 48 || event.which > 57) {
+      event.preventDefault();
+    }
+  })
+
+  var RegNotNum = /[^0-9]/g;
+   
+  var prev = ""; // 이전 값 백업용
+  $("#isBirthday").keyup(function() {
+
+    var date = this.value;
+
+    date = date.replace(RegNotNum, ''); // 숫자만 남기기
+
+    if (date == "" || date == null || date.length < 5) {
+      this.value = date;
+      return;
+    }
+
+    var DataFormat;
+    var RegDateFmt;
+
+    // 날짜 포맷(yyyy-mm-dd) 만들기 
+    if (date.length <= 6) {
+      DataFormat = "$1.$2"; // 포맷(-)을 바꾸려면 이곳을 변경
+      RegDateFmt = /([0-9]{4})([0-9]+)/;
+    } else if (date.length <= 8) {
+      DataFormat = "$1.$2.$3"; // 포맷(-)을 바꾸려면 이곳을 변경
+      RegDateFmt = /([0-9]{4})([0-9]{2})([0-9]+)/;
+    }
+
+    date = date.replace(RegDateFmt, DataFormat);
+
+    this.value = date;
+
+    // 모두 입력됐을 경우 날짜 유효성 확인
+    if (date.length == 10) {
+
+      var isVaild = true;
+
+      if (isNaN(Date.parse(date))) {
+        // 유효 날짜 확인 여부
+        isVaild = false;
+      } else {
+
+        // 년, 월, 일 0 이상 여부 확인
+        var date_sp = date.split("-");
+        date_sp.forEach(function(sp) {
+          if (parseInt(sp) == 0) {
+            isVaild = false;
+          }
+        });
+
+        // 마지막 일 확인
+        var last = new Date(new Date(date).getFullYear(), new Date(date).getMonth() + 1, 0);
+        // 일이 달의 마지막날을 초과했을 경우 다음달로 자동 전환되는 현상이 있음 (예-2월 30일 -> 3월 1일)
+        if (parseInt(date_sp[1]) != last.getMonth() + 1) {
+          var date_sp2 = date_sp.slice(0);
+          date_sp2[2] = '01';
+          var date2 = date_sp2.join("-");
+          last = new Date(new Date(date2).getFullYear(), new Date(date2).getMonth() + 1, 0);
+        }
+        if (last.getDate() < parseInt(date_sp[2])) {
+          isVaild = false;
+        }
+      }
+
+      if (!isVaild) {
+        alert("잘못된 날짜입니다. \n다시 입력하세요.");
+        this.value = "";
+        this.focus();
+        return;
+      }
+    }
+  }).focusin(function() {
+    prev = this.value;
+  }).focusout(function() {
+    // 정상 포맷이 아닌 채 입력 도중 나왔을 경우 값 복구
+    var RegDateFmt = /([0-9]{4}).([0-9]{2}).([0-9]+)/; // 포맷(-)을 바꾸려면 이곳을 변경
+    if (!RegDateFmt.test(this.value)) {
+      this.value = prev;
+    }
+  });
+
+
   // 요소 추가&삭제
   var index = 1;
-
   // 제외어 추가
   $(document).on('click', '.btn-add-exclude', function(){
     if(index === 9) {
@@ -421,6 +583,204 @@ $(function() {
     );
   });
 
+  
+  // 날짜 최소 최대 지정
+  function fromToDate(num, val) {
+    $('#fromDate'+num+val).datepicker();
+    $('#fromDate'+num+val).datepicker("option", "maxDate", $('#toDate'+num+val).val());
+    $('#fromDate'+num+val).datepicker("option", "onClose", function ( selectedDate ) {
+      $('#toDate'+num+val).datepicker( "option", "minDate", selectedDate );
+    });
+  
+    $('#toDate'+num+val).datepicker();
+    $('#toDate'+num+val).datepicker("option", "minDate", $('#fromDate'+num+val).val());
+    $('#toDate'+num+val).datepicker("option", "onClose", function ( selectedDate ) {
+      $('#fromDate'+num+val).datepicker( "option", "maxDate", selectedDate );
+    });
+  }
+  fromToDate('1-','1');
+  fromToDate('2-','1');
+  fromToDate('3-','1');
+
+  // 경력 추가
+  $(document).on('click', '.add-btn2', function(){
+    if(index === 9) {
+      alert("10개까지 추가 가능합니다.");
+      return false;
+    }
+    index++;
+
+    $(this)
+    .prev()
+    .before(
+      '<ul class="flex-wrap">'+
+          '<li class="f-left">'+
+              '<div class="list-tit">'+
+                  '<label for="">직장명</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<div class="input-wrap">'+
+                      '<input type="text" name="" id="" class="input02" value="" placeholder="직장명">'+
+                  '</div>'+
+              '</div>'+
+          '</li>'+
+          '<li class="f-left">'+
+              '<div class="list-tit">'+
+                  '<label for="">부서명</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<div class="input-wrap">'+
+                      '<input type="text" name="" id="" class="input02" placeholder="부서명">'+
+                  '</div>'+
+              '</div>'+
+          '</li>'+
+          '<li class="f-left">'+
+              '<div class="list-tit">'+                                            
+                  '<label for="">근무기간</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<input type="text" id="fromDate1-'+ index +'" class="" placeholder="시작연월">'+
+                  '<span>~</span>'+
+                  '<input type="text" id="toDate1-'+ index +'" class="" placeholder="종료연월">'+
+              '</div>'+
+          '</li>'+
+          '<li class="f-left">'+
+              '<div class="list-tit">'+                                           
+                  '<label for="">직위</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<div class="input-wrap">'+
+                      '<input type="text" name="" id="" class="input02" placeholder="직위">'+
+                  '</div>'+
+              '</div>'+
+          '</li>'+
+          '<li>'+
+              '<div class="list-tit">'+
+                  '<label for="">주요업무</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<div class="input-wrap">'+
+                      '<input type="text" name="" id="" class="input01" placeholder="주요업무를 작성해주세요.">'+
+                  '</div>'+
+              '</div>'+
+          '</li>'+
+      '</ul>'
+    );
+    fromToDate('1-',index);
+  });
+
+  // 활동 추가
+  $(document).on('click', '.add-btn3', function(){
+    if(index === 9) {
+      alert("10개까지 추가 가능합니다.");
+      return false;
+    }
+    index++;
+
+    $(this)
+    .prev()
+    .before(
+      '<ul class="flex-wrap">'+
+          '<li class="f-left">'+
+              '<div class="list-tit">'+
+                  '<label for="">상세분야</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<div class="input-wrap">'+
+                      '<input type="text" name="" id="" placeholder="상세 분야">'+
+                  '</div>'+
+              '</div>'+
+          '</li>'+
+          '<li class="f-left">'+
+              '<div class="list-tit">'+
+                  '<label for="">비고</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<div class="input-wrap">'+
+                      '<input type="text" name="" id="" placeholder="비고">'+
+                  '</div>'+
+              '</div>'+
+          '</li>'+
+          '<li>'+
+              '<div class="list-tit">'+
+                  '<label for="">활동기간</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<input type="text" id="fromDate2-'+ index +'" class="" placeholder="시작연월">'+
+                  '<span>~</span>'+
+                  '<input type="text" id="toDate2-'+ index +'" class="" placeholder="종료연월">'+
+              '</div>'+
+          '</li>'+
+          '<li>'+
+             '<div class="list-tit">'+
+                  '<label for="">주요내용</label>'+
+              '</div>'+
+              '<div class="list-cont">'+
+                  '<div class="input-wrap">'+
+                      '<input type="text" name="" id="" class="input01" placeholder="주요내용을 작성해 주세요">'+
+                 '</div>'+
+              '</div>'+
+          '</li>'+
+      '</ul>'
+    );
+    fromToDate('2-',index);
+  });
+
+  // 주요 결과물 추가
+  $(document).on('click', '.add-btn4', function(){
+    if(index === 9) {
+      alert("10개까지 추가 가능합니다.");
+      return false;
+    }
+    index++;
+
+    $(this)
+    .prev()
+    .before(
+      '<ul class="flex-wrap">'+
+        '<li class="f-left">'+
+            '<div class="list-tit">'+
+                '<label for="">구분</label>'+
+            '</div>'+
+            '<div class="list-cont">'+
+                '<div class="input-wrap">'+
+                    '<input type="text" name="" id="" placeholder="논문/저서 등">'+
+                '</div>'+
+            '</div>'+
+        '</li>'+
+        '<li class="f-left">'+
+            '<div class="list-tit lh0">'+
+                '<label for="datepicker3-1">연월<br><span>(발간,취득,등록,수상일)</span></label>'+
+           '</div>'+
+            '<div class="list-cont">'+
+                '<input type="text" id="datepicker3-'+ index +'" class="datepicker" placeholder="선택">'+
+            '</div>'+
+        '</li>'+
+        '<li class="f-left">'+
+            '<div class="list-tit">'+
+                '<label for="">제목</label>'+
+            '</div>'+
+            '<div class="list-cont">'+
+                '<div class="input-wrap">'+
+                    '<input type="text" name="" id="" class="input01" placeholder="명칭">'+
+                '</div>'+
+            '</div>'+
+        '</li>'+
+        '<li class="f-left">'+
+            '<div class="list-tit">'+
+                '<label for="">발급ㆍ수여기관</label>'+
+            '</div>'+
+            '<div class="list-cont">'+
+                '<div class="input-wrap">'+
+                    '<input type="text" name="" id="" placeholder="기관명">'+
+                '</div>'+
+            '</div>'+
+        '</li>'+
+    '</ul>'
+    );
+    $(".datepicker").datepicker();
+  });
+
 
 
   // 인재 등록 추가한 리스트 삭제
@@ -433,20 +793,22 @@ $(function() {
   });
   
 
+  // 표 내용 셀 비활성화 시 클래스 추가
+  if ($('.table-wrap.result-table-wrap tr').hasClass('inact')) {
+    $('.table-wrap.result-table-wrap tr.inact .btn').attr('href', "#");
+  }
 
 
 
 
 
 
-  // 퀵메뉴
-  var youthsPopupWrap = $('.popup-con.youths-info-con');
-  var quickMenu = $('#quickMenu .quickList');
-  
+
+  // 퀵메뉴  
   // 상단으로 이동
   $('#btn-top').on('click', function(e) {
     e.preventDefault();
-    youthsPopupWrap.animate({ scrollTop : 0 }, 500);
+    $('.popup-con.youths-info-con').animate({ scrollTop : 0 }, 500);
   });
 
   // 퀵메뉴 클릭 시 클래스 추가
@@ -460,29 +822,51 @@ $(function() {
 
     
   // 파일추가
-  $('#fileUp').on('input',function(){ 
-    var fileValue = $("#fileUp").val().split("\\");
+  $('.fileUp').on('input',function(e){
+    var that = $(this).attr('id')
+    var files = $(this)[0].files;
+    var multipleType = e.target.multiple;
+    var fileValue = $(this).val().split("\\");
     var fileName = fileValue[fileValue.length-1];
-    $('.file-not-sel').css('display','none');
+    var fileListLength = $(this).siblings('.file-list').length + 1;
 
-    if(maxAppend > 10){
-      alert("파일 업로드 최대 개수는 10개 입니다.");
-      return;
+    if($(this).val() === '') return;
+
+    $(this).siblings('.file-empty-list').css('display','none');
+
+    if (multipleType) {
+       if(fileListLength > 10){
+          alert("파일 업로드 최대 개수는 10개 입니다.");
+          return;
+       } else {
+          for(var i = 0; i < files.length; i++) {
+             console.log(files[i])
+             $(this).parent().append(        
+                "<div class='file-list'>"+
+                "<div>" +
+                   "<p>" + files[i].name + " </p>"+
+                   "<button type='button' class='btn-file-del' onclick='addDel(this, "+ that +")';>삭제</button>"+
+                "</div>" +
+                "</div>"        
+             ); 
+          }
+       };
     } else {
-      $('.file-upload > div').append(        
-          "<div class='file-sel input-nomal w100p'>"+
-              "<div>"+
-                  "<div></div>"+
-                  "<p>" + fileName + " </p>"+
-                  "<button type='button' onclick='addDel(this)';></button>"+
-              "</div>"+
-          "</div>"        
-        ); 
-
-      maxAppend ++;
+       if(fileListLength > 1){
+          alert("파일 업로드 최대 개수는 1개 입니다.");
+          return;
+       } else {
+          $(this).parent().append(        
+             "<div class='file-list'>"+
+             "<div>" +
+                "<p>" + fileName + " </p>"+
+                "<button type='button' class='btn-file-del' onclick='addDel(this, "+ that +")';>삭제</button>"+
+             "</div>" +
+             "</div>"        
+          ); 
+       };
     }
-
-  });
+});
 
   // 탭 
   var $TabList = $('.tab-list li');
@@ -526,58 +910,26 @@ $(function() {
 
   });
 
+  // 승인 및 거절 시 셀렉트 박스 스타일 변경
 
-});
 
 
-  // 데이트 피커
-  $(function() {
-    $( "#datepicker" ).datepicker({
-      dateFormat: "yy-mm-dd",
-      minDate: 0,
-      prevText: '이전 달',
-      nextText: '다음 달',
-      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-      showMonthAfterYear: true,
-      yearSuffix: '년'
-    });
-});
+  // 관리자 - 회원 목록 toggle
+  $('.user-list li').on('click', function(){
+    $(this).toggleClass(active);
+  });
 
-// 데이트 피커 - 기간 설정
-$(function() {
-    var dateFormat = "yy-mm-dd",
-    from = $( "#fromDate" )
-      .datepicker({
-        dateFormat: "yy-mm-dd",
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 1
-      })
-      .on( "change", function() {
-        to.datepicker( "option", "minDate", getDate( this ) );
-      }),
-    to = $( "#toDate" ).datepicker({
-      dateFormat: "yy-mm-dd",
-      defaultDate: "+1w",
-      changeMonth: true,
-      numberOfMonths: 1
-    })
-    .on( "change", function() {
-      from.datepicker( "option", "maxDate", getDate( this ) );
-    });
-
-  function getDate( element ) {
-    var date;
-    try {
-      date = $.datepicker.parseDate( dateFormat, element.value );
-    } catch( error ) {
-      date = null;
-    }
-
-    return date;
-  }
+  // 회원 토글
+  var schUserList = $('.schUser-box .box-cont > li');
+  schUserList.on('click', function(){
+    schUserList.not($(this)).removeClass(active);
+    schUserList.not($(this)).children('.menu-depth2').slideUp(300);
+    $(this)
+      .parent()
+      .parent()
+      .parent()
+      .addClass(active);
+    $('.menu-depth2', this).slideToggle(300);
+    $(this).toggleClass(active);
+ });
 });

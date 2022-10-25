@@ -84,10 +84,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="" class="menu-depth-06">회원관리</a>
+                       <a href="" class="menu-depth-06">회원관리</a>
                         <ul class="menu-depth2">
                             <li><a href="">- 회원목록</a></li>
                             <li><a href="">- 회원안내발송</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
                         </ul>
                     </li>
                     <li>
@@ -117,9 +118,9 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div id="m-menu-close">
-                        <span></span>
-                        <span></span>
+                    <div id="m-menu-close" class="close-box">
+                        <span class="btn_close"></span>
+                        <span class="btn_close"></span>
                     </div>
                 </div>
                 <div class="m-ico-box">
@@ -153,7 +154,7 @@
                 <div class="m-menu">
                     <ul>
                         <li class="active">
-                            <span>청년인재<br>데이터베이스</span>
+                            <span>청년인재데이터베이스</span>
                             <ul class="m-depth-02">
                                 <li><a href="">소개</a></li>
                                 <li><a href="">공지사항</a></li>
@@ -182,8 +183,10 @@
                             <span>인재관리</span>
                             <ul class="m-depth-02">
                                 <li><a href="">인재목록</a></li>
-                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">신규 인재정보 관리</a></li>
+                                <li><a href="">수정 인재정보 관리</a></li>
                                 <li><a href="">인재정보 현행화요청</a></li>
+                                <li><a href="">인재등록 현황</a></li>
                             </ul>
                         </li>
                         <li>
@@ -191,14 +194,20 @@
                             <ul class="m-depth-02">
                                 <li><a href="">회원목록</a></li>
                                 <li><a href="">회원안내발송</a></li>
+                                <li><a href="">권한그룹관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
                             <ul class="m-depth-02">
+                                <li><a href="">기본환경설정</a></li>
                                 <li><a href="">메뉴 관리</a></li>
                                 <li><a href="">게시판 관리</a></li>
-                                <li><a href="">팝업/배너 관리</a></li>
+                                <li><a href="">게시판 통합 관리</a></li>
+                                <li><a href="">카테고리 관리</a></li>
+                                <li><a href="">게시물 관리</a></li>
+                                <li><a href="">팝업 관리</a></li>
+                                <li><a href="">배너 관리</a></li>
                             </ul>
                         </li>
                         <li>
@@ -213,6 +222,11 @@
                         </li>
                         <li>
                             <span>통계/리포팅</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">게시판 통계</a></li>
+                                <li><a href="">사용자 통계</a></li>
+                                <li><a href="">접속 통계</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -233,7 +247,7 @@
                         <form action="">
                             <legend>청년인재 등록</legend>
                             <div class="con-box-wh">
-                                <div class="container">
+                                <div class="register-container">
                                     <div class="box-top-tit">
                                         <h3>인적사항</h3>
                                         <span class="sub-txt">
@@ -244,7 +258,7 @@
                                         <ul class="flex-wrap">
                                             <li class="f-left">
                                                 <div class="list-tit">                                                
-                                                    <label for="userName">성명
+                                                    <label for="userName">성명 <span class="red">*</span>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -254,28 +268,30 @@
                                             </li>
                                             <li class="f-left">
                                                 <div class="list-tit">                                                
-                                                    <label for="">생년월일</label>
+                                                    <label for="isBirthday">생년월일 <span class="red">*</span></label>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="userName" class="input02" placeholder="생년월일">
+                                                        <input maxlength="10" type="number" name="" id="isBirthday" class="input02 maxlength" placeholder="생년월일"/>
                                                     </div>
                                                 </div>
                                             </li>
                                             <li class="f-left">
                                                 <div class="list-tit">                                                
-                                                    <label for="">성별</label>
+                                                    <label for="">성별 <span class="red">*</span></label>
                                                 </div>
                                                 <div class="list-cont">
-                                                    <input type="checkbox" name="onechk" id="male">
-                                                    <label for="male" class="adm-chkBox">남자</label>
-                                                    <input type="checkbox" name="onechk" id="female">
-                                                    <label for="female" class="adm-chkBox">여자</label>
+                                                    <div class="input-wrap">
+                                                        <input type="radio" name="gender" class='radio_chkBox' id="male">
+                                                        <label for="male" class="adm-chkBox">남자</label>
+                                                        <input type="radio" name="gender" class='radio_chkBox' id="female">
+                                                        <label for="female" class="adm-chkBox ">여자</label>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li class="f-left">
                                                 <div class="list-tit">                                                
-                                                    <label for="">연락처</label>
+                                                    <label for="">연락처 <span class="red">*</span></label>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="form-style tel clearfix">
@@ -295,7 +311,7 @@
                                             </li>
                                             <li>
                                                 <div class="list-tit">
-                                                    <label for="email-ipt">이메일</label>
+                                                    <label for="email-ipt">이메일 <span class="red">*</span></label>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="form-style email">
@@ -319,7 +335,7 @@
                                             </li>
                                             <li>
                                                 <div class="list-tit">
-                                                    <label for="">활동지역</label>
+                                                    <label for="">활동지역 <span class="red">*</span></label>
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
@@ -335,12 +351,13 @@
                                                             <option value="선택2">선택2</option>
                                                             <option value="선택3">선택3</option>
                                                         </select>
-                                                        <input type="checkbox" name="aria" id="ariaHome">
+
+                                                        <input type="radio" name="kind" class='radio_chkBox' id="ariaHome">
                                                         <label for="ariaHome" class="adm-chkBox">주거지</label>
-                                                        <input type="checkbox" name="aria" id="ariaOffice">
-                                                        <label for="ariaOffice" class="adm-chkBox">직장</label>
-                                                        <input type="checkbox" name="aria" id="ariainterest">
-                                                        <label for="ariainterest" class="adm-chkBox">관심지역</label>
+                                                        <input type="radio" name="kind" class='radio_chkBox' id="ariaOffice">
+                                                        <label for="ariaOffice" class="adm-chkBox ">직장</label>
+                                                        <input type="radio" name="kind" class='radio_chkBox' id="ariainterest">
+                                                        <label for="ariainterest" class="adm-chkBox ">관심지역</label>
                                                     </div>
                                                 </div>
                                             </li>
@@ -348,14 +365,12 @@
                                                 <div class="list-tit">
                                                     증명사진
                                                 </div>
-                                                <div class="list2-cont">
+                                                <div class="list2-cont file-upload">
                                                     <div class="input-wrap">
-                                                        <input type="file" id="fileUp">
+                                                        <input type="file" id="fileUp" class="fileUp" accept="image/*">
                                                         <label for="fileUp" class="mr20">파일찾기</label>
                                                         <span class="inner-txt">※ 가급적 사진을 첨부해 주시기 바랍니다.(크기 제한 없음)</span>
-                                                    </div>
-                                                    <div>
-                                                        <div class="file-list">
+                                                        <div class="file-empty-list">
                                                             <p class="inner-txt">첨부된 파일이 없습니다.</p>
                                                         </div>
                                                     </div>
@@ -364,14 +379,14 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="container">
+                                <div class="register-container">
                                     <div class="box-top-tit">
                                         <h3>학력</h3>
                                         <span class="sub-txt">
                                             재학 중을 포함하여 고등학교 이상의 학력을 기재해 주세요. 해당 사항이 없는 경우 빈 칸으로 두시고 다음 단계를 진행해 주세요.
                                         </span>
                                     </div>
-                                    <div class="table-wrap table-th-left r-table-wrap">
+                                    <div class="table-wrap table-th-left r-table-wrap d-flex">
                                         <ul class="flex-wrap fixWrap">
                                             <li class="f-left">
                                                 <div class="list-tit">                                                
@@ -418,13 +433,9 @@
                                         </ul>
                                         <button type="button" class="btn btn-style-gr rmv-btn rmv-btn1">학력 삭제</button>
                                         <button type="button" class="btn btn-style-wh add-btn add-btn1">학력 추가</button>
-                                        <!-- <div class="btn-box">
-                                            <button type="button" class="btn btn-style-gr rmv-btn rmv-btn1">학력 삭제</button>
-                                            <button type="button" class="btn btn-style-wh add-btn add-btn1">학력 추가</button>
-                                        </div> -->
                                     </div>
                                 </div>
-                                <div class="container">
+                                <div class="register-container">
                                     <div class="box-top-tit">
                                         <h3>직장경력</h3>
                                         <span class="sub-txt">
@@ -441,7 +452,7 @@
                                                     <div>
                                                         <p class="inner-txt">※ 최대 3개 직종을 선택할 수 있습니다.</p>
                                                     </div>
-                                                    <div class="checkBoxList">
+                                                    <div class="checkBoxList" id="profession">
                                                         <ul class="clearfix">
                                                             <li>
                                                                 <input type="checkbox" name="profession" id="profession01">
@@ -530,8 +541,8 @@
                                         </ul>
                                     </div>
                                     <p class="inner-txt">※ 최근 순으로 기재하시기 바랍니다.</p>
-                                    <div class="table-wrap table-th-left r-table-wrap">
-                                        <ul class="flex-wrap">
+                                    <div class="table-wrap table-th-left r-table-wrap d-flex">
+                                        <ul class="flex-wrap fixWrap">
                                             <li class="f-left">
                                                 <div class="list-tit">                                                
                                                     <label for="">직장명</label>
@@ -557,9 +568,9 @@
                                                     <label for="">근무기간</label>
                                                 </div>
                                                 <div class="list-cont">
-                                                    <input type="text" id="sdate1-1" class="date-nomal w300  hasDatepicker" placeholder="시작연월">
+                                                    <input type="text" id="fromDate1-1" class="" placeholder="시작연월">
                                                     <span>~</span>
-                                                    <input type="text" id="edate1-1" class="date-nomal w300  hasDatepicker" placeholder="종료연월">
+                                                    <input type="text" id="toDate1-1" class="" placeholder="종료연월">
                                                 </div>
                                             </li>
                                             <li class="f-left">
@@ -583,13 +594,11 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                        <div class="btn-box">
-                                            <button type="button" class="btn btn-style-gr rmv-btn rmv-btn2">경력 삭제</button>
-                                            <button type="button" class="btn btn-style-wh add-btn add-btn2">경력 추가</button>
-                                        </div>
+                                        <button type="button" class="btn btn-style-gr rmv-btn rmv-btn2">경력 삭제</button>
+                                        <button type="button" class="btn btn-style-wh add-btn add-btn2">경력 추가</button>
                                     </div>
                                 </div>
-                                <div class="container mb0">
+                                <div class="register-container mb0">
                                     <div class="box-top-tit">
                                         <h3>관심분야</h3>
                                     </div>
@@ -603,7 +612,7 @@
                                                     <div>
                                                         <p class="inner-txt">※ 최대 3개 직종을 선택할 수 있습니다.</p>
                                                     </div>
-                                                    <div class="checkBoxList">
+                                                    <div class="checkBoxList" id="chk-limit">
                                                         <ul class="clearfix">
                                                             <li>
                                                                 <input type="checkbox" name="chk-limit" id="interest01">
@@ -664,12 +673,12 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="container">
+                                <div class="register-container">
                                     <div class="box-top-tit">
                                         <h3>상세분야</h3>
                                     </div>
                                     <div class="table-wrap thead-table-wrap">
-                                        <ul class="flex-wrap">
+                                        <ul class="flex-wrap" data-limit="chk-limit">
                                             <li>
                                                 <div class="list-tit">
                                                     관심 분야
@@ -678,7 +687,7 @@
                                                     상세 분야
                                                 </div>
                                             </li>
-                                            <li>
+                                            <li data-template="limit-template">
                                                 <div class="list-cont">
                                                     <label for="">-</label>
                                                 </div>
@@ -689,7 +698,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="container">
+                                <div class="register-container">
                                     <div class="box-top-tit">
                                         <h3>주요 활동사항</h3>
                                     </div>
@@ -764,8 +773,8 @@
                                         </ul>
                                     </div>
                                     <p class="inner-txt">※ 봉사활동, 정책기자단, SNS활동, 동아리, 프로젝트 등 다양한 활동을 기재하시기 바랍니다.</p>
-                                    <div class="table-wrap table-th-left r-table-wrap">
-                                        <ul class="flex-wrap">
+                                    <div class="table-wrap table-th-left r-table-wrap d-flex">
+                                        <ul class="flex-wrap fixWrap">
                                             <li class="f-left">
                                                 <div class="list-tit">                                                
                                                     <label for="">상세분야</label>
@@ -791,13 +800,13 @@
                                                     <label for="">활동기간</label>
                                                 </div>
                                                 <div class="list-cont">
-                                                    <input type="text" id="sdate1-1" class="date-nomal w300  hasDatepicker" placeholder="시작연월">
+                                                    <input type="text" id="fromDate2-1" class="" placeholder="시작연월">
                                                     <span>~</span>
-                                                    <input type="text" id="edate1-1" class="date-nomal w300  hasDatepicker" placeholder="종료연월">
+                                                    <input type="text" id="toDate2-1" class="" placeholder="종료연월">
                                                 </div>                                       
                                             </li>
                                             <li>
-                                                <div class="list-tit">                                                
+                                                <div class="list-tit">
                                                     <label for="">주요내용</label>
                                                 </div>
                                                 <div class="list-cont">
@@ -807,21 +816,19 @@
                                                 </div>      
                                             </li>
                                         </ul>
-                                        <div class="btn-box">
-                                            <button type="button" class="btn btn-style-gr rmv-btn rmv-btn3">활동 삭제</button>
-                                            <button type="button" class="btn btn-style-wh add-btn add-btn3">활동 추가</button>
-                                        </div>
+                                        <button type="button" class="btn btn-style-gr rmv-btn rmv-btn3">활동 삭제</button>
+                                        <button type="button" class="btn btn-style-wh add-btn add-btn3">활동 추가</button>
                                     </div>
                                 </div>
-                                <div class="container">
+                                <div class="register-container">
                                     <div class="box-top-tit">
                                         <h3>주요 결과물</h3>
                                         <span class="sub-txt">
                                             특허 ∙ 면허 ∙ 자격증 ∙ 수상 ∙ 논문 ∙ 저서 ∙ 기고 등을 작성해 주세요
                                         </span>
                                     </div>
-                                    <div class="table-wrap table-th-left r-table-wrap">
-                                        <ul class="flex-wrap">
+                                    <div class="table-wrap table-th-left r-table-wrap d-flex">
+                                        <ul class="flex-wrap fixWrap">
                                             <li class="f-left">
                                                 <div class="list-tit">                                                
                                                     <label for="">구분</label>
@@ -833,11 +840,11 @@
                                                 </div>                                                
                                             </li>
                                             <li class="f-left">
-                                                <div class="list-tit ">
-                                                    <label for="date3-1">연월<br><span>(발간,취득,등록,수상일)</span></label>
+                                                <div class="list-tit lh0">
+                                                    <label for="datepicker3-1">연월<br><span>(발간,취득,등록,수상일)</span></label>
                                                 </div>
                                                 <div class="list-cont">
-                                                    <input type="text" id="date3-1" class="date-nomal w300 hasDatepicker" placeholder="선택">
+                                                    <input type="text" id="datepicker3-1" class="datepicker" placeholder="선택">
                                                 </div>                                                
                                             </li>
                                             <li class="f-left">
@@ -861,13 +868,11 @@
                                                 </div>                                                
                                             </li>
                                         </ul>
-                                        <div class="btn-box">
-                                            <button type="button" class="btn btn-style-gr rmv-btn rmv-btn4">결과물 삭제</button>
-                                            <button type="button" class="btn btn-style-wh add-btn add-btn4">결과물 추가</button>
-                                        </div>
+                                        <button type="button" class="btn btn-style-gr rmv-btn rmv-btn4">결과물 삭제</button>
+                                        <button type="button" class="btn btn-style-wh add-btn add-btn4">결과물 추가</button>
                                     </div>
                                 </div>
-                                <div class="container">
+                                <div class="register-container">
                                     <div class="box-top-tit">
                                         <h3>참여희망 분야</h3>                                        
                                         <span class="sub-txt">※ 중복선택 할 수 있습니다.</span>
@@ -880,10 +885,10 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="checkbox" name="onechk2" id="onechk21">
-                                                        <label for="onechk21" class="adm-chkBox">중앙부처</label>
-                                                        <input type="checkbox" name="onechk2" id="onechk22">
-                                                        <label for="onechk22" class="adm-chkBox">지방자치단체</label>
+                                                        <input type="radio" name="participation_org" class='radio_chkBox' id="participation_org01">
+                                                        <label for="participation_org01" class="adm-chkBox">중앙부처</label>
+                                                        <input type="radio" name="participation_org" class='radio_chkBox' id="participation_org02">
+                                                        <label for="participation_org02" class="adm-chkBox">지방자치단체</label>
                                                     </div>
                                                 </div>    
                                             </li>
@@ -893,23 +898,23 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="checkbox" name="kind" id="check01">
-                                                        <label for="check01" class="adm-chkBox">정부위원회</label>
-                                                        <input type="checkbox" name="kind" id="check02">
-                                                        <label for="check02" class="adm-chkBox">정책 서포터즈ㆍ기자단</label>
-                                                        <input type="checkbox" name="kind" id="check03">
-                                                        <label for="check03" class="adm-chkBox">간담회ㆍ행사</label>
-                                                        <input type="checkbox" name="kind" id="check04">
-                                                        <label for="check04" class="adm-chkBox">정책평가ㆍ모니터링</label>
-                                                        <input type="checkbox" name="kind" id="check05">
-                                                        <label for="check05" class="adm-chkBox">기타</label>
+                                                        <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind01">
+                                                        <label for="participation_kind01" class="adm-chkBox">정부위원회</label>
+                                                        <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind02">
+                                                        <label for="participation_kind02" class="adm-chkBox ">정책 서포터즈ㆍ기자단</label>
+                                                        <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind03">
+                                                        <label for="participation_kind03" class="adm-chkBox ">간담회ㆍ행사</label>
+                                                        <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind04">
+                                                        <label for="participation_kind04" class="adm-chkBox ">정책평가ㆍ모니터링</label>
+                                                        <input type="radio" name="participation_kind" class='radio_chkBox' id="participation_kind05">
+                                                        <label for="participation_kind05" class="adm-chkBox ">기타</label>
                                                     </div>
                                                 </div>    
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="container">
+                                <div class="register-container">
                                     <div class="box-top-tit">
                                         <h3>지원동기</h3>
                                         <span class="sub-txt">
@@ -931,22 +936,17 @@
                                                 <div class="list-tit">                                                
                                                     <label for="">첨부파일</label>
                                                 </div>
-                                                <div class="list2-cont">
+                                                <div class="list2-cont file-upload">
+                                                    
                                                     <div class="input-wrap">
-                                                        <input type="file" id="fileUp" multiple>
-                                                        <label for="fileUp" class="mr20">파일찾기</label>
-                                                        <span class="inner-txt">※ 자기소개서, 포트폴리오 등 추가 자료가 있을 경우 첨부해 주세요.</span>
-                                                    </div>
-                                                    <div>
-                                                        <div class="file-list">
+                                                        <input type="file" id="fileUp2" class="fileUp" multiple accept="image/*, .pdf">
+                                                        <label for="fileUp2" class="mr20">파일찾기</label>
+                                                        <span class="inner-txt">※ 가급적 사진을 첨부해 주시기 바랍니다.(크기 제한 없음)</span>
+                                                        <div class="file-empty-list">
                                                             <p class="inner-txt">첨부된 파일이 없습니다.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- <div>
-                                                        <div class="file-not-sel input-nomal w100p">
-                                                            <p class="inner-txt">첨부된 파일이 없습니다.</p>
-                                                        </div>
-                                                    </div> -->
+
                                                 </div>  
                                             </li>
                                         </ul>

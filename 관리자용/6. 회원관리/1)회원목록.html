@@ -84,10 +84,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="" class="menu-depth-06">회원관리</a>
+                       <a href="" class="menu-depth-06">회원관리</a>
                         <ul class="menu-depth2">
                             <li><a href="">- 회원목록</a></li>
                             <li><a href="">- 회원안내발송</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
                         </ul>
                     </li>
                     <li>
@@ -118,9 +119,9 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div id="m-menu-close">
-                        <span></span>
-                        <span></span>
+                    <div id="m-menu-close" class="close-box">
+                        <span class="btn_close"></span>
+                        <span class="btn_close"></span>
                     </div>
                 </div>
                 <div class="m-ico-box">
@@ -154,7 +155,7 @@
                 <div class="m-menu">
                     <ul>
                         <li class="active">
-                            <span>청년인재<br>데이터베이스</span>
+                            <span>청년인재데이터베이스</span>
                             <ul class="m-depth-02">
                                 <li><a href="">소개</a></li>
                                 <li><a href="">공지사항</a></li>
@@ -183,8 +184,10 @@
                             <span>인재관리</span>
                             <ul class="m-depth-02">
                                 <li><a href="">인재목록</a></li>
-                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">신규 인재정보 관리</a></li>
+                                <li><a href="">수정 인재정보 관리</a></li>
                                 <li><a href="">인재정보 현행화요청</a></li>
+                                <li><a href="">인재등록 현황</a></li>
                             </ul>
                         </li>
                         <li>
@@ -192,14 +195,20 @@
                             <ul class="m-depth-02">
                                 <li><a href="">회원목록</a></li>
                                 <li><a href="">회원안내발송</a></li>
+                                <li><a href="">권한그룹관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
                             <ul class="m-depth-02">
+                                <li><a href="">기본환경설정</a></li>
                                 <li><a href="">메뉴 관리</a></li>
                                 <li><a href="">게시판 관리</a></li>
-                                <li><a href="">팝업/배너 관리</a></li>
+                                <li><a href="">게시판 통합 관리</a></li>
+                                <li><a href="">카테고리 관리</a></li>
+                                <li><a href="">게시물 관리</a></li>
+                                <li><a href="">팝업 관리</a></li>
+                                <li><a href="">배너 관리</a></li>
                             </ul>
                         </li>
                         <li>
@@ -214,6 +223,11 @@
                         </li>
                         <li>
                             <span>통계/리포팅</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">게시판 통계</a></li>
+                                <li><a href="">사용자 통계</a></li>
+                                <li><a href="">접속 통계</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -452,8 +466,8 @@
                                                     <tr>
                                                         <th scope="row" rowspan="2">
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="allChk" class="allChk">
-                                                                <label for="allChk"></label>
+                                                                <input type="checkbox" name="check" id="allChk2" class="allChk">
+                                                                <label for="allChk" class="adm-chkBox"></label>
                                                             </div>
                                                         </th>
                                                         <th scope="row" rowspan="2">이름</th>
@@ -473,8 +487,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk01">
-                                                                <label for="chk01"></label>
+                                                                <input type="checkbox" name="check_21" id="chk21">
+                                                                <label for="chk21" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>홍길동</td>
@@ -499,8 +513,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk02">
-                                                                <label for="chk02"></label>
+                                                                <input type="checkbox" name="check_22" id="chk22">
+                                                                <label for="chk22" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>김청년</td>
@@ -525,8 +539,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk03">
-                                                                <label for="chk03"></label>
+                                                                <input type="checkbox" name="check_23" id="chk23">
+                                                                <label for="chk23" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>홍길동</td>
@@ -597,8 +611,8 @@
                                                     <tr>
                                                         <th scope="row" rowspan="2">
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="allChk" class="allChk">
-                                                                <label for="allChk"></label>
+                                                                <input type="checkbox" name="check" id="allChk3" class="allChk">
+                                                                <label for="allChk" class="adm-chkBox"></label>
                                                             </div>
                                                         </th>
                                                         <th scope="row" rowspan="2">이름</th>
@@ -618,8 +632,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk01">
-                                                                <label for="chk01"></label>
+                                                                <input type="checkbox" name="check_31" id="chk31">
+                                                                <label for="chk31" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>홍길동</td>
@@ -644,8 +658,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk02">
-                                                                <label for="chk02"></label>
+                                                                <input type="checkbox" name="check_32" id="chk32">
+                                                                <label for="chk32" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>김청년</td>
@@ -670,8 +684,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk03">
-                                                                <label for="chk03"></label>
+                                                                <input type="checkbox" name="check_33" id="chk33">
+                                                                <label for="chk33" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>홍길동</td>
@@ -743,7 +757,7 @@
                                                         <th scope="row" rowspan="2">
                                                             <div class="checkBox">
                                                                 <input type="checkbox" name="check" id="allChk" class="allChk">
-                                                                <label for="allChk"></label>
+                                                                <label for="allChk" class="adm-chkBox"></label>
                                                             </div>
                                                         </th>
                                                         <th scope="row" rowspan="2">이름</th>
@@ -763,8 +777,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk01">
-                                                                <label for="chk01"></label>
+                                                                <input type="checkbox" name="check_41" id="chk41">
+                                                                <label for="chk41" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>홍길동</td>
@@ -789,8 +803,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk02">
-                                                                <label for="chk02"></label>
+                                                                <input type="checkbox" name="check_42" id="chk42">
+                                                                <label for="chk42" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>김청년</td>
@@ -815,8 +829,8 @@
                                                     <tr>
                                                         <td>
                                                             <div class="checkBox">
-                                                                <input type="checkbox" name="check" id="chk03">
-                                                                <label for="chk03"></label>
+                                                                <input type="checkbox" name="check_43" id="chk43">
+                                                                <label for="chk43" class="adm-chkBox"></label>
                                                             </div>
                                                         </td>
                                                         <td>홍길동</td>

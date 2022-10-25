@@ -79,15 +79,19 @@
                         <a href="" class="menu-depth-05">인재관리</a>
                         <ul class="menu-depth2">
                             <li><a href="">- 인재목록</a></li>
-                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 신규 인재정보 관리</a></li>
+                            <li><a href="">- 수정 인재정보 관리</a></li>
                             <li><a href="">- 인재정보 현행화요청</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="" class="menu-depth-06">회원관리</a>
+                       <a href="" class="menu-depth-06">회원관리</a>
                         <ul class="menu-depth2">
                             <li><a href="">- 회원목록</a></li>
                             <li><a href="">- 회원안내발송</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
                         </ul>
                     </li>
                     <li>
@@ -118,7 +122,7 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div class="close-box">
+                    <div id="m-menu-close" class="close-box">
                         <span class="btn_close"></span>
                         <span class="btn_close"></span>
                     </div>
@@ -127,25 +131,25 @@
                     <ul class="m-ico-menu">
                         <li>
                             <a href="">
-                                <img src="./images/common/m_ico_security.png" alt="인증서 관리">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
                                 <span>인증서 관리</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/common/m_ico_search.png" alt="통합검색">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
                                 <span>통합검색</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/common/m_ico_campaign.png" alt="공지사항">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
                                 <span>공지사항</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
                                 <span>마이페이지</span>
                             </a>
                         </li>
@@ -153,60 +157,68 @@
                 </div>
                 <div class="m-menu">
                     <ul>
-                        <li>
+                        <li class="active">
                             <span>청년인재데이터베이스</span>
                             <ul class="m-depth-02">
-                                <li>소개</li>
-                                <li>공지사항</li>
-                                <li>자료실</li>
-                                <li>공인인증서 안내</li>
-                                <li>사이트맵</li>
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>검색요청</span>
-                            <ul>
-                                <li>직접검색 요청</li>
-                                <li>인재추천 요청</li>
-                                <li>요청현황</li>
-                                <li>요청관리</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>인재검색</span>
-                            <ul>
-                                <li>통합검색</li>
-                                <li>관심인재 관리</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>인재관리</span>
-                            <ul>
-                                <li>인재목록</li>
-                                <li>인재등록 현황</li>
-                                <li>인재정보 현행화요청</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">신규 인재정보 관리</a></li>
+                                <li><a href="">수정 인재정보 관리</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                                <li><a href="">인재등록 현황</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>회원관리</span>
-                            <ul>
-                                <li>회원목록</li>
-                                <li>회원안내발송</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                                <li><a href="">권한그룹관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
-                            <ul>
-                                <li>메뉴 관리</li>
-                                <li>게시판 관리</li>
-                                <li>팝업/배너 관리</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">기본환경설정</a></li>
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">게시판 통합 관리</a></li>
+                                <li><a href="">카테고리 관리</a></li>
+                                <li><a href="">게시물 관리</a></li>
+                                <li><a href="">팝업 관리</a></li>
+                                <li><a href="">배너 관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>기타관리</span>
-                            <ul>
-                                <li>코드관리</li>
-                                <li>의심징후관리</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
                             </ul>
                         </li>
                         <li>
@@ -214,6 +226,11 @@
                         </li>
                         <li>
                             <span>통계/리포팅</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">게시판 통계</a></li>
+                                <li><a href="">사용자 통계</a></li>
+                                <li><a href="">접속 통계</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -291,8 +308,10 @@
                                        </a>
                                        <ul>
                                            <li><a href="./관리자용/5. 인재관리/1)인재목록.html">인재목록</a></li>
-                                           <li><a href="./관리자용/5. 인재관리/1)인재등록현황.html">인재등록 현황</a></li>
+                                           <li><a href="./관리자용/5. 인재관리/1)신규인재정보관리.html">신규 인재정보 관리</a></li>
+                                           <li><a href="./관리자용/5. 인재관리/1)수정인재정보관리.html">수정 인재정보 관리</a></li>
                                            <li><a href="./관리자용/5. 인재관리/1)인재정보현행화요청.html">인재정보 현행화 요청</a></li>
+                                           <li><a href="./관리자용/5. 인재관리/1)인재등록현황.html">인재등록 현황</a></li>
                                        </ul>
                                    </li>
                                    <li></li>
@@ -309,6 +328,7 @@
                                        <ul>
                                            <li><a href="./관리자용/6. 회원관리/1)회원목록.html">회원목록</a></li>
                                            <li><a href="./관리자용/6. 회원관리/1)회원안내발송.html">회원안내발송</a></li>
+                                           <li><a href="./관리자용/6. 회원관리/1)권한그룹관리.html">권한그룹관리</a></li>
                                        </ul>
                                    </li>
                                    <li></li>
@@ -321,9 +341,14 @@
                                            <span>통합관리</span>
                                        </a>
                                        <ul>
-                                           <li><a href="">메뉴관리</a></li>
-                                           <li><a href="">게시판관리</a></li>
-                                           <li><a href="">팝업/배너 관리</a></li>
+                                           <li><a href="">기본환경설정</a></li>
+                                           <li><a href="">메뉴 관리</a></li>
+                                           <li><a href="">게시판 관리</a></li>
+                                           <li><a href="">게시판 통합 관리</a></li>
+                                           <li><a href="">카테고리 관리</a></li>
+                                           <li><a href="">게시물 관리</a></li>
+                                           <li><a href="">팝업 관리</a></li>
+                                           <li><a href="">배너 관리</a></li>
                                        </ul>
                                    </li>
                                    <li></li>
@@ -361,6 +386,11 @@
                                        <a href="">
                                            <span>통계/리포팅</span>
                                        </a>
+                                       <ul>
+                                            <li><a href="">게시판 통계</a></li>
+                                            <li><a href="">사용자 통계</a></li>
+                                            <li><a href="">접속 통계</a></li>
+                                       </ul>
                                    </li>
                                    <li></li>
                                    <li></li>

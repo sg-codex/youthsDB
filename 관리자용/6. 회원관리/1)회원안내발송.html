@@ -84,10 +84,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="" class="menu-depth-06">회원관리</a>
+                       <a href="" class="menu-depth-06">회원관리</a>
                         <ul class="menu-depth2">
                             <li><a href="">- 회원목록</a></li>
                             <li><a href="">- 회원안내발송</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
                         </ul>
                     </li>
                     <li>
@@ -118,9 +119,9 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div id="m-menu-close">
-                        <span></span>
-                        <span></span>
+                    <div id="m-menu-close" class="close-box">
+                        <span class="btn_close"></span>
+                        <span class="btn_close"></span>
                     </div>
                 </div>
                 <div class="m-ico-box">
@@ -154,7 +155,7 @@
                 <div class="m-menu">
                     <ul>
                         <li class="active">
-                            <span>청년인재<br>데이터베이스</span>
+                            <span>청년인재데이터베이스</span>
                             <ul class="m-depth-02">
                                 <li><a href="">소개</a></li>
                                 <li><a href="">공지사항</a></li>
@@ -183,8 +184,10 @@
                             <span>인재관리</span>
                             <ul class="m-depth-02">
                                 <li><a href="">인재목록</a></li>
-                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">신규 인재정보 관리</a></li>
+                                <li><a href="">수정 인재정보 관리</a></li>
                                 <li><a href="">인재정보 현행화요청</a></li>
+                                <li><a href="">인재등록 현황</a></li>
                             </ul>
                         </li>
                         <li>
@@ -192,14 +195,20 @@
                             <ul class="m-depth-02">
                                 <li><a href="">회원목록</a></li>
                                 <li><a href="">회원안내발송</a></li>
+                                <li><a href="">권한그룹관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
                             <ul class="m-depth-02">
+                                <li><a href="">기본환경설정</a></li>
                                 <li><a href="">메뉴 관리</a></li>
                                 <li><a href="">게시판 관리</a></li>
-                                <li><a href="">팝업/배너 관리</a></li>
+                                <li><a href="">게시판 통합 관리</a></li>
+                                <li><a href="">카테고리 관리</a></li>
+                                <li><a href="">게시물 관리</a></li>
+                                <li><a href="">팝업 관리</a></li>
+                                <li><a href="">배너 관리</a></li>
                             </ul>
                         </li>
                         <li>
@@ -214,6 +223,11 @@
                         </li>
                         <li>
                             <span>통계/리포팅</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">게시판 통계</a></li>
+                                <li><a href="">사용자 통계</a></li>
+                                <li><a href="">접속 통계</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -245,20 +259,26 @@
                                         <div class="box-top-tit clearfix">                                  
                                             <h3>주소록 설정</h3>
                                         </div>
-                                        <div class="input-wrap">
-                                            <input type="radio" name="email-send" id="e-group">
-                                            <label for="e-group">회원 그룹에게 발송</label>
-                                            <input type="radio" name="email-send" id="e-member">
-                                            <label for="e-member">직접 입력하여 발송</label>
-                                        </div>
-                                        <div class=" d-flex">
+                                        <div class="d-flex">
                                             <div class="box01">
                                                 <h3>그룹</h3>
-                                                <ul>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
+                                                <ul class="box-cont">
+                                                    <li>
+                                                        <input type="checkbox" name="allMember" id="email-all" checked>
+                                                        <label for="email-all" class="adm-chkBox">전체 - 2,456</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="allMember" id="email-per">
+                                                        <label for="email-per" class="adm-chkBox">개인 - 1,245</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="allMember" id="email-org">
+                                                        <label for="email-org" class="adm-chkBox">기관 - 472</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="allMember" id="email-adm">
+                                                        <label for="email-adm" class="adm-chkBox">관리자 - 2</label>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="box02">
@@ -266,19 +286,398 @@
                                                     <h3>전체</h3>
                                                     <span class="people">2,456</span>
                                                 </div>
+                                                <div class="box02-inner">
+                                                    <form action="">
+                                                        <legend>회원 검색</legend>
+                                                        <div class="sch-ipt">
+                                                            <input type="search" name="" id="" placeholder="검색" class="">
+                                                        </div>
+                                                    </form>
+                                                    <button type="button" class="btn btn-style-wh w100">발송대상 목록으로 추가</button>
+                                                    <div class="memberList-table-wrap">
+                                                        <ul class="memberList-table">
+                                                            <li>
+                                                                <div>
+                                                                    <input type="checkbox" name="" id="">
+                                                                    <label for="" class="adm-chkBox"></label>
+                                                                </div>
+                                                                <div>
+                                                                    번호
+                                                                </div>
+                                                                <div>
+                                                                    이름
+                                                                </div>
+                                                                <div>
+                                                                    이메일
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div>
+                                                                    <input type="checkbox" name="" id="">
+                                                                    <label for="" class="adm-chkBox"></label>
+                                                                </div>
+                                                                <div>
+                                                                    1
+                                                                </div>
+                                                                <div>
+                                                                    홍길동
+                                                                </div>
+                                                                <div>
+                                                                    admin2022@email.com
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div>
+                                                                    <input type="checkbox" name="" id="">
+                                                                    <label for="" class="adm-chkBox"></label>
+                                                                </div>
+                                                                <div>
+                                                                    2
+                                                                </div>
+                                                                <div>
+                                                                    홍길동
+                                                                </div>
+                                                                <div>
+                                                                    admin2022@email.com
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="box03">
                                                 <div class="count-txt">
                                                     <h3>발송대상</h3>
                                                     <span class="people">2,456</span>
                                                 </div>
+                                                <div class="box03-inner">
+                                                    <form action="">
+                                                        <legend>회원 검색</legend>
+                                                        <div class="sch-ipt">
+                                                            <input type="search" name="" id="" placeholder="검색" class="">
+                                                        </div>
+                                                    </form>
+                                                    <div class="inner-btn-wrap d-flex">
+                                                        <button type="button" class="btn btn-style-gr">전체삭제</button>
+                                                        <button type="button" class="btn btn-style-gr">선택삭제</button>
+                                                    </div>
+                                                    <div class="sendTargetList-table-wrap">
+                                                        <ul class="sendTargetList-table">
+                                                            <li>
+                                                                <div>
+                                                                    <input type="checkbox" name="" id="">
+                                                                    <label for="" class="adm-chkBox"></label>
+                                                                </div>
+                                                                <div>
+                                                                    번호
+                                                                </div>
+                                                                <div>
+                                                                    이름
+                                                                </div>
+                                                                <div>
+                                                                    이메일
+                                                                </div>
+                                                                <div>
+                                                                    관리
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div>
+                                                                    <input type="checkbox" name="" id="">
+                                                                    <label for="" class="adm-chkBox"></label>
+                                                                </div>
+                                                                <div>
+                                                                    1
+                                                                </div>
+                                                                <div>
+                                                                    홍길동
+                                                                </div>
+                                                                <div>
+                                                                    admin2022@email.com
+                                                                </div>
+                                                                <div>
+                                                                    <button type="button" class="btn btn-style-gr">삭제</button>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div>
+                                                                    <input type="checkbox" name="" id="">
+                                                                    <label for="" class="adm-chkBox"></label>
+                                                                </div>
+                                                                <div>
+                                                                    2
+                                                                </div>
+                                                                <div>
+                                                                    홍길동
+                                                                </div>
+                                                                <div>
+                                                                    admin2022@email.com
+                                                                </div>
+                                                                <div>
+                                                                    <button type="button" class="btn btn-style-gr">삭제</button>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>                                    
+                                    </div>
+                                    <div class="send-content-box">
+                                        <div class="box-top-tit clearfix">                                  
+                                            <h3>이메일 내용 입력</h3>
+                                        </div>
+                                        <div>
+                                            <form action="" id="" accept="" method="" onsubmit="">
+                                                <legend>이메일 내용 작성</legend>
+                                                <div class="table-wrap table-th-left">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="list-tit">
+                                                                보내는 이메일
+                                                            </div>
+                                                            <div class="list-cont">
+                                                                <span class="result-txt">청년인재데이터베이스 &lt;admin2022@email.com&gt;</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="list-tit">
+                                                                <label for="">제목</label>
+                                                            </div>
+                                                            <div class="list-cont">
+                                                                <div class="input-wrap">
+                                                                    <input type="text" name="" id="" class="input01" placeholder="제목">
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="h-auto">
+                                                            <div class="list-tit">
+                                                                내용
+                                                            </div>
+                                                            <div class="list-cont">
+                                                                <textarea name="" id="" cols="30" rows="5" placeholder="내용"></textarea>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="btm-btnBox">
+                                                    <button type="reset" id="btn_reset" class="btn btn-style-wh">초기화</button>
+                                                    <button type="button" id="btn_save" class="btn" onclick="openPopup('alert-send');">전송</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="tab02" class="tabBox">
-                                    <div>
-
+                                    <div class="send-box">
+                                        <div class="box-top-tit clearfix">                                  
+                                            <h3>주소록 설정</h3>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="box01">
+                                                <h3>그룹</h3>
+                                                <ul class="box-cont">
+                                                    <li>
+                                                        <input type="checkbox" name="allMember" id="email-all" checked>
+                                                        <label for="email-all" class="adm-chkBox">전체 - 2,456</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="allMember" id="email-per">
+                                                        <label for="email-per" class="adm-chkBox">개인 - 1,245</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="allMember" id="email-org">
+                                                        <label for="email-org" class="adm-chkBox">기관 - 472</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="allMember" id="email-adm">
+                                                        <label for="email-adm" class="adm-chkBox">관리자 - 2</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="box02">
+                                                <div class="count-txt">
+                                                    <h3>전체</h3>
+                                                    <span class="people">2,456</span>
+                                                </div>
+                                                <div class="box02-inner">
+                                                    <form action="">
+                                                        <legend>회원 검색</legend>
+                                                        <div class="sch-ipt">
+                                                            <input type="search" name="" id="" placeholder="검색" class="">
+                                                        </div>
+                                                    </form>
+                                                    <button type="button" class="btn btn-style-wh w100">발송대상 목록으로 추가</button>
+                                                    <ul class="memberList-table">
+                                                        <li>
+                                                            <div>
+                                                                <input type="checkbox" name="" id="">
+                                                                <label for="" class="adm-chkBox"></label>
+                                                            </div>
+                                                            <div>
+                                                                번호
+                                                            </div>
+                                                            <div>
+                                                                이름
+                                                            </div>
+                                                            <div>
+                                                                연락처
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <input type="checkbox" name="" id="">
+                                                                <label for="" class="adm-chkBox"></label>
+                                                            </div>
+                                                            <div>
+                                                                1
+                                                            </div>
+                                                            <div>
+                                                                홍길동
+                                                            </div>
+                                                            <div>
+                                                                010-1234-5678
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <input type="checkbox" name="" id="">
+                                                                <label for="" class="adm-chkBox"></label>
+                                                            </div>
+                                                            <div>
+                                                                2
+                                                            </div>
+                                                            <div>
+                                                                홍길동
+                                                            </div>
+                                                            <div>
+                                                                010-1234-5678
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="box03">
+                                                <div class="count-txt">
+                                                    <h3>발송대상</h3>
+                                                    <span class="people">2,456</span>
+                                                </div>
+                                                <div class="box03-inner">
+                                                    <form action="">
+                                                        <legend>회원 검색</legend>
+                                                        <div class="sch-ipt">
+                                                            <input type="search" name="" id="" placeholder="검색" class="">
+                                                        </div>
+                                                    </form>
+                                                    <div class="inner-btn-wrap d-flex">
+                                                        <button type="button" class="btn btn-style-gr">전체 삭제</button>
+                                                        <button type="button" class="btn btn-style-gr">선택 삭제</button>
+                                                    </div>
+                                                    <ul class="sendTargetList-table">
+                                                        <li>
+                                                            <div>
+                                                                <input type="checkbox" name="" id="">
+                                                                <label for="" class="adm-chkBox"></label>
+                                                            </div>
+                                                            <div>
+                                                                번호
+                                                            </div>
+                                                            <div>
+                                                                이름
+                                                            </div>
+                                                            <div>
+                                                                연락처
+                                                            </div>
+                                                            <div>
+                                                                관리
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <input type="checkbox" name="" id="">
+                                                                <label for="" class="adm-chkBox"></label>
+                                                            </div>
+                                                            <div>
+                                                                1
+                                                            </div>
+                                                            <div>
+                                                                홍길동
+                                                            </div>
+                                                            <div>
+                                                                010-1234-5678
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-style-gr">삭제</button>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <input type="checkbox" name="" id="">
+                                                                <label for="" class="adm-chkBox"></label>
+                                                            </div>
+                                                            <div>
+                                                                2
+                                                            </div>
+                                                            <div>
+                                                                홍길동
+                                                            </div>
+                                                            <div>
+                                                                010-1234-5678
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-style-gr">삭제</button>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="send-content-box">
+                                        <div class="box-top-tit clearfix">                                  
+                                            <h3>메시지 내용 입력</h3>
+                                        </div>
+                                        <div>
+                                            <form action="" id="" accept="" method="" onsubmit="">
+                                                <legend>메시지 내용 작성</legend>
+                                                <div class="table-wrap table-th-left">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="list-tit">
+                                                                보내는 번호
+                                                            </div>
+                                                            <div class="list-cont">
+                                                                <span class="result-txt">청년인재데이터베이스 &lt;010-1234-5678&gt;</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="h-auto">
+                                                            <div class="list-tit">
+                                                                <label for="">제목</label>
+                                                            </div>
+                                                            <div class="list-cont">
+                                                                <div class="input-wrap">
+                                                                    <input type="text" name="" id="" class="input01" placeholder="제목">
+                                                                    <p class="add-txt">제목은 최대 40바이트까지 전송됩니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="h-auto">
+                                                            <div class="list-tit">
+                                                                내용
+                                                            </div>
+                                                            <div class="list-cont">
+                                                                <textarea name="" id="" cols="30" rows="5" placeholder="내용"></textarea>
+                                                                <p class="add-txt">90바이트가 초과될 경우 3건의 SMS가 차감됩니다.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="btm-btnBox">
+                                                    <button type="reset" id="btn_reset" class="btn btn-style-wh">초기화</button>
+                                                    <button type="button" id="btn_save" class="btn" onclick="openPopup('alert-send');">전송</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -287,151 +686,65 @@
                             <div>
                                 <div class="box-top-tit clearfix">                                  
                                     <h3>발송내역</h3>
+                                    <p class="explain-txt chkImg">최근 30일간 데이터만 조회할 수 있습니다.</p>
                                 </div>
                                 <div class="table-wrap result-table-wrap">
                                     <table>
                                         <caption>일간 평균</caption>
                                         <colgroup>
-                                            <col width="15.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
-                                            <col width="6.5%">
+                                            <col width="10%">
+                                            <col width="20%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="10%">
+                                            <col width="30%">
+                                            <col width="10%">
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th></th>
-                                                <th>1월</th>
-                                                <th>2월</th>
-                                                <th>3월</th>
-                                                <th>4월</th>
-                                                <th>5월</th>
-                                                <th>6월</th>
-                                                <th>7월</th>
-                                                <th>8월</th>
-                                                <th>9월</th>
-                                                <th>10월</th>
-                                                <th>11월</th>
-                                                <th>12월</th>
-                                                <th>평균</th>
+                                                <th scope="row">분류</th>
+                                                <th scope="row">발송일자</th>
+                                                <th scope="row">총 발송 건수</th>
+                                                <th scope="row">완료 건수</th>
+                                                <th scope="row">실패 건수</th>
+                                                <th scope="row">성공 여부 조회 중 건수</th>
+                                                <th scope="row">비고</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>2022</td>
+                                                <td>이메일</td>
+                                                <td>2022-08-30 11:35</td>
+                                                <td><a href="#" class="openPopup" onclick="openPopup('allSendCountPopup');">1090</a></td>
+                                                <td>1084</td>
+                                                <td><a href="#" class="openPopup" onclick="openPopup('failCountPopup');">6</a></td>
+                                                <td>985</td>
                                                 <td>
-                                                    52
-                                                    <span class="red txt-small">30</span>
+                                                    <a href="#" class="blue openPopup" onclick="openPopup('sendHistoryPopup');">보기</a>
                                                 </td>
-                                                <td>
-                                                    35
-                                                    <span class="blue txt-small">68</span>
-                                                </td>
-                                                <td>
-                                                    45
-                                                    <span class="red txt-small">13</span>
-                                                </td>
-                                                <td>
-                                                    24
-                                                    <span class="blue txt-small">29</span>
-                                                </td>
-                                                <td>
-                                                    46
-                                                    <span class="red txt-small">28</span>
-                                                </td>
-                                                <td>
-                                                    27
-                                                    <span class="blue txt-small">19</span>
-                                                </td>
-                                                <td>
-                                                    20
-                                                    <span class="blue txt-small">9</span>
-                                                </td>
-                                                <td>
-                                                    40
-                                                    <span class="red txt-small">71</span>
-                                                </td>
-                                                <td>
-                                                    57
-                                                    <span class="red txt-small">11</span>
-                                                </td>
-                                                <td>
-                                                    89
-                                                    <span class="red txt-small">1</span>
-                                                </td>
-                                                <td>
-                                                    20
-                                                    <span class="blue txt-small">4</span>
-                                                </td>
-                                                <td>
-                                                    46
-                                                    <span class="blue txt-small">22</span>
-                                                </td>
-                                                <td>56</td>
                                             </tr>
                                             <tr>
-                                                <td>2021</td>
+                                                <td>SMS</td>
+                                                <td>2022-08-30 11:35</td>
+                                                <td><a href="#" class="openPopup" onclick="openPopup('allSendCountPopup');">1090</a></td>
+                                                <td>1084</td>
+                                                <td><a href="#" class="openPopup" onclick="openPopup('failCountPopup');">6</a></td>
+                                                <td>985</td>
                                                 <td>
-                                                    52
-                                                    <span class="red txt-small">30</span>
+                                                    <a href="#" class="blue openPopup" onclick="openPopup('sendHistoryPopup');">보기</a>
                                                 </td>
-                                                <td>
-                                                    35
-                                                    <span class="blue txt-small">68</span>
-                                                </td>
-                                                <td>
-                                                    45
-                                                    <span class="red txt-small">13</span>
-                                                </td>
-                                                <td>
-                                                    24
-                                                    <span class="blue txt-small">29</span>
-                                                </td>
-                                                <td>
-                                                    46
-                                                    <span class="red txt-small">28</span>
-                                                </td>
-                                                <td>
-                                                    27
-                                                    <span class="blue txt-small">19</span>
-                                                </td>
-                                                <td>
-                                                    20
-                                                    <span class="blue txt-small">9</span>
-                                                </td>
-                                                <td>
-                                                    40
-                                                    <span class="red txt-small">71</span>
-                                                </td>
-                                                <td>
-                                                    57
-                                                    <span class="red txt-small">11</span>
-                                                </td>
-                                                <td>
-                                                    89
-                                                    <span class="red txt-small">1</span>
-                                                </td>
-                                                <td>
-                                                    20
-                                                    <span class="blue txt-small">4</span>
-                                                </td>
-                                                <td>
-                                                    46
-                                                    <span class="blue txt-small">22</span>
-                                                </td>
-                                                <td>56</td>
                                             </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                                <div id="pagination-container">
+                                    <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
                                 </div>
                             </div>
                         </div>
@@ -440,451 +753,225 @@
             </section>
         </div>
     </div>
-    <!-- 팝업 현행화요청 상세 -->
-    <div class="popupWrapper approvalPopup">
+
+    <!-- 팝업 발송 이메일 상세보기 -->
+    <div class="popupWrapper sendHistoryPopup">
         <div class="popup">
             <div class="popup-head">
                 <div class="popup-head-txt">
-                    <h2>인재정보 현행화요청 상세</h2>
+                    <h2>발송 이메일 상세보기</h2>
+                    <!-- SMS 발송 시 -->
+                    <!-- <h2>발송 SMS 상세보기</h2> -->
                 </div>
                 <div class="close">
                     <span class="btn_close"></span>
                 </div>
             </div>
             <div class="popup-con">
-                <div class="con-box">
-                    <h3 class="popup-sub-tit">인재정보</h3>
-                    <div class="popup-table-wrap thead-table-wrap">
-                        <table>
-                            <caption>요청 거절사유 상세 표</caption>
-                            <colgroup>
-                                <col width="15%">
-                                <col width="65%">    
-                                <col width="20%">                        
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>아이디</th>
-                                    <th>인재정보</th>
-                                    <th>자세히</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>admin2022</td>
-                                    <td>김서아 (1990-12-31, 33세 ,여)</td>
-                                    <td>
-                                        <button type="button" class="blue txt-underline" onclick="openPopup('youthsPopup');">보기</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
                 <div class="popup-table-wrap">
                     <table>
-                        <caption>요청 거절사유 상세 표</caption>
+                        <caption>발송상세내역</caption>
                         <colgroup>
                             <col width="20%">
-                            <col width="30%">    
-                            <col width="20%">   
-                            <col width="30%">                       
+                            <col width="auto">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="col">요청일자</th>
-                                <td>2022-08-05</td>
-                                <th scope="col">요청자</th>
-                                <td>인사혁신처, 홍길동</td>
+                                <th scope="col">보내는 이메일</th>
+                                <td>
+                                    <span class="result-txt">admin2022@email.com</span>
+                                </td>
                             </tr>
                             <tr>
-                                <th scope="col">요청내용</th>
-                                <td colspan="3">
-                                    <p class="table-minHeight">요청 내용이 노출됩니다.<br>
-                                        요청 내용이 노출됩니다.<br>
-                                        요청 내용이 노출됩니다.<br>
-                                        요청 내용이 노출됩니다.<br>
-                                        요청 내용이 노출됩니다.<br>
-                                        요청 내용이 노출됩니다.</p>
+                                <th scope="col">제목</th>
+                                <td>
+                                    <span class="result-txt">청년인재데이터베이스 공지</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">내용</th>
+                                <td>
+                                    <span class="result-txt">청년인재데이터베이스 공지 내용입니다.<br>
+                                        청년인재데이터베이스 공지 내용입니다.<br>
+                                        청년인재데이터베이스 공지 내용입니다.<br>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" rowspan="2">발송정보</th>
+                                <td>
+                                    <span class="result-txt">예약발송</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="result-txt">2022-08-31 14:30</span>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="popup-btn-box">
-                    <button type="button" class="btn">현행화 요청</button>
-                </div>
             </div>
         </div>
     </div>
-    <!-- 팝업 인재상세열람 -->
-    <div class="popupWrapper youthsPopup">
-        <!-- 퀵메뉴 -->
-        <div id="quickMenuWrapper">
-            <div id="quickMenu">
-                <div class="name">
-                    김서아
-                </div>
-                <ul class="quickList">
-                    <li>
-                        <a href="#userInfo">인적사항</a>
-                    </li>
-                    <li>
-                        <a href="#eduInfo">학력/직종/경력</a>
-                    </li>
-                    <li>
-                        <a href="#intInfo">관심 분야</a>
-                    </li>
-                    <li>
-                        <a href="#expInfo">주요 활동사항</a>
-                    </li>
-                    <li>
-                        <a href="#perfInfo">주요 결과물</a>
-                    </li>
-                    <li>
-                        <a href="#orgaInfo">참여희망 분야</a>
-                    </li>
-                    <li>
-                        <a href="#appliInfo">지원동기</a>
-                    </li>
-                </ul>
-                <div class="btn-box">
-                    <button type="button" class="btn btn-style-gr" onclick="openPopup('synchronizingPopup');">현행화요청</button>
-                    <button type="button" class="btn btn-style-gr" onclick="openPopup('historyPopup');" >열람이력조회</button>
-                    <a href="./1)인재목록-청년인재등록.html" class="btn btn-style-wh">인재정보수정</a>
-                </div>
-                <div class="btn-top-box">
-                    <a href="#" id="btn-top">TOP</a>
-                </div>
-            </div>
-        </div>
+    <!-- 팝업 총 발송 건수 -->
+    <div class="popupWrapper allSendCountPopup">
         <div class="popup">
             <div class="popup-head">
                 <div class="popup-head-txt">
-                    <h2>인재정보</h2>
-                </div>
-                <div class="close">
-                    <span class="btn_close"></span>
-                    <!-- <span class="btn_close"></span> -->
-                </div>
-            </div>
-            <div class="popup-con youths-info-con">
-                <div id="userInfo" class="con-box d-table">
-                    <div class="id-pic-box">
-                        <div class="id-pic"></div>
-                    </div>
-                    <div class="">
-                        <div class="data-name">
-                            <span class="name">김서아</span>
-                            <span class="ag">(33세, 여)</span>
-                        </div>
-                        <ul class="data-careers">
-                           <li>주식회사 OOOO OOO부 대리</li>
-                        </ul>
-                       <div class="data-info">
-                            <div>
-                                <ul class="info-list">
-                                    <li>
-                                        <strong>연락처</strong>
-                                        <span>010-1234-1234</span>
-                                    </li>
-                                    <li>
-                                        <strong>이메일</strong>
-                                        <span>youthsDB@email.com</span>
-                                    </li>
-                                    <li>
-                                        <strong>활동지역</strong>
-                                        <span class="slash">주거지</span><span>대전광역시 서구</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="info-list">
-                                    <li>
-                                        <strong>직종</strong>
-                                        <span>일반 사무직, 교육직, 기타</span>
-                                    </li>
-                                    <li>
-                                        <strong>관심분야</strong>
-                                        <span>고용ㆍ노동, 교육</span>
-                                    </li>
-                                    <li>
-                                        <strong>참여희망 분야</strong>
-                                        <span>정부위원회, 정책 홍보, 간담회ㆍ행사</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="info-list">
-                                    <li>
-                                        <strong>최종수정일</strong>
-                                        <span>2022-08-22</span>
-                                    </li>
-                                </ul>
-                            </div>
-                       </div>
-
-                    </div>
-                </div>
-                <div id="eduInfo" class="con-box">
-                    <h3 class="info-tit bg">학력</h3>
-                    <div class="popup-table-wrap">
-                        <table>
-                            <caption>학력 상세 표</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="row">학교명</th>
-                                    <th scope="row">학과/전공명</th>
-                                    <th scope="row">학위 종류</th>
-                                    <th scope="row">상태</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>OOOO대학교</td>
-                                    <td>OOOO전공</td>
-                                    <td>학사</td>
-                                    <td>휴학</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <hr class="con-box-line">
-                    <h3 class="info-tit bg">직종 구분(전∙현직)</h3>
-                    <div class="tag-box">
-                        <span>일반 사무직</span>
-                        <span>기타</span>
-                        <span>교육직</span>
-                    </div>
-                    <hr class="con-box-line">
-                    <h3 class="info-tit bg">근무경력(전∙현직)</h3>
-                    <div class="popup-table-wrap">
-                        <table>
-                            <caption>근무경력 상세 표</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="row">직장 및 부서명</th>
-                                    <th scope="row">직위</th>
-                                    <th scope="row">근무기간</th>
-                                    <th scope="row">주요업무</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>주식회사 OOOO OOO부</td>
-                                    <td>대리</td>
-                                    <td>2019.08 ~ 2021.03</td>
-                                    <td class="txt-left">‘청년이 머무르는 지역’을 뜻하는 청정지역 프로젝트 진행</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div id="intInfo" class="con-box">
-                    <h3 class="info-tit bg">관심 분야</h3>
-                    <div class="tag-box">
-                        <span>고용ㆍ노동</span>
-                        <span>교육</span>
-                    </div>
-                    <div class="popup-table-wrap thead-table-wrap">
-                        <table>
-                            <caption>관심 분야 상세 표</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="row">관심 분야</th>
-                                    <th scope="row">상세 분야</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>고용ㆍ노동</td>
-                                    <td class="txt-left">청년들을 위한 지역 활성화</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div id="expInfo" class="con-box">
-                    <h3 class="info-tit bg">주요 활동사항</h3>
-                    <div class="tag-box">
-                        <span>고용ㆍ노동 분야</span>
-                        <span>창업 분야</span>
-                        <span>교육 분야</span>
-                        <span>지역발전 분야</span>
-                    </div>
-                    <div class="popup-table-wrap">
-                        <table>
-                            <caption>주요 활동사항 상세 표</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="row">상세분야</th>
-                                    <th scope="row">활동기간</th>
-                                    <th scope="row">주요내용</th>
-                                    <th scope="row">비고</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>마음건강</td>
-                                    <td>2021.01 ~ 2021.06</td>
-                                    <td>OO지역 중∙고등학생 100명을 대상으로 ‘OOOO만들기' 행사를 직접 기획하였습니다.</td>
-                                    <td>행사, 기획</td>
-                                </tr>
-                                <tr>
-                                    <td>월세지원</td>
-                                    <td>2020.01 ~ 2020.06</td>
-                                    <td>OO부처에서 모집하는 ‘OO기자단'으로 활동하여 직접 정책홍보영상을 제작하였습니다.</td>
-                                    <td>정책기자단, 영상제작</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div id="perfInfo" class="con-box">
-                    <h3 class="info-tit bg">주요 결과물</h3>
-                    <div class="popup-table-wrap">
-                        <table>
-                            <caption>주요 결과물 상세 표</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="row">구분</th>
-                                    <th scope="row">제목</th>
-                                    <th scope="row">일자</th>
-                                    <th scope="row">발급ㆍ수여기관</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>논문</td>
-                                    <td>청년들의 정책참여 촉진 요인에 관한 연구</td>
-                                    <td>2021.01</td>
-                                    <td>OOOO학회</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div id="orgaInfo" class="con-box">
-                    <h3 class="info-tit bg">참여희망 기관</h3>
-                    <div class="tag-box2">
-                        <span>중앙부처</span>
-                    </div>
-                    <hr class="con-box-line">
-                    <h3 class="info-tit bg">참여희망 종류</h3>
-                    <div class="tag-box">
-                        <span>정부위원회</span>
-                        <span>정책 홍보</span>
-                        <span>간담회ㆍ행사</span>
-                    </div>
-                </div>
-                <div id="appliInfo" class="con-box">
-                    <h3 class="info-tit bg">지원동기</h3>
-                    <div class="inner-box">
-                        <p>
-                            혼인과 가족생활은 개인의 존엄과 양성의 평등을 기초로 성립되고 유지되어야 하며, 국가는 이를 보장한다. 국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 총리령 또는 부령을 발할 수 있다. 국회는 선전포고, 국군의 외국에의 파견 또는 외국군대의 대한민국 영역안에서의 주류에 대한 동의권을 가진다.
-    대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다. 탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다.
-                        </p>
-                    </div>
-                    <hr class="con-box-line">
-                    <h3 class="info-tit bg">첨부파일</h3>
-                    <div class="inner-box">
-                        <a href="" class="" download="">청년인재데이터베이스_김서아_지원동기서.pdf</a>
-                    </div>
-                </div>
-                <div class="popup-btn-box">
-                    <button type="button" class="btn btn-style-wh" onclick="openPopup('synchronizingPopup');">현행화요청</button>
-                    <a href="./1)인재목록-청년인재등록.html" class="btn">인재정보수정</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 팝업 현행화요청 -->
-    <div class="popupWrapper synchronizingPopup">
-        <div class="popup">
-            <div class="popup-head">
-                <div class="popup-head-txt">
-                    <h2>인재정보 현행화요청</h2>
+                    <h2>총 발송 건수</h2>
                 </div>
                 <div class="close">
                     <span class="btn_close"></span>
                 </div>
             </div>
             <div class="popup-con">
-                <div class="popup-table-wrap">
+                <div class="popup-table-wrap thead-table-wrap mh300">
                     <table>
-                        <caption>인재정보 현행화요청 표</caption>
-                        <tbody>
-                            <tr>
-                                <th scope="col">요청일자</th>
-                                <td>2022-08-05</td>
-                                <th scope="col">요청자</th>
-                                <td>시스템1</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">요청내용<span class="red">*</span></th>
-                                <td colspan="3">
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="요청내용을 작성해 주세요"></textarea>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="sub-txt-wrap">
-                        <p class="sub-txt"><span class="red">*</span>&nbsp;인재정보에 대하여 수정, 현행화가 필요할 시 현행화요청을 할 수 있습니다.</p>
-                    </div>
-                </div>
-                <div class="popup-btn-box">
-                    <button type="button" class="btn close-befor-popup">요청</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 팝업 열람이력조회 -->
-    <div class="popupWrapper historyPopup">
-        <div class="popup">
-            <div class="popup-head">
-                <div class="popup-head-txt">
-                    <h2>열람이력조회</h2>
-                </div>
-                <div class="close">
-                    <span class="btn_close"></span>
-                </div>
-            </div>
-            <div class="popup-con">
-                <div class="count-box">
-                    <span class="count-txt">전체 <strong class="items">1</strong></span>
-                </div>
-                <div class="popup-table-wrap thead-table-wrap">
-                    <table>
-                        <caption>열람이력조회 표</caption>
+                        <caption>총 발송 건수</caption>
                         <thead>
                             <tr>
-                                <th scope="row">열람기관</th>
-                                <th scope="row">열람자</th>
-                                <th scope="row">열람일시</th>
+                                <th scope="row">받는 사람</th>
+                                <th scope="row">상태</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>인사혁신처</td>
-                                <td>홍길동</td>
-                                <td>2022-08-17 13:31:06</td>
+                                <td>admin2022@email.com</td>
+                                <td><span>확인중</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="blue">확인</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div id="pagination-container">
+                    <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 전송 실패 건수 -->
+    <div class="popupWrapper failCountPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>전송 실패 건수</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="popup-table-wrap thead-table-wrap mh300">
+                    <table>
+                        <caption>전송 실패 상세</caption>
+                        <thead>
+                            <tr>
+                                <th scope="row">받는 사람</th>
+                                <th scope="row">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                            <tr>
+                                <td>admin2022@email.com</td>
+                                <td><span class="red">실패</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="pagination-container">
+                    <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- alert 팝업 일괄승인 -->
-    <div class="popupWrapper alert-confirm">
+    <!-- alert 팝업 발송 확인 -->
+    <div class="popupWrapper alert-send">
         <div class="popup alert-popup">
             <div class="popup-con">
                 <div class="icon-box">
                     <img src="../../images/ico_write.png" alt="등록 아이콘">
                 </div>
                 <div class="alert-txt-box">
-                    <p>중복인재의 대표정보로 설정하시겠습니까?</p>
+                    <p>이메일을 발송 하시겠습니까?</p>
+                    <!-- SMS 발송 시 -->
+                    <!-- <p>SMS를 발송 하시겠습니까?</p> -->
                 </div>
                 <div class="popup-btn-box">
                     <button type="button" class="btn btn-style-wh alert-close">취소</button>

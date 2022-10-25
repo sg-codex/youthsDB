@@ -84,10 +84,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="" class="menu-depth-06">회원관리</a>
+                       <a href="" class="menu-depth-06">회원관리</a>
                         <ul class="menu-depth2">
                             <li><a href="">- 회원목록</a></li>
                             <li><a href="">- 회원안내발송</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
                         </ul>
                     </li>
                     <li>
@@ -118,7 +119,7 @@
             <nav id="m-nav" class="">
                 <div class="m-header">
                     <h3>전체메뉴</h3>
-                    <div class="close-box">
+                    <div id="m-menu-close" class="close-box">
                         <span class="btn_close"></span>
                         <span class="btn_close"></span>
                     </div>
@@ -156,57 +157,65 @@
                         <li>
                             <span>청년인재데이터베이스</span>
                             <ul class="m-depth-02">
-                                <li>소개</li>
-                                <li>공지사항</li>
-                                <li>자료실</li>
-                                <li>공인인증서 안내</li>
-                                <li>사이트맵</li>
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>검색요청</span>
-                            <ul>
-                                <li>직접검색 요청</li>
-                                <li>인재추천 요청</li>
-                                <li>요청현황</li>
-                                <li>요청관리</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>인재검색</span>
-                            <ul>
-                                <li>통합검색</li>
-                                <li>관심인재 관리</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>인재관리</span>
-                            <ul>
-                                <li>인재목록</li>
-                                <li>인재등록 현황</li>
-                                <li>인재정보 현행화요청</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">신규 인재정보 관리</a></li>
+                                <li><a href="">수정 인재정보 관리</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                                <li><a href="">인재등록 현황</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>회원관리</span>
-                            <ul>
-                                <li>회원목록</li>
-                                <li>회원안내발송</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                                <li><a href="">권한그룹관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>통합관리</span>
-                            <ul>
-                                <li>메뉴 관리</li>
-                                <li>게시판 관리</li>
-                                <li>팝업/배너 관리</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">기본환경설정</a></li>
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">게시판 통합 관리</a></li>
+                                <li><a href="">카테고리 관리</a></li>
+                                <li><a href="">게시물 관리</a></li>
+                                <li><a href="">팝업 관리</a></li>
+                                <li><a href="">배너 관리</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>기타관리</span>
-                            <ul>
-                                <li>코드관리</li>
-                                <li>의심징후관리</li>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
                             </ul>
                         </li>
                         <li>
@@ -214,6 +223,11 @@
                         </li>
                         <li>
                             <span>통계/리포팅</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">게시판 통계</a></li>
+                                <li><a href="">사용자 통계</a></li>
+                                <li><a href="">접속 통계</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -335,12 +349,12 @@
                                         </li>
                                         <li class="f-left">
                                             <div class="list-tit">
-                                                <label for="departName">위촉/선정 예정일</label>
+                                                <label for="datepicker">위촉/선정 예정일</label>
                                                 <span class="blind"></span>
                                             </div>
                                             <div class="list-cont">
                                                 <div class="input-wrap">
-                                                    <input type="text" id="datepicker" class="input02" placeholder="위촉/선정 예정일" autocomplete="off">
+                                                    <input type="text" id="datepicker" class="input02 datepicker" placeholder="위촉/선정 예정일" autocomplete="off">
                                                 </div>
                                             </div>
                                         </li>
