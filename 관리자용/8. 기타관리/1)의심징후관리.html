@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/printThis.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" class="">인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" class="">
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" class="">
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                       <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                            <li><a href="">- 권한그룹관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 메뉴 관리</a></li>
+                            <li><a href="">- 게시판 관리</a></li>
+                            <li><a href="">- 팝업/배너 관리</a></li>
+                            <li><a href="">- 게시물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="m-nav" class="">
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close" class="close-box">
+                        <span class="btn_close"></span>
+                        <span class="btn_close"></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">신규 인재정보 관리</a></li>
+                                <li><a href="">수정 인재정보 관리</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                                <li><a href="">권한그룹관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">기본환경설정</a></li>
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">게시판 통합 관리</a></li>
+                                <li><a href="">카테고리 관리</a></li>
+                                <li><a href="">게시물 관리</a></li>
+                                <li><a href="">팝업 관리</a></li>
+                                <li><a href="">배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">게시판 통계</a></li>
+                                <li><a href="">사용자 통계</a></li>
+                                <li><a href="">접속 통계</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="content" class="content">
+                <div id="cont-wrap">
+                    <div class="location-box clearfix">
+                        <h2 class="page-title-txt">의심징후 관리</h2>
+                        <div class="location-txt">
+                            <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                            <span>기타관리</span>
+                            <span class="angle-bracket">의심징후 관리</span>
+                        </div>
+                    </div>
+                    <hr class="page-title-line">
+                    <div>
+                        <!-- 차트 -->
+                        <!-- 탭메뉴 -->
+                        <div class="tab-wrap">
+                            <div>
+                                <ul class="tab-list">
+                                    <li class="tab-on"><a href="./1)의심징후관리.html">접근권한이 없는 계정의 접속시도 이력</a></li>
+                                    <li><a href="#">비인가 IP의 접속시도이력</a></li>
+                                    <li><a href="#">업무시간 외 접속이력</a></li>
+                                    <li><a href="#">과도한 정보 조회 행위 분석</a></li>
+                                    <li><a href="#">과도한 정보 다운로드 행위 분석</a></li>
+                                    <li><a href="#">날짜별 의심징후</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div id="" class="tabBox">
+                                    <p class="explain-txt chkImg">승인되지 않은 계정 또는 권한없는 페이지의 접근 이력입니다.</p>
+                                    <div class="box-top-tit clearfix">
+                                        <div class="l-box">
+                                            <span class="count-txt">전체 <strong class="items">1</strong></span>
+                                        </div>
+                                        <div class="r-box">
+                                            <select name="" id="" class="">
+                                                <option value="10개씩">10개씩</option>
+                                                <option value="30개씩">30개씩</option>
+                                                <option value="50개씩">50개씩</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="table-wrap result-table-wrap">
+                                        <table>
+                                            <caption>요청이력</caption>
+                                            <colgroup>
+                                                <col width="18%">
+                                                <col width="18%">
+                                                <col width="28%">
+                                                <col width="18%">
+                                                <col width="18%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="row">사용자ID</th>
+                                                    <th scope="row">이름</th>
+                                                    <th scope="row">기관</th>
+                                                    <th scope="row">IP주소</th>
+                                                    <th scope="row">일시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>abcd1234</td>
+                                                    <td>홍길동</td>
+                                                    <td>청년인재</td>
+                                                    <td>123.153.12.125</td>
+                                                    <td>2022.08.02 (월) 15:56</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="pagination-container">
+                                        <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                                        <a href="#" class="active">1</a>
+                                        <a href="#">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <a href="#">5</a>
+                                        <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </section>
+        </div>
+    </div>
+    
+</body>
+</html>

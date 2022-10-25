@@ -73,6 +73,7 @@ margin
 .btn {
     display: inline-block;
     min-width: 160px;
+    max-width: 170px;
     height: 46px;
     line-height: 1.4;
     text-align: center;
@@ -564,6 +565,7 @@ input.hasDatepicker {
     width: 60px;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     height: 100%;
     background-color: #fff;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
@@ -744,6 +746,7 @@ input.hasDatepicker {
     width: 100%;
     height: calc(100vh - 200px);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .m-menu > ul { position: relative; }
 .m-menu > ul > li {
@@ -827,6 +830,7 @@ input.hasDatepicker {
 h2.page-title-txt {
     color: #02346B;
     font-size: 1.6rem;
+    line-height: 34px;
 }
 hr.page-title-line {
     height: 2px;
@@ -847,7 +851,7 @@ hr.page-bottom-line {
 }
 .location-box > .location-txt {
     float: right;
-    margin-top: 12px;
+    line-height: 32px;
     white-space: nowrap;
 }
 .location-txt img {
@@ -2237,6 +2241,8 @@ table .result-txt.headcount::after {
 .tab-list li.tab-on {
     color: #1776E1;
     background-color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
 }
 .tab-content { 
     margin-top: -1px;
@@ -2406,7 +2412,7 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
 }
 
 .memberList-table,
-.sendTargetList-table { margin-top: 30px; height: 475px; overflow-y: auto; overflow-x: hidden; }
+.sendTargetList-table { margin-top: 30px; height: 475px; overflow-y: auto; -webkit-overflow-scrolling: touch; overflow-x: hidden; }
 .memberList-table li:first-child,
 .sendTargetList-table li:first-child {border-bottom: 2px solid #02346B;}
 
@@ -2450,6 +2456,9 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
 .group-update-box.d-flex > div {
     width: 50%;
     max-height: 620px;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .group-inner-box {
@@ -2457,6 +2466,7 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
     border: 1px solid #E2E9EE;
     border-radius: 6px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     margin-top: 10px;
     height: calc(100% - 62px);
 }
@@ -2474,6 +2484,7 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
 
 
 .group-update-box.d-flex > div:last-child .group-inner-box {
+    min-height: 200px;
     height: calc(100% - 106px);
 }
 .group-inner-box ul li {
@@ -2511,8 +2522,48 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
 /* =========================================================================================== 
  기타관리
 =========================================================================================== */
+/* 시스템 코드관리 */
+.popup-table-wrap.maxhgt {
+    max-height: 370px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
+.codeStep { position: relative; }
+.codeStep > * {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #D4D9E4;
+    border-radius: 4px;
+    padding: 2px;
+}
+.codeStep .stepUp {
+    background: url(/images/common/ico_more_b.png) no-repeat center / contain;
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    margin-right: 5px;
+}
+.codeStep .stepDown {
+    background: url(/images/common/ico_more_b.png) no-repeat center / contain;
+}
 
+.codeStep .btn-del {
+    position: absolute;
+    right: 10px;
+    top: -6px;
+    min-width: 60px;
+    height: 36px;
+}
+
+/* 의심징후관리 */
+.tabBox > p.explain-txt {
+    color: #818181;
+    margin: 20px 0;
+}
 
 
 
@@ -2545,6 +2596,7 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
     margin: 0 auto;
     min-height: 270px;
     height: auto;
+    max-height: 90%;
     overflow: hidden;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
@@ -2593,6 +2645,7 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
     padding: 5px 30px 38px;
     height: calc(100% - 80px);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     position: relative;
 }
 .popup-con .con-box {
@@ -2602,7 +2655,7 @@ form#memberForm div.table-wrap:not(:last-child) { margin-bottom: 30px; }
     border-radius: 14px;
     background-color: #ffffff;
 }
-.popup-con .con-box:first-child {
+.popup-con .con-box:nth-child(1) {
     margin-top: 0;
 }
 h3.popup-sub-tit {
@@ -2616,7 +2669,7 @@ h3.popup-sub-tit {
     margin-bottom: 0 !important; 
     overflow-x: auto;
 }
-.popup-table-wrap:not(:first-child) { margin-top: 15px; }
+.popup-table-wrap:not(:nth-child(1)) { margin-top: 15px; }
 .popup-table-wrap table {
     border-top: 2px solid #02346B;
     word-break: keep-all;
@@ -2669,6 +2722,7 @@ h3.popup-sub-tit {
     border: 1px solid #E2E9EE;
     border-radius: 4px;
     padding: 15px;
+    margin-bottom: 30px;
 }
 .popup .con-box-b p {
     color: #333333;
@@ -2996,7 +3050,7 @@ hr.con-box-line {
 .estimationPopup .popup .count-box { margin-bottom: 0; }
 .estimationPopup .popup-form-table { margin-top: 20px; }
 
-form .form-list { margin-top: 30px; }
+form .form-list:not(:last-child) { margin-bottom: 30px; }
 form .form-list h3 { 
     display: inline-block;
     font-size: 1.15rem;
@@ -3309,9 +3363,9 @@ form .form-list h3 {
     .depth-box:nth-child(4n) { width: 100%; }
 
     /* 버튼 스타일 */
-    .btn {
+    /* .btn {
         min-width: 45%;
-    }
+    } */
 
     /* table wrap */
     .box-top-tit h3 { display: block; margin: 0 0 5px 0; }
@@ -3370,8 +3424,8 @@ form .form-list h3 {
         float: none;
         width: 100% !important;
     }
-    .sch-select-box > div.w20 {
-        margin-top: 20px;
+    .sch-select-box > div:not(:last-child) {
+        margin-bottom: 10px;
     }
     .sch-select-box .w20 select {
         width: 100%;
@@ -3412,11 +3466,10 @@ form .form-list h3 {
     }
     .box-top-tit .l-box .explain-txt { vertical-align: -30%; }
     .box-top-tit .r-box {margin-top: 10px;}
-    .box-top-tit .r-box select {
+    /* .box-top-tit .r-box select {
         min-width: 32%;
-    }
+    } */
     .box-top-tit .r-box .btn { 
-        min-width: 48%; 
         display: inline-block; 
         margin: 5px 0 0 0; 
     }
@@ -3445,11 +3498,22 @@ form .form-list h3 {
     
     /* ========================================= 관리자 ========================================= */
     
-
+    /* 청년인재등록 */
+    .thead-table-wrap ul .list-tit:first-child, 
+    .thead-table-wrap ul .list-cont:first-child {
+        min-width: 120px;
+        display: table-cell;
+    }
+    .thead-table-wrap ul .list-tit:last-child, 
+    .thead-table-wrap ul .list-cont:last-child {
+        min-width: 120px;
+        display: table-cell;
+    }
 
 
     /* 인재등록 현황 */
     .tab-content { padding: 15px; }
+
 
     /* 회원목록 */
     .cont-flex { display: block; }
@@ -3464,7 +3528,7 @@ form .form-list h3 {
         display: block !important;
     }
     .send-box > .d-flex > div {
-        min-height: 400px;
+        min-height: 340px;
         margin-bottom: 10px;
     }
     .send-box .box02-inner, 
@@ -3511,6 +3575,10 @@ form .form-list h3 {
     }
     .popup-table-wrap table tbody th, .popup-table-wrap table tbody td {
         display: block;
+    }
+    .youthsPopup .popup-table-wrap table tbody th, 
+    .youthsPopup .popup-table-wrap table tbody td {
+        display: table-cell;
     }
 
 
@@ -3592,6 +3660,10 @@ form .form-list h3 {
     .btm-btnBox .btn:last-child { margin-bottom: 0; }
     .r-btn-box { display: block !important; margin-top: 10px; }
     .table-wrap ul .list-cont .btn { display: inline-block; vertical-align: middle; margin-bottom: 0; }
+    .table-wrap.result-table-wrap table .btn,
+    .table-wrap .btn:nth-child(2) {
+        margin: 5px auto 0;
+    }
 
     /* 데이트피커 커스텀 */
     input.datepicker-b { width: 100%; }
@@ -3607,6 +3679,11 @@ form .form-list h3 {
         min-width: 80px;
     }
 
+    /* 화면명 */
+    h2.page-title-txt { font-size: 1.2rem; }
+    hr.page-title-line { margin-top: 5px; }
+
+    /* 콘텐츠 박스 */
     .con-box-wh { padding: 20px; }
     .con-box { padding: 20px; }
     .con-box-wh  > p, 
@@ -3688,6 +3765,25 @@ form .form-list h3 {
     #directList .r-box .btn, 
     #recommendList .r-box .btn {min-width: 130px;}
 
+    /****************** 관리자 *********************/
+    /* 인재관리 */
+    .table-wrap ul .list2-cont > div > .inner-txt { 
+        display: block; 
+        line-height: 1.2;
+        padding-left: 15px;
+    }
+
+    /* 회원관리 */
+    .group-update-box.d-flex {
+        display: block !important;
+    }
+    .group-update-box.d-flex > div {
+        width: 100%;
+    }
+    .memberList-table, 
+    .sendTargetList-table {
+        margin-top: 0;
+    }
 
 
     /* 팝업 */
@@ -3703,6 +3799,13 @@ form .form-list h3 {
         display: table-cell;
     }
     .tag-box span {margin-right: 5px;}
+
+    .youthsPopup .d-table > div {
+        display: block;
+        width: 100%;
+    }
+    .id-pic { margin: 0 auto; }
+    .id-pic-box + div { padding-left: 0; }
 
     /* 팝업 현행화요청 */
     .synchronizingPopup .popup-table-wrap table td,
