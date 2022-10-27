@@ -7,7 +7,6 @@
     <title>admin</title>
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
     <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
     
@@ -250,18 +249,20 @@
                                 <div class="w20">
                                     <select name="" id="" class="mt0 more-b">
                                         <option value="이름">이름</option>
-                                        <option value="생년월일">생년월일</option>
-                                        <option value="최종 수정일">최종 수정일</option>
+                                        <option value="이메일">이메일</option>
+                                        <option value="휴대전화">휴대전화</option>
+                                        <option value="기타">기타</option>
                                     </select>
                                 </div>
                                 <div class="w40">
                                     <label for="schIpt"></label>
                                     <div class="sch-wrap">
-                                        <input type="search" id="schIpt" class="input01" placeholder="검색어를 입력해주세요">
+                                        <input type="search" id="schIpt" class="inputw100" placeholder="검색어를 입력해주세요">
                                         <button type="submit" class="schBtn h46"></button>
                                     </div>
                                 </div>
                                 <div class="btn-box">
+                                    <button type="button" class="btn btn-style-wh btn_file" onclick="openPopup('uploadPopup');">파일 업로드</button>
                                     <a href="./1)인재목록-청년인재등록.html" class="btn">청년인재등록</a>
                                 </div>
                             </div>
@@ -274,10 +275,13 @@
                                 <div class="r-box">
                                     <select name="" id="" class="">
                                         <option value="최신순">최신순</option>
-                                        <option value="오래된순">오래된순</option>
+                                        <option value="등록일순">등록일순</option>
+                                        <option value="이름순">이름순</option>
+                                        <option value="최종 수정일순">최종 수정일순</option>
                                     </select>
                                     <select name="" id="" class="">
-                                        <option value="10개씩">10개씩</option>
+                                        <option value="10개씩" selected>10개씩</option>
+                                        <option value="30개씩">30개씩</option>
                                         <option value="50개씩">50개씩</option>
                                     </select>
                                     <a href="./1)인재목록-중복인재관리.html" class="btn btn-style-wh">중복인재 관리</a>
@@ -396,6 +400,34 @@
                     </div>
                 </div>                
             </section>
+        </div>
+    </div>
+    <!-- 팝업 파일 업로드 -->
+    <div class="popupWrapper uploadPopup">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>파일 업로드</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="con-box">
+                    <div class="upload-box">
+                        <div>
+                            <h3>업로드할 파일을 선택해주세요</h3>
+                            <p>※ 등록 가능한 파일 :  xls, xlsx</p>
+                        </div>
+                        <div>
+                            <input type="file" accept="xls, xlsx" title="파일 업로드" id="upload01" />
+                            <label for="upload01" class="btn btn_upload">파일 업로드</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- 팝업 인재상세열람 -->

@@ -1,0 +1,252 @@
+.print-visible {
+   display: none;
+}
+.print-section {
+   page-break-before:always;
+}
+.print-title {
+   font-size:24px;
+   color:#333;
+   font-weight:bold;
+   text-align:center;
+   margin: 30px 0 20px;   
+}
+.print-pageName {
+   position:relative;
+   font-size:13px;
+}
+.print-pageName::before {
+   content: '■';
+   margin-right:5px;
+}
+.print-container {
+   margin-top: 80px;
+}
+.print-container .print-txt {
+   font-size:18px;
+   word-break: keep-all;
+}
+.print-section .unerline-area {
+   border-bottom:1px solid #333;
+   display:inline-block;
+   margin:0 5px;
+}
+.print-section .print-orderList {
+   counter-reset:list-number;
+   margin:40px 0 100px;
+}
+.print-section .print-orderList li {
+   counter-increment:list-number;
+   position:relative;
+   padding-left:20px;
+   margin:40px 0;
+}
+.print-section .print-orderList li::before {
+   content:counter(list-number)".";
+   position:absolute;
+   left:0;
+}
+.print-section .unerline-area.w30 {
+   width:10px;
+}
+.print-section .unerline-area.w10 {
+   width:5px;
+}
+.print-section .date,
+.print-section .sign {
+   display: block;
+   text-align:right;
+}
+.print-section .sign {
+   padding-right:250px;
+   position:relative;
+   margin-top:15px;
+}
+.print-section .sign > sup {
+   position:absolute;
+   right:0;
+   font-weight:300;
+   font-size:14px;
+   color: rgba(0,0,0,0.5);
+}
+.print-section .date > span {
+   display:inline-block;
+   width:35px;
+}
+.print-section .info {
+   font-size:20px;
+   margin-top:50px;
+   padding-bottom:20px;
+   border-bottom:1px solid #333;
+}
+.print-section .info sup {
+   font-size:13px;
+}
+.print-comment {
+   position: relative;
+   font-size:12px;
+   color:#333;   
+}
+.print-comment > span {
+   display:block;
+   padding:5px 23px;
+}
+@media print {
+   header, section, footer, nav, .print-hidden {
+      display:none !important;
+   }
+   #directList.print-section.print-visible.active,
+   #recommendList.print-section.print-visible.active, 
+   .print-visible {
+      display:block !important;
+   }
+   #content,
+   #contents,
+   .print-section {
+      display:block !important;
+      padding:0;
+   }
+   #directList.print-section.print-visible,
+   #recommendList.print-section.print-visible {
+      display:none !important;
+   }
+   #contents .container {
+      box-shadow: none;
+      padding:0;
+   }
+   .table-wrap {
+      overflow:visible;
+   }
+   .table-wrap table {
+      min-width: auto;
+      border-top:1px solid #D4D9E4;
+   }
+   .table-wrap.table-th-left table th,
+   .table-wrap table td {
+      font-size: 14px;
+      border-right: 1px solid #D4D9E4;
+      min-height: auto;
+   }
+   .table-wrap.table-th-left table th {
+      min-width: 130px;
+      font-weight: 500;
+   }
+   .table-wrap.table-th-left table td:last-child {
+      border-right:0;
+   }
+   .table-wrap table td .result-txt {
+      font-size:14px;
+      line-height: 1.5;      
+   }
+   .table-wrap + .table-wrap.print-visible {
+      margin-top:20px;
+   }
+   .popupWrapper.print-section {
+      background-color:rgba(0,0,0,0);
+      position:static;
+   }
+   .popupWrapper.print-section .popup {
+      width: 100% !important;
+      height: 100%;
+      position: relative;
+      transform:none;
+      box-shadow: none;
+      overflow:visible;
+      top:auto;
+      left:auto;
+   }
+   /* colgroup print width setting */
+
+   .print-section col.colgrop-col.print-col-w5 {
+      width: 5% !important;
+   }
+   .print-section col.colgrop-col.print-col-w10 {
+      width: 10% !important;
+   }
+   .print-section col.colgrop-col.print-col-w15 {
+      width: 15% !important;
+   }
+   .print-section col.colgrop-col.print-col-w20 {
+      width: 20% !important;
+   }
+   .print-section col.colgrop-col.print-col-w25 {
+      width: 25% !important;
+   }
+   .print-section col.colgrop-col.print-col-w30 {
+      width: 30% !important;
+   }
+   .print-section col.colgrop-col.print-col-w35 {
+      width: 35% !important;
+   }
+   .print-section col.colgrop-col.print-col-w40 {
+      width: 40% !important;
+   }
+   .print-section .print-mb5 {
+      margin-bottom: 5px !important;
+   }
+   .print-section .print-mb10 {
+      margin-bottom: 10px !important;
+   }
+   .print-section .print-mb15 {
+      margin-bottom: 15px !important;
+   }
+   .print-section .print-mb20 {
+      margin-bottom: 20px !important;
+   }
+   .print-section .print-mt5 {
+      margin-top: 5px !important;
+   }
+   .print-section .print-mt10 {
+      margin-top: 10px !important;
+   }
+   .print-section .print-mt15 {
+      margin-top: 15px !important;
+   }
+   .print-section .print-mt20 {
+      margin-top: 20px !important;
+   }
+   /* .print-section .print-mt40 {
+      margin-top: 40px !important;
+   } */
+
+   .popupWrapper.print-section .popup-table-wrap table tbody th, 
+   .popupWrapper.print-section .popup-table-wrap table tbody td {
+      display: table-cell;
+      /* border-right:1px solid #D4D9E4; */
+   }
+   .popupWrapper.print-section .popup-table-wrap table tbody th {
+      min-width: 100px;
+      border-right:1px solid #D4D9E4;
+      line-height:1.25
+   }
+   .popupWrapper.print-section .popup-table-wrap table tbody td {
+      padding:10px;
+   }
+   .print-section .table-wrap.result-table-wrap table th {
+      font-size: 12px;
+   } 
+   .print-section .table-wrap.result-table-wrap table tbody td,
+   .print-section .table-wrap.result-table-wrap table tbody td > a,
+   .print-section .table-wrap.result-table-wrap table tbody td > span,
+   .print-section .table-wrap.result-table-wrap table tbody td > span.txt-small::before {
+      font-size:10px !important;
+   }
+   .print-section .table-wrap.result-table-wrap table tbody td {
+      height: auto;
+   }
+   .calendar-table-wrap .d-flex {
+      min-height: 100px;
+   }
+   .box-top-tit h3 {
+      font-size: 14px;
+   }
+   .calendar-table-wrap .d-flex .date,
+   .calendar-table-wrap .d-flex .num {
+      font-size:10px;
+   }
+   .calendar-table-wrap .d-flex .num span::before,
+   .calendar-table-wrap .d-flex .num span::after {
+      font-size: 10px;
+   }
+}
+

@@ -7,7 +7,6 @@
     <title>admin</title>
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
     <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
     
@@ -262,7 +261,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="userName" class="input02" value="" placeholder="성명">
+                                                        <input type="text" name="" id="userName" class="inputw80" value="" placeholder="성명">
                                                     </div>
                                                 </div>
                                             </li>
@@ -272,7 +271,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input maxlength="10" type="number" name="" id="isBirthday" class="input02 maxlength" placeholder="생년월일"/>
+                                                        <input maxlength="10" type="number" name="" id="isBirthday" class="inputw80 maxlength" placeholder="생년월일"/>
                                                     </div>
                                                 </div>
                                             </li>
@@ -315,7 +314,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="form-style email">
-                                                        <input type="text" name="" id="email-id-ipt" class="input02" title="이메일 주소입력" value="" maxlength="40">
+                                                        <input type="text" name="" id="email-id-ipt" class="inputw80" title="이메일 주소입력" value="" maxlength="40">
                                                         <span class="email-at">@</span>
                                                         <input type="text" name="" id="email-ipt" title="이메일 도메인" value="">
                                                         <select id="email-select" class="email-select" title="이메일 도메인" name="email-select">
@@ -394,7 +393,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="" class="input02" value="" placeholder="학교명">
+                                                        <input type="text" name="" id="" class="inputw80" value="" placeholder="학교명">
                                                     </div>
                                                 </div>
                                             </li>
@@ -404,7 +403,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="" class="input02" placeholder="학과ㆍ전공명">
+                                                        <input type="text" name="" id="" class="inputw80" placeholder="학과ㆍ전공명">
                                                     </div>
                                                 </div>
                                             </li>
@@ -414,8 +413,13 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <select name="" id="">
-                                                        <option value="선택" selected disabled>선택</option>
-                                                        <option value="1">1</option>
+                                                        <option value="" selected disabled>선택</option>
+                                                        <option value="없음">없음</option>
+                                                        <option value="전문학사">전문학사</option>
+                                                        <option value="학사">학사</option>
+                                                        <option value="석사">석사</option>
+                                                        <option value="박사">박사</option>
+                                                        <option value="전문박사">전문박사</option>
                                                     </select>
                                                 </div>
                                             </li>
@@ -426,7 +430,14 @@
                                                 <div class="list-cont">
                                                     <select name="" id="">
                                                         <option value="선택" selected disabled>선택</option>
-                                                        <option value="1">1</option>
+                                                        <option value="없음">없음</option>
+                                                        <option value="졸업">졸업</option>
+                                                        <option value="재학중">재학중</option>
+                                                        <option value="휴학중">휴학중</option>
+                                                        <option value="수료">수료</option>
+                                                        <option value="중퇴">중퇴</option>
+                                                        <option value="자퇴">자퇴</option>
+                                                        <option value="졸업예정">졸업예정</option>
                                                     </select>
                                                 </div>
                                             </li>
@@ -549,7 +560,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="" class="input02" value="" placeholder="직장명">
+                                                        <input type="text" name="" id="" class="inputw80" value="" placeholder="직장명">
                                                     </div>
                                                 </div>
                                             </li>
@@ -559,7 +570,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="" class="input02" placeholder="부서명">
+                                                        <input type="text" name="" id="" class="inputw80" placeholder="부서명">
                                                     </div>
                                                 </div>
                                             </li>
@@ -581,7 +592,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="" class="input02" placeholder="직위">
+                                                        <input type="text" name="" id="" class="inputw80" placeholder="직위">
                                                     </div>
                                                 </div>
                                             </li>
@@ -591,7 +602,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="" class="input01" placeholder="주요업무를 작성해주세요.">
+                                                        <input type="text" name="" id="" class="inputw100" placeholder="주요업무를 작성해주세요.">
                                                     </div>
                                                 </div>
                                             </li>
@@ -694,7 +705,7 @@
                                                     <label for="">-</label>
                                                 </div>
                                                 <div class="list-cont txt-left">
-                                                    <input type="text" name="" id="" class="input01" placeholder="상세 분야를 작성해 주세요">
+                                                    <input type="text" name="" id="" class="inputw100" placeholder="상세 분야를 작성해 주세요">
                                                 </div>
                                             </li>
                                         </ul>
@@ -802,9 +813,11 @@
                                                     <label for="">활동기간</label>
                                                 </div>
                                                 <div class="list-cont">
-                                                    <input type="text" id="fromDate2-1" class="" placeholder="시작연월">
-                                                    <span>~</span>
-                                                    <input type="text" id="toDate2-1" class="" placeholder="종료연월">
+                                                    <div class="datePickerBox">
+                                                        <input type="text" id="fromDate2-1" class="" placeholder="시작연월">
+                                                        <span>~</span>
+                                                        <input type="text" id="toDate2-1" class="" placeholder="종료연월">
+                                                    </div>                                                    
                                                 </div>                                       
                                             </li>
                                             <li>
@@ -813,7 +826,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="" class="input01" placeholder="주요내용을 작성해 주세요">
+                                                        <input type="text" name="" id="" class="inputw100" placeholder="주요내용을 작성해 주세요">
                                                     </div>
                                                 </div>      
                                             </li>
@@ -855,7 +868,7 @@
                                                 </div>
                                                 <div class="list-cont">
                                                     <div class="input-wrap">
-                                                        <input type="text" name="" id="" class="input01" placeholder="명칭">
+                                                        <input type="text" name="" id="" class="inputw100" placeholder="명칭">
                                                     </div>
                                                 </div>                                                
                                             </li>

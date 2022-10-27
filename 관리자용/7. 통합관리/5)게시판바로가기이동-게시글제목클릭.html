@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-total.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script  src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script  src="../../plugin/jquery/jquery-ui.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" >인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" >
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" >
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="./7-1_기본환경설정.html">- 기본환경설정</a></li>
+                            <li><a href="./7-1_메뉴 관리.html">- 메뉴 관리</a></li>
+                            <li><a href="./7-1_게시판관리.html">- 게시판 관리</a></li>
+                            <li><a href="./7-1_게시판 통합 관리-게시판 통합.html">- 게시판 통합 관리</a></li>
+                            <li><a href="./7-1_카테고리 관리 - 목록.html">- 카테고리 관리</a></li>
+                            <li><a href="./7-1_게시물 관리-게시물 관리.html">- 게시물 관리</a></li>
+                            <li><a href="./7-1_팝업 관리.html">- 팝업 관리</a></li>
+                            <li><a href="./7-1_배너 관리.html">- 배너 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="m-nav" >
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="content" class="content">
+                <div id="cont-wrap">                    
+                    <form  id="memberForm">
+                        <div class="location-box clearfix">
+                            <h2 class="page-title-txt">자료실</h2>
+                            <div class="location-txt">
+                                <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                                <span>통합관리</span>
+                                <span class="angle-bracket">자료실</span>
+                            </div>
+                        </div>
+                        <hr class="page-title-line">
+                        <div>
+                            <div class="con-box-wh">
+                                <div class="box-top-tit clearfix">
+                                    <div class="l-box">
+                                        <h3>게시판명</h3>
+                                    </div>
+                                    <div class="r-box">
+                                        <input type="button" value="인쇄" class="btn btn-style-none print-btn mr20" onclick="">
+                                        <input type="button" value="링크공유" class="btn btn-style-none share-btn" onclick="">
+                                    </div>
+                                </div>
+                                <div class="table-wrap table-th-left r-table-wrap">
+                                    <ul class="flex-wrap">
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                제목
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">제목 미리보기</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                등록자
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">업무관리 (정보통신담당관 / 홍길동)</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                등록일
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">2022-08-22 21:05:22</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                수정자
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">업무관리 (정보통신담당관 / 홍길동)</span>
+                                            </div>
+                                        </li>
+                                        <li class="f-left">
+                                            <div class="list-tit">                                                
+                                                수정일
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">2022-08-22 21:05:22</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                조회수
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">12</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                공유범위
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">전체</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-tit">                                                
+                                                내용
+                                            </div>
+                                            <div class="list-cont">
+                                                <span class="result-txt">내용</span>
+                                            </div>
+                                        </li>
+                                        <li class="h-auto">
+                                            <div class="list-tit">                                                
+                                                <p>첨부파일</p>
+                                                <button type="button"  class="btn btn-style-wh small-btn2">전체받기</button>
+                                            </div>
+                                            <div class="list-cont">
+                                                <div class="preview">
+                                                    <span>김서아_증명사진.jpg</span>
+                                                    <button type="button">미리보기</button>
+                                                </div>
+                                                <div class="preview">
+                                                    <span>김서아_증명사진.jpg</span>
+                                                    <button type="button">미리보기</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>  
+                                <div class="btm-btnBox btm-btnBox-start-end clearfix">
+                                    <button type="button"  class="btn btn-style-wh">목록</button>
+                                    <div>
+                                        <button type="button"  class="btn btn-style-re mr10">삭제</button>
+                                        <button type="button"  class="btn">수정</button>
+                                    </div>
+                                    
+                                </div>                   
+                            </div>
+                            <div class="con-box-wh">
+                                <div class="box-top-tit mb20">
+                                    <h3>댓글</h3>
+                                </div>
+                                <div class="comments-wrap">
+                                    <div class="comments-inner">
+                                        <textarea   cols="30" rows="4" class="comments mr10" placeholder="댓글을 입력해주세요"></textarea>
+                                        <button class="comments-btn">등록</button>
+                                    </div>
+                                    <div class="comments-file">
+                                        <input type="file" id="add-file" class="file">
+                                        <button type="button " class="mr10"><img src="../../images/emoticon.png" alt="이모티콘"></button>
+                                        <label for="add-file">파일선택</label>
+                                        <input value="선택된 파일 없음" class="upload-name" readonly>
+                                    </div>
+                                </div>
+                                <ul class="comments-list-wrap">
+                                    <li>
+                                        <div class="comments-info">
+                                            <div class="comments-list-left">
+                                                <div class="comments-name-wrap">
+                                                    <p class="comments-name">홍길동</p>
+                                                    <p class="comments-date">2022-10-05 14:06:42</p>
+                                                </div>
+                                                <p class="comments-contents">
+                                                    댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요댓글을 입력해주세요
+                                                </p>
+                                            </div>
+                                            <div class="comments-list-right">
+                                                <button type="button" class="btn btn-style-gr">삭제</button>
+                                                <button type="button" class="btn btn-style-wh">수정</button>
+                                                <button type="button" class="btn btn-style-wh recomments-btn">댓글달기</button>
+                                            </div>
+                                        </div>
+                                        <div class="recomments">
+                                            <div class="comments-inner">
+                                                <img src="../../images/recomments-arrow.png" alt="">
+                                                <textarea   cols="30" rows="4" class="comments mr10" placeholder="댓글을 입력해주세요"></textarea>
+                                                <button type="button" class="comments-btn mr10">등록</button>
+                                                <button type="button" class="comments-btn comments-btn-cancle">취소</button>
+                                            </div>
+                                            <div class="comments-file">
+                                                <input type="file" id="add-file2" class="file">
+                                                <button type="button " class="mr10"><img src="../../images/emoticon.png" alt="이모티콘"></button>
+                                                <label for="add-file2">파일선택</label>
+                                                <input value="선택된 파일 없음" class="upload-name" readonly>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="comments-info">
+                                            <div class="comments-list-left">
+                                                <div class="comments-name-wrap">
+                                                    <p class="comments-name">홍길동</p>
+                                                    <p class="comments-date">2022-10-05 14:06:42</p>
+                                                </div>
+                                                <p class="comments-contents">
+                                                    댓글을 입력해주세요
+                                                </p>
+                                            </div>
+                                            <div class="comments-list-right">
+                                                <button type="button" class="btn btn-style-gr">삭제</button>
+                                                <button type="button" class="btn btn-style-wh">수정</button>
+                                                <button type="button" class="btn btn-style-wh recomments-btn">댓글달기</button>
+                                            </div>
+                                        </div>
+                                        <div class="recomments">
+                                            <div class="comments-inner">
+                                                <img src="../../images/recomments-arrow.png" alt="">
+                                                <textarea   cols="30" rows="4" class="comments mr10" placeholder="댓글을 입력해주세요"></textarea>
+                                                <button type="button" class="comments-btn mr10">등록</button>
+                                                <button type="button" class="comments-btn comments-btn-cancle">취소</button>
+                                            </div>
+                                            <div class="comments-file">
+                                                <input type="file" id="add-file2" class="file">
+                                                <button type="button " class="mr10"><img src="../../images/emoticon.png" alt="이모티콘"></button>
+                                                <label for="add-file2">파일선택</label>
+                                                <input value="선택된 파일 없음" class="upload-name" readonly>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>                
+            </section>
+        </div>
+    </div>
+ 
+</body>
+</html>

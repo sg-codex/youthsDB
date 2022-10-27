@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
+    <script src="../../js/ui.js"></script>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a8726601416eee2fe076a58cdd35309b&libraries=clusterer"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" class="">인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" class="">
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" class="">
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 메뉴 관리</a></li>
+                            <li><a href="">- 게시판 관리</a></li>
+                            <li><a href="">- 팝업/배너 관리</a></li>
+                            <li><a href="">- 게시물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="m-nav" class="">
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="content" class="content">
+                <div id="cont-wrap">
+                    <div class="location-box clearfix">
+                        <h2 class="page-title-txt">인재정보 현행화요청</h2>
+                        <div class="location-txt">
+                            <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                            <span>인재관리</span>
+                            <span class="angle-bracket">인재정보 현행화요청</span>
+                        </div>
+                    </div>
+                    <hr class="page-title-line">
+                    <div>
+                        <div class="con-box-wh">
+                            <form action="">
+                                <legend>요청관리 조회</legend>
+                                <div class="sch-select-box clearfix">
+                                    <div class="w35">
+                                        <p>요청일</p>
+                                        <div class="datePickerBox">
+                                            <input type="text" id="fromDate1-1" name="from" autocomplete="off" placeholder="날짜 선택" class="">
+                                            <label for="fromDate1-1"><span class="blind">시작연월</span></label>
+                                            <span>~</span>
+                                            <input type="text" id="toDate1-1" name="to" autocomplete="off" placeholder="날짜 선택" class="">
+                                            <label for="toDate1-1"><span class="blind">종료연월</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="w20">
+                                        <p>상태</p>
+                                        <select name="" id="" class="more-b">
+                                            <option value="선택" selected disabled>선택</option>
+                                            <option value="전체">전체</option>
+                                            <option value="접수">접수</option>
+                                            <option value="대기">대기</option>
+                                            <option value="완료">완료</option>
+                                        </select>
+                                    </div>
+                                    <div class="w20">
+                                        <p><label for="schIpt">검색어</label></p>
+                                        <div class="input-wrap">
+                                            <input type="search" id="schIpt" class="input01" placeholder="검색어를 입력해주세요">
+                                        </div>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button type="submit" class="btn">조회</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="con-box-wh">
+                            <div class="box-top-tit clearfix">
+                                <div class="l-box">
+                                    <h3>카카오맵~</h3>
+                                </div>
+                                <div class="r-box">
+                                    <select name="" id="" class="">
+                                        <option value="최신순">최신순</option>
+                                        <option value="오래된순">오래된순</option>
+                                    </select>
+                                    <select name="" id="" class="">
+                                        <option value="10개씩">10개씩</option>
+                                        <option value="50개씩">50개씩</option>
+                                    </select>
+                                </div>
+                            </div>
+                           <div id="map" style="height: 500px"></div>
+                           <script>
+                              var map = new kakao.maps.Map(document.getElementById('map'), { 
+                                 center : new kakao.maps.LatLng(36.2683, 127.6358), 
+                                 level : 13, 
+                              });
+                              
+                              // 마커 클러스터러를 생성합니다 
+                              var clusterer = new kakao.maps.MarkerClusterer({
+                                 map: map, 
+                                 averageCenter: true, 
+                                 minLevel: 10, 
+                                 calculator: [10, 30, 50], 
+                                 styles: [
+                                    { 
+                                       width : '54px', height : '54px',
+                                       background: 'rgba(23, 118, 225, 0.8)',
+                                       border: '2px solid rgba(23, 118, 225, 0.8)',
+                                       borderRadius: '100%',
+                                       color: '#fff',
+                                       fontWeight: '300',
+                                       textAlign: 'center',
+                                       lineHeight: '48px',
+                                    },
+                                 ]
+                              });
+
+                              $.get("./map.json", function(data) {
+                                 var markers = $(data.positions).map(function(i, position) {
+                                       return new kakao.maps.Marker({
+                                          position : new kakao.maps.LatLng(position.lat, position.lng)
+                                       });
+                                 }); 
+
+                                 clusterer.addMarkers(markers);
+                              });
+
+                              kakao.maps.event.addListener(clusterer, 'clusterclick', function(cluster) {
+                                 var level = map.getLevel()-1;
+                                 map.setLevel(level, {anchor: cluster.getCenter()});
+                              });
+                              
+                              kakao.maps.event.addListener(clusterer, 'clustered', function(clusters ) {
+                                 for(var i=0; i<clusters.length; i++){            
+                                    var cluster = clusters[i];
+                                    var overlay = cluster.getClusterMarker().getContent();
+                                    
+                                    overlay.addEventListener('mouseover', function() {
+                                          if(!this.classList.contains('div_over')) {      
+                                             this.classList.add('div_over');
+                                          }
+                                    });
+                                    
+                                    overlay.addEventListener('mouseout', function() {
+                                          if(this.classList.contains('div_over')) {
+                                             this.classList.remove('div_over');
+                                          }
+                                    });
+                                 }
+                              });
+                           </script>
+                        </div>
+                    </div>
+                </div>                
+            </section>
+        </div>
+    </div>
+</body>
+</html>

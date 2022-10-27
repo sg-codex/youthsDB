@@ -7,7 +7,7 @@
     <title>admin</title>
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/print.css">
     <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/printThis.js"></script>
@@ -252,7 +252,7 @@
             </nav>
             <section id="content" class="content">
                 <div id="cont-wrap">
-                    <div class="location-box clearfix">
+                    <div class="location-box clearfix print-hidden">
                         <h2 class="page-title-txt">관심인재관리</h2>
                         <div class="location-txt">
                             <img src="../../images/common/ico_location.png" alt="홈 아이콘">
@@ -260,9 +260,9 @@
                             <span class="angle-bracket">관심인재관리</span>
                         </div>
                     </div>
-                    <hr class="page-title-line">
+                    <hr class="page-title-line print-hidden">
                     <div>
-                        <div class="con-box-wh">
+                        <div class="con-box-wh print-hidden">
                             <form action="">
                                 <legend>요청관리 조회</legend>
                                 <div class="sch-select-box clearfix">
@@ -310,7 +310,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="con-box-wh">
+                        <div class="con-box-wh print-hidden">
                             <div class="box-top-tit clearfix">
                                 <div class="l-box">
                                     <h3>요청이력</h3>
@@ -319,11 +319,11 @@
                                 <div class="r-box">
                                     <select name="" id="" class="">
                                         <option value="최신순">최신순</option>
-                                        <option value="오래된순">오래된순</option>
+                                        <option value="등록일순">요청일순</option>
                                     </select>
                                     <select name="" id="" class="">
-                                        <option value="10개씩">10개씩</option>
-                                        <option value="20개씩">20개씩</option>
+                                        <option value="10개씩" selected>10개씩</option>
+                                        <option value="30개씩">30개씩</option>
                                         <option value="50개씩">50개씩</option>
                                     </select>
                                 </div>
@@ -380,8 +380,8 @@
                                             <td>
                                                 <span id="">검색중</span>
                                                 <!-- <span id="">검색완료</span> -->
-                                                <!-- <span id="">평가중</span> -->
-                                                <!-- <span id="">평가완료</span> -->
+                                                <!-- <span id="">선임완료</span> -->
+                                                <!-- <span id="">선임완료</span> -->
                                             </td>
                                             <td>
                                                 <span class="blue">승인</span>
@@ -401,8 +401,8 @@
                                             <td>
                                                 <!-- <span id="">검색중</span> -->
                                                 <span id="">검색완료</span>
-                                                <!-- <span id="">평가중</span> -->
-                                                <!-- <span id="">평가완료</span> -->
+                                                <!-- <span id="">선임완료</span> -->
+                                                <!-- <span id="">선임완료</span> -->
                                             </td>
                                             <td>
                                                 <span class="blue">승인</span>
@@ -422,8 +422,8 @@
                                             <td>
                                                 <!-- <span id="">검색중</span> -->
                                                 <!-- <span id="">검색완료</span> -->
-                                                <span id="">평가중</span>
-                                                <!-- <span id="">평가완료</span> -->
+                                                <span id="">선임완료</span>
+                                                <!-- <span id="">선임완료</span> -->
                                             </td>
                                             <td>
                                                 <span class="blue">승인</span>
@@ -443,8 +443,8 @@
                                             <td>
                                                 <!-- <span id="">검색중</span> -->
                                                 <!-- <span id="">검색완료</span> -->
-                                                <!-- <span id="">평가중</span> -->
-                                                <span id="">평가완료</span>
+                                                <!-- <span id="">선임완료</span> -->
+                                                <span id="">선임완료</span>
                                             </td>
                                             <td>
                                                 <span class="blue">승인</span>
@@ -467,43 +467,48 @@
                         </div>
 
                         <!-- 관심인재 목록 -->
-                        <div id="directList" class="con-box-wh">
-                            <div class="box-top-tit mb0">
+                        <div id="directList" class="con-box-wh print-section print-visible">
+                            <div class="print-visible">
+                                <h2 class="print-title">관심인재 목록</h2>
+                                <p class="print-comment print-mb20">※노란색 배경은 이미 인쇄를 한 인물입니다.</p>
+                             </div>
+                            <div class="box-top-tit mb0 print-hidden">
                                 <h3>관심인재 목록</h3>
                                 <span class="count-txt">전체 <strong class="items">3</strong></span>
                             </div>
-                            <div class="box-top-tit clearfix">
+                            <div class="box-top-tit clearfix print-hidden">
                                 <div class="l-box">
                                     <span class="explain-txt">※노란색 배경은 이미 인쇄를 한 인물입니다.</span>
                                 </div>
                                 <div class="r-box">
                                     <select name="" id="" class="">
-                                        <option value="최신순">최신순</option>
-                                        <option value="오래된순">오래된순</option>
+                                        <option value="최신순" selected>최신순</option>
+                                        <option value="등록일순">등록일순</option>
                                     </select>
                                     <select name="" id="" class="">
-                                        <option value="10개씩">10개씩</option>
+                                        <option value="10개씩" selected>10개씩</option>
+                                        <option value="30개씩">30개씩</option>
                                         <option value="50개씩">50개씩</option>
                                     </select>
-                                    <input type="button" value="엑셀" class="btn btn-style-wh btn_file" onclick="">
-                                    <input type="button" value="인쇄" class="btn btn-style-wh btn_print" onclick="openPopup('printPopup');">
+                                    <button type="button" class="btn btn-style-wh btn_file">엑셀</button>
+                                    <button type="button" class="btn btn-style-wh btn_print" onclick="openPopup('printPopup');" >인쇄</button>
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap bd-style01">
                                 <table>
-                                    <caption>요청이력</caption>
+                                    <caption>관심인재 목록</caption>
                                     <colgroup>
-                                        <col width="3%">
-                                        <col width="5%">
-                                        <col width="5%">
-                                        <col width="5%">
-                                        <col width="5%">
-                                        <col width="10%">
-                                        <col width="17%">
-                                        <col width="25%">
-                                        <col width="12%">
-                                        <col width="5%">
-                                        <col width="8%">
+                                        <col width="3%" class="colgrop-col print-col-w5">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="10%" class="colgrop-col print-col-w10"> 
+                                        <col width="17%" class="colgrop-col print-col-w20">
+                                        <col width="25%" class="colgrop-col print-col-w20"> 
+                                        <col width="12%" class="colgrop-col print-col-w10">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="8%" class="colgrop-col print-col-w5">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -526,28 +531,28 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="printed">
+                                        <tr class="printed">
+                                            <td>
                                                 <div class="checkBox">
-                                                    <input type="checkbox" name="check" id="chk01">
+                                                    <input type="checkbox" name="check_01" id="chk01">
                                                     <label for="chk01" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
-                                            <td class="printed"><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
-                                            <td class="printed">1997</td>
-                                            <td class="printed">남</td>
-                                            <td class="printed">서울</td>
-                                            <td class="printed">학생</td>
-                                            <td class="printed">고용ㆍ노동 / 기후ㆍ환경 / 기타</td>
-                                            <td class="printed">중앙부처 (정책평가ㆍ모니터링 / 자문)</td>
-                                            <td class="printed">2021-07-02</td>
-                                            <td class="printed"></td>
-                                            <td class="printed"></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
+                                            <td>1997</td>
+                                            <td>남</td>
+                                            <td>서울</td>
+                                            <td>학생</td>
+                                            <td>고용ㆍ노동 / 기후ㆍ환경 / 기타</td>
+                                            <td>중앙부처 (정책평가ㆍ모니터링 / 자문)</td>
+                                            <td>2021-07-02</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkBox">
-                                                    <input type="checkbox" name="check" id="chk02">
+                                                    <input type="checkbox" name="check_02" id="chk02">
                                                     <label for="chk02" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
@@ -565,7 +570,7 @@
                                         <tr>
                                             <td>
                                                 <div class="checkBox">
-                                                    <input type="checkbox" name="check" id="chk03">
+                                                    <input type="checkbox" name="check_03" id="chk03">
                                                     <label for="chk03" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
@@ -583,14 +588,14 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="r-btn-box">
+                            <div class="r-btn-box print-hidden">
                                 <button type="button" id="" class="btn r-btn" onclick="openPopup('alert-removePopup');">관심인재삭제</button>
                                 <button type="button" id="" class="btn r-btn">검색완료</button>
                                 <button type="button" id="" class="btn r-btn" onclick="openPopup('alert-addSearchPopup');" >추가검색요청</button>
                                 <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
-                                <button type="button" id="" class="btn r-btn" onclick="openPopup('estimationPopup');" >활용평가등록</button>
+                                <button type="button" id="" class="btn r-btn" onclick="openPopup('estimationPopup');" >결과등록</button>
                             </div>
-                            <div id="pagination-container">
+                            <div id="pagination-container" class="print-hidden">
                                 <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
                                 <a href="#" class="active">1</a>
                                 <a href="#">2</a>
@@ -601,12 +606,16 @@
                             </div>
                         </div>
                         <!-- 추천인재 목록 -->
-                        <div id="recommendList" class="con-box-wh">
-                            <div class="box-top-tit mb0">
+                        <div id="recommendList" class="con-box-wh print-section print-visible">
+                            <div class="print-visible">
+                               <h2 class="print-title">추천인재 목록</h2>
+                               <p class="print-comment print-mb20">※노란색 배경은 이미 인쇄를 한 인물입니다.</p>
+                            </div>
+                            <div class="box-top-tit mb0 print-hidden">
                                 <h3>추천인재 목록</h3>
                                 <span class="count-txt">전체 <strong class="items">3</strong></span>
                             </div>
-                            <div class="box-top-tit clearfix">
+                            <div class="box-top-tit clearfix print-hidden">
                                 <div class="l-box">
                                     <span class="explain-txt">※노란색 배경은 이미 인쇄를 한 인물입니다.</span>
                                 </div>
@@ -616,28 +625,29 @@
                                         <option value="오래된순">오래된순</option>
                                     </select>
                                     <select name="" id="" class="">
-                                        <option value="10개씩">10개씩</option>
+                                        <option value="10개씩" selected>10개씩</option>
+                                        <option value="30개씩">30개씩</option>
                                         <option value="50개씩">50개씩</option>
                                     </select>
-                                    <input type="button" value="엑셀" class="btn btn-style-wh btn_file" onclick="">
-                                    <input type="button" value="인쇄" class="btn btn-style-wh btn_print" onclick="openPopup('printPopup');">
+                                    <button type="button" class="btn btn-style-wh btn_file">엑셀</button>
+                                    <button type="button" class="btn btn-style-wh btn_print" onclick="openPopup('printPopup');" >인쇄</button>
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap bd-style01">
                                 <table>
-                                    <caption>요청이력</caption>
+                                    <caption>추천인재 목록</caption>
                                     <colgroup>
-                                        <col width="3%">
-                                        <col width="5%">
-                                        <col width="5%">
-                                        <col width="5%">
-                                        <col width="5%">
-                                        <col width="10%">
-                                        <col width="17%">
-                                        <col width="25%">
-                                        <col width="12%">
-                                        <col width="5%">
-                                        <col width="8%">
+                                        <col width="3%" class="colgrop-col print-col-w5">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="10%" class="colgrop-col print-col-w10">
+                                        <col width="17%" class="colgrop-col print-col-w15">
+                                        <col width="25%" class="colgrop-col print-col-w25">
+                                        <col width="12%" class="colgrop-col print-col-w10">
+                                        <col width="5%" class="colgrop-col print-col-w5">
+                                        <col width="8%" class="colgrop-col print-col-w5">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -660,28 +670,28 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="printed">
+                                        <tr class="printed">
+                                            <td>
                                                 <div class="checkBox">
-                                                    <input type="checkbox" name="check" id="chk01">
+                                                    <input type="checkbox" name="check_01" id="chk01">
                                                     <label for="chk01" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
-                                            <td class="printed"><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
-                                            <td class="printed">1997</td>
-                                            <td class="printed">남</td>
-                                            <td class="printed">서울</td>
-                                            <td class="printed">학생</td>
-                                            <td class="printed">고용ㆍ노동 / 기후ㆍ환경 / 기타</td>
-                                            <td class="printed">중앙부처 (정책평가ㆍ모니터링 / 자문)</td>
-                                            <td class="printed">2021-07-02</td>
-                                            <td class="printed"></td>
-                                            <td class="printed"></td>
+                                            <td><a href="#" class="openPopup" onclick="openPopup('youthsPopup');">홍길동</a></td>
+                                            <td>1997</td>
+                                            <td>남</td>
+                                            <td>서울</td>
+                                            <td>학생</td>
+                                            <td>고용ㆍ노동 / 기후ㆍ환경 / 기타</td>
+                                            <td>중앙부처 (정책평가ㆍ모니터링 / 자문)</td>
+                                            <td>2021-07-02</td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkBox">
-                                                    <input type="checkbox" name="check" id="chk02">
+                                                    <input type="checkbox" name="check_02" id="chk02">
                                                     <label for="chk02" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
@@ -699,7 +709,7 @@
                                         <tr>
                                             <td>
                                                 <div class="checkBox">
-                                                    <input type="checkbox" name="check" id="chk03">
+                                                    <input type="checkbox" name="check_03" id="chk03">
                                                     <label for="chk03" class="adm-chkBox"></label>
                                                 </div>
                                             </td>
@@ -717,13 +727,13 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="p-relative">
+                            <div class="p-relative print-hidden">
                                 <div class="r-btn-box">
                                     <button type="button" id="" class="btn r-btn">추천인재삭제</button>
-                                    <button type="button" id="" class="btn r-btn" disabled>선임등록</button>
-                                    <button type="button" id="" class="btn r-btn" disabled>활용평가등록</button>
+                                    <button type="button" id="" class="btn r-btn">선임등록</button>
+                                    <button type="button" id="" class="btn r-btn" onclick="openPopup('estimationPopup');">결과등록</button>
                                 </div>
-                                <div id="pagination-container">
+                                <div id="pagination-container" class="print-hidden">
                                     <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
                                     <a href="#" class="active">1</a>
                                     <a href="#">2</a>
@@ -733,7 +743,7 @@
                                     <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
                                 </div>
                             </div>
-                            <div class="btm-btnBox">
+                            <div class="btm-btnBox print-hidden">
                                 <button type="button" class="btn">인재추천완료</button>
                             </div>
                         </div>
@@ -1270,7 +1280,7 @@
         </div>
     </div>
     <!-- 팝업 인쇄옵션 -->
-    <div class="popupWrapper printPopup">
+    <div class="popupWrapper printPopup print-hidden">
         <div class="popup">
             <div class="popup-head">
                 <div class="popup-head-txt">

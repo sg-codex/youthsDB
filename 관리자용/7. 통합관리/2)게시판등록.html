@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 등록</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-7.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script  src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script  src="../../plugin/jquery/jquery-ui.js"></script>
+    
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" >인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" >
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" >
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="./7-1_기본환경설정.html">- 기본환경설정</a></li>
+                            <li><a href="./7-1_메뉴 관리.html">- 메뉴 관리</a></li>
+                            <li><a href="./7-1_게시판관리.html">- 게시판 관리</a></li>
+                            <li><a href="./7-1_게시판 통합 관리-게시판 통합.html">- 게시판 통합 관리</a></li>
+                            <li><a href="./7-1_카테고리 관리 - 목록.html">- 카테고리 관리</a></li>
+                            <li><a href="./7-1_게시물 관리-게시물 관리.html">- 게시물 관리</a></li>
+                            <li><a href="./7-1_팝업 관리.html">- 팝업 관리</a></li>
+                            <li><a href="./7-1_배너 관리.html">- 배너 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="m-nav" >
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="content" class="content">
+                <div id="cont-wrap" class="padding">                    
+                    <form  id="memberForm">
+                        <div class="location-box clearfix">
+                            <h2 class="page-title-txt">게시판 관리</h2>
+                            <div class="location-txt">
+                                <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                                <span>통합관리</span>
+                                <span class="angle-bracket">게시판 관리</span>
+                            </div>
+                        </div>
+                        <hr class="page-title-line">
+                        <div class="con-box-wh">
+                            <div class="box-top-tit">
+                                <h3>게시판 기본정보</h3>
+                            </div>
+                            <div class="table-wrap table-th-left r-table-wrap">
+                                <ul class="flex-wrap">
+                                    <li>
+                                        <div class="list-tit">
+                                            <label for="">게시판명 <span class="red">*</span></label>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="text"   class="inputw100">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="h-auto">
+                                        <div class="list-tit">설명</div>
+                                        <div class="list-cont">
+                                            <textarea   cols="30" rows="4" placeholder="입력한 게시판 설명은 해당 게시판의 목록 최상단에 표시됩니다."></textarea>
+                                        </div>
+                                    </li>
+                                    <li class="h-auto">
+                                        <div class="list-tit">                                 게시판 위치
+                                        </div>
+                                        <div class="list-cont">
+                                            <select   class="w300">
+                                                <option value="선택" selected="">선택안함</option>
+                                                <option value="옵션">옵션</option>
+                                                <option value="옵션">옵션</option>
+                                                <option value="옵션">옵션</option>
+                                            </select>
+                                            <span class="side-txt">메뉴의</span>
+                                            <select   class="w300">
+                                                <option value="선택" selected=""></option>
+                                                <option value="옵션">옵션</option>
+                                                <option value="옵션">옵션</option>
+                                                <option value="옵션">옵션</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="list-tit">
+                                            <label for="">머릿글</label>
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="input-wrap">
+                                                <input type="text"   class="inputw100" placeholder="입력하신 머릿글은 ‘ , ’ 로 분리되어 해당 게시판 글 작성시 사용됩니다. ex)공지,긴급 -> [공지][긴급]">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="h-auto">
+                                        <div class="list-tit">                                                
+                                            게시판 종류
+                                        </div>
+                                        <div class="list-cont">
+                                            <select   class="w500">
+                                                <option value="선택" selected="" >선택안함</option>
+                                                <option value="일반형">일반형</option>
+                                                <option value="갤러리형">갤러리형</option>
+                                                <option value="Q&A형">Q&A형</option>
+                                                <option value="답글형">답글형</option>
+                                                <option value="답변형">답변형</option>
+                                                <option value="신고형">신고형</option>
+                                                <option value="동영상형">동영상형</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            카테고리
+                                        </div>
+                                        <div class="list-cont">
+                                            <select   class="w100">
+                                                <option value="선택" selected="" >선택안함</option>
+                                                <option value="옵션">옵션</option>
+                                                <option value="옵션">옵션</option>
+                                                <option value="옵션">옵션</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            게시판 스킨
+                                        </div>
+                                        <div class="list-cont">
+                                            <select   class="w100">
+                                                <option value="기본스킨" selected="" >기본스킨</option>
+                                                <option value="자주묻는질문FAQ">자주묻는질문FAQ</option>
+                                                <option value="옵션">옵션</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            글 등록 권한
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="agreement" id="agree01" checked>
+                                                        <label for="agree01">전체</label>
+                                                        <input type="radio" name="agreement" id="agree02">
+                                                        <label for="agree02">게시판 담당자</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            등록일 표시형태
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="date" id="date03" checked>
+                                                        <label for="date03">날짜</label>
+                                                        <input type="radio" name="date" id="date04">
+                                                        <label for="date04">일시</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            에디터 기능
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="editor" id="editor05" checked>
+                                                        <label for="editor05">사용</label>
+                                                        <input type="radio" name="editor" id="editor06">
+                                                        <label for="editor06">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            댓글 기능
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="reply" id="reply07" checked>
+                                                        <label for="reply07">사용</label>
+                                                        <input type="radio" name="reply" id="reply08">
+                                                        <label for="reply08">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            게시판 사용 
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="board" id="board09" checked>
+                                                        <label for="board09">사용</label>
+                                                        <input type="radio" name="board" id="board10">
+                                                        <label for="board10">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left clearfix">
+                                        <div class="list-tit">                                                
+                                            기본 목록 라인 수
+                                        </div>
+                                        <div class="list-cont">
+                                            <select   class="w100">
+                                                <option value="10" selected="" >10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="h-auto w100 style-custom03">
+                                        <div class="list-tit">                                                
+                                            금칙어 설정
+                                            <input type="checkbox" id="toggle" hidden> 
+                                            <label for="toggle" class="toggle-switch">
+                                                <span class="toggle-button"></span>
+                                            </label>
+                                        </div>
+                                        <div class="list-cont d-flex cont-toggle">
+                                            <p>금칙어가 숨김처리 되었습니다.</p>
+                                            <textarea   cols="30" placeholder="내용" onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex respon-flex-wrap">
+                                        <div class="list-tit d-flex align-items">
+                                            <label for="">파일첨부</label>
+                                        </div>
+                                        <div class="list-cont d-flex style-custom04">
+                                           <div class="d-flex respon-flex-wrap">
+                                                <div class="list-cont d-flex align-items">
+                                                    <div class="agree-txt">
+                                                        <div class="d-flex  mr30">
+                                                            <span class="agr-radio-box d-flex align-items">
+                                                                <input type="radio" name="fileUse" id="fileUse03" checked>
+                                                                <label for="fileUse03">사용</label>
+                                                                <input type="radio" name="fileUse" id="fileUse04">
+                                                                <label for="fileUse04">미사용</label>
+                                                            </span>
+                                                        </div>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="list-cont d-flex align-items">
+                                                    <span class="side-txt2">파일수</span>
+                                                    <select   class="w300p">
+                                                        <option value="1개" selected="" >1개</option>
+                                                        <option value="2개">2개</option>
+                                                        <option value="3개">3개</option>
+                                                        <option value="4개">4개</option>
+                                                        <option value="5개">5개</option>
+                                                    </select>
+                                                </div>
+                                                <div class="list-cont d-flex align-items">
+                                                    <span class="side-txt2">파일수</span>
+                                                    <select   class="w300p">
+                                                        <option value="3MB" selected="" >3MB</option>
+                                                        <option value="5MB">5MB</option>
+                                                        <option value="10MB">10MB</option>
+                                                        <option value="20MB">20MB</option>
+                                                        <option value="33MB">33MB</option>
+                                                        <option value="50MB">50MB</option>
+                                                    </select>
+                                                </div>
+                                           </div>
+                                            <div class="input-wrap w100">
+                                                <label for="" class="side-txt2 m10">첨부 가능 확장자</label>
+                                                <input type="text"   class="inputw100" placeholder="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="h-auto">
+                                        <div class="list-tit">                                                
+                                            컨텐츠 용량
+                                        </div>
+                                        <div class="list-cont">
+                                            <select   class="w500">
+                                                <option value="3MB" selected="" >3MB</option>
+                                                <option value="5MB">5MB</option>
+                                                <option value="10MB">10MB</option>
+                                                <option value="20MB">20MB</option>
+                                                <option value="33MB">33MB</option>
+                                                <option value="50MB">50MB</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="h-auto style-custom07">
+                                        <div class="list-tit">                                                
+                                            <label for="" class="mr10">담당자 <span class="red">*</span></label>
+                                            <button type="button"  class="admin-find-btn" onclick="openPopup('searchPersonPopup');">
+                                                <img src="../../images/search.png" alt="검색">
+                                            </button>
+                                        </div>
+                                        <div class="list-cont flex-center">
+                                            <ul class="user-list">
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>                              
+                        </div>
+                         
+                        <div class="con-box-wh">
+                            <div class="box-top-tit">
+                                <h3>부가기능</h3>
+                            </div>
+                            <div class="table-wrap table-th-left r-table-wrap">
+                                <ul class="flex-wrap">
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            상단게시 설정
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting01" id="set01" checked>
+                                                        <label for="set01">사용</label>
+                                                        <input type="radio" name="setting01" id="set02">
+                                                        <label for="set02">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            신규 게시물 설정
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting02" id="set03" checked>
+                                                        <label for="set03">사용</label>
+                                                        <input type="radio" name="setting02" id="set04">
+                                                        <label for="set04">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            게시기간 설정
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting03" id="set05" checked>
+                                                        <label for="set05">사용</label>
+                                                        <input type="radio" name="setting03" id="set06">
+                                                        <label for="set06">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            공유범위 지정
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting04" id="set07" checked>
+                                                        <label for="set07">사용</label>
+                                                        <input type="radio" name="setting04" id="set08">
+                                                        <label for="set08">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            익명등록
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting05" id="set09" checked>
+                                                        <label for="set09">사용</label>
+                                                        <input type="radio" name="setting05" id="set10">
+                                                        <label for="set10">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            태그등록
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting06" id="set11" checked>
+                                                        <label for="set11">사용</label>
+                                                        <input type="radio" name="setting06" id="set12">
+                                                        <label for="set12">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            게시글 관리 권한
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting07" id="set13" checked>
+                                                        <label for="set13">사용</label>
+                                                        <input type="radio" name="setting07" id="set14">
+                                                        <label for="set14">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            내 글만 보기
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting08" id="set15" checked>
+                                                        <label for="set15">사용</label>
+                                                        <input type="radio" name="setting08" id="set16">
+                                                        <label for="set16">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            댓글 파일첨부
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting09" id="set17" checked>
+                                                        <label for="set17">사용</label>
+                                                        <input type="radio" name="setting09" id="set18">
+                                                        <label for="set18">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left clearfix">
+                                        <div class="list-tit">                                                
+                                            새글 표시 기간
+                                        </div>
+                                        <div class="list-cont">
+                                            <select   class="w100">
+                                                <option value="6시간" selected="" >6시간</option>
+                                                <option value="12시간">12시간</option>
+                                                <option value="24시간">24시간</option>
+                                                <option value="36시간">36시간</option>
+                                                <option value="48시간">48시간</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex w100 respon-flex-wrap">
+                                        <div class="list-tit d-flex align-items">
+                                            <label for="">공감/비공감 사용</label>
+                                        </div>
+                                        <div class="list-cont d-flex style-custom04 style-custom05">
+                                           <div class="d-flex respon-flex-wrap">
+                                                <div class="list-cont d-flex align-items">
+                                                    <div class="agree-txt">
+                                                        <div class="d-flex  mr30">
+                                                            <span class="agr-radio-box d-flex align-items">
+                                                                <input type="radio" name="setting10" id="set19" checked>
+                                                                <label for="set19">사용</label>
+                                                                <input type="radio" name="setting10" id="set20">
+                                                                <label for="set20">미사용</label>
+                                                            </span>
+                                                        </div>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="list-cont d-flex align-items">
+                                                    <span class="side-txt2">공감/비공감 옵션</span>
+                                                    <select   class="w300p">
+                                                        <option value="공감만 사용" selected="" >공감만 사용</option>
+                                                        <option value="옵션">옵션</option>
+                                                        <option value="옵션">옵션</option>
+                                                        <option value="옵션">옵션</option>
+                                                    </select>
+                                                </div>
+                                                
+                                           </div>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left style-custom06">
+                                        <div class="list-tit">                                                
+                                            총괄관리자<br>열람가능 여부
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting11" id="setting21" checked>
+                                                        <label for="setting21">열람 가능</label>
+                                                        <input type="radio" name="setting11" id="setting22">
+                                                        <label for="setting22">불가능</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="f-left">
+                                        <div class="list-tit">                                                
+                                            관리자 확인 기능
+                                        </div>
+                                        <div class="list-cont">
+                                            <div class="agree-txt d-flex">
+                                                <div class="d-flex">
+                                                    <span class="agr-radio-box d-flex">
+                                                        <input type="radio" name="setting12" id="setting23" checked>
+                                                        <label for="setting23">사용</label>
+                                                        <input type="radio" name="setting12" id="setting24">
+                                                        <label for="setting24">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>                                
+                        </div> 
+                        <div class="con-box-wh">
+                            <div class="box-top-tit">
+                                <h3>접근권한</h3>
+                            </div>
+                            <div class="table-wrap table-th-left r-table-wrap">
+                                <ul class="flex-wrap">
+                                    <li>
+                                        <div class="list-tit">                                                
+                                            접근권한 설정
+                                        </div>
+                                        <div class="list-cont flex-center">
+                                            
+                                                
+                                            <span class="agr-radio-box d-flex">
+                                                <input type="radio" name="setting13" id="set25" checked>
+                                                <label for="set25">사용</label>
+                                                <input type="radio" name="setting13" id="set26">
+                                                <label for="set26">미사용</label>
+                                            </span>
+                                                
+                                                                                       
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </div>                                
+                        </div>
+                        <div class="con-box-wh">
+                            <div class="box-top-tit">
+                                <h3>알림설정</h3>
+                                <span class="sub-title-b">(※ 알림 설정한 사용자에게 게시물, 답변, 댓글 등록시 알림이 발송됩니다.)</span>
+                            </div>
+                            <div class="table-wrap table-th-left r-table-wrap">
+                                <ul class="flex-wrap">
+                                    <li class="h-auto style-custom07">
+                                        <div class="list-tit d-flex align-items">                                                
+                                            <label for="" class="mr10">알림 사용자</label>
+                                            <button type="button"  class="admin-find-btn" onclick="openPopup('searchUserPopup');">
+                                                <img src="../../images/search.png" alt="검색">
+                                            </button>
+                                        </div>
+                                        <div class="list-cont flex-center">
+                                            <ul class="user-list">
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                                <li>
+                                                    <p>홍길동 (내부업무시스템 / 기관)</p>
+                                                    <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>                                
+                        </div>
+                        <div class="btm-btnBox">
+                            <button type="button"  class="btn btn-style-wh">취소</button>
+                            <button type="button"  class="btn">저장</button>
+                        </div>
+                    </form>
+                </div>                
+            </section>
+        </div>
+    </div>
+    <div class="popupWrapper searchPersonPopup">
+        <div class="popup max-w1265">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>담당자 검색</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="sch-form">
+                    <div class="input-wrap">
+                        <select   class="mr10">
+                            <option value="선택" selected="" >이름</option>
+                            <option value="옵션">옵션</option>
+                            <option value="옵션">옵션</option>
+                            <option value="옵션">옵션</option>
+                        </select>
+                        <input type="text"  id="schID1" class="mr10" placeholder="검색어를 입력해주세요">
+                        <button type="button"  class="btn">검색</button>
+                    </div>
+                    <div class="result-wrap">
+                       <div>
+                         <h5 class="title-underline">회원</h5>
+                         <ul class="system-type-input-wrap">
+                            <li>    
+                                <input type="radio" name="systemGroup" id="systemGroup01">
+                                <label for="systemGroup01" class="mt20">내부업무시스템</label>
+                                <ul id="accordian-item">
+                                    <li>
+                                        <input type="radio" name="systemType" id="systemType01">
+                                        <label for="systemType01">-개인</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="systemType" id="systemType02">
+                                        <label for="systemType02">-기관</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="systemType" id="systemType03">
+                                        <label for="systemType03">-관리자</label>
+                                    </li>
+                                </ul>    
+                            </li>
+                         </ul>
+                       </div> 
+                       <div>
+                            <h5>검색된 회원</h5>
+                            <ul class="scrollBar">
+                                <li>
+                                    <input type="checkbox" name="selMember" id="selM01">
+                                    <label for="selM01">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selMember" id="selM02">
+                                    <label for="selM02">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selMember" id="selM03">
+                                    <label for="selM03">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selMember" id="selM04">
+                                    <label for="selM04">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selMember" id="selM05">
+                                    <label for="selM05">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selMember" id="selM06">
+                                    <label for="selM06">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selMember" id="selM07">
+                                    <label for="selM07">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                            </ul>
+                            <div class="r-btn-box center-box d-flex">
+                                <button type="button" class="btn r-btn">전체추가</button>
+                                <button type="button" class="btn r-btn">선택추가</button>
+                                <button type="button"  class="btn r-btn r-btn-cancel">선택삭제</button>
+                            </div>
+                            <ul class="scrollBar">
+                              
+                            </ul>
+                       </div> 
+                    </div>
+                </div>
+                <div class="btm-btnBox">
+                    <button type="button"  class="btn btn-style-wh">취소</button>
+                    <button type="button"  class="btn">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popupWrapper searchUserPopup">
+        <div class="popup max-w1265">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>사용자 검색</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="sch-form">
+                    <div class="input-wrap">
+                        <select   class="mr10">
+                            <option value="선택" selected="" >이름</option>
+                            <option value="옵션">옵션</option>
+                            <option value="옵션">옵션</option>
+                            <option value="옵션">옵션</option>
+                        </select>
+                        <input type="text"  id="schID2" class="mr10" placeholder="검색어를 입력해주세요">
+                        <button type="button"  class="btn">검색</button>
+                    </div>
+                    <div class="result-wrap">
+                       <div>
+                         <h5 class="title-underline">회원</h5>
+                         <ul class="system-type-input-wrap">
+                            <li>    
+                                <input type="radio" name="systemGroupUser" id="systemGroupUser02">
+                                <label for="systemGroupUser02" class="mt20">내부업무시스템</label>
+                                <ul id="accordian-item02">
+                                    <li>
+                                        <input type="radio" name="systemTypeUser" id="systemTypeUser01">
+                                        <label for="systemTypeUser01">-개인</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="systemTypeUser" id="systemTypeUser02">
+                                        <label for="systemTypeUser02">-기관</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="systemTypeUser" id="systemTypeUser03">
+                                        <label for="systemTypeUser03">-관리자</label>
+                                    </li>
+                                </ul>    
+                            </li>
+                         </ul>
+                       </div> 
+                       <div>
+                            <h5>검색된 회원</h5>
+                            <ul class="scrollBar">
+                                <li>
+                                    <input type="checkbox" name="selUser" id="selU01">
+                                    <label for="selU01">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selUser" id="selU02">
+                                    <label for="selU02">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selUser" id="selU03">
+                                    <label for="selU03">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selUser" id="selU04">
+                                    <label for="selU04">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selUser" id="selU05">
+                                    <label for="selU05">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selUser" id="selU06">
+                                    <label for="selU06">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="selUser" id="selU07">
+                                    <label for="selU07">홍길동 (admin2022 / 내부업무시스템-기관)</label>
+                                </li>
+                            </ul>
+                            <div class="r-btn-box d-flex center-box">
+                                <button type="button" class="btn r-btn">전체추가</button>
+                                <button type="button" class="btn r-btn">선택추가</button>
+                                <button type="button"  class="btn r-btn r-btn-cancel">선택삭제</button>
+                            </div>
+                            <ul class="scrollBar">
+                              
+                            </ul>
+                       </div> 
+                    </div>
+                </div>
+                <div class="btm-btnBox">
+                    <button type="button"  class="btn btn-style-wh">취소</button>
+                    <button type="button"  class="btn">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //textarea 높이를 auto로 
+        function resize(obj) {
+            obj.style.height = '1px';
+            obj.style.height = (12 + obj.scrollHeight) + 'px';
+        }
+
+        // toggle button
+        const $toggle = document.querySelector(".toggle-switch"); 
+        const $contentToggle = document.querySelector(".cont-toggle"); 
+        $toggle.onclick = () => {
+        $toggle.classList.toggle('active');
+        $contentToggle.classList.toggle('hide');
+        }
+        
+        // 팝업 아코디언
+        //담당자 검색
+        const $accordian = document.querySelector("#systemGroup01"); 
+        const $accordianItem = document.querySelector("#accordian-item"); 
+        const $accordianItems = document.querySelector("#accordian-item > li"); 
+
+        $accordian.onclick = () => {
+            $accordian.nextSibling.nextSibling.classList.toggle('active01');
+            $accordianItem.classList.toggle('active02');
+            document.querySelector('.searchPersonPopup .result-wrap > div:first-child').classList.toggle('active03');
+            document.querySelector('.searchPersonPopup .system-type-input-wrap > li').classList.toggle('active04');
+            
+                    
+                if ($accordianItems.style.maxHeight) {
+                $accordianItems.style.maxHeight = null;
+                } else {
+                $accordianItems.style.maxHeight = $accordianItem.scrollHeight + "px";
+                }
+        }
+         //사용자 검색
+         const $accordian02 = document.querySelector("#systemGroupUser02");
+         const $accordianItem02 = document.querySelector("#accordian-item02"); 
+         $accordian02.onclick = () => {
+
+            // $accordian02.parentElement.style.backgroundImage = "url('../../images/common/ico_select_more_blue.svg')";
+            $accordian02.nextSibling.nextSibling.classList.toggle('active01');
+            $accordianItem02.classList.toggle('active02');
+            document.querySelector('.searchUserPopup .result-wrap > div:first-child').classList.toggle('active03');
+            document.querySelector('.searchUserPopup .system-type-input-wrap > li').classList.toggle('active04');
+            
+                    
+                if ($accordianItem02.style.maxHeight) {
+                $accordianItem02.style.maxHeight = null;
+                } else {
+                $accordianItem02.style.maxHeight = $accordianItem02.scrollHeight + "px";
+                }
+        }
+    </script>
+</body>
+</html>

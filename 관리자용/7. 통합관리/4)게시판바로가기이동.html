@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-7.css">
+    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <script  src="../../plugin/jquery/jquery-1.12.4.js"></script>
+    <script  src="../../plugin/jquery/jquery-ui.js"></script>
+    <script src="../../js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="wrap">
+            <header id="top-header">
+                <div id="btn_menuOpen" class="btn_menuOpen">
+                    <button type="button" class="btn_menu">
+                        <img src="../../images/common/ico_menu.png" alt="메뉴열기">
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="../../index.html" title="메인 바로가기"><img src="../../images/logo.png" alt="청년인재데이터베이스"></a>
+                </div>
+                <div class="top-header-right">
+                    <ul>
+                        <li>
+                            <a href="../../기관용(+공통)/1. 대시보드/1)인증서등록.html" id="btn_certificate" >인증서 관리</a>
+                        </li>
+                        <li>
+                            <button type="button" id="btn_user" >
+                                <span>홍길동</span>
+                                <ul class="user-menu">
+                                    <li><a href="../../기관용(+공통)/1. 대시보드/1)마이페이지.html">마이페이지</a></li>
+                                    <li><a href="">로그아웃</a></li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="side-nav" >
+                <ul class="menu">
+                    <li class="one-depth">
+                        <a href="" class="menu-depth-01">대시보드</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-02">청년인재데이터베이스</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 소개</a></li>
+                            <li><a href="">- 공지사항</a></li>
+                            <li><a href="">- 자료실</a></li>
+                            <li><a href="">- 인증서 안내</a></li>
+                            <li><a href="">- 사이트맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-03">검색요청</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 직접검색 요청</a></li>
+                            <li><a href="">- 요청현황</a></li>
+                            <li><a href="">- 인재추천 요청</a></li>
+                            <li><a href="">- 인재추천 현황 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-04">인재검색</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 통합검색</a></li>
+                            <li><a href="">- 관심인재 관리</a></li>
+                        </ul>
+                    </li>
+                    <!-- 관리자 추가 메뉴 -->
+                    <li>
+                        <a href="" class="menu-depth-05">인재관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 인재목록</a></li>
+                            <li><a href="">- 인재등록 현황</a></li>
+                            <li><a href="">- 인재정보 현행화요청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-06">회원관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 회원목록</a></li>
+                            <li><a href="">- 회원안내발송</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-07">통합관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="./7-1_기본환경설정.html">- 기본환경설정</a></li>
+                            <li><a href="./7-1_메뉴 관리.html">- 메뉴 관리</a></li>
+                            <li><a href="./7-1_게시판관리.html">- 게시판 관리</a></li>
+                            <li><a href="./7-1_게시판 통합 관리-게시판 통합.html">- 게시판 통합 관리</a></li>
+                            <li><a href="./7-1_카테고리 관리 - 목록.html">- 카테고리 관리</a></li>
+                            <li><a href="./7-1_게시물 관리-게시물 관리.html">- 게시물 관리</a></li>
+                            <li><a href="./7-1_팝업 관리.html">- 팝업 관리</a></li>
+                            <li><a href="./7-1_배너 관리.html">- 배너 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-08">기타관리</a>
+                        <ul class="menu-depth2">
+                            <li><a href="">- 코드관리</a></li>
+                            <li><a href="">- 의심징후관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-09">모니터링</a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-depth-10">통계/리포팅</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="m-nav" >
+                <div class="m-header">
+                    <h3>전체메뉴</h3>
+                    <div id="m-menu-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="m-ico-box">
+                    <ul class="m-ico-menu">
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_security.png" alt="인증서 관리">
+                                <span>인증서 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_search.png" alt="통합검색">
+                                <span>통합검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_campaign.png" alt="공지사항">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../../images/common/m_ico_person_outline.png" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li class="active">
+                            <span>청년인재<br>데이터베이스</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">소개</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">자료실</a></li>
+                                <li><a href="">공인인증서 안내</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>검색요청</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">직접검색 요청</a></li>
+                                <li><a href="">인재추천 요청</a></li>
+                                <li><a href="">요청현황</a></li>
+                                <li><a href="">요청관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재검색</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">통합검색</a></li>
+                                <li><a href="">관심인재 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>인재관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">인재목록</a></li>
+                                <li><a href="">인재등록 현황</a></li>
+                                <li><a href="">인재정보 현행화요청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">회원목록</a></li>
+                                <li><a href="">회원안내발송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>통합관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">메뉴 관리</a></li>
+                                <li><a href="">게시판 관리</a></li>
+                                <li><a href="">팝업/배너 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>기타관리</span>
+                            <ul class="m-depth-02">
+                                <li><a href="">코드관리</a></li>
+                                <li><a href="">의심징후관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>모니터링</span>
+                        </li>
+                        <li>
+                            <span>통계/리포팅</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="content" class="content">
+                <div id="cont-wrap">                    
+                    <form  id="memberForm">
+                        <div class="location-box clearfix">
+                            <h2 class="page-title-txt">공지사항</h2>
+                            <div class="location-txt">
+                                <img src="../../images/common/ico_location.png" alt="홈 아이콘">
+                                <span>통합관리</span>
+                                <span class="angle-bracket">공지사항</span>
+                            </div>
+                        </div>
+                        <hr class="page-title-line">
+                        <div>
+                                <div class="con-box-wh sch-select-box clearfix">
+                                    <div class="w40">
+                                        <p>작성일</p>
+                                        <div class="datePickerBox">
+                                            <input type="text" id="fromDate" name="from" autocomplete="off" placeholder="날짜 선택">
+                                            <span>~</span>
+                                            <input type="text" id="toDate" name="to" autocomplete="off" placeholder="날짜 선택">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w20">
+                                        <p>작성일</p>
+                                        <select name="" id="" class="mt0 more-b">
+                                            <option value="전체" selected="">전체</option>
+                                            <option value="옵션">옵션</option>
+                                            <option value="옵션">옵션</option>
+                                        </select>
+                                    </div>
+                                    <div class="w30">
+                                        <p>검색어</p>
+                                        <label for="schIpt"></label>
+                                        <div class="sch-wrap">
+                                            <input type="search" id="schIpt" class="inputw100" placeholder="검색어를 입력해주세요">
+                                            <button type="submit" class="schBtn h46"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="con-box-wh">
+                                    <div class="box-top-tit clearfix">
+                                        <div class="l-box">
+                                            <span class="count-txt">전체 글 수 <strong class="items">3</strong></span>
+                                        </div>
+                                        <div class="r-box">
+                                            <select>
+                                                <option value="최신순">최신순</option>
+                                                <option value="옵션">옵션</option>
+                                            </select>
+                                            <select class="mr20">
+                                                <option value="10개씩">10개씩</option>
+                                                <option value="50개씩">50개씩</option>
+                                            </select>
+                                            <input type="button" value="게시글 작성" class="btn" onclick="">
+                                        </div>
+                                    </div> 
+                                    <div class="table-wrap result-table-wrap bd-style01">
+                                        <table>
+                                            <caption>게시물 관리</caption>
+                                            <colgroup>
+                                                <col width="10%">
+                                                <col width="60%">
+                                                <col width="15%">
+                                                <col width="15%">
+                                                
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="row">번호</th>
+                                                    <th scope="row">제목</th>
+                                                    <th scope="row">작성일</th>
+                                                    <th scope="row">조회수</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="text-left">제목</td>
+                                                    <td>2022-09-07</td>
+                                                    <td>2312</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="text-left">제목</td>
+                                                    <td>2022-09-07</td>
+                                                    <td>2312</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="text-left">제목</td>
+                                                    <td>2022-09-07</td>
+                                                    <td>2312</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="r-btn-box">
+                                            <button type="button" class="btn r-btn mr8 ">
+                                                <img src="../../images/open.png" alt="">
+                                                통계</button>
+                                            <button type="button" class="btn r-btn">
+                                                <img src="../../images/download.png" alt="">
+                                                일괄 다운로드
+                                            </button>
+                                        </div>
+                                    </div>    
+                                    <div class="pagination-container">
+                                        <div><img src="../../images/common/btn_arr_l.png" alt="왼쪽 화살표" title="이전 페이지로 이동"></div>
+                                        <a href="#" class="active">1</a>
+                                        <a href="#">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <a href="#">5</a>
+                                        <div><img src="../../images/common/btn_arr2_r.png" alt="오른쪽 화살표" title="끝 페이지로 이동"></div>
+                                    </div>   
+                                </div>
+                                
+                            
+                        </div>
+                    </form>
+                </div>                
+            </section>
+        </div>
+    </div>
+
+    <!-- 팝업 게시물 복사 -->
+    <div class="popupWrapper copy-board">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>게시물 복사</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                
+                
+                    <ul class="popup-add-txt">
+                        <li>게시물 복사 시 선택한 게시물의 게시판 종류와 복사할 게시판의 종류가 같아야 합니다.</li>
+                    </ul>
+                    <div class="copy-board-admin">
+                        <div class="left-wrap">
+                            <p class="popup-title">
+                                복사할 게시물
+                            </p>
+                            <ul class="board-contents">
+                                <li>게시물 <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button></li>
+                            </ul>
+                        </div>
+                        <div class="right-wrap">
+                            <div class="sch-select-box sch-con-box clearfix">
+                                <div>
+                                    <select   class="mt0 more-b">
+                                        <option value="일반형" selected="" disabled="">일반형</option>
+                                        <option value="신고형">신고형</option>
+                                        <option value="답변형">답변형</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="schIpt2"></label>
+                                    <div class="sch-wrap">
+                                        <input type="search" id="schIpt2" class="inputw100" placeholder="검색어를 입력해주세요">
+                                        <button type="submit" class="schBtn h46"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-wrap result-table-wrap bd-style01 mb30">
+                                <table>
+                                    <caption>게시물 검색 결과</caption>
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="30%">
+                                        <col width="40%">
+                                        
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_01" id="allChk2" class="allChk">
+                                                    <label for="allChk2" class="adm-chkBox"></label>
+                                                </div>
+                                            </th>
+                                            <th scope="row">번호</th>
+                                            <th scope="row">게시판 종류</th>
+                                            <th scope="row">게시판명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_02" id="chk-popup1-01">
+                                                    <label for="chk-popup1-01" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_02" id="chk-popup1-02">
+                                                    <label for="chk-popup1-02" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>신고형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_02" id="chk-popup1-03">
+                                                    <label for="chk-popup1-03" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>답변형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_02" id="chk-popup1-04">
+                                                    <label for="chk-popup1-04" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_02" id="chk-popup1-05">
+                                                    <label for="chk-popup1-05" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_02" id="chk-popup1-06">
+                                                    <label for="chk-popup1-06" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="popup-title">
+                                선택한 게시판
+                            </p>
+                            <p class="select-program">
+                                게시판1
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="popup-btn-box">
+                        <button type="button" class="btn">저장</button>
+                    </div>
+                
+    
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 게시물 이동 -->
+    <div class="popupWrapper move-board">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>게시물 이동</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                
+                
+                    <ul class="popup-add-txt">
+                        <li>게시물 복사 시 선택한 게시물의 게시판 종류와 복사할 게시판의 종류가 같아야 합니다.</li>
+                    </ul>
+                    <div class="copy-board-admin">
+                        <div class="left-wrap">
+                            <p class="popup-title">
+                                이동할 게시물
+                            </p>
+                            <ul class="board-contents">
+                                <li>게시물1 <button type="button" title="삭제"><img src="../../images/board-del-btn.png" alt="삭제"></button></li>
+                            </ul>
+                        </div>
+                        <div class="right-wrap">
+                            <div class="sch-select-box sch-con-box clearfix">
+                                <div>
+                                    <select   class="mt0 more-b">
+                                        <option value="일반형" selected="" disabled="">일반형</option>
+                                        <option value="신고형">신고형</option>
+                                        <option value="답변형">답변형</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="schIpt3"></label>
+                                    <div class="sch-wrap">
+                                        <input type="search" id="schIpt3" class="inputw100" placeholder="검색어를 입력해주세요">
+                                        <button type="submit" class="schBtn h46"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-wrap result-table-wrap bd-style01 mb30">
+                                <table>
+                                    <caption>게시물 검색 결과</caption>
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="30%">
+                                        <col width="40%">
+                                        
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_03" id="allChk3" class="allChk">
+                                                    <label for="allChk3" class="adm-chkBox"></label>
+                                                </div>
+                                            </th>
+                                            <th scope="row">번호</th>
+                                            <th scope="row">게시판 종류</th>
+                                            <th scope="row">게시판명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_03" id="chk-popup2-01">
+                                                    <label for="chk-popup2-01" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_03" id="chk-popup2-02">
+                                                    <label for="chk-popup2-02" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>신고형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_03" id="chk-popup2-03">
+                                                    <label for="chk-popup2-03" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>답변형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_03" id="chk-popup2-04">
+                                                    <label for="chk-popup2-04" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_03" id="chk-popup2-05">
+                                                    <label for="chk-popup2-05" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkBox">
+                                                    <input type="checkbox" name="check_03" id="chk-popup2-06">
+                                                    <label for="chk-popup2-06" class="adm-chkBox"></label>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>게시판1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="popup-title">
+                                선택한 게시판
+                            </p>
+                            <p class="select-program">
+                                게시판1
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="popup-btn-box">
+                        <button type="button" class="btn">저장</button>
+                    </div>
+                
+    
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 삭제 -->
+    <div class="popupWrapper del-board">
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head-txt">
+                    <h2>게시물 삭제</h2>
+                </div>
+                <div class="close">
+                    <span class="btn_close"></span>
+                </div>
+            </div>
+            <div class="popup-con">
+                <div class="popup-table-wrap">
+                    <table>
+                        <caption>게시물 삭제 사유 작성표</caption>
+                        <colgroup>
+                            <col width="20%">
+                            <col width="80%">                        
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>삭제사유</th>
+                                <td>
+                                    <textarea   cols="30" rows="3" placeholder="삭제사유를 입력해 주세요"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="popup-btn-box">
+                        <button type="button" class="btn">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 얼럿 팝업 완전 삭제 -->
+    <div class="popupWrapper comp-del-board">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../images/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>삭제시 복구가 불가능합니다.</p>
+                </div>
+                <ul class="popup-add-txt">
+                    <li>선택한 게시물을 완전삭제 하시겠습니까?</li>
+                </ul>
+                <div class="popup-btn-box">
+                    <button type="button" class="btn alert-close btn-style-gr mr10">삭제</button>
+                    <button type="button" class="btn alert-close">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

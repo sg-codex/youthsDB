@@ -7,7 +7,6 @@
     <title>admin</title>
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
     <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
     
@@ -108,12 +107,14 @@
                     </div>
                     <div class="agree-txt d-flex">
                         <span>위와 같은 개인정보의 수집· 이용에 동의하십니까?</span>&nbsp;
-                        (&nbsp;<span class="agr-radio-box d-flex">
-                            <input type="radio" name="agreement" id="agree01" value="Y">
-                            <label for="agree01">동의함</label>
-                            <input type="radio" name="agreement" id="agree02" value="N">
-                            <label for="agree02">동의하지 않음</label>
-                        </span>&nbsp;)
+                        <div class="d-flex">
+                            (&nbsp;<span class="agr-radio-box d-flex">
+                                <input type="radio" name="agreement" id="agree01" value="Y">
+                                <label for="agree01">동의함</label>
+                                <input type="radio" name="agreement" id="agree02" value="N">
+                                <label for="agree02">동의하지 않음</label>
+                            </span>&nbsp;)
+                        </div>
                     </div>
                 </div>
                 <div class="btm-btnBox">

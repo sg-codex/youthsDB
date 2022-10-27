@@ -7,11 +7,12 @@
     <title>admin</title>
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
     <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
-    
     <script src="../../js/ui.js"></script>
+    <script src="../../plugin/chart/chart.min.js"></script>
+    <script src="../../plugin/chart/chartjs-plugin-datalabels.js"></script>    
+    <script src="../../js/chart.js"></script>
 
 </head>
 <body>
@@ -241,7 +242,7 @@
                 <div id="cont-wrap">
                     <div class="con-box-wh">
                         <div class="box-top-tit dashboard-tit">
-                            <a href="./../3. 검색요청/1)요청현황.html">요청 현황</a>
+                            <a href="./../3. 검색요청/1)요청현황.html" class="ico-arr">요청 현황</a>
                         </div>
                         <div class="dashboard-table-wrap">
                             <table>
@@ -289,8 +290,8 @@
                                         <td>
                                             <span id="">검색중</span>
                                             <!-- <span id="">검색완료</span> -->
-                                            <!-- <span id="">평가중</span> -->
-                                            <!-- <span id="">평가완료</span> -->
+                                            <!-- <span id="">선임완료</span> -->
+                                            <!-- <span id="">선임완료</span> -->
                                         </td>
                                         <td>
                                             <span class="blue">승인</span>
@@ -310,8 +311,8 @@
                                         <td>
                                             <!-- <span id="">검색중</span> -->
                                             <span id="">검색완료</span>
-                                            <!-- <span id="">평가중</span> -->
-                                            <!-- <span id="">평가완료</span> -->
+                                            <!-- <span id="">선임완료</span> -->
+                                            <!-- <span id="">선임완료</span> -->
                                         </td>
                                         <td>
                                             <span class="blue">승인</span>
@@ -331,8 +332,8 @@
                                         <td>
                                             <!-- <span id="">검색중</span> -->
                                             <!-- <span id="">검색완료</span> -->
-                                            <span id="">평가중</span>
-                                            <!-- <span id="">평가완료</span> -->
+                                            <span id="">선임완료</span>
+                                            <!-- <span id="">선임완료</span> -->
                                         </td>
                                         <td>
                                             <span class="blue">승인</span>
@@ -352,8 +353,8 @@
                                         <td>
                                             <!-- <span id="">검색중</span> -->
                                             <!-- <span id="">검색완료</span> -->
-                                            <!-- <span id="">평가중</span> -->
-                                            <span id="">평가완료</span>
+                                            <!-- <span id="">선임완료</span> -->
+                                            <span id="">선임완료</span>
                                         </td>
                                         <td>
                                             <span class="blue">승인</span>
@@ -368,38 +369,38 @@
                     <div class="d-flex dashboard-flex">
                         <div class="con-box-wh">
                             <div class="box-top-tit dashboard-tit">
-                                <a href="">요청 현황</a>
+                                <h3>요청 현황</h3>
                             </div>
                             <span class="tag-gray">최근 6개월 기준</span>
                             <div class="db-chart-box">
-
+                                <canvas id="chat-line-type01"></canvas>
                             </div>
                         </div>
                         <div class="con-box-wh">
                             <div class="box-top-tit dashboard-tit">
-                                <a href="">관심인재 등록 현황</a>
+                                <h3>관심인재 등록 현황</h3>
                             </div>
                             <span class="tag-gray">최근 6개월 기준</span>
                             <div class="db-chart-box">
-                                
+                                <canvas id="chat-bar-type01"></canvas>
                             </div>
                         </div>
                         <div class="con-box-wh">
                             <div class="box-top-tit dashboard-tit">
-                                <a href="">인재정보 조회 수</a>
+                                <h3>인재정보 조회 수</h3>
                             </div>
                             <span class="tag-gray">최근 6개월 기준</span>
                             <div class="db-chart-box">
-                                
+                                <canvas id="chat-line-type02"></canvas>
                             </div>
                         </div>
                         <div class="con-box-wh">
                             <div class="box-top-tit dashboard-tit">
-                                <a href="">활용 현황</a>
+                                <h3>활용 현황</h3>
                             </div>
                             <span class="tag-gray">최근 6개월 기준</span>
                             <div class="db-chart-box">
-                                
+                                <canvas id="chat-bar-type02"></canvas>
                             </div>
                         </div>
                     </div>
@@ -407,5 +408,32 @@
             </section>
         </div>
     </div>
+    <script>
+      $(function() {
+         /**
+          * 
+          * lineChart : 라인 차트
+          * barChart : 바 차트
+          * 
+          * parameter(id, labels, datas, yTicks);
+          * id: type: String -> 해당 캔버스 아이디 값
+          * labels: type: Array -> 차트 하단 라벨 값
+          * datas: type: Array -> 차트에서 보여줄 데이터 값
+          * yTicks: type: String -> y scales 숫자 표시, 표시가 필요할때만 hex, rgb값 문자열로 담아 호출
+          * 
+         */
+         var labels_1 = ['3월','4월','5월','6월','7월','8월'];
+         var data_1 = [5, 10, 8, 9, 18, 20];
+         lineChart('chat-line-type01', labels_1, data_1);
+
+         var labels_2 = ['1월','2월','3월','4월','5월','6월'];
+         var data_2 = [10,16,5,25,30,12];
+         lineChart('chat-line-type02', labels_2, data_2);
+
+
+         barChart('chat-bar-type01', labels_1, data_1); 
+         barChart('chat-bar-type02', labels_2, data_2);
+      });
+    </script>
 </body>
 </html>

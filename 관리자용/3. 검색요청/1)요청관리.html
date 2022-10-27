@@ -7,7 +7,7 @@
     <title>admin</title>
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/print.css">
     <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
     
@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <div id="wrapper">
+    <div id="wrapper" class="print-hidden">
         <div class="wrap">
             <header id="top-header">
                 <div id="btn_menuOpen" class="btn_menuOpen">
@@ -314,6 +314,7 @@
                                     </select>
                                     <select name="" id="" class="">
                                         <option value="10개씩" selected>10개씩</option>
+                                        <option value="30개씩">30개씩</option>
                                         <option value="50개씩">50개씩</option>
                                     </select>
                                 </div>
@@ -519,9 +520,9 @@
         </div>
     </div>
     <!-- 팝업 요청상세내역 -->
-    <div class="popupWrapper requestDetailPopup">
+    <div class="popupWrapper requestDetailPopup print-section">
         <div class="popup">
-            <div class="popup-head">
+            <div class="popup-head print-hidden">
                 <div class="popup-head-txt">
                     <h2>요청상세내역</h2>
                 </div>
@@ -529,15 +530,18 @@
                     <span class="btn_close"></span>
                 </div>
             </div>
+            <div class="print-visible">
+               <h2 class="print-title">요청상세내역</h2>
+            </div>
             <div class="popup-con">
                 <div class="popup-table-wrap">
                     <table>
                         <caption>요청상세내역</caption>
                         <colgroup>
-                            <col width="15%">
-                            <col width="35%">
-                            <col width="15%">
-                            <col width="35%">
+                            <col width="15%" class="colgrop-col print-col-w20">
+                            <col width="35%" class="colgrop-col print-col-w30">
+                            <col width="15%" class="colgrop-col print-col-w20">
+                            <col width="35%" class="colgrop-col print-col-w30">
                         </colgroup>
                         <tbody>
                             <tr>
@@ -613,8 +617,8 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="popup-btn-box">
-                    <button type="button" class="btn btn-style-wh" onclick="">요청내역 인쇄</button>
+                <div class="popup-btn-box print-hidden">
+                    <button type="button" class="btn btn-style-wh" onclick="window.print();">요청내역 인쇄</button>
                     <button type="button" class="btn">확인</button>
                 </div>
             </div>

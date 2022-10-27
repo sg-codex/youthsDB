@@ -1,0 +1,22 @@
+/* 카카오 맵 */
+#map {
+   height:830px;
+}
+#map .div_over {
+   position: relative !important;
+   color: #1776E1 !important;
+   background-color: #fff !important;
+}
+#map .div_over:after {
+   content:"";
+   position:absolute;
+   width: 350%;
+   height: 350%;
+   left:50%;
+   top:50%;
+   transform: translate(-50%, -50%);
+   border: 1px solid #1776E1;
+   background-color: rgba(23, 118, 225, 0.2);
+   border-radius: 100%;
+   transition: .3s;
+}

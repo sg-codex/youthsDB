@@ -7,7 +7,6 @@
     <title>admin</title>
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../plugin/jquery/jquery-ui.css">
     <script type="text/javascript" src="../../plugin/jquery/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="../../plugin/jquery/jquery-ui.js"></script>
     
@@ -288,8 +287,8 @@
                                         <option value="30개씩">30개씩</option>
                                         <option value="50개씩">50개씩</option>
                                     </select>
-                                    <input type="button" value="엑셀" class="btn btn-style-wh btn_file" onclick="">
-                                    <input type="button" value="인쇄" class="btn btn-style-wh btn_print" onclick="openPopup('printPopup');">
+                                    <button type="button" class="btn btn-style-wh btn_file">엑셀</button>
+                                    <button type="button" class="btn btn-style-wh btn_print" onclick="window.print();" >인쇄</button>
                                 </div>
                             </div>
                             <div class="table-wrap result-table-wrap">
