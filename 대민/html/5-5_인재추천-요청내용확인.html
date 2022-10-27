@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/common_db.css">
+
+
+
+    <title>청년인재데이터베이스</title>
+</head>
+<body>
+    <!-- 스킵네비게이션 -->
+     <div class="skip_nav" id="skip">
+        <a href="#contents">본문 바로가기</a>
+    </div>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="header__top">
+            <div class="row">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="row">
+                <a href="/index.html" class="header__logo">
+                    <img src="/img/img_logo.png" alt="청년인재데이터베이스">
+                </a>
+                <ul class="header__menu">
+                    <li class="sub-menu-ok header__step1  temp-menu1" data-menuval="1"><a href="#">청년인재데이터베이스</a>   
+                        <ul>
+                            <li class="header__step2 "><a href="#" >청년인재데이터베이스</a></li>
+                            <li class="header__step2 "><a href="#" >등록방법 안내</a></li>
+                            <li class="header__step2 "><a href="#" >인증방법 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__step1  temp-menu2" data-menuval="2"><a href="#" >인재정보등록</a>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu3" data-menuval="3"><a href="#" >검색요청</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >직접검색 요청</a></li>
+                            <li class="header__step2 "><a href="#" >직접검색 요청현황</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu4" data-menuval="4"><a href="#" >인재검색</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >통합검색</a></li>
+                            <li class="header__step2 "><a href="#" >관심인물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu5" data-menuval="5"><a href="#" >공지사항</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >공지사항</a></li>
+                            <li class="header__step2 "><a href="#" >자주하는 질문(FAQ)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="ir_pm header__top-menu pc-only">PC메뉴</a>
+                        <a href="#" class="ir_pm header__top-menu mobile-only" onclick="modalOn('modal-menu')">MOBILE메뉴</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="title-banner">
+        <div class="title-banner">
+            <h1>검색요청</h1>
+            <img src="/img/img_main_bn.png" alt="배너이미지">
+        </div>
+        <div class="row">
+            <ul class="header__menu title-banner-menu">
+                <li>
+                    <a href="#" class="go-home ir_pm">홈</a>
+                </li>
+                <li class="sub-menu-ok header__step1  temp-menu1" data-menuval="1"><a href="#">추천요청</a>   
+                    <ul>
+                        <li class="header__step2 "><a href="#" >메뉴</a></li>
+                        <li class="header__step2 "><a href="#" >메뉴</a></li>
+                        <li class="header__step2 "><a href="#" >메뉴</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-ok header__step1  temp-menu3" data-menuval="3"><a href="#" >인재추천 요청</a>
+                    <ul>
+                        <li class="header__step2 "><a href="#" >서브메뉴</a></li>
+                        <li class="header__step2 "><a href="#" >서브메뉴</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contents">
+        <div class="row">
+            <h2 class="contents-title print-hidden">인재추천 요청 상세</h2>
+            <!-- 프린트 출력 시 보여주는 콘텐츠 -->
+            <div class="print-visible">
+               <h2 class="print-title">청년인재정보 활용 신청서</h2>
+               <span class="print-comment">
+                  본 신청서를 첨부하여 필요한 날부터 10일 전까지 공문 또는 정보통신망을 통해 제출해 주시기 바랍니다.
+                  <span>
+                     (수신: 국무조정실 청년정책조정실 청년정책협력관)
+                  </span>
+               </span>
+            </div>
+            <div class="container">
+               <div class="table-wrap table-th-left">
+                  <table>
+                     <caption>요청상세내역</caption>
+                     <colgroup>
+                           <col width="15%">
+                           <col width="35%">
+                           <col width="15%">
+                           <col width="35%">
+                     </colgroup>
+                     <tbody>
+                           <tr>
+                              <th>요청기관</th>
+                              <td>
+                                 <span class="result-txt">지방자치단체명</span>
+                              </td>
+                              <th>부서명</th>
+                              <td>
+                                 <span class="result-txt">부서명</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>담당자명</th>
+                              <td>
+                                 <span class="result-txt">홍길동</span>
+                              </td>
+                              <th>연락처</th>
+                              <td>
+                                 <span class="result-txt">010-1234-1234</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>활용목적</th>
+                              <td colspan="3">
+                                 <span class="result-txt">◯◯위원회 위촉직 위원</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>근거규정</th>
+                              <td colspan="3">
+                                 <span class="result-txt">위촉직위가 행정기관위원회(지방자치 단체 포함) 위원인 경우 위원회 근거규정 등</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>선정/위촉인원</th>
+                              <td>
+                                 <span class="result-txt headcount">3</span>
+                              </td>
+                              <th>위촉/선정 예정일</th>
+                              <td>
+                                 <span class="result-txt">2022-09-01</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>관심 분야</th>
+                              <td colspan="3">
+                                 <span class="result-txt">고용 · 노동 / 창업</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>선정요건</th>
+                              <td colspan="3">
+                                 <span class="result-txt">근무경력, 활동사항, 지역 등 선정요건</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>참고사항</th>
+                              <td colspan="3">
+                                 <span class="result-txt">참고사항</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>요청일</th>
+                              <td>
+                                 <span class="result-txt">2022-08-16</span>
+                              </td>
+                              <th>요청내역 분류</th>
+                              <td>
+                                 <span class="result-txt">인재추천</span>
+                              </td>
+                           </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!-- 프린트 출력 시 보여주는 콘텐츠 -->
+               <div class="table-wrap table-th-left print-visible">
+                  <table>
+                     <caption>요청상세내역</caption>
+                     <colgroup>
+                           <col width="15%">
+                           <col width="85%">
+                     </colgroup>
+                     <tbody>
+                           <tr>
+                              <th>첨부서류</th>
+                              <td>
+                                 <span class="result-txt">제5호 서식</span>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+               </div>
+               <div class="print-visible print-section">
+                  <span class="print-pageName">청년인재데이터베이스 제5호 서식</span>
+                  <h2 class="print-title">청년인재데이터베이스 사용ㆍ열람자 보안유지 서약서</h2>
+                  <div class="print-container">
+                     <p class="print-txt">
+                        본인은<span class="unerline-area w10"></span>년<span class="unerline-area w5"></span>월<span class="unerline-area w5"></span>일부터 국무조정실 청년인재데이터베이스를 이용하면서 다음 사항을 준수할 것을 서약합니다.
+                     </p>
+                     <ol class="print-orderList">
+                        <li class="print-txt">
+                           청년인재데이터베이스에 등록된 정보는 ｢개인정보보호법｣, ｢청년기본법｣, ｢청년기본법 시행령｣에 따라 정책결정과정에 청년의 참여를 지원하기 위한 목적으로만 사용하겠습니다.
+                        </li>
+                        <li class="print-txt">
+                           청년인재데이터베이스에 있는 정보를 조회ㆍ등록ㆍ수정 및 추천하는 과정에서 얻게 된 정보나 자료를 어떠한 경우에도 외부에 누설하거나 유출하지 않겠습니다.
+                        </li>
+                        <li class="print-txt">
+                           만약 위의 사항을 위반할 경우에는 관련 법규에 따른 처벌을 감수하겠습니다.
+                        </li>
+                     </ol>
+                     <span class="date">년<span></span>월<span></span>일</span>
+                     <span class="sign">성명 <sup>(서명 또는 인)</sup></span>
+                     <h3 class="info">국무조정실장 <sup>귀하</sup></h3>
+                  </div>
+               </div>
+            </div>
+            <div class="btn-wrap print-hidden">
+                <button type="button" class="btn-wh btn-round" onClick="window.print();">요청내역 인쇄</button>
+                <a href="./5-6_인재추천-요청현황.html" class="btn-bl btn-round">확인</a>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+         <div class="row">
+             <div class="footer-top">
+                <a href="#">국무조정실</a>
+                <a href="#">청년정책조정위원회</a>
+                <a href="#">청년포털</a>
+                <a href="#">정부∙시민사회 소통협력 플랫폼</a>
+                <select name="footer-select" id="footer-select">
+                    <option value="기본값">관련사이트 바로가기</option>
+                    <option value="국무조정실">국무조정실</option>
+                    <option value="청년정책조정위원회">청년정책조정위원회</option>
+                    <option value="청년포털">청년포털</option>
+                    <option value="정부∙시민사회 소통협력 플랫폼">정부∙시민사회 소통협력 플랫폼</option>
+                </select>
+             </div>
+             <div class="footer-bottom">
+                <div>
+                    <p>(30103) 세종특별자치시 한누리대로 492 청암빌딩 5층</p>
+                    <span class="footer__line">Tel : 044-200-6349</span>
+                    <span>Fax : 044-865-6331</span>
+                    <p>Copyright © Office for Youth Policy Coordination. All Rights Reserved</p>
+                </div>
+                <div class="footer-logo-wrap">
+                    <a href="#">개인정보보호방침</a>
+                    <img class="footer__logo" src="/img/footer-img.png" alt="국무조정실 청년정책조정실">
+                </div>
+             </div>
+         </div>
+    </footer>
+    <div class="modal normal">
+        <div class="modal_content w460">
+          <div class="modal__title">
+            <h1>모달타이틀</h1>
+            <button class="modal-close-btn ir_pm">닫기</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal modal-check">
+        <div class="popup alert-popup">
+            <div class="popup-con">
+                <div class="icon-box">
+                    <img src="../../img/ico_write.png" alt="등록 아이콘">
+                </div>
+                <div class="alert-txt-box">
+                    <p>요청서 작성을 완료하시겠습니까?</p>
+                </div>
+                <ul class="popup-add-txt">
+                    <li>작성 완료된 요청서의 현황은 요청현황에서 확인할 수 있습니다.</li>
+                </ul>
+                <div class="popup-btn-box twobtns">
+                    <button type="button" class="btn btn-style-wh alert-close">취소</button>
+                    <a href="./" class="btn">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-menu">
+        <div class="modal_content w460">
+            <div class="modal__title">
+                <h1>전체메뉴</h1>
+                <button class="modal-close-btn ir_pm">닫기</button>
+            </div>
+            <div class="modal-menu-top">
+                <div><span>서비스 이용을 위해 </span><a href="#">로그인</a><span>이 필요합니다.</span></div>
+                <div class="btn-wrap">
+                    <button class="btn-bl btn-nomal">회원가입</button>
+                </div>
+                <button class="one-login-btn">
+                    <img src="/img/one-login-btn.png" alt="디지털원패스로 로그인">
+                </button>
+            </div>
+            <ul class="modal-menu-list">
+                <!-- .menu-step1에 .menu-on 추가하면 메뉴 오픈됩니다 -->
+                <li class="menu-step1">
+                    <p>청년인재데이터베이스</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">청년인재데이터베이스</a></li>
+                        <li class="menu-step2"><a href="#">등록방법 안내</a></li>
+                        <li class="menu-step2"><a href="#">인증방법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1"><a href="#">인재정보등록</a></li>
+                <li class="menu-step1 ">
+                    <p>검색요청</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">직접검색 요청</a></li>
+                        <li class="menu-step2"><a href="#">직접검색 요청현황</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1">
+                    <p>인재검색</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">통합검색</a></li>
+                        <li class="menu-step2"><a href="#">관심인물 관리</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1">
+                    <p>공지사항</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">공지사항</a></li>
+                        <li class="menu-step2"><a href="#">자주하는 질문(FAQ)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

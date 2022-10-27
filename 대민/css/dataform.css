@@ -1,0 +1,537 @@
+@charset "utf-8";
+
+/* 공통 */
+.box-wrap {
+    width: 100%;
+    display: flex;
+}
+.box-style  {
+    width: 100%;
+    background: #F9FCFF;
+    border: 1px solid #E2E9EE;
+    padding: 20px 30px;
+    border-radius: 14px;
+}
+.flex-divide {
+    flex-direction: inherit;
+    flex-wrap: inherit;
+}
+.align-items-start {
+    align-items: inherit;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+.mr20 {
+    margin-right: 20px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.w600{
+    width: 600px;
+}
+
+.container__title {
+    margin-bottom: 20px;
+}
+.container {
+    margin-bottom: 40px;
+}
+.textarea-num {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.textarea-num span {
+    font-weight: 500;
+font-size: 15px;
+line-height: 22px;
+color: #333;
+
+}
+.textarea-num span:nth-child(1){
+    color: #1776E1;
+    margin-right: 4px;
+}
+.date-nomal {
+    color: #979BA4;
+}
+.date-nomal::placeholder {
+    color: #979BA4;
+}
+label.mw-cus,
+label.mw-cus2 {
+    min-width: 140px !important;
+}
+.fit-content {
+    width: auto !important;
+    display: table;
+}
+.fit-content-100p {
+    width: 100%;
+    display: table;
+}
+.fit-content-lable {
+    width: auto !important;
+    display: inline-block;
+    word-break: keep-all;
+}
+/* 첫번째 섹션 시작 */
+.wrap-01 > div:first-child {
+    width: 240px;
+    margin-right: 60px;
+}
+.wrap-01 > div:last-child {
+    width: calc(100% - 240px)
+}
+/* 사진 업로드 시작 */
+.picture-img {
+    width: 240px;
+    height: 280px;
+    background: #F3F7FA url() no-repeat;
+    border: 1px solid #D4D9E4;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.picture-img img {
+    width: 240px;
+    height: 280px;
+    object-fit: contain;
+}
+.button-wrap {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+}
+/* 사진 업로드 버튼 */
+.button-wrap > * {
+    border: 1px solid #91A2B6;
+    border-radius: 6px;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #91A2B6;
+}
+.button-wrap input[type=file] {
+    display: none;
+}
+.button-wrap label[for="picFile"] {
+    flex: 1;
+    text-align: center;
+}
+.button-wrap label[for="picFile"] {
+    border: 1px solid #1776E1;
+    color: #1776E1;
+}
+.button-wrap button {
+    flex: 1;
+    margin-left: 10px;
+    background-color: #fff;
+}
+/* 사진 업로드 버튼 끝 */
+.b-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.b-item > label {
+    width: fit-content;
+    min-width:64px;
+}
+.b-item > label:nth-child(1){
+    min-width: 88px;
+}
+.b-item-01 >  label:nth-of-type(2){
+    margin-right: 10px;
+}
+.b-item-02 > span {
+    padding: 0 10px;
+}
+.b-item-03 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.b-item-03 > div {
+    width: 100%;
+    margin-top: 10px;
+}
+.b-item-03 > div > select {
+    color: #979BA4;
+}
+.b-item-03 > div > select:first-child {
+    margin-right: 10px;
+    margin-left: 88px;
+}
+
+/* 두번째 섹션 시작 */
+.wrap-02 {
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.wrap-02 > label {
+    color: #747F97;
+}
+/* 세번째 섹션 시작 */
+.wrap-03 {
+    width: 100%;
+}
+.btn-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.add-btn {
+    background: #FFFFFF;
+    border: 1px solid #1776E1;
+    color: #1776E1;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    width: 140px;
+    padding: 10px;
+    border-radius: 6px;
+}
+/* 네번째 섹션 시작 */
+.wrap-04 {
+    flex-wrap: wrap;
+}
+.wrap-04 .select-nomal {
+    background-color: #fff;
+}
+.wrap-04 > div {
+    width: 100%;
+    display: flex;
+
+}
+.wrap-04 > div > div:last-child {
+    margin-right: 0;
+}
+.wrap-04 .b-item {
+    width: fit-content;
+    margin-right: 60px;
+}
+.wrap-04 .b-item > label {
+    width: 80px;
+    margin-right: 8px;
+}
+.wrap-04.box-style > div:nth-child(2)>div:first-child > div{
+    width: 300px;
+}
+.wrap-04.box-style{
+    margin-top: 10px;
+}
+.wrap-04.box-style:nth-child(1){
+    margin-top: 0;
+}
+/* 다섯번째 섹션 */
+.wrap-05 > div {
+    width: 100%;
+    display: flex;
+}
+.wrap-05 .b-item {
+    margin-right: 60px;
+}
+
+.wrap-05 .b-item span {
+    margin: 0 15px;
+}
+.wrap-05.box-style{
+    margin-top: 10px;
+}
+.wrap-05.box-style:nth-child(1){
+    margin-top: 0;
+}
+.wrap-06 > div .b-item:nth-child(1)  {
+   width: fit-content;
+}
+.wrap-06 p {
+    margin-left: 0px;
+}
+/* 마지막 섹션 */
+.wrap-07 .box-style p {
+    line-height: 34px;
+}
+.wrap-07 textarea {
+    margin-top: 20px;
+}
+/* 첨부파일 */
+.file-upload {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.file-upload input[type="file"] {
+    display: none;
+}
+.file-upload label {
+    padding: 10px 28px;
+    border: 1px solid #1776e1;
+    border-radius: 6px;
+    color: #1776E1;
+    min-width: 122px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.file-upload > div {
+    width: 100%;
+}
+.file-upload > div > div {
+    margin-bottom: 10px;
+}
+.file-upload > div > div p {
+    color: #979BA4;
+}
+/* 파일을 선택하지 않았을 때. */
+.file-upload .file-not-sel > div {
+    display: none;
+}
+/* 파일을 선택했을 때  */
+.file-upload .file-sel {
+    display: block;
+}
+.file-upload .file-sel > p {
+    display: none;
+}
+.file-upload .file-sel > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.file-upload .file-sel > div > div {
+    width: 14px;
+    min-width: 14px;
+    height: 18px;
+    background: url(../img/icon-file-upload.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+}
+.file-upload .file-sel > div > p {
+    width: 100%;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp:1 ;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.file-upload .file-sel > div > button {
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    background: url(../img/icon-file-del.svg) no-repeat;
+    background-size: contain;
+    background-position: center;  
+}
+.form-btn-wrap{
+    justify-content: center;
+}
+.required{
+    position: relative;
+    display: flex;
+
+}
+.required::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: url(/img/required.png) no-repeat;
+    display: block;
+    margin-left: 2px;
+}
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
+@media all and (max-width:1023px) {
+    .flex-divide {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    /* 첫번째 섹션 */
+    .wrap-01 {
+        display: block;
+    }
+    .wrap-01 > div:last-child {
+        width: 100%;
+    }
+    .box-wrap > div {
+        width: 100%;
+    }
+    .wrap-01 > div:first-child {
+        margin-bottom: 20px;
+    }
+    .b-item-03 > div > select:first-child {
+        margin-bottom: 10px;
+    }
+    .b-item-03 > div > select:last-child {
+        margin-left: 88px;
+    }
+   
+    /* 네번째 섹션 */
+    .wrap-04 .b-item > label {
+        width: fit-content;
+        min-width: 80px;
+    }
+    .wrap-04 .b-item {
+        width: 100%;
+    }
+    .wrap-04 > div {
+        flex-direction: column;
+    }
+    .wrap-06 > div:first-child {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .wrap-06 p {
+        margin-left: 90px;
+        display: table;
+    }  
+    .align-items-start {
+        align-items: flex-start !important;
+    }
+    .w100p {
+        width: 100% !important;
+    }
+    label.mw-cus {
+        min-width: 88px !important;
+    }
+
+    label.mw-cus2 {
+        min-width: fit-content !important;
+        margin-right: 30px
+    }
+    .wrap-08 > div {
+       flex-direction: column;
+    }
+   
+    .w600 {
+        width: 100%;
+    }
+    .b-item2 {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .m0 {
+        margin: 0 !important;
+    }
+    .fit-content {
+        width: inherit !important;
+    }
+    .mr0 {
+        margin-right: 0;
+    }
+   
+} 
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+@media all and (max-width:767px) {
+  
+    .wrap-01 > div:first-child {
+        margin: 0 auto 20px;
+        width: 100%;
+    }
+    
+    .box-style {
+        padding: 16px;
+    }
+    .picture-img img,.picture-img {
+        width: 100%;
+        height: auto;
+    }
+    .b-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .b-item label:nth-of-type(1) {
+        margin-bottom: 10px;
+    }
+    .b-item-01 {
+       flex-direction: row;
+       flex-wrap: wrap;
+    }
+    .b-item-01 label:last-of-type {
+        margin-right: 0;
+    }
+    .b-item-01 label {
+        width: 100%;
+        margin-right: 0;
+
+    }
+    .b-item-01 input + label{
+        text-align: center;
+    }
+    .b-item-01 > label:nth-of-type(2),
+    .b-item-01 > label:nth-of-type(3)  {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .b-item-02 {
+        flex-wrap: wrap;
+    }
+
+    .b-item-02 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .b-item-02 input {
+        width: 85%;
+        margin-bottom: 10px;
+    }
+    .b-item-02 #inputId{
+        width: 100%;
+        margin-right: 0;
+    }
+    .b-item-02 span {
+        line-height: 35px;
+    }
+    .b-item-03 > div > select:first-child {
+        margin-bottom: 10px;
+    }
+    .b-item-03 > div > select:last-child {
+        margin-left: 88px;
+    }
+    .b-item-03 > div > select:first-child,
+    .b-item-03 > div > select:last-child {
+        margin-left: 0;
+    }
+    .b-item-04 .radio-nomal {
+        padding: 10px 25px;
+    }
+    .wrap-05 > div {
+        flex-direction: column;
+    }
+    .wrap-05 > div input:nth-of-type(1){
+        margin-bottom: 10px;
+    }
+    .b-item-06 input:nth-of-type(1) {
+        margin-bottom: 0 !important;
+    }
+    .wrap-06 p {
+      margin-left: 0;   
+    }
+    .wrap-06 > div .b-item:nth-child(1) {
+        width: 100%;
+        margin-right: 0;
+    }
+    .fit-content {
+        width: 100% !important;
+    }
+    /* 첨부파일 */
+    .file-upload {
+        flex-direction: column;
+    }
+    .file-upload label {
+        margin-bottom: 10px;
+    }
+    .w600 {
+        width: 100%;
+    }
+    .wrap-04.box-style > div:nth-child(2) > div:nth-child(1) > div,.wrap-04.box-style > div:nth-child(2) > div:nth-child(2) > div {
+        width: 100%;
+    }
+}

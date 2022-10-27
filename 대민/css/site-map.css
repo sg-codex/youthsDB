@@ -1,0 +1,76 @@
+.site-map-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.site-map {
+    width: calc(25% - 22.5px);
+    margin-right: 30px;
+    margin-bottom: 80px;
+}
+.site-map:nth-child(4){
+    margin-right: 0;
+}
+.site-map .contents-title{
+    font-family: 'GmarketSansMedium';
+font-style: normal;
+display: flex;
+font-size: 22px;
+padding-bottom: 23px;
+margin-bottom: 10px;
+font-weight: 400;
+position: relative;
+}
+.contents-title {
+    border-bottom: 3px solid #ECF0F8 !important;
+    color: #02346B !important;
+}
+.site-map .contents-title::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url(/img/site-map-list-img.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.contents-title::after {
+    width: 70px;
+}
+
+
+.site-map > a {
+    display: block;
+    font-size: 18px;
+line-height: 27px;
+color: #333333;
+padding-bottom: 20px;
+padding-top: 20px;
+border-bottom: 1px solid #ECF0F8;
+}
+.site-map a:hover:not(.contents-title) {
+    text-decoration: underline;
+}
+.site-map > p {
+    line-height: 27px;
+color: #333333;
+padding-bottom: 20px;
+padding-top: 20px;
+}
+.site-map > a:last-child,
+.site-map > p:last-child,
+.site-map > ul:last-child{
+    padding-bottom: 20px;
+    border-bottom: 3px solid #ECF0F8;
+}
+
+@media all and (max-width:1023px) {
+
+    .site-map{
+        width: 100%;
+        margin-right: 0;
+    }
+
+}
