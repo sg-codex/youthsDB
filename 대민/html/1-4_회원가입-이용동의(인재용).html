@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="/css/reset.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/join.css">
+
+
+
+    <title>청년인재데이터베이스</title>
+</head>
+<body>
+    <!-- 스킵네비게이션 -->
+     <div class="skip_nav" id="skip">
+        <a href="#contents">본문 바로가기</a>
+    </div>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="header__top">
+            <div class="row">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="row">
+                <a href="/index.html" class="header__logo">
+                    <img src="/img/img_logo.png" alt="청년인재데이터베이스">
+                </a>
+                <ul class="header__menu">
+                    <li class="sub-menu-ok header__step1  temp-menu1" data-menuval="1"><a href="#">청년인재데이터베이스</a>   
+                        <ul>
+                            <li class="header__step2 "><a href="#" >청년인재데이터베이스</a></li>
+                            <li class="header__step2 "><a href="#" >등록방법 안내</a></li>
+                            <li class="header__step2 "><a href="#" >인증방법 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__step1  temp-menu2" data-menuval="2"><a href="#" >인재정보등록</a>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu3" data-menuval="3"><a href="#" >검색요청</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >직접검색 요청</a></li>
+                            <li class="header__step2 "><a href="#" >직접검색 요청현황</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu4" data-menuval="4"><a href="#" >인재검색</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >통합검색</a></li>
+                            <li class="header__step2 "><a href="#" >관심인물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu5" data-menuval="5"><a href="#" >공지사항</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >공지사항</a></li>
+                            <li class="header__step2 "><a href="#" >자주하는 질문(FAQ)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="ir_pm header__top-menu pc-only">PC메뉴</a>
+                        <a href="#" class="ir_pm header__top-menu mobile-only" onclick="modalOn('modal-menu')">MOBILE메뉴</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="title-banner">
+        <div class="title-banner">
+            <h1>회원가입</h1>
+            <img src="/img/img_main_bn.png" alt="배너이미지">
+        </div>
+    </section>
+
+    <section id="contents">
+        <div class="row">
+            <h2 class="contents-title">개인정보 수집ㆍ이용ㆍ제공 동의</h2>
+            <form>
+                <div class="container join3">
+                    <div class="box-blue">
+                        <p>
+                            청년인재데이터베이스 등록을 위하여 아래의 개인정보 수집ㆍ이용 및 제공에 대한 내용을 자세히 읽어보신 후 동의여부를 결정하여 주시기 바랍니다.
+                        </p>
+                    </div>
+                    <div class="box-wh">
+                        <p class="join3-title">인적사항 관련 개인정보 수집/이용 내역 <strong class="color-red">(필수)</strong></p>
+                        <div class="table-nomal">
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">수집 및 이용하는 개인정보 항목</div>
+                                <div class="table-nomal-td">
+                                    성명, 성별, 생년월일, 휴대전화, 전자우편, 주된 활동지역
+                                </div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">수집 및 이용 목적</div>
+                                <div class="table-nomal-td underline">청년인재DB 인재등록</div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">보유∙이용기간</div>
+                                <div class="table-nomal-td underline">만 39세 경과 시 또는 삭제요청 시까지</div>
+                            </div>
+                        </div>
+                        <p class="table-nomal-footnote">※ 위 사항에 대하여 동의를 거부할 권리가 있으며, 동의 거부 시에는 인재등록 이용이 제한됩니다.</p>
+                        <div class="agree-wrap">
+                            <span>위의 개인정보의 수집ㆍ이용에 동의하십니까? (</span>
+                            <input type="radio" name="ra1" id="ra1"><label for="ra1" class="radio-small mr20">동의함</label>
+                            <input type="radio" name="ra1" id="ra2"><label for="ra2" class="radio-small">동의하지 않음</label>
+                            <span>)</span>
+
+                        </div>
+                    </div>
+                    <div class="box-wh">
+                        <p class="join3-title">전문성 관련 개인정보 수집/이용 내역 <strong class="color-red">(필수)</strong></p>
+                        <div class="table-nomal">
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">수집 및 이용하는 개인정보 항목</div>
+                                <div class="table-nomal-td">
+                                    학교경력, 직장경력, 관심분야, 주요 활동사항, 주요 결과물, 참여희망 분야, 지원동기
+                                </div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">수집 및 이용 목적</div>
+                                <div class="table-nomal-td underline">청년인재DB 인재등록</div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">보유∙이용기간</div>
+                                <div class="table-nomal-td underline">만 39세 경과 시 또는 삭제요청 시까지</div>
+                            </div>
+                        </div>
+                        <p class="table-nomal-footnote">※ 위 사항에 대하여 동의를 거부할 권리가 있으며, 동의 거부 시에는 인재등록 이용이 제한됩니다.</p>
+                        <div class="agree-wrap">
+                            <span>위의 개인정보의 수집ㆍ이용에 동의하십니까? (</span>
+                            <input type="radio" name="ra2" id="ra3"><label for="ra3" class="radio-small mr20">동의함</label>
+                            <input type="radio" name="ra2" id="ra4"><label for="ra4" class="radio-small">동의하지 않음</label>
+                            <span>)</span>
+                        </div>
+                    </div>
+                    <div class="box-wh">
+                        <p class="join3-title">개인정보 제3자 제공 내역 <strong class="color-red">(필수)</strong></p>
+                        <div class="table-nomal">
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">수집 및 이용하는 개인정보 항목</div>
+                                <div class="table-nomal-td underline">
+                                    국가기관, 지방자치단체, 공공기관
+                                </div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">제공 목적</div>
+                                <div class="table-nomal-td">「청년기본법」 제15조의2제1항 및 같은 법 시행령 제20조의3제3항 따라 정책결정과정에
+                                    청년의 참여를 지원</div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">제공하는 항목</div>
+                                <div class="table-nomal-td">성명, 성별, 생년월일,
+                                    휴대전화, 전자우편, 주된 활동지역, 학교경력, 직장경력, 관심분야, 주요 활동사항, 주요 결과물, 참여희망 분야, 지원동기</div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">제공 받는 자의 보유기간</div>
+                                <div class="table-nomal-td underline">정보활용목적 완료시까지</div>
+                            </div>
+                        </div>
+                        <p class="table-nomal-footnote">※ 위 사항에 대하여 동의를 거부할 권리가 있으며, 동의 거부 시에는 인재등록 이용이 제한됩니다.</p>
+                        <div class="agree-wrap">
+                            <span>위의 개인정보의 수집ㆍ이용에 동의하십니까? (</span>
+                            <input type="radio" name="ra3" id="ra5"><label for="ra5" class="radio-small mr20">동의함</label>
+                            <input type="radio" name="ra3" id="ra6"><label for="ra6" class="radio-small">동의하지 않음</label>
+                            <span>)</span>
+                        </div>
+                    </div>
+                    <div class="box-wh">
+                        <p class="join3-title">청년인재데이터베이스 직접열람 동의 여부 <strong class="color-red">(필수)</strong></p>
+                        <div class="table-nomal">
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">열람할 수 있는 자</div>
+                                <div class="table-nomal-td underline">
+                                    국가기관, 지방자치단체, 공공기관
+                                </div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">공개 목적 및 방법</div>
+                                <div class="table-nomal-td">「청년기본법」 제15조의2제2항에 따라 준용되는 「국가공무원법」 제19조의3제4항 및 「공직후보자 등에 관한 정보의 수집 및 관리에 관한 규정」 
+                                    제6조제3항에 따라
+                                    <span class="underline">데이터베이스를 통해 열람</span></div>
+                            </div>
+                            <div class="table-nomal-tr">
+                                <div class="table-nomal-th">공개 항목</div>
+                                <div class="table-nomal-td">성명, 성별, 생년월일,
+                                    성명, 성별, 생년월일,
+휴대전화, 전자우편, 주된 활동지역, 학교경력, 직장경력, 관심분야, 주요 활동사항, 주요 결과물, 참여희망 분야, 지원동기</div>
+                            </div>
+                        </div>
+                        <p class="table-nomal-footnote">※ 위 사항에 대하여 동의를 거부할 권리가 있으며, 동의 거부 시에는 인재등록 이용이 제한됩니다.</p>
+                        <div class="agree-wrap">
+                            <span>위의 개인정보의 수집ㆍ이용에 동의하십니까? (</span>
+                            <input type="radio" name="ra4" id="ra7"><label for="ra7" class="radio-small mr20">동의함</label>
+                            <input type="radio" name="ra4" id="ra8"><label for="ra8" class="radio-small">동의하지 않음</label>
+                            <span>)</span>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="ch1">
+                        <label for="ch1" class="check-small"></label>
+                        <label for="ch1" class="agree">개인정보 수집∙이용에 동의합니다.</label>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btn-wh btn-round">이전</button>
+                    <button class="btn-bl btn-round">다음</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+         <div class="row">
+             <div class="footer-top">
+                <a href="#">국무조정실</a>
+                <a href="#">청년정책조정위원회</a>
+                <a href="#">청년포털</a>
+                <a href="#">정부∙시민사회 소통협력 플랫폼</a>
+                <select name="footer-select" id="footer-select">
+                    <option value="기본값">관련사이트 바로가기</option>
+                    <option value="국무조정실">국무조정실</option>
+                    <option value="청년정책조정위원회">청년정책조정위원회</option>
+                    <option value="청년포털">청년포털</option>
+                    <option value="정부∙시민사회 소통협력 플랫폼">정부∙시민사회 소통협력 플랫폼</option>
+                </select>
+             </div>
+             <div class="footer-bottom">
+                <div>
+                    <p>(30103) 세종특별자치시 한누리대로 492 청암빌딩 5층</p>
+                    <span class="footer__line">Tel : 044-200-6349</span>
+                    <span>Fax : 044-865-6331</span>
+                    <p>Copyright © Office for Youth Policy Coordination. All Rights Reserved</p>
+                </div>
+                <div class="footer-logo-wrap">
+                    <a href="#">개인정보보호방침</a>
+                    <img class="footer__logo" src="/img/footer-img.png" alt="국무조정실 청년정책조정실">
+                </div>
+             </div>
+         </div>
+    </footer>
+    <div class="modal">
+        <div class="modal_content w460">
+          <div class="modal__title">
+            <h1>모달타이틀</h1>
+            <button class="modal-close-btn ir_pm">닫기</button>
+          </div>
+        </div>
+    </div>
+    <div class="modal modal-menu">
+        <div class="modal_content w460">
+            <div class="modal__title">
+                <h1>전체메뉴</h1>
+                <button class="modal-close-btn ir_pm">닫기</button>
+            </div>
+            <div class="modal-menu-top">
+                <div><span>서비스 이용을 위해 </span><a href="#">로그인</a><span>이 필요합니다.</span></div>
+                <div class="btn-wrap">
+                    <button class="btn-bl btn-nomal">회원가입</button>
+                </div>
+                <button class="one-login-btn">
+                    <img src="/img/one-login-btn.png" alt="디지털원패스로 로그인">
+                </button>
+            </div>
+            <ul class="modal-menu-list">
+                <!-- .menu-step1에 .menu-on 추가하면 메뉴 오픈됩니다 -->
+                <li class="menu-step1">
+                    <p>청년인재데이터베이스</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">청년인재데이터베이스</a></li>
+                        <li class="menu-step2"><a href="#">등록방법 안내</a></li>
+                        <li class="menu-step2"><a href="#">인증방법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1"><a href="#">인재정보등록</a></li>
+                <li class="menu-step1 ">
+                    <p>검색요청</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">직접검색 요청</a></li>
+                        <li class="menu-step2"><a href="#">직접검색 요청현황</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1">
+                    <p>인재검색</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">통합검색</a></li>
+                        <li class="menu-step2"><a href="#">관심인물 관리</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1">
+                    <p>공지사항</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">공지사항</a></li>
+                        <li class="menu-step2"><a href="#">자주하는 질문(FAQ)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

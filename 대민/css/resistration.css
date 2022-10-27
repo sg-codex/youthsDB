@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+.box-blue, .box-wh {
+    padding: 20px 30px;
+
+}
+.register__bnt-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-blue p {
+    text-align: center;
+    color: #555555;
+}
+.container__title {
+    margin-bottom: 20px;
+}
+.check-small+label{
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block; 
+}
+.check-small, input[type="checkbox"]:checked + .check-small{
+    min-width: 24px;
+    height: 24px;
+    background-size: cover;
+}
+.checkbox-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.box-blue{
+    margin-bottom: 20px;
+}
+.box-wh p {
+    color: #555555;
+    line-height: 28px;
+}
+.mb40{
+    margin-bottom: 40px;
+}
+.register{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.register > img {
+    width: 50%;
+}
+.register > div {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 84px 60px;
+}
+.register__title{
+    font-family: 'GmarketSansMedium';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    color: #02346B;
+    margin-bottom: 20px;
+    
+}
+.register__title strong{
+    font-family: 'GmarketSansBold';
+
+} 
+.register__info{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.03em;
+    color: #555555;
+    margin-bottom: 50px;
+}
+
+@media all and (max-width:1023px) {
+
+    .register > img {
+        width: 100%;
+    }
+    .register > div {
+        width: 100%;
+        padding: 36px 40px;
+    }
+    .print-btn {
+        display: none;
+    }
+}

@@ -1,0 +1,163 @@
+.top-nab-btn {
+    justify-content: center;
+}
+.top-nab-btn a {
+    width: 160px;
+    font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+white-space: nowrap;
+height: 50px;
+}
+.join2 .box-blue {
+    padding: 20px 30px;
+}
+.more-btn-bl {
+    width: 200px;
+}
+.down-wrap .mypaer2-1 {
+    width: 116px;
+    height: 126px;
+}
+.down-wrap .mypaer2-2 {
+    width: 136px;
+    height: 116px;
+    margin-right: 44px;
+} 
+.join__title span {
+    font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+align-items: center;
+letter-spacing: -0.03em;
+margin-left: 6px;
+color: #555555;
+}
+.join1 .box-wh:nth-child(1) img.mypage3-1 {
+    width: 94px;
+    min-width: 94px;
+    height: 110px;
+    margin-left: 40px;
+    margin-right: 93px;
+}
+.join1 .box-wh:nth-child(2) {margin-bottom: 0;}
+
+.mypage9 {
+    display: flex;
+    flex-direction: row;
+    border-bottom: none;
+}
+.table-nomal.mypage9 .table-nomal-tr:last-child{
+    border-bottom: 1px solid #ECF0F8;
+}
+.mypage9 > .table-nomal-tr {
+    width: 50%;
+}
+.mypage9 .table-nomal-td {
+    width: 100%;
+    text-align: center;
+}
+.mypage9-compl {
+    color: #1776E1;
+}
+.mypage9-refusal {
+    color: #FF0000;
+}
+.mypage9-refusal::after{
+    content: '';
+    width: 14px;height: 18px;
+    background: url(/img/mypage9-refusal.png) no-repeat;
+    display: inline-block;
+    background-size: contain;
+    transform: translateY(4px);
+    margin-left: 3px;
+}
+.w935 {
+    width: 935px;
+}
+.modal-refusal .mypage9 > .table-nomal-tr {
+    width: 100%;
+    min-height: 150px;
+}
+.modal-refusal .table-nomal-th {
+    justify-content: flex-start;
+    width: 200px;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+.modal-refusal .table-nomal {
+    border-top: 3px solid #02346B;
+}
+.modal-refusal .mypage9 .table-nomal-td{
+    text-align-last: left;
+}
+
+.w120 {
+    width: 120px;
+    height: 35px;
+    font-size: 15px;
+    padding: 6px 14px;
+}
+.table-wrap {
+    margin-top: 14px;
+}
+.table-wrap table thead th {
+    border-top: 2px #02346B solid;
+}
+.table-num {
+    font-size: 15px;
+line-height: 22px;
+color: #555555;
+}
+.table-num span {
+    color: #1776E1;
+    margin: 0 2px;
+}
+.table-wrap table thead tr th:nth-child(1),.table-wrap tbody td:nth-child(1) {
+    border-right: 1px solid #D4D9E4 ;
+    border-bottom: 1px solid #D4D9E4 ;
+}
+.table-wrap table thead tr th:nth-child(2),.table-wrap tbody td:nth-child(2) {
+    width: 300px;
+    text-align: center;
+    border-right: 1px solid #D4D9E4 ;
+    border-bottom: 1px solid #D4D9E4 ;
+
+}
+.table-wrap table thead tr th:nth-child(3),.table-wrap tbody td:nth-child(3) {
+    width: 650px;
+    border-right: 1px solid #D4D9E4 ;
+    border-bottom: 1px solid #D4D9E4 ;
+
+
+}
+.table-wrap table thead tr th:nth-child(4),.table-wrap tbody td:nth-child(4) {
+    width: 260px;
+    border-bottom: 1px solid #D4D9E4 ;
+
+}
+@media (max-width: 1023px){
+    .down-wrap .mypaer2-2 {
+        margin-right: 0;
+    }
+    .join1 .box-wh:nth-child(1) img.mypage3-1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .w935 {
+        width: 100%;
+    }
+    .table-nomal-th {
+        min-width: auto;
+        width: 100%;
+    }
+    .modal-refusal .table-nomal-th {
+        width: 100%;
+        justify-content: center;
+    }
+    .w120 {
+        margin-left: 4px;
+    }
+}

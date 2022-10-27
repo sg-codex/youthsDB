@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="/css/reset.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/info.css">
+
+
+
+    <title>청년인재데이터베이스</title>
+</head>
+<body>
+    <!-- 스킵네비게이션 -->
+     <div class="skip_nav" id="skip">
+        <a href="#contents">본문 바로가기</a>
+    </div>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="header__top">
+            <div class="row">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="row">
+                <a href="/index.html" class="header__logo">
+                    <img src="/img/img_logo.png" alt="청년인재데이터베이스">
+                </a>
+                <ul class="header__menu">
+                    <li class="sub-menu-ok header__step1  temp-menu1 menu-on" data-menuval="1"><a href="#">청년인재데이터베이스</a>   
+                        <ul>
+                            <li class="header__step2 "><a href="#" >청년인재데이터베이스</a></li>
+                            <li class="header__step2 "><a href="#" >등록방법 안내</a></li>
+                            <li class="header__step2 "><a href="#" >인증방법 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__step1  temp-menu2" data-menuval="2"><a href="#" >인재정보등록</a>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu3" data-menuval="3"><a href="#" >검색요청</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >직접검색 요청</a></li>
+                            <li class="header__step2 "><a href="#" >직접검색 요청현황</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu4" data-menuval="4"><a href="#" >인재검색</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >통합검색</a></li>
+                            <li class="header__step2 "><a href="#" >관심인물 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-ok header__step1  temp-menu5" data-menuval="5"><a href="#" >공지사항</a>
+                        <ul>
+                            <li class="header__step2 "><a href="#" >공지사항</a></li>
+                            <li class="header__step2 "><a href="#" >자주하는 질문(FAQ)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="ir_pm header__top-menu pc-only">PC메뉴</a>
+                        <a href="#" class="ir_pm header__top-menu mobile-only" onclick="modalOn('modal-menu')">MOBILE메뉴</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="title-banner">
+        <div class="title-banner">
+            <h1>청년인재데이터베이스 소개</h1>
+            <img src="/img/img_main_bn.png" alt="배너이미지">
+        </div>
+        <div class="row">
+            <ul class="header__menu title-banner-menu">
+                <li>
+                    <a href="#" class="go-home ir_pm">홈</a>
+                </li>
+                <li class="sub-menu-ok header__step1  temp-menu1" data-menuval="1"><a href="#">메뉴</a>   
+                    <ul>
+                        <li class="header__step2 "><a href="#" >메뉴</a></li>
+                        <li class="header__step2 "><a href="#" >메뉴</a></li>
+                        <li class="header__step2 "><a href="#" >메뉴</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu-ok header__step1  temp-menu3" data-menuval="3"><a href="#" >서브메뉴</a>
+                    <ul>
+                        <li class="header__step2 "><a href="#" >서브메뉴</a></li>
+                        <li class="header__step2 "><a href="#" >서브메뉴</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contents">
+        <div class="row">
+            <h2 class="contents-title">청년인재데이터베이스란?</h2>
+            
+            <div class="container">
+                <p class="container__title">청년인재데이터베이스는 국가 주요직위 인선을 지원하는 인재풀입니다.
+                    <span class="sub-block">청년인재데이터베이스는 공무원 및 사회 각 분야 전문가 인물 정보를 효율적으로 관리하여, 정무직 등 국가 주요직위 인선시 전문가의 지식과 경험을 활용할 수 있게 구축된 인물정보 관리시스템입니다.</span>
+                </p>
+                <div class="bottom-line"></div>
+                <p class="container__title">추천직위</p>
+                <div class="position">
+                    <div class="position__list position3">
+                        <p>정무직(선거직 제외)</p>
+                        <p>개방형 및 공모직위</p>
+                        <p>책임운영기관장</p>
+                        <p>공공기관장 및 임원</p>
+                        <p>정부위원회 위원</p>
+                        <p>각급기관 시험위원</p>
+                        <p>각종 선발심사위원회 및 후보추천위원회 위원</p>
+                    </div>
+                    <img class="position-img1" src="/img/position-img.png" alt="추천직위">
+                </div>
+                <div class="bottom-line"></div>
+                <p class="container__title">청년인재데이터베이스는 자격, 능력, 실적 등 객관적 정보가 수록됩니다.
+                    <span class="sub-block">청년인재데이터베이스는 학력, 경력, 자격면허, 상훈, 저서, 논문 등 주요 직위 인재추천에 필요한 객관적인 인물정보 자료가 수록되어 있습니다.</span>
+                </p>
+                <div class="bottom-line"></div>
+                <p class="container__title">청년인재데이터베이스는 자격, 능력, 실적 등 객관적 정보가 수록됩니다.</p>
+                <ul class="container__list">
+                    <li>『공공기관의 운영에 관한 법률』의 적용을 받는 공공기관의 기관장 및 임원</li>
+                    <li>『행정기관 소속 위원회의 설치·운영에 관한 법률』에 따른 위원회 위원</li>
+                    <li>5급 이상 국가공무원, 4급 이상 지방공무원(여성은 5급 이상)</li>
+                    <li>대학의 조교수 이상, 인문사회·과학기술 등 각 분야 연구기관의 연구원, 박사 학위 소지자</li>
+                    <li>중견기업의 임원, 유망 중소기업(『벤처기업 육성에 관한 특별조치법』 제2조에 따른 벤처기업 등)의 경영인</li>
+                    <li>주요 협회, 단체 등의 임원급 이상에 해당하는 자</li>
+                    <li>변호사·의사·건축사·공인회계사·공인노무사 등 전문 자격증 소지자</li>
+                    <li>기술사, 대한민국 명장</li>
+                    <li>문화·예술·체육 관련 국내외 입상자 및 훈포상 수여자</li>
+                    <li>긴급구조요원, 시민단체 활동가, 국제기구 종사자 등 해당 분야에서 10년 이상의 경험을 보유한 자</li>
+                    <li>사회 각 분야에서 뚜렷한 업적이나 성과를 거두어 국가의 위상제고에 기여한 자</li>
+                    <li>기타 데이터베이스에 수록될 필요가 있다고 인정하는 자</li>
+                </ul>
+            </div>
+
+            <h3 class="contents-title">청년인재데이터베이스를 통한 인재추천 및 관리</h3>
+            <div class="container">
+                <p class="container__title">청년인재데이터베이스를 활용한 인재추천</p>
+                <ul class="container__list">
+                    <li>부처에 인사수요가 발생한 경우, 청년인재 DB를 활용하여 적합한 인재를 추천합니다.
+                        <span>– 해당 분야의 전문가 Pool에서 경력, 저서/논문, 자격 등을 고려하여 적합한 인재를 추천합니다.</span>
+                    </li>
+                    <li>현재 위원활동 유무, 나이, 성별, 근무지역 등을 고려하여 많은 인재를 다양한 위원활동에 추천하고 있습니다.
+                        <span>– 특히, 여성과 지방인재들의 추천 및 참여 유도에 많은 노력을 기울이고 있습니다.</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+         <div class="row">
+             <div class="footer-top">
+                <a href="#">국무조정실</a>
+                <a href="#">청년정책조정위원회</a>
+                <a href="#">청년포털</a>
+                <a href="#">정부∙시민사회 소통협력 플랫폼</a>
+                <select name="footer-select" id="footer-select">
+                    <option value="기본값">관련사이트 바로가기</option>
+                    <option value="국무조정실">국무조정실</option>
+                    <option value="청년정책조정위원회">청년정책조정위원회</option>
+                    <option value="청년포털">청년포털</option>
+                    <option value="정부∙시민사회 소통협력 플랫폼">정부∙시민사회 소통협력 플랫폼</option>
+                </select>
+             </div>
+             <div class="footer-bottom">
+                <div>
+                    <p>(30103) 세종특별자치시 한누리대로 492 청암빌딩 5층</p>
+                    <span class="footer__line">Tel : 044-200-6349</span>
+                    <span>Fax : 044-865-6331</span>
+                    <p>Copyright © Office for Youth Policy Coordination. All Rights Reserved</p>
+                </div>
+                <div class="footer-logo-wrap">
+                    <a href="#">개인정보보호방침</a>
+                    <img class="footer__logo" src="/img/footer-img.png" alt="국무조정실 청년정책조정실">
+                </div>
+             </div>
+         </div>
+    </footer>
+    <div class="modal">
+        <div class="modal_content w460">
+          <div class="modal__title">
+            <h1>모달타이틀</h1>
+            <button class="modal-close-btn ir_pm">닫기</button>
+          </div>
+        </div>
+    </div>
+    <div class="modal modal-menu">
+        <div class="modal_content w460">
+            <div class="modal__title">
+                <h1>전체메뉴</h1>
+                <button class="modal-close-btn ir_pm">닫기</button>
+            </div>
+            <div class="modal-menu-top">
+                <div><span>서비스 이용을 위해 </span><a href="#">로그인</a><span>이 필요합니다.</span></div>
+                <div class="btn-wrap">
+                    <button class="btn-bl btn-nomal">회원가입</button>
+                </div>
+                <button class="one-login-btn">
+                    <img src="/img/one-login-btn.png" alt="디지털원패스로 로그인">
+                </button>
+            </div>
+            <ul class="modal-menu-list">
+                <!-- .menu-step1에 .menu-on 추가하면 메뉴 오픈됩니다 -->
+                <li class="menu-step1">
+                    <p>청년인재데이터베이스</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">청년인재데이터베이스</a></li>
+                        <li class="menu-step2"><a href="#">등록방법 안내</a></li>
+                        <li class="menu-step2"><a href="#">인증방법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1"><a href="#">인재정보등록</a></li>
+                <li class="menu-step1 ">
+                    <p>검색요청</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">직접검색 요청</a></li>
+                        <li class="menu-step2"><a href="#">직접검색 요청현황</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1">
+                    <p>인재검색</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">통합검색</a></li>
+                        <li class="menu-step2"><a href="#">관심인물 관리</a></li>
+                    </ul>
+                </li>
+                <li class="menu-step1">
+                    <p>공지사항</p>
+                    <ul>
+                        <li class="menu-step2"><a href="#">공지사항</a></li>
+                        <li class="menu-step2"><a href="#">자주하는 질문(FAQ)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
